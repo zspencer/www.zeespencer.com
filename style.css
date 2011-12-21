@@ -1,6 +1,7 @@
 body {
-  background-color: #D1D1D1;
-  font-family: ScratchmybackRegular, helvetica, arial, sans-serif;
+  background: url('images/dark_circles.png');
+  color: #FAFAFF;
+  font-family: helvetica, arial, sans-serif;
   text-align: center;
 }
 h1, h2, h3, h4, h5 {
@@ -19,24 +20,12 @@ div#contact-info {
   width: 50%
 }
 a {
-  color: #00009f;
+  color: #dadaEa;
 }
 a:visited {
-  color: #000060;
+  color: #AAAACC;
 }
 ul {
   list-style: none;
   padding-left: 0;
 }
-
-@font-face {
-  font-family: 'ScratchmybackRegular';
-  src: url('fonts/SCRATCHM-webfont.eot');
-  src: url('fonts/SCRATCHM-webfont.eot?#iefix') format('embedded-opentype'),
-  url('fonts/SCRATCHM-webfont.woff') format('woff'),
-  url('fonts/SCRATCHM-webfont.ttf') format('truetype'),
-  url('fonts/SCRATCHM-webfont.svg#ScratchmybackRegular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
