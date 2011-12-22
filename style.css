@@ -11,15 +11,10 @@ h1, h2, h3, h4, h5 {
 div#main {
   text-align: left;
   margin: 0px auto;
-  width: 50%;
   min-width: 14em;
-  max-width: 24em;
+  width: 50%;
 }
 
-div#contact-info {
-  margin: 0px auto;
-  width: 50%
-}
 a {
   color: #dadaEa;
 }
