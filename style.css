@@ -2,6 +2,7 @@ body {
   background: url('images/dark_circles.png');
   color: #FAFAFF;
   font-family: helvetica, arial, sans-serif;
+  font-size: 2em;
   text-align: center;
 }
 h1, h2, h3, h4, h5 {
@@ -28,4 +29,9 @@ a:visited {
 ul {
   list-style: none;
   padding-left: 0;
+  margin-bottom: 1em;
+}
+ul ul {
+  list-style: disc;
+  padding-left: 1.10em;
 }
