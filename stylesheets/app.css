@@ -1,0 +1,52 @@
+/* line 17, ../scss/app.scss */
+body {
+  background: url("../images/dark_circles.png");
+  color: #FAFAFF;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 1.75em;
+  text-align: center;
+}
+
+/* line 24, ../scss/app.scss */
+h1, h2, h3, h4, h5 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* line 29, ../scss/app.scss */
+#main {
+  text-align: left;
+  margin: 0px auto;
+  min-width: 12.25em;
+  width: 50%;
+}
+
+/* line 35, ../scss/app.scss */
+a {
+  color: #dadaEa;
+}
+/* line 37, ../scss/app.scss */
+a:visited {
+  color: #AAAACC;
+}
+/* line 38, ../scss/app.scss */
+a:hover {
+  color: #FFFFFF;
+}
+
+/* line 41, ../scss/app.scss */
+ul, p {
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 0.875em;
+}
+
+/* line 46, ../scss/app.scss */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+/* line 49, ../scss/app.scss */
+ul ul {
+  padding-left: 0.875em;
+}

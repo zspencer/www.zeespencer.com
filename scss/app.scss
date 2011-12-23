@@ -1,0 +1,53 @@
+// -------------------------------------------------- 
+//    Table of Contents
+// --------------------------------------------------
+// :: Shared Styles
+// :: Page Name 1
+// :: Page Name 2
+
+$base-font-size: 1.75em;
+$line-height: $base-font-size/2;
+$indentation-level: $base-font-size/2;
+$min-width: $base-font-size*7;
+
+// -----------------------------------------
+//    Shared Styles
+// -----------------------------------------
+
+body {
+  background: url("../images/dark_circles.png");
+  color: #FAFAFF;
+  font-family: helvetica, arial, sans-serif;
+  font-size: $base-font-size;
+  text-align: center;
+}
+h1, h2, h3, h4, h5 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+#main {
+  text-align: left;
+  margin: 0px auto;
+  min-width: $min-width;
+  width: 50%;
+}
+a {
+  color: #dadaEa;
+  &:visited { color: #AAAACC; }
+  &:hover { color: #FFFFFF; }
+}
+
+ul, p { 
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: $line-height;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+  ul {
+    padding-left: $indentation-level;
+  }
+}
+
