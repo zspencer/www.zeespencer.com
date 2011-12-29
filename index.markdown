@@ -39,7 +39,7 @@
 
 
 #### i wrote
-  * [Holistic Thinking for Innovators](http://businessinnovationfactory.com/weblog/introduction-holistic-thinking-innovator)
+  * [Holistic Thinking for Innovators](http://businessinnovationfactory.com/weblog/introduction-holistic-thinking-innovators)
   * [Three Sets of Practice of an Effective Software Team](http://pillartechnology.com/blog/?p=205)
 
 #### i can be found at
