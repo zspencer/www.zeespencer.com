@@ -1,15 +1,14 @@
 ---
-  layout: default
-  title: Confessions of a Shitty Pianist
+layout: default
+title: Confessions of a Shitty Pianist
+tags: [musings]
 ---
-I\'m a shitty pianist.
+At one time I practiced daily, studied theory, explored composers and genres, and wrote my own music.
 
-When I was young I practiced daily, studied theory, explored composers and genres, and composed my own music.
+I became a badass pianist.
 
-This helped me become a badass pianist.
-
-Then I stopped practicing, experimenting, exploring, and creating.
+Now I stopped practicing, experimenting, exploring, and creating.
 
 Now I\'m a shitty pianist.
 
-**We can not be exceptional when we rarely practice, study, explore, or create.**
+**If we rarely practice, study, explore, or create we are not exceptional.**
