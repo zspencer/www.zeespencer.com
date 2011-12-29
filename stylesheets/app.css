@@ -1,6 +1,6 @@
 /* line 17, ../scss/app.scss */
 body {
-  background: url("../images/dark_circles.png");
+  background: url('/images/dark_circles.png?1323621483');
   color: #FAFAFF;
   font-family: helvetica, arial, sans-serif;
   font-size: 1.75em;

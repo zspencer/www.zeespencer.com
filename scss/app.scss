@@ -15,7 +15,7 @@ $min-width: $base-font-size*7;
 // -----------------------------------------
 
 body {
-  background: url("../images/dark_circles.png");
+  background: image-url("dark_circles.png");
   color: #FAFAFF;
   font-family: helvetica, arial, sans-serif;
   font-size: $base-font-size;
