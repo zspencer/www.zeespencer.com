@@ -35,9 +35,6 @@
   * html/mustache/haml
   * css/cass/compass
 
-### i write
-  * [a collection of musings](/musings/)
-
 ####i wrote
   * [Holistic Thinking for Innovators](http://businessinnovationfactory.com/weblog/introduction-holistic-thinking-innovator)
   * [Three Sets of Practice of an Effective Software Team](http://pillartechnology.com/blog/?p=205)
