@@ -1,4 +1,4 @@
-/* line 17, ../../precompiled/scss/app.scss */
+/* line 16, ../../precompiled/scss/app.scss */
 body {
   background: url('/assets/images/dark_circles.png?1323621483');
   color: #FAFAFF;
@@ -7,13 +7,13 @@ body {
   text-align: center;
 }
 
-/* line 24, ../../precompiled/scss/app.scss */
+/* line 23, ../../precompiled/scss/app.scss */
 h1, h2, h3, h4, h5 {
   margin-bottom: 0;
   padding-bottom: 0;
 }
 
-/* line 29, ../../precompiled/scss/app.scss */
+/* line 28, ../../precompiled/scss/app.scss */
 #main {
   text-align: left;
   margin: 0px auto;
@@ -21,32 +21,37 @@ h1, h2, h3, h4, h5 {
   width: 50%;
 }
 
-/* line 35, ../../precompiled/scss/app.scss */
+/* line 34, ../../precompiled/scss/app.scss */
 a {
   color: #dadaEa;
 }
-/* line 37, ../../precompiled/scss/app.scss */
+/* line 36, ../../precompiled/scss/app.scss */
 a:visited {
   color: #AAAACC;
 }
-/* line 38, ../../precompiled/scss/app.scss */
+/* line 37, ../../precompiled/scss/app.scss */
 a:hover {
   color: #FFFFFF;
 }
 
-/* line 41, ../../precompiled/scss/app.scss */
+/* line 40, ../../precompiled/scss/app.scss */
 ul, p {
   margin-top: 0;
   padding-top: 0;
   margin-bottom: 0.875em;
 }
 
-/* line 46, ../../precompiled/scss/app.scss */
+/* line 45, ../../precompiled/scss/app.scss */
 ul {
   list-style: none;
   padding-left: 0;
 }
-/* line 49, ../../precompiled/scss/app.scss */
+/* line 48, ../../precompiled/scss/app.scss */
 ul ul {
   padding-left: 0.875em;
+}
+
+/* line 57, ../../precompiled/scss/app.scss */
+.musing {
+  font-size: 0.583em;
 }

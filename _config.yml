@@ -1,4 +1,4 @@
 ---
-pygments:    true
 markdown:    kramdown
 permalink:   /musings/:title
+exclude: [precompiled, Gemfile, Gemfile.lock, config.rb]

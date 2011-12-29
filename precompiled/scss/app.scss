@@ -2,8 +2,7 @@
 //    Table of Contents
 // --------------------------------------------------
 // :: Shared Styles
-// :: Page Name 1
-// :: Page Name 2
+// :: Musings
 
 $base-font-size: 1.75em;
 $line-height: $base-font-size/2;
@@ -51,3 +50,10 @@ ul {
   }
 }
 
+// -----------------------------------------
+//    Musings
+// -----------------------------------------
+
+.musing {
+  font-size: $base-font-size / 3;
+}

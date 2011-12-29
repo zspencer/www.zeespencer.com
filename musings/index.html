@@ -1,0 +1,13 @@
+---
+layout: default
+title: Musings
+---
+{% for post in site.tags.musings %}
+<div class="musing">
+<h3>{{ post.title }}</h3>
+
+{{ post.content }}
+
+<a href="{{post.url}}">permalink</a>
+</div>
+{% endfor %}

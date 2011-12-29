@@ -7,6 +7,8 @@
 
 ## i teach people
 
+## [i muse](/musings/)
+
 #### i make
   * [canhazworkshop](http://canhazworkshop.com)
 
@@ -35,7 +37,8 @@
   * html/mustache/haml
   * css/cass/compass
 
-####i wrote
+
+#### i wrote
   * [Holistic Thinking for Innovators](http://businessinnovationfactory.com/weblog/introduction-holistic-thinking-innovator)
   * [Three Sets of Practice of an Effective Software Team](http://pillartechnology.com/blog/?p=205)
 
