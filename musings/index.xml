@@ -14,7 +14,7 @@ layout: nil
     <email>zee@zeespencer.com</email>
   </author>
 
-  {% for post in site.tags.musings %}
+  {% for post in site.tags.published %}
   <entry>
     <id>http://zeespencer.com{{ post.id }}</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com{{ post.url }}"/>

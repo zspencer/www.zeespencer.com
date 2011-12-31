@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Confessions of a Shitty Pianist
-tags: [musings]
+tags: [published]
 ---
 At one time I practiced daily, studied theory, explored composers and genres, and wrote my own music.
 
