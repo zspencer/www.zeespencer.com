@@ -3,11 +3,12 @@ layout: default
 title: Confessions of a Shitty Pianist
 tags: [published]
 ---
-At one time I practiced daily, studied theory, explored composers and genres, and wrote my own music.
+Once I practiced daily, studied theory, explored composers and genres, and wrote
+my own music.
 
 I became a badass pianist.
 
-Now I stopped practicing, experimenting, exploring, and creating.
+Then I stopped practicing, experimenting, exploring, and creating.
 
 Now I\'m a shitty pianist.
 
