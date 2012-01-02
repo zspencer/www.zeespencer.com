@@ -13,13 +13,11 @@
   * [canhazworkshop](http://canhazworkshop.com)
 
 #### i help make
-  * [impact autism - impact everyday](http://impactautism.org/solution/impacteveryday/)
   * [page-object](https://github.com/cheezy/page-object)
 
 ##### i helped make
   * [the civic commons](http://theciviccommons.com) - [source](https://github.com/CivicCommons/CivicCommons)
   * [covenant eyes](http://www.covenanteyes.com)
-  * [dominos pizza online ordering](http://express.dominos.com)
 
 #### i am good at
 * working with small, empowered teams that:
