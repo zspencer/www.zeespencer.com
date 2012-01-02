@@ -1,6 +1,6 @@
 /* line 16, ../../precompiled/scss/app.scss */
 body {
-  background: url('/assets/images/dark_circles.png?1323621483');
+  background: url('/assets/images/concrete_wall.png?1325541812');
   color: #FAFAFF;
   font-family: helvetica, arial, sans-serif;
   font-size: 1.75em;
@@ -43,15 +43,14 @@ ul, p {
 
 /* line 45, ../../precompiled/scss/app.scss */
 ul {
-  list-style: none;
   padding-left: 0;
 }
-/* line 48, ../../precompiled/scss/app.scss */
+/* line 47, ../../precompiled/scss/app.scss */
 ul ul {
   padding-left: 0.875em;
 }
 
-/* line 57, ../../precompiled/scss/app.scss */
+/* line 56, ../../precompiled/scss/app.scss */
 .musing {
   font-size: 0.583em;
 }

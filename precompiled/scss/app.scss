@@ -14,7 +14,7 @@ $min-width: $base-font-size*7;
 // -----------------------------------------
 
 body {
-  background: image-url("dark_circles.png");
+  background: image-url("concrete_wall.png");
   color: #FAFAFF;
   font-family: helvetica, arial, sans-serif;
   font-size: $base-font-size;
@@ -43,7 +43,6 @@ ul, p {
   margin-bottom: $line-height;
 }
 ul {
-  list-style: none;
   padding-left: 0;
   ul {
     padding-left: $indentation-level;
