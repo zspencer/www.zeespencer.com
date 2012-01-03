@@ -1,7 +1,7 @@
 ---
 layout: default
 title: The Hardest Part of Practicing Agile
-tags: drafts
+tags: [article, draft]
 ---
 You want to know the hardest part about working on an agile team?  No, it\'s not
 swallowing the kool-aid; though it\'s difficult to choke down.  It\'s not test
@@ -13,9 +13,7 @@ purpose with people you may have little in common with. It\'s not being able to
 adapt your project\'s direction as deftly as a rock climber discovering just the
 right place to stick their heel on a particularly perilous ascent.
 
-Each of these are incredibly important and incredibly difficult. Yet given
-enough study, practice, and practical application any decent development team
-can learn to apply them effectively.
+Each of these are incredibly important and incredibly difficult.
 
 So what\'s harder? Pairing. Pairing is hard. I mean really hard. Not just
 because pairing can quite literally stink. Mints and honest, compassionate
