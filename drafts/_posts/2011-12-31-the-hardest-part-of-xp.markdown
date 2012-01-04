@@ -44,4 +44,13 @@ When pair programming, I\'ve noticed some patterns that add to the challenge:
    Fistfight ensues.
 
 Each of these have their challenges. Each of these have their benefits. None of
-these are solved by avoiding these types of situations.
+these are solved by avoiding them.
+
+###Motive Mistmatches
+Insert helpful advice here
+### Competence Chasms
+Insert helpful advice here
+### Disposition Dissonance
+Insert helpful advice here
+### Semantic Squabbles
+Insert helpful advice here
