@@ -32,7 +32,7 @@ When pair programming, I\'ve noticed some patterns that add to the challenge:
 
 *  Motive Mismatches: These occur when each partner has a different goal, maybe
    one partner wishes to explore an idea they read about recently, while the
-   other simply wants to finish the card and move on.
+   other simply wants to finish their current task and move on.
 *  Competence Chasms: Sometimes you\'ll see two people with very different
    levels of skill pairing. One simply breathes code, the other is fresh out of
    college. Both struggle to interact due to the gap in their experiences.
@@ -47,10 +47,44 @@ Each of these have their challenges. Each of these have their benefits. None of
 these are solved by avoiding them.
 
 ###Motive Mistmatches
-Insert helpful advice here
+There are a few different things people look for when pairing: momentum,
+deeper understanding of a technique or tool, deeper social connection, or just
+to have some fun. Normally these motives are intertwingled, with a primary one
+bubbling to the top.
+
+However if two people have very different motives for the pairing session,
+the session can go south fast.
+
+#### Things to Watch For
+A motive mismatch is often revealed by an lack of momentum. Frequent
+starts and stops on your task, failures to come to agreement on what to do next,
+or a building disinterest in continuing the pairing session are all indicators
+that you may be experiencing a motive mismatch.
+
+#### Where to Start
+I generally recommend stopping what you are doing and having a short
+conversation with your pair. Be direct but polite, explain that it looks like
+you have different objectives for your pairing session. Clearly explain what you
+want to get out of the pairing session, and ask what their top priority is. It
+may be helpful to use questions in order to give them the vocabulary to explain
+what they are looking for. You may discover that your desire to hone your skills
+with with a new text editor is interfere with their desire to complete the task
+at hand.
+
 ### Competence Chasms
-Insert helpful advice here
+
+#### Things to Watch For
+
+#### Where to Start
+
 ### Disposition Dissonance
-Insert helpful advice here
+
+#### Things to Watch For
+
+#### Where to Start
+
 ### Semantic Squabbles
-Insert helpful advice here
+
+#### Things to Watch For
+
+#### Where to Start
