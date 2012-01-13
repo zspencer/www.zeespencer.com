@@ -3,21 +3,10 @@ layout: default
 title: When Good Pairing Goes Bad
 tags: [article, draft]
 ---
-Working on an agile team is hard. Agile teams shove a bunch of people with
-little in common into a small room and give them an objective. Stakeholders must
-adapt a project\'s direction as deftly as a rock climber discovering just the
-right place to stick their heel on a particularly perilous ascent.  Test driven
-development has so many subtle layers of nuance I\'ll never master it.
-Refactoring requires you to see patterns in complexity then untangle them with
-the deftness of an Akido master.
-
-Each of these are incredibly difficult and important.
-
-But I think there is something harder: pairing. Pairing is hard. I mean really
-hard. Not just because pairing can literally stink. Mints and honest,
-compassionate feedback take care of that. Not because it\'s technically
-difficult. Anyone can sit next to someone else for a few hours, point out typos
-and feel good about \"contributing value.\"
+Pairing is hard. I mean really hard. Not just because pairing can literally
+stink. Mints and honest, compassionate feedback take care of that. Not because
+it\'s technically difficult. Anyone can sit next to someone else for a few
+hours, point out typos and feel good about \"contributing value.\"
 
 Pairing forces you to connect with someone for more than a few minutes at a
 time. That person may not share your background, skills, passion, or even
