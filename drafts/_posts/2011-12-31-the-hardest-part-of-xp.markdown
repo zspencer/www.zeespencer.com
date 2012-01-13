@@ -44,9 +44,9 @@ When pair programming, I\'ve noticed some patterns that add to the challenge:
 Each of these have their challenges. Each of these have their benefits. None of
 these are solved by avoiding them.
 
-###Motive Mistmatches
+###Motive Mismatches
 There are a few different things people look for when pairing: momentum,
-deeper understanding of a technique or tool, deeper social connection, or just
+knowledge transfer, deeper social connection, or just
 to have some fun. Normally these motives are intertwingled, with a primary one
 bubbling to the top.
 
@@ -54,7 +54,7 @@ However if two people have very different motives for the pairing session,
 the session can go south fast.
 
 #### Things to Watch For
-A motive mismatch is often revealed by an lack of momentum. Frequent
+A motive mismatch is often revealed by a lack of momentum. Frequent
 starts and stops on your task, failures to come to agreement on what to do next,
 or a building disinterest in continuing the pairing session are all indicators
 that you may be experiencing a motive mismatch.
