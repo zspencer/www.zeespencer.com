@@ -16,7 +16,7 @@
 ## i teach people
   * as a technical and business consultant at [leandog](http://leandog.com)
 
-## by writing
+### by writing
   * [An Introduction to Sketchmodeling](http://businessinnovationfactory.com/weblog/sketchmodeling-zee-spencer)
   * [Holistic Thinking for Innovators](http://businessinnovationfactory.com/weblog/introduction-holistic-thinking-innovators)
   * [Three Sets of Practice of an Effective Software Team](http://pillartechnology.com/blog/?p=205)
