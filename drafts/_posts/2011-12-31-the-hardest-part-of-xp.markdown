@@ -69,13 +69,36 @@ want to get out of the pairing session, and ask what their top priority is. It
 may be helpful to use questions in order to give them the vocabulary to explain
 what they are looking for. You may discover that your desire to hone your skills
 with with a new text editor is interfere with their desire to complete the task
-at hand.
+at hand. You may even realize that you were focusing on the wrong
+thing!
 
 ### Competence Chasms
+We each have different things we\'re good at. Even two highly talented
+programmers often have different specialities. This is often beneficial.
+Diversity of thought leads to creative yet simple solutions where both
+contribute the little different things that they know. Novices can often
+spot problems by asking questions that jiggle their partners mental state just
+enough that it provides them with the right decision.
 
-#### Things to Watch For
+However the chasm can also cause chaos. Trying to explain to a developer about
+font selection strategies when they are unaware of the difference between
+serif, sans-serif, and script fonts can be frustrating when you really just want
+to solve an issue where people are making mistakes because they think two things
+are more related than they actualy are.
+
+#### What to Watch For
+Competence chasms are by no means a bad thing, but they can be exhuasting. The
+difference in perspective, knowledge, etc. can wear out a pair much faster than
+if both people have similar skills and abilities.
+
+It becomes easy to become disengaged from your partner, which results in
+unproductive pairing.
 
 #### Where to Start
+First do a quick motive check, then consider taking a break. I find that
+the Pomodoro technique is especially important when there is a large gap between
+skills. It lets both people step away and look at the problem with fresh eyes
+again.
 
 ### Disposition Dissonance
 
