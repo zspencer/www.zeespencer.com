@@ -1,32 +1,30 @@
 ---
 layout: default
-title: The Hardest Part of Practicing Agile
+title: When Good Pairing Goes Bad
 tags: [article, draft]
 ---
-You want to know the hardest part about working on an agile team?  No, it\'s not
-swallowing the kool-aid; though it\'s difficult to choke down.  It\'s not test
-driven development, though that has so many subtle layers of nuance I\'ll never
-master it. It isn\'t refactoring, which requires you to see patterns in
-complexity and gently untangle it with the deftness of an Akido master. It\'s
-not being part of a whole team and doing whatever it takes to accomplish your
-purpose with people you may have little in common with. It\'s not being able to
-adapt your project\'s direction as deftly as a rock climber discovering just the
-right place to stick their heel on a particularly perilous ascent.
+Working on an agile team is hard. Agile teams shove a bunch of people with
+little in common into a small room and give them an objective. Stakeholders must
+adapt a project\'s direction as deftly as a rock climber discovering just the
+right place to stick their heel on a particularly perilous ascent.  Test driven
+development has so many subtle layers of nuance I\'ll never master it.
+Refactoring requires you to see patterns in complexity then untangle them with
+the deftness of an Akido master.
 
-Each of these are incredibly important and incredibly difficult.
+Each of these are incredibly difficult and important.
 
-So what\'s harder? Pairing. Pairing is hard. I mean really hard. Not just
-because pairing can quite literally stink. Mints and honest, compassionate
-feedback often take care of that.  Not because it\'s technically difficult.
-After all, anyone can sit next to someone else for a few hours, point out typos
+But I think there is something harder: pairing. Pairing is hard. I mean really
+hard. Not just because pairing can literally stink. Mints and honest,
+compassionate feedback take care of that. Not because it\'s technically
+difficult. Anyone can sit next to someone else for a few hours, point out typos
 and feel good about \"contributing value.\"
 
-Pairing is hard because it requires you to connect with someone for more than a
-few minutes at a time. That person may not share your background, skills,
-passion, or even vocabulary; yet in order for pairing to be worth it you must
-communicate incredibly well. It requires you to be aware of and respond to
-non-verbal cues, interact with your shared creation at the same time as your
-pair, and sometimes even talk to each other.
+Pairing forces you to connect with someone for more than a few minutes at a
+time. That person may not share your background, skills, passion, or even
+vocabulary; yet in order for pairing to be worth it you must communicate
+incredibly well. It requires you to be aware of and respond to non-verbal cues,
+interact with your shared creation at the same time as your pair, and sometimes
+even talk to each other.
 
 When pair programming, I\'ve noticed some patterns that add to the challenge:
 
