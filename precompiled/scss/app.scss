@@ -1,13 +1,12 @@
+@import "_base";
+@import "compass/reset";
+
 // -------------------------------------------------- 
 //    Table of Contents
 // --------------------------------------------------
 // :: Shared Styles
+// :: Home
 // :: Musings
-
-$base-font-size: 1.75em;
-$line-height: $base-font-size/2;
-$indentation-level: $base-font-size/2;
-$min-width: $base-font-size*7;
 
 // -----------------------------------------
 //    Shared Styles
@@ -18,41 +17,65 @@ body {
   color: #FAFAFF;
   font-family: helvetica, arial, sans-serif;
   font-size: $base-font-size;
-  text-align: center;
-}
-h1, h2, h3, h4, h5 {
-  margin-bottom: 0;
-  padding-bottom: 0;
 }
 
+h1 {
+  font-size: $title-heading-font-size;
+  line-height: $line-height / $title-heading-font-size;
+  margin-bottom: #{$line-height / $title-heading-font-size}em;
+}
+
+h2 {
+  font-size: $main-heading-font-size;
+  line-height: $line-height / $main-heading-font-size;
+}
+
+h3 {
+  font-size: $sub-heading-font-size;
+  line-height: $line-height / $sub-heading-font-size;
+}
 #main {
   text-align: left;
-  margin: 0px auto;
+  margin: $base-font-size auto;
   min-width: $min-width;
-  width: 50%;
-}
-a {
-  color: #dadaEa;
-  &:visited { color: #AAAACC; }
-  &:hover { color: #FFFFFF; }
+  max-width: $max-width;
+  width: 90%;
 }
 
-ul, p { 
-  margin-top: 0;
-  padding-top: 0;
+a {
+  color: #dadaEa;
+  &:visited { color: #AAC; }
+  &:hover { color: #DDD; }
+}
+
+ul, p {
   margin-bottom: $line-height;
 }
-ul {
-  padding-left: 0;
-  ul {
-    padding-left: $indentation-level;
+
+// -----------------------------------------
+//    Home
+// -----------------------------------------
+.thing-i-do {
+  clear: both;
+  h2, .content { width: $column_width }
+  h2 {
+    font-size: $title-heading-font-size;
   }
+}
+
+.thing-i-do:nth-child(odd) {
+  h2 { float: right; }
+  .content { float: left; }
+}
+
+.thing-i-do:nth-child(even) {
+  h2 { float: left; }
+  .content { float: right; }
 }
 
 // -----------------------------------------
 //    Musings
 // -----------------------------------------
-
 .musing {
   font-size: $base-font-size / 3;
 }
