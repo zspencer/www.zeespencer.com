@@ -33,8 +33,8 @@ Remember design is spending time subtracting instead of adding.
 
 Remember design is bringing ideas to life.
 
-Remember design is clambering upon the shoulders of giants.
-
 Remember design is pursuing what is important at the expense of everything else.
+
+Remember design is clambering up the shoulders of giants.
 
 Remember design is saying yes when you desparately need to say yes.
