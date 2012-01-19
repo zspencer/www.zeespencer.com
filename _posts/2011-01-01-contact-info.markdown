@@ -1,5 +1,5 @@
 ---
-  title: i am found at
+  title: i am found on
   tags: [things_i_do]
 ---
   * [github](http://github.com/zspencer)
