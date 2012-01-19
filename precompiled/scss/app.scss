@@ -34,6 +34,11 @@ h3 {
   font-size: $sub-heading-font-size;
   line-height: $line-height / $sub-heading-font-size;
 }
+
+h4 {
+  font-weight: bold;
+}
+
 #main {
   text-align: left;
   margin: $base-font-size auto;
