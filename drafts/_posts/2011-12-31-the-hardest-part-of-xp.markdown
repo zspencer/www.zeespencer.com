@@ -152,6 +152,3 @@ careful. Breathe a few breathes, ask a few questions, and genuinely attempt to
 understand their perspective. Often times you\'ll discover that this deep,
 painful point of contention is simply two people who have had different
 experiences build their vocabulary.
-
-
-
