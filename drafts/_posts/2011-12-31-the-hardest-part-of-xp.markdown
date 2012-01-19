@@ -89,12 +89,69 @@ again.
 
 ### Disposition Dissonance
 
+All of us are different people. We have different personalities, different
+passions, and different behavioral triggers. These differences are not bad, by
+any means. They are often why we are successful. If everyone was as obnoxious as
+I am, it would be difficult for anyone to stay in the same room as each other
+for longer than fifteen minutes at a time.
+
+But these differences can also make pairing hard. Someone who doesn\'t like to
+talk very much can feel oppressed by a partner who laughs and jokes all day long.
+Someone who struggles with personal self worth can be devastated by a harsh word
+casually spoken.
+
 #### Things to Watch For
+Watch your pair. If you notice your pair responding (or not responding!) in a way that you expect
+them to you\'re discovering that they have a different perspective on life than
+you do. Tis may not be a problem, but if they become disengaged, avoid pairing
+with you in the future, or even seem uncomfortable it can often be rooted in
+personality differences.
 
 #### Where to Start
+First, remember that your pair partner is a person. Sometimes their behavior is
+odd, unsettling, or disturbing; but it is never _wrong_. Once you accept The
+fact that the person you\'re working with is behaving the way they behave
+because it is how they are it becomes much easier to stop, reflect, and
+determine a valid course of action.
+
+Of course I strongly recommend that old fashioned tool known as a regular old
+conversation, but there are a couple ideas that can help you understand how your
+behavior impacts your pair, and vice versa. My favorite at this time is called
+the DISC system. Disc is a competitor to the Myers Briggs personality profile system. I
+personally prefer DISC because it chooses not to declare what someone is, and
+instead focuses on what their behavioral tendencies are.
 
 ### Semantic Squabbles
+Again, we all have different experiences. These different experiences are quite
+often reflected in the phrasing that we use. What one calls a \"resource\" another
+may call a \"person.\" Often there is no intended slight on either\'s behalf,
+but one can is considered snooty and pedantic, and the other is considered a
+heartless exploiter of human potential.
+
+Obviously, neither are true. It is simply the result of different perspectives
+and different practices. Two people, especially when pairing, can be so caught
+up in these differences that they stop working towards a solution and instead
+spend all their time trying to change their partners vocabulary. Often the only
+effect is feelings being hurt, and relationships being damaged.
 
 #### Things to Watch For
+Be careful when you feel that swirl of emotion flurrying up into your chest.
+\"Well, you just don\'t understand a RESTful application!\" you may think when
+your partner inadvertently calls a SOAP service request a REST call.
+
+Watch out for discussions about what something should be called. Sometimes these
+discussions are important, reflecting hidden differences in underlying models of
+understanding; but they can also simply be two people using just-so-slightly
+different phrasing to mean the same thing.
 
 #### Where to Start
+First, acknowledge your buzz words. We all have buttons. Some of them are more
+powerful than others. If you know you become triggered when someone
+misinterprets usability to mean aestheticaly pleasing, then be
+careful. Breathe a few breathes, ask a few questions, and genuinely attempt to
+understand their perspective. Often times you\'ll discover that this deep,
+painful point of contention is simply two people who have had different
+experiences build their vocabulary.
+
+
+
