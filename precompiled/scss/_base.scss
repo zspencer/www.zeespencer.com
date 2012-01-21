@@ -4,6 +4,16 @@ $title-heading-font-size: $base-font-size * 1.7;
 $main-heading-font-size: $base-font-size * 1.3;
 $sub-heading-font-size: $base-font-size * 1.1;
 $indentation-level: $base-font-size/2;
+$main-width: 90%;
 $min-width: 500px;
 $max-width: 974px;
 $column-width: 45%;
+
+$primary-color: #0971B2;
+$secondary-color: #B21212;
+$tertiary-color: #FFFC20;
+
+$font-color: #FAFAFF;
+
+$visited-link-color: darken($tertiary-color, 20%);
+$hover-link-color: lighten($tertiary-color, 20%);

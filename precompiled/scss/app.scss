@@ -13,31 +13,30 @@
 // -----------------------------------------
 
 body {
-  background: #0971B2;
-  color: #FAFAFF;
+  background: $primary-color;
+  color: $font-color;
   font-family: helvetica, arial, sans-serif;
   font-size: $base-font-size;
 }
 
 #header {
-  width: 100%;
-  background: #B21212;
+  background: $secondary-color;
   text-align: center;
 }
+@mixin centered-column {
+  min-width: $min-width;
+  max-width: $max-width;
+  width: 90%;
+  text-align: left;
+}
 #header h1 {
+  @include centered-column;
   margin: 0 auto;
   padding: $base-font-size/2 0 $base-font-size/2 0;
-  min-width: $min-width;
-  max-width: $max-width;
-  text-align: left;
-  width: 90%;
 }
 #main {
-  text-align: left;
+  @include centered-column;
   margin: $base-font-size auto;
-  min-width: $min-width;
-  max-width: $max-width;
-  width: 90%;
 }
 h1 {
   font-size: $title-heading-font-size;
@@ -61,9 +60,9 @@ h4 {
 
 
 a {
-  color: #FFFC19;
-  &:visited { color: #FFFC19; }
-  &:hover { color: #FFFC19; }
+  color: $tertiary-color;
+  &:visited { color: $visited-link-color }
+  &:hover { color: $hover-link-color }
 }
 
 ul, p {
