@@ -1,1 +1,176 @@
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}body{line-height:1}ol,ul{list-style:none}table{border-collapse:collapse;border-spacing:0}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle}q,blockquote{quotes:none}q:before,q:after,blockquote:before,blockquote:after{content:"";content:none}a img{border:none}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block}body{background:url('/assets/images/concrete_wall.png?1325541812');color:#FAFAFF;font-family:helvetica, arial, sans-serif;font-size:1.5em}h1{font-size:2.55em;line-height:0.882;margin-bottom:0.882em}h2{font-size:1.95em;line-height:1.154}h3{font-size:1.65em;line-height:1.364}h4{font-weight:bold}#main{text-align:left;margin:1.5em auto;min-width:500px;max-width:974px;width:90%}a{color:#dadaEa}a:visited{color:#AAC}a:hover{color:#DDD}ul,p{margin-bottom:2.25em}.thing-i-do{clear:both}.thing-i-do h2,.thing-i-do .content{width:45%}.thing-i-do h2{font-size:2.55em}.thing-i-do:nth-child(odd) h2{float:right}.thing-i-do:nth-child(odd) .content{float:left}.thing-i-do:nth-child(even) h2{float:left}.thing-i-do:nth-child(even) .content{float:right}.musing{font-size:0.5em}
+/* line 17, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 20, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+body {
+  line-height: 1;
+}
+
+/* line 22, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 24, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 26, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 28, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 101, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 30, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 114, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 15, ../../precompiled/scss/app.scss */
+body {
+  background: #0971B2;
+  color: #FAFAFF;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 1.5em;
+}
+
+/* line 22, ../../precompiled/scss/app.scss */
+#header {
+  width: 100%;
+  background: #B21212;
+  text-align: center;
+}
+
+/* line 27, ../../precompiled/scss/app.scss */
+#header h1 {
+  margin: 0 auto;
+  padding: 0.75em 0 0.75em 0;
+  min-width: 500px;
+  max-width: 974px;
+  text-align: left;
+  width: 90%;
+}
+
+/* line 35, ../../precompiled/scss/app.scss */
+#main {
+  text-align: left;
+  margin: 1.5em auto;
+  min-width: 500px;
+  max-width: 974px;
+  width: 90%;
+}
+
+/* line 42, ../../precompiled/scss/app.scss */
+h1 {
+  font-size: 2.55em;
+  line-height: 0.882;
+  margin-bottom: 0.882em;
+}
+
+/* line 48, ../../precompiled/scss/app.scss */
+h2 {
+  font-size: 1.95em;
+  line-height: 1.154;
+}
+
+/* line 53, ../../precompiled/scss/app.scss */
+h3 {
+  font-size: 1.65em;
+  line-height: 1.364;
+}
+
+/* line 58, ../../precompiled/scss/app.scss */
+h4 {
+  font-weight: bold;
+}
+
+/* line 63, ../../precompiled/scss/app.scss */
+a {
+  color: #FFFC19;
+}
+/* line 65, ../../precompiled/scss/app.scss */
+a:visited {
+  color: #FFFC19;
+}
+/* line 66, ../../precompiled/scss/app.scss */
+a:hover {
+  color: #FFFC19;
+}
+
+/* line 69, ../../precompiled/scss/app.scss */
+ul, p {
+  margin-bottom: 2.25em;
+}
+
+/* line 76, ../../precompiled/scss/app.scss */
+.thing-i-do {
+  clear: both;
+}
+/* line 78, ../../precompiled/scss/app.scss */
+.thing-i-do h2, .thing-i-do .content {
+  width: 45%;
+}
+/* line 79, ../../precompiled/scss/app.scss */
+.thing-i-do h2 {
+  font-size: 2.55em;
+}
+
+/* line 85, ../../precompiled/scss/app.scss */
+.thing-i-do:nth-child(odd) h2 {
+  float: right;
+}
+/* line 86, ../../precompiled/scss/app.scss */
+.thing-i-do:nth-child(odd) .content {
+  float: left;
+}
+
+/* line 90, ../../precompiled/scss/app.scss */
+.thing-i-do:nth-child(even) h2 {
+  float: left;
+}
+/* line 91, ../../precompiled/scss/app.scss */
+.thing-i-do:nth-child(even) .content {
+  float: right;
+}
+
+/* line 97, ../../precompiled/scss/app.scss */
+.musing {
+  font-size: 0.5em;
+}
