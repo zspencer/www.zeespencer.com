@@ -6,7 +6,6 @@ tags: [things_i_do]
 ### by mentoring
   * students at [code academy](http://codeacademy.org/)
 
-
 ### by consulting
   * on product design
   * on business strategy
@@ -16,4 +15,7 @@ tags: [things_i_do]
   * [an introduction to sketchmodeling](http://businessinnovationfactory.com/weblog/sketchmodeling-zee-spencer)
   * [holistic thinking for innovators](http://businessinnovationfactory.com/weblog/introduction-holistic-thinking-innovators)
 
-### by [musing](/musings/)
+### by musing
+{% for post in site.categories.musings %}{% if post.tags contains 'published' and post.tags contains 'featured' %}
+  * [{{ post.title | downcase }}]({{ post.url }}){% endif %}{% endfor %}
+  * [more](/musings)

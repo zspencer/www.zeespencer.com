@@ -23,21 +23,25 @@ body {
   background: $secondary-color;
   text-align: center;
 }
+
 @mixin centered-column {
   min-width: $min-width;
   max-width: $max-width;
   width: 90%;
   text-align: left;
 }
+
 #header h1 {
   @include centered-column;
   margin: 0 auto;
   padding: $base-font-size/2 0 $base-font-size/2 0;
 }
+
 #main {
   @include centered-column;
   margin: $base-font-size auto;
 }
+
 h1 {
   font-size: $title-heading-font-size;
   line-height: $line-height / $title-heading-font-size;

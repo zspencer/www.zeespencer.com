@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Finding Flow in Practice
-tags: [published, musing, practice, design]
+tags: [featured, published, practice, design]
 ---
 
 I spent 5 hours practicing visual design.
