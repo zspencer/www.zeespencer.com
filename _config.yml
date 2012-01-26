@@ -1,4 +1,4 @@
 ---
 markdown:    kramdown
 permalink:   /:categories/:title
-exclude: [precompiled, Gemfile, Gemfile.lock, config.rb, /\.sketch/]
+exclude: [precompiled, Gemfile, Gemfile.lock, config.rb, /\.sketch/, spec]
