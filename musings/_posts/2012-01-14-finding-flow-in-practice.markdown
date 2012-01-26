@@ -8,7 +8,7 @@ I spent 5 hours practicing visual design.
 
 I never picked up a pen.
 
-I used a more familiar, yet less efficient tool.
+I used a more familiar, less efficient tool.
 
 It kept me focused.
 
