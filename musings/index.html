@@ -4,10 +4,10 @@ title: Musings
 ---
 {% for post in site.categories.musings %}
   {% if post.tags contains 'published' %}
-  <div class="musing">
-    <h3>{{ post.title }}</h3>
-    {{ post.content }}
-    <a href="{{post.url}}">permalink</a>
-  </div>
+<div class="musing">
+  <h3>{{ post.title }}</h3>
+  {{ post.content }}
+  <a href="{{post.url}}">permalink</a>
+</div>
   {% endif %}
 {% endfor %}
