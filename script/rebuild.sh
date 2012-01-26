@@ -1,4 +1,4 @@
 #!/bin/bash
 
-compass compile --force
+compass compile -s compressed --force
 jekyll
