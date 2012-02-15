@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Breaking Up With Backbone
-tags: [article, draft]
+tags: [published, js, backbone]
 ---
 
 
