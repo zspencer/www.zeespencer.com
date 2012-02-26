@@ -7,7 +7,7 @@ tags: [songs, published]
 Reluctantly crouched at the command line
 keyboards clicking and clacking in time
 the green bar flashes, the vim pops up
-churning, and burning, they yearn for server up
+churning, and burning, they push changes up
 they deftly maneuver and regex to rename
 fingers flying fast keyboards in flame
 reckless and wild, they commit and they push
