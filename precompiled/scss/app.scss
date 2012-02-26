@@ -70,7 +70,7 @@ a {
 }
 
 ul, p {
-  margin-bottom: $line-height;
+  margin-bottom: $vertical-spacing;
 }
 
 // -----------------------------------------
@@ -78,19 +78,19 @@ ul, p {
 // -----------------------------------------
 .thing-i-do {
   clear: both;
-  h2, .content { width: $column_width }
-  h2 {
-    font-size: $title-heading-font-size;
-  }
-}
 
-.thing-i-do:nth-child(odd) {
-  h2 { float: right; }
-  .content { float: left; }
+  h2, .content { width: $column_width }
+  h2 { font-size: $title-heading-font-size; }
+  .content { font-size: $main-heading-font-size; }
 }
 
 .thing-i-do:nth-child(even) {
-  h2 { float: left; }
+  h2 { float: right; }
+  .content { float: left; text-align: right;}
+}
+
+.thing-i-do:nth-child(odd) {
+  h2 { float: left; text-align: right; }
   .content { float: right; }
 }
 
@@ -98,5 +98,9 @@ ul, p {
 //    Musings
 // -----------------------------------------
 .musing {
-  font-size: $base-font-size / 3;
+  font-size: $base-font-size / 2;
+  width: $column-width - 5%;
+  margin-right: $gutter-width;
+  margin-bottom: $vertical-spacing;
+  float: left;
 }
