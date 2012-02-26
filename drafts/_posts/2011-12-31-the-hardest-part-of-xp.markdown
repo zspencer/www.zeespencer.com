@@ -101,33 +101,26 @@ answer their question. Applying DISC rigidly can get in the way of actually
 understanding your pair, but I find it a useful framework to start out with.
 
 ### Semantic Squabbles
-Again, we all have different experiences. These different experiences are quite
-often reflected in the phrasing that we use. What one calls a \"resource\" another
-may call a \"person.\" Often there is no intended slight on either\'s behalf,
-but one can is considered snooty and pedantic, and the other is considered a
-heartless exploiter of human potential.
-
-Obviously, neither are true. It is simply the result of different perspectives
-and different practices. Two people, especially when pairing, can be so caught
-up in these differences that they stop working towards a solution and instead
-spend all their time trying to change their partners vocabulary. Often the only
-effect is feelings being hurt, and relationships being damaged.
+Often our different backgrounds result in different phrasing. What one calls a
+"resource" another may demand be called a "person." There is no malice on
+either's behalf, but it can result in hurt feelings and damaged relationships.
 
 #### Things to Watch For
-Be careful when you feel that swirl of emotion flurrying up into your chest.
-\"Well, you just don\'t understand a RESTful application!\" you may think when
-your partner inadvertently calls a SOAP service request a REST call.
+Words are powerful, and often create powerful emotions. Check your emotional
+state if you hear a trigger word, or be aware if your pair is getting frustrated
+with you.
 
-Watch out for discussions about what something should be called. Sometimes these
-discussions are important, reflecting hidden differences in underlying models of
-understanding; but they can also simply be two people using just-so-slightly
-different phrasing to mean the same thing.
+Be aware not all discussions about what something should be called are
+necessarily productive. Often they are important, reflecting hidden differences
+in your problem domain; but sometimes they are two people using slightly
+different words to mean the same thing.
 
 #### Where to Start
-First, acknowledge your buzz words. We all have buttons. Some of them are more
-powerful than others. If you know you become triggered when someone
-misinterprets usability to mean aestheticaly pleasing, then be
-careful. Breathe a few breathes, ask a few questions, and genuinely attempt to
-understand their perspective. Often times you\'ll discover that this deep,
-painful point of contention is simply two people who have had different
-experiences build their vocabulary.
+Your pair calling your project backlog and burnup a forecast it does not
+necessarily mean they are treating it like a traditional project plan.
+
+We all have words which trigger us. When you are triggered, breathe a few
+breathes, ask a few questions, and try to understand their perspective. When
+your pair is triggered, take a step back. Apologize, and replace your word with
+theirs. It may be worth having a discussion about it later, but for now you
+should hold off.
