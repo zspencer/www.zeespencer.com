@@ -70,37 +70,34 @@ again.
 
 ### Disposition Dissonance
 
-All of us are different people. We have different personalities, different
-passions, and different behavioral triggers. These differences are not bad, by
-any means. They are often why we are successful. If everyone was as obnoxious as
-I am, it would be difficult for anyone to stay in the same room as each other
-for longer than fifteen minutes at a time.
+We are all different. We have different personalities, passions, experiences,
+specialities and behavioral triggers. These differences are often why we succeed
+as a team.
 
-But these differences can also make pairing hard. Someone who doesn\'t like to
-talk very much can feel oppressed by a partner who laughs and jokes all day long.
-Someone who struggles with personal self worth can be devastated by a harsh word
-casually spoken.
+Yet these differences can make pairing hard. Someone who doesn't talk much can
+feel oppressed by a partner who laughs and jokes all day long. Someone who
+struggles with personal self worth could be devastated by a harsh word casually
+spoken.
 
 #### Things to Watch For
-Watch your pair. If you notice your pair responding (or not responding!) in a way that you expect
-them to you\'re discovering that they have a different perspective on life than
-you do. Tis may not be a problem, but if they become disengaged, avoid pairing
-with you in the future, or even seem uncomfortable it can often be rooted in
+If you notice your pair responding (or not responding!) in a way that you expect
+you're discovering they have a different perspective on life than you do. This
+may not be a problem, but if they seem uncomfortable or frustrated, become
+disengaged, or avoid pairing with you in the future, it can often be rooted in
 personality differences.
 
 #### Where to Start
-First, remember that your pair partner is a person. Sometimes their behavior is
-odd, unsettling, or disturbing; but it is never _wrong_. Once you accept The
-fact that the person you\'re working with is behaving the way they behave
-because it is how they are it becomes much easier to stop, reflect, and
-determine a valid course of action.
+Remember your pair partner is a person. Sometimes they seem odd, unsettling, or
+disturbing; but they are rarely malicious or stupid. Once you accept your pair
+is a good person doing the best they can given their experiences, knowledge, and
+abilities it is easier to stop, reflect, and have a conversation.
 
-Of course I strongly recommend that old fashioned tool known as a regular old
-conversation, but there are a couple ideas that can help you understand how your
-behavior impacts your pair, and vice versa. My favorite at this time is called
-the DISC system. Disc is a competitor to the Myers Briggs personality profile system. I
-personally prefer DISC because it chooses not to declare what someone is, and
-instead focuses on what their behavioral tendencies are.
+It may be useful to look into personality profiling tools such as
+[DISC](http://en.wikipedia.org/wiki/DISC_assessment). By understanding the
+strengths and weaknesses of your and other personality types you can gain
+insight into why your pair gets upset when you continue your thought before you
+answer their question. Applying DISC rigidly can get in the way of actually
+understanding your pair, but I find it a useful framework to start out with.
 
 ### Semantic Squabbles
 Again, we all have different experiences. These different experiences are quite
