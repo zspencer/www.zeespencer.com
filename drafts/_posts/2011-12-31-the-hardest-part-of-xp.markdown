@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 4 Indicators You're Pairing Badly and How To Fix Them
+title: 4 Common Pairing Pitfalls and How to Avoid Them
 tags: [article, draft]
 ---
 Pairing is hard; really hard. Not because pairing can literally stink or because
