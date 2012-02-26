@@ -41,32 +41,33 @@ and ask what theirs are. You may even realize you were focusing on the
 wrong thing!
 
 ### Competence Chasms
-We each have different things we\'re good at. Even two highly talented
-programmers often have different specialities. This is often beneficial.
-Diversity of thought leads to creative yet simple solutions where both
-contribute the little different things that they know. Novices can often
-spot problems by asking questions that jiggle their partners mental state just
-enough that it provides them with the right decision.
+We all have things we're good at. Even two talented programmers often have
+different specialities. This is good, as diversity of thought leads to creative
+yet simple solutions. Novices can often spot problems by asking questions that
+jiggle their partners mental state enough to provide a new solution.
 
-However the chasm can also cause chaos. Trying to explain to a developer about
-font selection strategies when they are unaware of the difference between
-serif, sans-serif, and script fonts can be frustrating when you really just want
-to solve an issue where people are making mistakes because they think two things
-are more related than they actualy are.
+But the chasm can cause chaos. Trying to explain the concept of constraints and
+how proximity implies relationship when your partner does not have a design
+background can be frustrating when you really just want to solve an issue and
+move on.
 
 #### What to Watch For
-Competence chasms are by no means a bad thing, but they can be exhuasting. The
-difference in perspective, knowledge, etc. can wear out a pair much faster than
-if both people have similar skills and abilities.
-
-It becomes easy to become disengaged from your partner, which results in
-unproductive pairing.
+Be careful when pairing across proficiencies. Check to see if you're feeling
+tired or frustrated. Depending on the personalities at play, you may even see
+arguments between someone with more experience and someone with less.
 
 #### Where to Start
-First do a quick motive check, then consider taking a break. I find that
-the Pomodoro technique is especially important when there is a large gap between
-skills. It lets both people step away and look at the problem with fresh eyes
-again.
+Do a quick motive check. If the goal is to share knowledge then it may not be a
+bad thing that you are making little progress on the task at hand. When you get
+tired, take a break. Grab coffee or take a walk. This relieves some of the
+mental exhaustion that can occur when pairing with someone more or less
+experienced than yourself.
+
+When disagreeing it is often prudent to defer to your pair and ask
+for further reading or offer to discuss the idea over lunch. Regardless of
+experience, your pair offers insights which would be foolish to
+ignore just because they don't know how to program, test, or design as well as
+you.
 
 ### Disposition Dissonance
 
