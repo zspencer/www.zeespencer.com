@@ -78,21 +78,14 @@ ul { list-style-type: disc }
   clear: both;
 
   h2, .content { width: $column_width }
-  h2 { font-size: $title-heading-font-size; }
+  h2 {
+    font-size: $title-heading-font-size;
+    float: left; text-align: right;
+  }
   .content {
     font-size: $main-heading-font-size;
+    float: right;
   }
-  ul { list-style-type: none; }
-}
-
-.thing-i-do:nth-child(even) {
-  h2 { float: right; }
-  .content { float: left; text-align: right;}
-}
-
-.thing-i-do:nth-child(odd) {
-  h2 { float: left; text-align: right; }
-  .content { float: right; }
 }
 
 // -----------------------------------------
