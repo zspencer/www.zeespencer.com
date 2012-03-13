@@ -1,6 +1,4 @@
 #!/bin/bash
 
 script/rebuild.sh
-git add -p
-git commit
-git put
+ruby script/deploy_assets.rb

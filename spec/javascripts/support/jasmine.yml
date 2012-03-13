@@ -1,8 +1,8 @@
 src_files:
   - vendor/**/*
-  - "**/*.{js,coffee}"
+  - "**/*.js"
 helpers:
-  - helpers/**/*.{js,coffee}
+  - helpers/**/*.js
 spec_files:
   - "**/*_spec.*"
 src_dir: assets/javascripts
