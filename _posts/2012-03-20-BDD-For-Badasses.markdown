@@ -1,7 +1,8 @@
 ---
 layout: default
 title: BDD for Badasses
-tags: [presentations, published]
+tags: [published]
+category: presentations
 ---
 BDD?! That's crazy! Describing an application's behavior with executable
 specifications?! Using those specifications to drive your codes' design?!
