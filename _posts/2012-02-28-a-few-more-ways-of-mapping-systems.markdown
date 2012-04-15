@@ -4,11 +4,12 @@ title: More Methods of Mapping Systems
 tags: [article, draft]
 ---
 
-
+Now that you have at least one method for mapping out a systems model, I'd like
+to discuss some of the theory behind why we map systems out.
 ## System Models
+* Should be visible
 * Should facilitate decision making
 * Should be living
-* Should be visible
 * Should be interactive
 
 ## Persona Mapping
