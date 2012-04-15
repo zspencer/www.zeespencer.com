@@ -4,7 +4,6 @@ title: Breaking Up With Backbone
 tags: [published, js, backbone]
 ---
 
-
 Dear Backbone,
 
 It's been fun. We've had some incredible times together. But I just

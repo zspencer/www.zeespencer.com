@@ -66,10 +66,11 @@ a {
   &:hover { color: $hover-link-color }
 }
 
-ul, p {
+ul, p, ol {
   margin-bottom: $vertical-spacing;
 }
 ul { list-style-type: disc }
+ol { list-style-type: cjk-ideographic }
 
 // -----------------------------------------
 //    Home
