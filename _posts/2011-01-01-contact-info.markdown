@@ -1,9 +1,9 @@
 ---
-  title: i am found on
+  title: contact me on
   tags: [things_i_do]
 ---
 
-* [email](mailto: hello@zeespencer.com):w
-* [github](http://github.com/zspencer)
 * [twitter](http://twitter.com/zspencer)
+* [email](mailto:hello@zeespencer.com)
+* [github](http://github.com/zspencer)
 * [stack exchange](http://stackexchange.com/users/32761)
