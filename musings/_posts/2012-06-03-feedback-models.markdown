@@ -1,15 +1,27 @@
-As a voracious learner, I thrive on feedback. So much so that I often infer feedback even when none is given. What Ive noticed is that different people receive different kinds of feedback in different ways. 
+---
+layout: default
+title: A Few Thoughts on Feedback Models
+tags: [drafts]
+---
+Feedback is important. It shapes our relationships, behaviors, and mindsets.
+Different people have different preferences for receiving and giving feedback. Imagine that these preferences are opposed axis:
 
-feedback axis: 
- * direct vs indirect
- * immediate vs delayed
- * public vs private
+ * Direct vs Indirect
+ * Immediate vs Delayed
+ * Public vs Private
 
-direct vs indirect
-use direct when: person is thick skinned or self validated. indirect whien
-someone is sensitive or externally validated.
+## Direct vs Indirect
+Directness of feedback is not about timing, but about clarity. Direct feedback
+is explicitly targeted towards the person or their behavior. It is not couched
+with any kind of subtlety. Someone who is thick skinned or doesn't realize
+feedback is being given often benefits from direct feedback. 
 
-immediate vs delayed
+Indirect feedback can be directed towards a thing or event and smoothed with tact. This
+helps if a person reacts strongly to direct feedback or is very observant.
+
+## Immediate vs Delayed
+I believe timing is even more important than directness when determining how to give someone feedback. If someone is not in the moment to hear the feedback, it does not matter how well you give it. Different time frames can even impact what kind of feedback people are willing and able to hear!
+
 immediatte owhen behavior must be addressed immediately. delayed when person
 needs time before capable of receiving feedback
 
