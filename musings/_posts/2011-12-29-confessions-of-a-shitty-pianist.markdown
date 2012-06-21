@@ -10,6 +10,6 @@ I became a badass pianist.
 
 Then I stopped practicing, experimenting, exploring, and creating.
 
-Now I\'m a shitty pianist.
+Now I'm a shitty pianist.
 
 **If we rarely practice, study, explore, or create we are not exceptional.**
