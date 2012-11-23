@@ -1,8 +1,8 @@
 ---
-layout: default
+layout: article
 title: The Proud Ants
 category: articles
-tags: [published]
+tags: [published, parables]
 ---
 
 Once upon a time there was an ant colony. It wasn't a very big colony, but it

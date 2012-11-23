@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: article
 title: When to Reject and Accept Work
 tags: [published, project-managemetn,agile]
 ---

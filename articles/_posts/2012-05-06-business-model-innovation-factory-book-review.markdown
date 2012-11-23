@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: article
 title: Book Review of Saul Kaplan's Business Model Innovation Factory
 tags: [published, business, book-reviews]
 ---
