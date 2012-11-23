@@ -1,5 +1,0 @@
----
-title: Categorizing Software Apprenticeships
----
-
-
