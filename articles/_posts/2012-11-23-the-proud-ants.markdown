@@ -1,8 +1,8 @@
 ---
 layout: default
-title: The Ants Go Marching
+title: The Proud Ants
 category: articles
-tags: [drafts]
+tags: [published]
 ---
 
 Once upon a time there was an ant colony. It wasn't a very big colony, but it
