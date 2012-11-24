@@ -1,7 +1,7 @@
 ---
 layout: default
 title: BDD for Badasses
-tags: [published]
+tags: [drafts]
 category: presentations
 ---
 BDD?! That's crazy! Describing an application's behavior with executable
