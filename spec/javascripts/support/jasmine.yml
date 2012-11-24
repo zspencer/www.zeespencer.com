@@ -1,9 +1,0 @@
-src_files:
-  - vendor/**/*
-  - "**/*.js"
-helpers:
-  - helpers/**/*.js
-spec_files:
-  - "**/*_spec.*"
-src_dir: assets/javascripts
-spec_dir: spec/javascripts
