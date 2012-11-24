@@ -4,6 +4,7 @@ title: Coding the Distance
 tags: [songs, published]
 ---
 
+<pre>
 Reluctantly crouched at the command line
 keyboards clicking and clacking in time
 the green bar flashes, the vim pops up
@@ -44,7 +45,6 @@ and long ago he's emptied his coffee cup
 But he's coding, and typing, and stubbing things out
 And hacking up a feature customers are raving about
 
-
 He's deploying continuous
 He's deploying with speed
 She's all alone
@@ -58,3 +58,4 @@ He's fighting and typing and running his specs
 He's deploying continuous
 He's deploying for speed
 He's deploying continuous
+</pre>
