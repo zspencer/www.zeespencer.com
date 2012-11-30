@@ -38,7 +38,8 @@ body {
   padding: $base-font-size/2 0 $base-font-size/2 0;
 }
 
-#main {
+#main, #footer {
+  clear: both;
   @include centered-column;
   margin: $base-font-size auto;
 }
@@ -98,4 +99,14 @@ ol { list-style-type: cjk-ideographic }
   margin-right: $gutter-width;
   margin-bottom: $vertical-spacing;
   float: left;
+}
+
+#nav {
+  @include centered-column;
+  list-style-type: none;
+  text-align: center;
+  li {
+    float: left;
+    margin-right: $gutter-width;
+  }
 }
