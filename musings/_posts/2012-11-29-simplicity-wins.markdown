@@ -4,5 +4,8 @@ title: Simplicity Wins
 tags: [published]
 ---
 
-Occams Razor applies to your code.
+Occam's Razor applies to your business plan.
+Occam's Razor applies to your design.
+Occam's Razor applies to your code.
 
+Stop adding blades; dammit.
