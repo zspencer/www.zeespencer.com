@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: article
 title: Why I Don't Use Aliases
 tags: [published]
 ---

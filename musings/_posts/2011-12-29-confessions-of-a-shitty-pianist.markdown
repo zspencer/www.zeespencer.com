@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: article
 title: Confessions of a Shitty Pianist
 tags: [published]
 ---
