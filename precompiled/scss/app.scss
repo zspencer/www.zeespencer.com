@@ -39,8 +39,8 @@ body {
 }
 
 #main, #footer {
-  clear: both;
   @include centered-column;
+  clear: both;
   margin: $base-font-size auto;
 }
 
@@ -106,7 +106,7 @@ ol { list-style-type: cjk-ideographic }
   list-style-type: none;
   text-align: center;
   li {
-    float: left;
+    display: inline-block;
     margin-right: $gutter-width;
   }
 }
