@@ -1,6 +1,6 @@
 build:
 	compass compile -s compressed --force && jekyll
-deploy: build
+release: build
 	ruby script/deploy_assets.rb
 run:
 	foreman start
