@@ -1,15 +1,16 @@
 ---
 layout: article
-title: Building Networks of Empowerment
-tags: [draft, empowerment]
+title: Building Communities of Empowerment
+tags: [published, empowerment]
 ---
 
-Recently I sat in on a conversation between two people I respect.  One declared
+Recently I sat in on a conversation between two people I respect. One declared
 empowerment is an individuals choice. We choose how to respond to situations and
 we can choose to remove ourselves from unacceptable situations.
 
-The other stated empowerment requires us to have support from our community.  It
-needs structures in place so when we take a stand we're not ostracized.
+The other stated empowerment requires us to have support from our community. It
+needs structures in place so that negative situations are reduced and positive
+situations are increased
 
 Both of them are right.
 
@@ -23,14 +24,15 @@ That's where empowerment requires strucure. It requires support. It requires
 a community. It takes a lot of people to make the future a better place. It
 takes a lot of light to drive out shadows.
 
-Empowerment is not as simple as what you do for yourself or what is imposed upon you.
-It's a complex, nuanced thing. If we want to attract good people regardless of
-color, gender, or background we're going to need to learn how to empower
-ourselves and put structures in place to support each other.
+Empowerment is not as simple as what you do for yourself or what is imposed upon
+you. It's a complex, nuanced thing. If we want to attract good people
+regardless of color, gender, or background we're going to need to understand
+these nuances and balance between empowering ourselves and putting structures in
+place to support each other.
 
 I'm not saying this will be easy. It's hard to take the right amount of
 responsibility for the situations we're in. It takes constant practice to
 forgive and empathize when emotions run hot. It takes work to build communities
-that back each other up. It's hard to shape a culture of acceptance and support.
+that back each other up. It's hard to shape a culture of empathy and support.
 
 But damn, it's worth it.
