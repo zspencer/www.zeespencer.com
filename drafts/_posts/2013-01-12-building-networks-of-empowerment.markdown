@@ -3,20 +3,34 @@ layout: article
 title: Building Networks of Empowerment
 tags: [draft, empowerment]
 ---
-What is empowerment? For now, I'll define it as "taking steps towards the
-situations one wants to experience."
 
-Empowerment is best grasped in the context of time and difficulty. While I may
-not be able to avoid an unpleasant confrontation once it's already started, I can
-remove myself from it. It may be difficult to make large positive financial
-strides if I'm burdened with a large amount of debt and a struggling economy,
-but I can start to set the stage for financial security.
+Recently I sat in on a conversation between two people I hold in high esteem.
+One declared empowerment is an individuals choice. We choose how to respond to
+situations and we can choose to remove ourselves from unacceptable situations.
 
-Empowerment is not simply what you do for yourself or what is imposed upon you.
-It's a highly complex, nuanced thing. We need to understand these
-nuances, demonstrate an empowered life, and provide just enough structure to
-help others become more empowered.
+The other stated empowerment requires us to have support from our community.  It
+needs structures in place so when we take a stand we're not ostracized.
 
-I'm not saying this is easy. It's hard to take responsibility for our lives.
-It's hard to know when to stand up and fight and when to open up and embrace.
-It takes constant practice to forgive and empathize when emotions run hot.
+Both of them are right.
+
+In the moment, I can choose to remove myself from an unpleasant situation.
+In the future, I can choose to avoid groups that tend to put me into unpleasant
+situations. But empowerment isn't just retreat. It's about making a
+difference in the future. It's about setting the stage so you have a richer,
+fuller life.
+
+That's where empowerment requires strucure. It requires support. It requires
+a community. It takes a lot of people to make the future a better place. It
+takes a lot of light to drive out shadows.
+
+Empowerment is not as simple as what you do for yourself or what is imposed upon you.
+It's a complex, nuanced thing. If we want to attract good people regardless of
+color, gender, or background we're going to need to learn how to empower
+ourselves and put the right structures in place to support each other.
+
+I'm not saying this will be easy. It's hard to take responsibility for our
+lives.  It's hard to know when to stand up and fight. It takes constant practice
+to forgive and empathize when emotions run hot. It's hard to find people that
+will back you up. It's hard to craft a culture of acceptance and support.
+
+But it's worth it.
