@@ -1,7 +1,6 @@
 ---
-layout: article
 title: The Proud Ants
-category: articles
+layout: article
 tags: [published, parables]
 ---
 
