@@ -1,6 +1,6 @@
 source :rubygems
 
 gem 'jekyll'
+gem 'jekyll-s3'
 gem 'compass'
-gem 's3deployer'
 gem 'foreman'

@@ -3,23 +3,30 @@ GEM
   specs:
     albino (1.3.3)
       posix-spawn (>= 0.3.6)
-    aws-s3 (0.6.3)
-      builder
-      mime-types
-      xml-simple
-    builder (3.1.4)
+    aws-sdk (1.8.0)
+      httparty (~> 0.7)
+      json (~> 1.4)
+      nokogiri (>= 1.4.4)
+      uuidtools (~> 2.1)
     chunky_png (1.2.6)
     classifier (1.3.3)
       fast-stemmer (>= 1.0.0)
+    colored (1.2)
     compass (0.12.2)
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
       sass (~> 3.1)
+    configure-s3-website (1.1.1)
     directory_watcher (1.4.1)
+    erubis (2.7.0)
     fast-stemmer (1.0.1)
+    filey-diff (1.0.2)
     foreman (0.60.2)
       thor (>= 0.13.6)
     fssm (0.2.9)
+    httparty (0.10.1)
+      multi_json (~> 1.0)
+      multi_xml (>= 0.5.2)
     jekyll (0.11.2)
       albino (~> 1.3)
       classifier (~> 1.3)
@@ -27,18 +34,29 @@ GEM
       kramdown (~> 0.13)
       liquid (~> 2.3)
       maruku (~> 0.5)
+    jekyll-s3 (2.3.0)
+      aws-sdk (~> 1.8.0)
+      configure-s3-website (~> 1.1)
+      erubis (~> 2.7.0)
+      filey-diff (~> 1.0)
+      mime-types (= 1.19)
+      simple-cloudfront-invalidator (~> 1.0)
+    json (1.7.6)
     kramdown (0.14.0)
     liquid (2.4.1)
     maruku (0.6.1)
       syntax (>= 1.0.0)
     mime-types (1.19)
+    multi_json (1.5.0)
+    multi_xml (0.5.2)
+    nokogiri (1.5.6)
     posix-spawn (0.3.6)
-    s3deployer (0.0.7)
-      aws-s3
     sass (3.2.1)
+    simple-cloudfront-invalidator (1.0.0)
+      colored (= 1.2)
     syntax (1.0.0)
     thor (0.16.0)
-    xml-simple (1.1.2)
+    uuidtools (2.1.3)
 
 PLATFORMS
   ruby
@@ -47,4 +65,4 @@ DEPENDENCIES
   compass
   foreman
   jekyll
-  s3deployer
+  jekyll-s3
