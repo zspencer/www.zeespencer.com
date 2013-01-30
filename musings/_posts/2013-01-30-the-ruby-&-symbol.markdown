@@ -3,7 +3,8 @@ layout: default
 title: The Ruby & Operator
 tags: [ruby, tapas, blocks,published]
 ---
-& is a powerful ruby unary operator with two main use cases:
+& is a powerful ruby operator, when you use it as a unary operator it has two
+main use cases:
 
 The most common is to pass an object as a block to a method, like this:
 
