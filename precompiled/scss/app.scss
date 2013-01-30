@@ -79,12 +79,13 @@ a {
 
 pre, code {
   background-color: #000;
-  font-size: .8em;
+  font-size: .85em;
   font-family: Monaco, monospace
 }
 
 ul, p, ol {
-  margin-bottom: $vertical-spacing;
+  margin-bottom: $vertical-spacing / 2;
+  margin-top: $vertical-spacing / 2;
 }
 ul { list-style-type: disc }
 ol { list-style-type: cjk-ideographic }
