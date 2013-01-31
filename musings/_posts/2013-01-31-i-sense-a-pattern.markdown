@@ -1,5 +1,6 @@
 ---
-title: I'm seeing a pattern here
+layout: default
+title: I sense a pattern
 tags: [published, patterns]
 ---
 From curiosities, interest.
