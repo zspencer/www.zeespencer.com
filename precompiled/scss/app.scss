@@ -41,6 +41,7 @@ body {
 #main, #footer {
   @include centered-column;
   clear: both;
+  width: 500px;
   margin: $base-font-size auto;
 }
 
