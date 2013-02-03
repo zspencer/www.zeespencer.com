@@ -105,6 +105,8 @@ ol { list-style-type: cjk-ideographic }
   .content {
     font-size: $main-heading-font-size;
     float: right;
+    p, ul, ol { margin-top: 0; margin-bottom: $vertical-spacing; }
+    ul, ol { list-style: none; }
   }
 }
 
