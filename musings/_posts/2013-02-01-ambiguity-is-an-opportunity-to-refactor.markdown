@@ -35,6 +35,6 @@ ways](http://docs.python.org/2/library/stdtypes.html#set.intersection) to do set
 intersections: the `&` operator, and the `intersection` function.
 
 Since ruby does not always provide named variants for ambiguous symbols this
-provides us with an opportunity to refactor. When we encounter ambiguity , maybe
+provides us with an opportunity to refactor. When we encounter ambiguity, maybe
 it's time to extract a method to describes the operation more explicitely than
 `|` or `&`.
