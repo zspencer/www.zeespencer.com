@@ -110,7 +110,7 @@ Once that's done, set up your authorized\_keys for your local machine: `touch
 Now take the public key you created for the pair username, and add it to the
 end of your `~/.ssh/authorized_keys` file, like so:
 
-`command="tmux attach",no-port-forwarding,no-X11-forwarding,no-agent-forwardin <pair-users-ssh-public-key>`
+`command="tmux attach",no-port-forwarding,no-X11-forwarding,no-agent-forwarding <pair-users-ssh-public-key>`
 
 
 ### Test it out
