@@ -1,3 +1,4 @@
 ---
 permalink:   /:categories/:title
 exclude: [precompiled, Gemfile, Gemfile.lock, config.rb, /\.sketch/, spec]
+redirects: yes

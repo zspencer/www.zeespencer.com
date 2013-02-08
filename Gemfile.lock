@@ -1,3 +1,8 @@
+PATH
+  remote: ~/Projects/jekyll-redirects
+  specs:
+    jeykll-redirects (0.0.1)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -62,3 +67,4 @@ DEPENDENCIES
   foreman
   jekyll
   jekyll-s3
+  jeykll-redirects!
