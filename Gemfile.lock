@@ -1,8 +1,3 @@
-PATH
-  remote: ~/Projects/jekyll-redirects
-  specs:
-    jeykll-redirects (0.0.1)
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -33,6 +28,7 @@ GEM
       liquid (~> 2.3)
       maruku (~> 0.5)
       pygments.rb (~> 0.3.2)
+    jekyll-redirects (0.0.1)
     jekyll-s3 (2.3.0)
       aws-sdk (~> 1.8.0)
       configure-s3-website (~> 1.1)
@@ -66,5 +62,5 @@ DEPENDENCIES
   compass
   foreman
   jekyll
+  jekyll-redirects
   jekyll-s3
-  jeykll-redirects!
