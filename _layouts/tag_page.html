@@ -5,8 +5,7 @@ layout: default
 <ul>
 {% for post in page.posts %}
   {% unless post.tags contains 'draft' %}
-    <li><a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date |
-    date_to_string }} | Topics: {{ post | tags }})</li>
+    <li><a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_string }} | Topics: {{ post | tags }})</li>
   {% endunless %}
 {% endfor %}
 </ul>
