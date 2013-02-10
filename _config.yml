@@ -2,3 +2,6 @@
 permalink:   /:categories/:title
 exclude: [precompiled, Gemfile, Gemfile.lock, config.rb, /\.sketch/, spec]
 redirects: yes
+tag_page_layout: tag_page
+tag_page_dir: tags
+ignored_tags: drafts
