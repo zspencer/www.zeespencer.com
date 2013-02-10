@@ -1,7 +1,9 @@
 ---
 layout: article
-title: The Ruby & Operator
+title: The Ruby & Symbol
 tags: [code, ruby, tapas]
+redirects:
+  - /musings/the-ruby-&-symbol/
 ---
 & is a powerful ruby operator, when you use it as a unary operator it has two
 main use cases:
