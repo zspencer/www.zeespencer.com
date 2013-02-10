@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Ambiguity In Code Is an Opportunity for Refactoring
-togs: [drafts, ruby, tapas, interaciton-design]
+togs: [code, ruby, tapas, design]
 ---
 
 There's a common design principle that states "Design the system to prevent

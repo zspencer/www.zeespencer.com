@@ -1,7 +1,7 @@
 ---
-layout: article
 title: What Mom and Dad Need to Know About the Rails Security Exploit
-tags: [published, rails]
+layout: article
+tags: [ruby, code, rails, security]
 ---
 Dear Mom, Dad, Gramma, Brothers, Aunts and Uncles
 

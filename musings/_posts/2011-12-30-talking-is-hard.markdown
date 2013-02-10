@@ -1,7 +1,7 @@
 ---
-layout: article
 title: Talking is Hard
-tags: [published]
+layout: article
+tags: [mastery, poetry]
 ---
 I am an external thinker.
 

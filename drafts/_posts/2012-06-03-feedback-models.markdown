@@ -1,8 +1,7 @@
 ---
-layout: default
+layout: article
 title: A Few Thoughts on Feedback
-category: articles
-tags: [drafts]
+tags: [draft]
 ---
 Giving and receiving feedback is one of the important daily events that occur.
 However it can be difficult. Feedback is both social and deeply personal. It can

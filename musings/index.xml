@@ -18,7 +18,6 @@ redirects:
   </author>
 
   {% for post in site.categories.musings %}
-  {% if post.tags contains 'published' %}
   <entry>
     <id>http://zeespencer.com{{ post.id }}</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com{{ post.url }}"/>
@@ -30,7 +29,6 @@ redirects:
     </author>
     <content type="html">{{ post.content | xml_escape }}</content>
   </entry>
-  {% endif %}
   {% endfor %}
 
 </feed>

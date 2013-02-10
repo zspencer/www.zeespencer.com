@@ -1,8 +1,7 @@
 ---
-layout: default
+layout: article
 title: BDD for Badasses
-tags: [drafts]
-category: presentations
+tags: [draft]
 ---
 BDD?! That's crazy! Describing an application's behavior with executable
 specifications?! Using those specifications to drive your codes' design?!

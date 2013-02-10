@@ -1,7 +1,7 @@
 ---
-layout: article
 title: In Pursuit of Excellence
-tags: [published]
+layout: article
+tags: [mastery, empathy]
 ---
 
 Excellence is not only about the task at hand.

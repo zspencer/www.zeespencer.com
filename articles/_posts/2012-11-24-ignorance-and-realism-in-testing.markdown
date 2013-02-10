@@ -1,7 +1,7 @@
 ---
-layout: article
 title: Ignorance and Realism in Testing
-tags: [published, tdd, bdd, craftsmanship]
+layout: article
+tags: [code, craftsmanship]
 ---
 
 I was talking through some of my thoughts on applying visual and interaction

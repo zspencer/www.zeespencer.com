@@ -1,7 +1,6 @@
 ---
-layout: default
+layout: article
 tags: [draft]
-category: articles
 title: "Clean Code and Gravitation"
 description: "Clean Code is often confused with personal preference. Let's examine the math behind clean code."
 ---

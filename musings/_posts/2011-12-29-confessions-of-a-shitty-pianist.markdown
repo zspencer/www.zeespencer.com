@@ -1,7 +1,7 @@
 ---
-layout: article
 title: Confessions of a Shitty Pianist
-tags: [published]
+layout: article
+tags: [parables, mastery]
 ---
 Once I practiced daily, studied theory, explored composers and genres, and wrote
 my own music.

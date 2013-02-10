@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: article
 title: ATDD - Beyond the Cukes
 tags: [presentations, draft]
 ---

@@ -1,7 +1,7 @@
 ---
 layout: article
 title: How Do You Find Mentors Outside Your Core Skills?
-tags: [published, questions, personal-development]
+tags: [questions, mastery, mentors]
 ---
 
 To ring in the new year, I want to expose some of my ignorance.

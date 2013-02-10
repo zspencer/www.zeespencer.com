@@ -1,7 +1,7 @@
 ---
-layout: article
 title: Applying Heuristic Analysis to Test Code
-tags: [usability, code, draft]
+layout: article
+tags: [design, code, draft]
 ---
 
 When talking about code, we like to toss around words like "expressive" or

@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: article
 title: Project Management Isn't Rocket Surgery
-tags: [article, draft]
+tags: [draft]
 ---
 
 It's funny, really. We think project management is this incredibly complicated

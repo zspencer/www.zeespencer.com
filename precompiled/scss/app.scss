@@ -121,6 +121,11 @@ ol { list-style-type: cjk-ideographic }
   float: left;
 }
 
+#post-tags {
+  @include centered-column;
+  text-align: center;
+}
+
 #nav {
   @include centered-column;
   list-style-type: none;

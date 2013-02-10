@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: article
 title: More Methods of Mapping Systems
-tags: [article, draft]
+tags: [draft]
 ---
 
 Now that you have at least one method for mapping out a systems model, I'd like

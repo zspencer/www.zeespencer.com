@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: article
 title: The Ruby & Operator
-tags: [ruby, tapas, blocks,published]
+tags: [code, ruby, tapas]
 ---
 & is a powerful ruby operator, when you use it as a unary operator it has two
 main use cases:

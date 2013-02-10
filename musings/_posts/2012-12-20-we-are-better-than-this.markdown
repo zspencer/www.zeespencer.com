@@ -1,8 +1,7 @@
 ---
 layout: article
 title: We Are Better Than This
-category: musings
-tags: [published, sexism, community]
+tags: [empathy, community]
 ---
 
 Let me start this off by saying I'm furious. I'm furious at my gender, and my

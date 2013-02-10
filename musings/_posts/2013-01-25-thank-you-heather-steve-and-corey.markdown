@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: article
 title: Thank You Heather, Steve, and Corey
-tags: [published, programming, community]
+tags: [empathy, community]
 ---
 Recently I saw a few highly critical tweets go by my stream about a package
 written by Heather Arthur. They were by Corey Haines and Steve Klabnik, a couple

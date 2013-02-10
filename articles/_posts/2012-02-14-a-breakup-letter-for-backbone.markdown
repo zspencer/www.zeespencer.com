@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Breaking Up With Backbone
-tags: [published, js, backbone]
+tags: [js, code]
 ---
 
 Dear Backbone,

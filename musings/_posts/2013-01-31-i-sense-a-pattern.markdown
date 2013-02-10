@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: article
 title: I sense a pattern
-tags: [published, patterns]
+tags: [poetry, mastery]
 ---
 From curiosities, interest.
 

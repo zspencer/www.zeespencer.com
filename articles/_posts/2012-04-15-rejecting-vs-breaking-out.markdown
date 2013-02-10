@@ -1,7 +1,7 @@
 ---
 layout: article
 title: When to Reject and Accept Work
-tags: [published, project-managemetn,agile]
+tags: [design, business]
 ---
 
 No matter how well you define what should be done you will always wind

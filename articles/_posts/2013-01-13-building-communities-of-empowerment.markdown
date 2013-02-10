@@ -1,7 +1,7 @@
 ---
-layout: article
 title: Building Communities of Empowerment
-tags: [published, empowerment]
+layout: article
+tags: [empathy, community]
 ---
 
 Recently I sat in on a conversation between two people I respect. One declared

@@ -1,7 +1,7 @@
 ---
-layout: article
 title: Finding Flow in Practice
-tags: [featured, published, practice, design]
+layout: article
+tags: [mastery, design]
 ---
 
 I spent 5 hours practicing visual design.

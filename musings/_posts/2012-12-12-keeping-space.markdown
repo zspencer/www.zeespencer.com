@@ -1,7 +1,7 @@
 ---
-layout: article
 title: Keeping Space
-tags: [published]
+layout: article
+tags: [mastery, empathy]
 ---
 
 While at Devbootcamp last week I was introduced to a new phrase by an

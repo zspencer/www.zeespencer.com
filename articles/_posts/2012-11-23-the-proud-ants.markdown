@@ -1,7 +1,7 @@
 ---
 title: The Proud Ants
 layout: article
-tags: [published, parables]
+tags: [parables, community, empathy]
 ---
 
 Once upon a time there was an ant colony. It wasn't a very big colony, but it
