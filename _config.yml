@@ -1,6 +1,6 @@
 ---
 permalink:   /:categories/:title
-exclude: [precompiled, Gemfile, Gemfile.lock, config.rb, /\.sketch/, spec]
+exclude: [Gemfile, Gemfile.lock, config.rb]
 redirects: yes
 tag_page_layout: tag_page
 tag_page_dir: tags
