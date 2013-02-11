@@ -1,6 +1,6 @@
 http_path = "/"
 
-sass_dir = "precompiled/scss"
+sass_dir = "_precompiled/scss"
 
 css_dir = "assets/stylesheets"
 images_dir = "assets/images"
