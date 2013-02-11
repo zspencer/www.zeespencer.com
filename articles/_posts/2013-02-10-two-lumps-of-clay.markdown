@@ -1,7 +1,7 @@
 ---
 title: Two Lumps of Clay
 layout: article
-tags: [draft, parables, empathy]
+tags: [parables, empathy]
 ---
 Two lumps of clay were bought by a potter and set on her windowsill to
 soften in the sun. The first was terrified of being prodded, poked, and shaped.
