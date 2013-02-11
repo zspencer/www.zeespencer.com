@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Book Review of Saul Kaplan's Business Model Innovation Factory
+title: Saul Kaplan's Business Model Innovation Factory
 tags: [business, book-review]
 ---
 TL/DR: BMIF is a thought provoking look at what a business model is and how they
