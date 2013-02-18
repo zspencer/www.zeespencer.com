@@ -29,7 +29,6 @@ Ah! Much better! Because this function always returns an object of the same type
 it can be used without checking the value! The astute reader will spot this as
 an example of the [Null Object Pattern](http://c2.com/cgi/wiki?NullObject)
 
-
 In spite of it's lack of suitability as a replacement for a reasonable default
 value, I'm a fan of `nil`. I especially like it's use as a [null
 terminator](http://en.wikipedia.org/wiki/Null_character):
@@ -49,9 +48,10 @@ terminator](http://en.wikipedia.org/wiki/Null_character):
 
 Here we're relying on the side effect that a `nil` value is also falsey. I'm
 less edgey about this because this functions use case is an iterator, instead of
-an accessor; but it's still a little iffy. However, if you return an empty
-string instead of a falsey value it requires an additional method call to use as
-an iterator:
+an accessor; but it's still a little iffy.
+
+However, if you return an empty string instead of a falsey value it requires an
+additional method call to use as an iterator:
 
     def uniterable_fetch_val(index)
       data = "1234567890"
