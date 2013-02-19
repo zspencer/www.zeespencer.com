@@ -8,7 +8,7 @@ Last year was fantastic. I started my own business, helped three startups get
 off the ground, learned a ton about working with distributed teams, and fell in
 love.
 
-This year is even more exciting! I just signed a 9 month contract with at
+This year is even more exciting! I just signed a 9 month contract with
 [DevBootCamp](http://devbootcamp) to teach for their San Francisco camp. I get
 to teach hundreds of people as they begin their programming journey; talk about
 fun!
