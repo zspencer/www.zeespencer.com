@@ -6,7 +6,6 @@ redirects:
   - /drafts.html
 ---
 
-{% for post in site.tags.draft %}
+{% for post in site.categories.drafts %}
 ### [{{ post.title }}]({{ post.url }})
-{{ post.description }}
 {% endfor %}

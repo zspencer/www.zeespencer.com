@@ -1,0 +1,34 @@
+---
+title: Onward
+layout: article
+tags: [community,mastery]
+---
+
+Last year was fantastic. I started my own business, helped three startups get
+off the ground, learned a ton about working with distributed teams, and fell in
+love.
+
+This year is even more exciting! I just signed a 9 month contract with at
+[DevBootCamp](http://devbootcamp) to teach for their San Francisco camp. I get
+to teach hundreds of people as they begin their programming journey; talk about
+fun!
+
+While I was leary of boot-camp style developer training DevBootCamp won me over.
+Not only are they teaching practical programming skills they're also teaching:
+
+1. How to continue learning
+2. How to solve problems
+3. How to work as a team
+
+DevBootCamp doesn't expect graduates to launch a startup or be a rails wizard at
+the end of their program. They make three promises:
+
+3. You'll know yourself enough to keep growing.
+2. You'll learn enough code to [sweep the floor](http://my.safaribooksonline.com/book/career-development/9780596806842/accurate-self-assessment/sweep_the_floor).
+1. You'll grow enough of a makers mindset to overcome software problems.
+
+That's what makes a great beginner developer.
+
+Not Rails. Not Node. Not Django. Not Spring.
+
+Initiative, self-knowledge, humility, and enough experience to be useful.
