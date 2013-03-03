@@ -1,4 +1,5 @@
 @import "_base";
+@import "_pygments";
 @import "compass/reset";
 
 // -------------------------------------------------- 
@@ -78,8 +79,11 @@ a {
 }
 
 
-pre, code {
+p pre, p code {
   background-color: $secondary-color;
+}
+
+code, pre {
   font-size: .85em;
   font-family: Monaco, monospace
 }
