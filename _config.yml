@@ -5,3 +5,6 @@ redirects: yes
 tag_page_layout: tag_page
 tag_page_dir: tags
 ignored_tags: [draft, things_i_do]
+asset_url:
+  - production: http://assets.zeespencer.com/assets
+  - development: /assets

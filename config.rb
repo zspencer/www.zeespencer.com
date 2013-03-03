@@ -1,4 +1,4 @@
-http_path = "/"
+http_path = (environment == :production) ? "http://media.zeespencer.com/" : "/"
 
 sass_dir = "_precompiled/scss"
 
