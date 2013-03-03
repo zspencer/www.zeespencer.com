@@ -1,5 +1,5 @@
 ---
-title: A caveat when using Cloudfront with Jekyll
+title: A Caveat When Hosting a Static Site on CloudFront
 tags: [ops, jekyll]
 layout: article
 ---
@@ -11,11 +11,12 @@ Cloudflare does not translate `/foo` to `/foo/index.html`, which makes perfect
 sense for performance; but causes problems if you depend on the server to
 follow that lookup pattern.
 
-To get around this I use S3 for `zeespencer.com` and Cloudfront for
+To get around this I use S3 for `zeespencer.com` and CloudFront for
 `assets.zeespencer.com`. Below are some liquid filters and config options that
 allow me to keep assets local while writing and host them on a CDN when in
 production.
 
+Ruby source:
 {% highlight ruby %}
 
 module Jekyll
@@ -39,3 +40,13 @@ module Jekyll
 end
 
 {% endhighlight %}
+
+And the config:
+
+{% highlight yaml %}
+asset\_url:
+  - production: http://assets.zeespencer.com/assets
+  - development: /assets
+{% endhighlight %}
+
+Look for this in gem form sometime soon.
