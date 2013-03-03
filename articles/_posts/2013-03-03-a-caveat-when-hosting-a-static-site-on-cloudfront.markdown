@@ -44,9 +44,9 @@ end
 And the config:
 
 {% highlight yaml %}
-asset\_url:
-  - production: http://assets.zeespencer.com/assets
-  - development: /assets
+    asset_url:
+      - production: http://assets.zeespencer.com/assets
+      - development: /assets
 {% endhighlight %}
 
 Look for this in gem form sometime soon.
