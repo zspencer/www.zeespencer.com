@@ -3,28 +3,28 @@ title: Gertrude the Giraffe
 layout: default
 tags: [makermenagerie]
 ---
-I have a small menagerie of pets I take with me wherever I go. One whose
-accompanied me since I was a child is Gertrude the Giraffe. Gertrude has a
-beautiful neck with spots which spell four words: _Guess, Google, Grab, Go_.
+I have a small menagerie I take wherever I go. One who has accompanied me since
+I was a child is Gertrude. Gertrude is a giraffe with a long, beautiful neck
+with spots which spell four words: _Guess, Google, Grab, Go_.
 
 When I get stuck Gertrude reaches up with her long neck and plucks a leaf out of
 a Guessandtrythis tree. She drops it in front of me and prods me until I pick it
 up. With each guess I gather information to help us make another, better guess.
 
-Gertrude is quite astute. If guessing isn't leading us anywhere, she nudges the
-big red _Google It!_ button. We then guess how to get helpful information from
-the Great Google.
+Gertrude is nobodies fool. If guessing isn't getting us anywhere, she nudges the
+big red _Google It!_ button. The Great Google opens up and we glean information
+from her pages.
 
-If she senses Google doesn't have the wisdom we seek Gertrude will reach her
-elegant neck out of my office, grab a colleague with her teeth, and drag them to
-my desk. Once they get recover from their shock they provide all kinds of help
-in solving my problem.
+If Gertrude senses Google doesn't have the wisdom we seek she reaches her long,
+elegant neck out of my office, grabs a colleague with her teeth, and drags them
+to my desk. Once they recover from their shock they share opinions, expertise,
+and experiences which illuminate nooks and crannies that I never knew existed!
 
-Gertrude is far more empathetic than I, and can sense when I'm too panicked to
-move forward. She'll grab me from my chair and shove me out the door for a walk.
-Each step takes me further and further from the problem at hand, until when I
-finally make it back it is as if it's a brand new problem! The assumptions that
-were clouding my view fall away and I see exactly how to move forward.
+Gertrude is far more empathetic than I. She senses when I'm too panicked to
+learn and will grab me from my chair and shove me out the door for a walk.  Each
+step takes me further and further from my frustration until when I finally make
+it back it is a brand new problem! The assumptions that were clouding my vision
+fall away and I see how to move forward.
 
-I'm glad Gertrude is there to remind me to guess, google, grab others, and go
-for walks. I don't know where I'd be without her!
+I'm glad Gertrude reminds me to guess and try, google, grab others, and go for
+walks. I don't know where I'd be without her!
