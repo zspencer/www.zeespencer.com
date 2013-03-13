@@ -18,7 +18,7 @@ from her pages.
 If Gertrude senses Google doesn't have the wisdom we seek she reaches her long,
 elegant neck out of my office, grabs a colleague with her teeth, and drags them
 to my desk. Once they recover from their shock they share opinions, expertise,
-and experiences which illuminate nooks and crannies that I never knew existed!
+and experiences which illuminate nooks and crannies I never knew existed!
 
 Gertrude is far more empathetic than I. She senses when I'm too panicked to
 learn and will grab me from my chair and shove me out the door for a walk.  Each
