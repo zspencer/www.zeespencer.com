@@ -4,9 +4,11 @@ title: Choosing Kindness over Condemnation
 tags: [love, poetry]
 ---
 
-It's easy when hurt to lash out. To crush those who caused me pain.
+It's easy when hurt to lash out.<br />
+To crush those who caused me pain.
 
-It's hard when hurt to reach out. To comfort those who caused me pain.
+It's hard when hurt to reach out.<br />
+To comfort those who caused me pain.
 
 When I choose to be kind, I am forgotten.
 
