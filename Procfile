@@ -1,2 +1,2 @@
-web: env JEKYLL_ENV=development bundle exec jekyll --server 5555 --auto
+web: bundle exec jekyll --server --auto
 compass: bundle exec compass watch -s compressed
