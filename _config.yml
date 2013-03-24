@@ -7,5 +7,5 @@ tag_page_dir: tags
 ignored_tags: [draft, things_i_do]
 pygments: true
 asset_url:
-  - production: http://assets.zeespencer.com/assets
-  - development: /assets
+  - hosted: http://assets.zeespencer.com/assets
+  - local: /assets
