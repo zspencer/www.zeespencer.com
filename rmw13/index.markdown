@@ -3,14 +3,31 @@ title: Ruby Midwest 2013
 layout: default
 ---
 
-HEY YA'LL! Sorry you had to suffer through my talk.
+Thanks for listening to Computer, Program Thyself.
 
-If you want to leave feedback, I'd appreciate it. Here's my profile on
-[SpeakerRate](http://speakerrate.com/talks/21341-computer-program-thyself)
+If you have correcting or reinforcing feedback, I'd love to hear it! Post a
+comment on the talk's [SpeakerRate](http://speakerrate.com/talks/21341-computer-program-thyself)
+page or send [a tweet](http://twitter.com/zspencer)
 
-Oh, and here's a [PDF of the slides]({{ 'presentations/computer-program-thyself.pdf' | asset_path }}).
 
-Here are the take-aways for the next revision of this talk:
+If you'd like to download a copy here's a
+[PDF of the slides]({{ 'presentations/computer-program-thyself.pdf' | asset_path }}).
+
+### My Takeaways
+
+#### Drawing the presentation was interesting/fun
+I got a lot of feedback about how much people enjoyed the drawing and presenting.
+Especially the sound effects. I'll see if I can keep that in future talks. I had
+a lot of fun preparing it and giving it; but I was super nervous since I'd never
+done it before.
+
+#### Energy was contagious/engaging, but slow down!
+I spoke quickly and had a lot of energy. I got a nice set of reinforcing
+feedback about how it was good to start the day with that kind of energy.
+
+I also got a bit of correcting feedback that my speed was a bit too frenetic to
+follow.  Both are legit.
+
 
 #### Provide Useful Applications of Generative Programming
 I spoke a lot in hypotheticals and analogy. Providing concrete examples of how
