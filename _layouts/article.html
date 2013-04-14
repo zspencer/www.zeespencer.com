@@ -3,6 +3,7 @@ layout: base
 ---
 {{ content }}
 <div id="post-tags">
+  <hr />
   <p>Like this? More posts about:
   {% for tag in page.tags %}
     <a href="{{ tag | tag_url }}">{{tag}}</a> 
