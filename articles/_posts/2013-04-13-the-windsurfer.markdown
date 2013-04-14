@@ -1,7 +1,7 @@
 ---
 title: The Windsurfer
 layout: article
-tags: [poetry, opportunity]
+tags: [poetry, parables, opportunity]
 ---
 
 She chrouches, alert and ready.<br />
