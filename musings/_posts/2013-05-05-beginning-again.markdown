@@ -6,7 +6,7 @@ tags: [mastery, poetry]
 
 Professions are complex. From outside it looks solid.
 
-Entrepenuer. Lawyer. Designer. Accountant. Developer.
+Entrepreneur. Lawyer. Designer. Accountant. Developer.
 
 Once we dig in we discover its diversity. Subtle differences become stark
 contrasts.
