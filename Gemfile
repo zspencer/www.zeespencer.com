@@ -8,3 +8,4 @@ gem 'jekyll-tagging'
 
 gem 'compass'
 gem 'foreman'
+gem 'rerun'
