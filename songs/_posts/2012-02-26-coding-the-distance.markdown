@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Coding the Distance
-tags: [parody]
+tags: [parody, songs]
 ---
 
 Reluctantly crouched at the command line<br />
