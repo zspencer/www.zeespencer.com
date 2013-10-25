@@ -5,7 +5,7 @@ gem 'jekyll-cdn'
 gem 'jekyll-redirects'
 gem 'jekyll-s3'
 gem 'jekyll-tagging'
-
+gem 'kramdown'
 gem 'compass'
 gem 'foreman'
 gem 'rerun'
