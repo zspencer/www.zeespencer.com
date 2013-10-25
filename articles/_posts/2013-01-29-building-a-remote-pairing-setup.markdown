@@ -52,7 +52,7 @@ provides an [excellent tutorial on creating ssh
 keys](https://help.github.com/articles/generating-ssh-keys) if you don't think
 you have a public key.
 
-From now on, typing `ssh <your-user>@<your-server>` will use key-pair
+From now on, typing `ssh your-user@your-server` will use key-pair
 encryption to verify your identity; which is far more secure than meager
 passwords. For an added security boost you may want to edit your
 `/etc/ssh/sshd_config` and change `PasswordAuthentication` to `no` *after
@@ -77,7 +77,7 @@ The `no-(agent|port|X11)-forwarding` directives are another security
 precaution. Now we can add anyone we want as a partner with very little fear.
 
 Go ahead and add your public key as a partner for now, then from your local
-machine type `ssh pair@<your-server>`. This should give you a message like
+machine type `ssh pair@your-server`. This should give you a message like
 `ssh: connect to host localhost port 1337: Connection refused`
 
 This is good! It means that you successfully connected as `pair` on your server
@@ -116,9 +116,9 @@ end of your `~/.ssh/authorized_keys` file, like so:
 ### Test it out
 
 From your local machine open a new terminal and type `ssh -R1337:localhost:22
-<your-user>@<your-server>` . This sets up the network forwarding stuff. Yay!
+your-user@your-server` . This sets up the network forwarding stuff. Yay!
 
-From a second terminal, type in `ssh pair@<your-server>`. This should give you
+From a second terminal, type in `ssh pair@your-server`. This should give you
 at least these two lines:  `no sessions` and `Connection to localhost closed`.
 
 The `no sessions` line is letting us know tmux doesn't have anything to attach
@@ -126,7 +126,7 @@ to. the `Connection to localhost closed` is letting us know that we were kicked
 off the system. As we should be!
 
 Now, on *another* terminal launch `tmux`, then from the second terminal try
-`ssh pair@<your-server>` again. If all goes well, you should see the contents
+`ssh pair@your-server` again. If all goes well, you should see the contents
 of the third terminal in the second terminal, and it should redraw pretty fast.
 
 ### Further enhancements
