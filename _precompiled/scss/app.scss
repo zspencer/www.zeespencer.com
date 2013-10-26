@@ -119,6 +119,10 @@ ul, p, ol {
 ul { list-style-type: disc }
 ol { list-style-type: cjk-ideographic }
 
+li {
+    margin-left:  -1em;
+    padding-left: 1em;
+}
 blockquote {
   font-style: italic;
   margin: 0 $base-font-size
