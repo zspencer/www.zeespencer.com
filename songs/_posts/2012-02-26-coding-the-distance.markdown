@@ -26,7 +26,7 @@ He's deploying with speed<br />
 She's all alone<br />
 In her time of need<br />
 
-Because he's hacking and cracking and moving to the next<br />
+Because he's hacking and cracking and refactoring obsessed<br />
 He's fighting and typing and running his specs<br />
 He's deploying continuous<br />
 
@@ -37,7 +37,7 @@ Assail him, impale him with monster-truck force.<br />
 In his mind, he's still coding, still making the grade<br />
 She's hoping in time that her memories will fade.<br />
 
-Because he's hacking and cracking and moving to the next<br /><br />
+Because he's hacking and cracking and refactoring obsessed<br /><br />
 He's fighting and typing and running his specs<br />
 the sun has gone down and the moon come up<br />
 and long ago he's emptied his coffee cup<br />
