@@ -27,9 +27,7 @@ body {
 }
 
 @mixin centered-column {
-  min-width: $min-width;
-  max-width: $max-width;
-  width: 90%;
+  width: 500px;
   text-align: left;
 }
 
@@ -42,7 +40,6 @@ body {
 #main, #footer {
   @include centered-column;
   clear: both;
-  width: 500px;
   margin: $base-font-size auto;
 }
 
@@ -95,6 +92,11 @@ ul, p, ol {
 ul { list-style-type: disc }
 ol { list-style-type: cjk-ideographic }
 
+blockquote {
+  font-style: italic;
+  margin: 0 $base-font-size
+
+}
 // -----------------------------------------
 //    Home
 // -----------------------------------------
