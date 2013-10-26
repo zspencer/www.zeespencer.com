@@ -4,20 +4,18 @@ $title-heading-font-size: $base-font-size * 1.7;
 $main-heading-font-size: $base-font-size * 1.3;
 $sub-heading-font-size: $base-font-size * 1.1;
 $indentation-level: $base-font-size/2;
-$main-width: 90%;
-$min-width: 500px;
-$max-width: 974px;
+$main-width: 500px;
 
 $column-width: 45%;
 $gutter-width: 10%;
 
 $vertical-spacing: $line-height / 2;
 
-$primary-color: darken(#0971B2, 30%);
-$secondary-color: darken(#B21212, 10%);
+$primary-color: #0F3FB8;
+$secondary-color: #030B20;
 $tertiary-color: #FFFC20;
 
-$font-color: #FAFAFF;
+$font-color: #F4F4FF;
 
-$visited-link-color: darken($tertiary-color, 20%);
-$hover-link-color: lighten($tertiary-color, 20%);
+$visited-link-color: darken($tertiary-color, 15%);
+$hover-link-color: lighten($tertiary-color, 10%);

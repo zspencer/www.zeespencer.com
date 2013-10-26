@@ -1,6 +1,6 @@
 ---
 title: Gertrude the Giraffe
-layout: default
+layout: article
 tags: [makermenagerie]
 ---
 I have a small menagerie I take wherever I go. One who has accompanied me since

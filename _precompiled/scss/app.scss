@@ -5,16 +5,30 @@
 // -------------------------------------------------- 
 //    Table of Contents
 // --------------------------------------------------
+// :: Mixins
 // :: Shared Styles
 // :: Home
 // :: Musings
+
+
+
+// -----------------------------------------
+//    Mixins
+// -----------------------------------------
+
+@mixin centered-column {
+  width: $main-width;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto
+}
 
 // -----------------------------------------
 //    Shared Styles
 // -----------------------------------------
 
 body {
-  background: $primary-color;
+  background: darken($primary-color, 2%);
   color: $font-color;
   font-family: helvetica, arial, sans-serif;
   font-size: $base-font-size;
@@ -26,21 +40,34 @@ body {
   text-align: center;
 }
 
-@mixin centered-column {
-  width: 500px;
-  text-align: left;
-}
 
 #header h1 {
   @include centered-column;
-  margin: 0 auto;
   padding: $base-font-size/2 0 $base-font-size/2 0;
 }
 
-#main, #footer {
+#footer {
+  background: $secondary-color;
+  clear: both;
+
+  h3 {
+    text-align: center;
+    padding: $base-font-size/2 0 $base-font-size/2 0;
+  }
+
+  ul {
+    @include centered-column;
+    margin: 0 auto;
+    padding: $base-font-size/2 0 $base-font-size/2 0;
+  }
+}
+
+
+#main {
+  background-color: $primary-color;
   @include centered-column;
   clear: both;
-  margin: $base-font-size auto;
+  padding: 1em;
 }
 
 h1 {
@@ -101,7 +128,7 @@ blockquote {
 //    Home
 // -----------------------------------------
 .thing-i-do {
-  clear: both;
+  display: inline-block;
 
   h2, .content { width: $column_width }
   h2 {
