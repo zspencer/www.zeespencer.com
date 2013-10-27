@@ -154,10 +154,10 @@ blockquote {
 // -----------------------------------------
 .musing, .article, .question {
   font-size: $base-font-size / 2;
-  width: $column-width - 5%;
+  width: $column-width - 6%;
   margin-right: $gutter-width;
   margin-bottom: $vertical-spacing;
-  float: left;
+  display: inline-block;
 }
 
 #post-tags {
