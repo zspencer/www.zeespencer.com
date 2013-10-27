@@ -43,7 +43,7 @@ body {
 
 #header h1 {
   @include centered-column;
-  padding: $base-font-size/2 1em $base-font-size/2 1em;
+  padding: $base-font-size/2 1em 0 1em;
   text-align: center;
 }
 
@@ -169,6 +169,8 @@ blockquote {
   @include centered-column;
   list-style-type: none;
   text-align: center;
+  margin-bottom: 0;
+  padding-bottom: $vertical-spacing;
   li {
     display: inline-block;
     margin-right: $gutter-width;
