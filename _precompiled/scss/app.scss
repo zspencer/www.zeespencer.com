@@ -43,7 +43,6 @@ body {
 
 #header h1 {
   @include centered-column;
-  background: lighten($secondary-color, 5%);
   padding: $base-font-size/2 1em $base-font-size/2 1em;
   text-align: center;
 }
