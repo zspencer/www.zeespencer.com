@@ -2,6 +2,8 @@
 layout: base
 title: Availability
 ---
+If you are looking for a developer/practice coach, I'd love to chat. My email is
+[hello@zeespencer.com](mailto:hello+availability@zeespencer.com)
 
 ## Available Services
 * Developer Mentoring
