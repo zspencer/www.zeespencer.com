@@ -2,7 +2,8 @@
 layout: base
 title: Availability
 ---
-If you are looking for a developer/practice coach, I'd love to chat. My email is
+If you are looking for a developer or technical practices coach, I'd love to
+chat. My email is
 [hello@zeespencer.com](mailto:hello+availability@zeespencer.com)
 
 ## Available Services
@@ -13,6 +14,7 @@ If you are looking for a developer/practice coach, I'd love to chat. My email is
 ## Expertise
 * Refactoring
 * Test Driven Development
+* Adaptable Code
 * Service Oriented Architectures
 * Ruby
 * Javascript
