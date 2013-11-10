@@ -37,7 +37,7 @@ expectations, obligations, habits, or similar
 ## Conclusion
 
 Space and structure are related. The only way to change space is to adjust
-structure. Given the impact stuctural changes have, they should be intentional
+structure. Given the impact structural changes have, they should be intentional
 and thoughtful.
 
 Some questions to consider when changing structure:
