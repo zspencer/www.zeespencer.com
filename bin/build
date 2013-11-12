@@ -1,2 +1,2 @@
 #!/bin/bash
-compass compile -s compressed -e production --force && JEKYLL_ENV=hosted jekyll build
+bin/compass compile -s compressed -e production --force && JEKYLL_ENV=hosted bin/jekyll build

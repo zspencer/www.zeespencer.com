@@ -1,4 +1,4 @@
 #!/bin/bash
 
 bin/build
-s3_website push
+bin/s3_website push
