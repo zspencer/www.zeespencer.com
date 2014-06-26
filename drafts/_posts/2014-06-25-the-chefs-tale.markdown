@@ -1,5 +1,5 @@
 ---
-title: The Chefs Tale
+title: The Chef's Tale
 layout: article
 tags: [parables, mastery]
 ---
