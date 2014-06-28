@@ -8,7 +8,7 @@ tags: [learning, software, craftsmanship]
 Junior developers make complex solutions for simple problems.
 Average developers make simple solutions for simple problems and complex
 solutions for complex problems.
-Senior developers make simple solutions to complex problems.<br /><br />
+Senior developers make simple solutions for complex problems.<br /><br />
 
 
 -- Unknown</blockquote>
