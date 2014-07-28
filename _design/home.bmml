@@ -5,83 +5,83 @@
         <text>Zee.%20Software%20Developer.%20Educator%0Ahttp%3A//zeespencer.com/</text>
       </controlProperties>
     </control>
-    <control controlID="2" controlTypeID="com.balsamiq.mockups::Paragraph" x="139" y="176" w="452" h="36" measuredW="275" measuredH="80" zOrder="1" locked="false" isInGroup="-1">
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Paragraph" x="139" y="176" w="452" h="36" measuredW="275" measuredH="80" zOrder="6" locked="false" isInGroup="-1">
       <controlProperties>
         <size>28</size>
         <text>Zee.%20Software%20Developer.%20Educator.</text>
       </controlProperties>
     </control>
-    <control controlID="6" controlTypeID="com.balsamiq.mockups::Canvas" x="128" y="789" w="478" h="95" measuredW="100" measuredH="70" zOrder="2" locked="false" isInGroup="-1"/>
-    <control controlID="7" controlTypeID="com.balsamiq.mockups::Paragraph" x="143" y="842" w="448" h="37" measuredW="275" measuredH="80" zOrder="3" locked="false" isInGroup="-1">
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Canvas" x="128" y="789" w="478" h="95" measuredW="100" measuredH="70" zOrder="7" locked="false" isInGroup="-1"/>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Paragraph" x="143" y="842" w="448" h="37" measuredW="275" measuredH="80" zOrder="8" locked="false" isInGroup="-1">
       <controlProperties>
         <size>13</size>
         <text>Copyright%202004%20-%202014%20Zee%20Spencer.%20Licensed%20under%20Creative%20Commons%20Attribution%20Share-Alike%20Non-Commercial.%20Some%20Rights%20Reserved.</text>
       </controlProperties>
     </control>
-    <control controlID="9" controlTypeID="com.balsamiq.mockups::LinkBar" x="143" y="806" w="-1" h="-1" measuredW="184" measuredH="24" zOrder="4" locked="false" isInGroup="-1">
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::LinkBar" x="143" y="806" w="-1" h="-1" measuredW="184" measuredH="24" zOrder="9" locked="false" isInGroup="-1">
       <controlProperties>
         <size>18</size>
         <text>Explore%2C%20Contact%20Zee</text>
       </controlProperties>
     </control>
-    <control controlID="10" controlTypeID="com.balsamiq.mockups::Icon" x="511" y="802" w="-1" h="-1" measuredW="32" measuredH="32" zOrder="5" locked="false" isInGroup="-1">
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Icon" x="511" y="802" w="-1" h="-1" measuredW="32" measuredH="32" zOrder="10" locked="false" isInGroup="-1">
       <controlProperties>
         <icon>TwitterIcon%7Cmedium</icon>
       </controlProperties>
     </control>
-    <control controlID="11" controlTypeID="com.balsamiq.mockups::Icon" x="549" y="802" w="-1" h="-1" measuredW="32" measuredH="32" zOrder="6" locked="false" isInGroup="-1">
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Icon" x="549" y="802" w="-1" h="-1" measuredW="32" measuredH="32" zOrder="11" locked="false" isInGroup="-1">
       <controlProperties>
         <icon>RSSIcon%7Cmedium</icon>
       </controlProperties>
     </control>
-    <control controlID="12" controlTypeID="com.balsamiq.mockups::Icon" x="479" y="802" w="-1" h="-1" measuredW="32" measuredH="32" zOrder="7" locked="false" isInGroup="-1">
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Icon" x="479" y="802" w="-1" h="-1" measuredW="32" measuredH="32" zOrder="12" locked="false" isInGroup="-1">
       <controlProperties>
         <icon>ContactIcon%7Cmedium</icon>
       </controlProperties>
     </control>
-    <control controlID="13" controlTypeID="com.balsamiq.mockups::Paragraph" x="139" y="227" w="228" h="31" measuredW="275" measuredH="80" zOrder="8" locked="false" isInGroup="-1">
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::Paragraph" x="139" y="227" w="228" h="31" measuredW="275" measuredH="80" zOrder="13" locked="false" isInGroup="-1">
       <controlProperties>
         <size>24</size>
         <text>Hot%20Off%20the%20Presses</text>
       </controlProperties>
     </control>
-    <control controlID="14" controlTypeID="com.balsamiq.mockups::Paragraph" x="139" y="263" w="209" h="43" measuredW="275" measuredH="80" zOrder="9" locked="false" isInGroup="-1">
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::Paragraph" x="139" y="263" w="209" h="43" measuredW="275" measuredH="80" zOrder="14" locked="false" isInGroup="-1">
       <controlProperties>
         <size>16</size>
         <text>%5BEffectively%20Phone%20Screen%20Jr.%20Developers%5D</text>
       </controlProperties>
     </control>
-    <control controlID="16" controlTypeID="com.balsamiq.mockups::Paragraph" x="382" y="263" w="209" h="43" measuredW="275" measuredH="80" zOrder="10" locked="false" isInGroup="-1">
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::Paragraph" x="382" y="263" w="209" h="43" measuredW="275" measuredH="80" zOrder="15" locked="false" isInGroup="-1">
       <controlProperties>
         <size>16</size>
         <text>%5BUnderstanding%20Ruby%20Blocks%5D</text>
       </controlProperties>
     </control>
-    <control controlID="17" controlTypeID="com.balsamiq.mockups::Paragraph" x="139" y="368" w="228" h="31" measuredW="275" measuredH="80" zOrder="11" locked="false" isInGroup="-1">
+    <control controlID="17" controlTypeID="com.balsamiq.mockups::Paragraph" x="139" y="368" w="228" h="31" measuredW="275" measuredH="80" zOrder="16" locked="false" isInGroup="-1">
       <controlProperties>
         <size>24</size>
         <text>Testimonials</text>
       </controlProperties>
     </control>
-    <control controlID="18" controlTypeID="com.balsamiq.mockups::Paragraph" x="139" y="317" w="209" h="43" measuredW="275" measuredH="80" zOrder="12" locked="false" isInGroup="-1">
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::Paragraph" x="139" y="317" w="209" h="43" measuredW="275" measuredH="80" zOrder="17" locked="false" isInGroup="-1">
       <controlProperties>
         <size>16</size>
         <text>%5BUpcoming%20Javascript%20Testing%20Workshop%21%5D</text>
       </controlProperties>
     </control>
-    <control controlID="19" controlTypeID="com.balsamiq.mockups::Paragraph" x="382" y="317" w="209" h="43" measuredW="275" measuredH="80" zOrder="13" locked="false" isInGroup="-1">
+    <control controlID="19" controlTypeID="com.balsamiq.mockups::Paragraph" x="382" y="317" w="209" h="43" measuredW="275" measuredH="80" zOrder="18" locked="false" isInGroup="-1">
       <controlProperties>
         <size>16</size>
         <text>%5BYou%20Are%20Not%20A%20UX%20Designer%5D</text>
       </controlProperties>
     </control>
-    <control controlID="20" controlTypeID="com.balsamiq.mockups::Paragraph" x="150" y="399" w="295" h="60" measuredW="275" measuredH="80" zOrder="14" locked="false" isInGroup="-1">
+    <control controlID="20" controlTypeID="com.balsamiq.mockups::Paragraph" x="150" y="399" w="295" h="60" measuredW="275" measuredH="80" zOrder="19" locked="false" isInGroup="-1">
       <controlProperties>
         <size>16</size>
         <text>%22Zee%20taught%20us%20how%20to%20learn%20from%20each%20other%2C%20and%20it%27s%20paid%20off%20in%20fundamentally%20better%20software.%22</text>
       </controlProperties>
     </control>
-    <control controlID="25" controlTypeID="__group__" x="460" y="396" w="135" h="48" measuredW="135" measuredH="48" zOrder="15" locked="false" isInGroup="-1">
+    <control controlID="25" controlTypeID="__group__" x="460" y="396" w="135" h="48" measuredW="135" measuredH="48" zOrder="20" locked="false" isInGroup="-1">
       <groupChildrenDescriptors>
         <control controlID="0" controlTypeID="com.balsamiq.mockups::Icon" x="0" y="0" w="-1" h="-1" measuredW="48" measuredH="48" zOrder="0" locked="false" isInGroup="25">
           <controlProperties>
@@ -96,13 +96,13 @@
         </control>
       </groupChildrenDescriptors>
     </control>
-    <control controlID="26" controlTypeID="com.balsamiq.mockups::Paragraph" x="296" y="463" w="295" h="43" measuredW="275" measuredH="80" zOrder="16" locked="false" isInGroup="-1">
+    <control controlID="26" controlTypeID="com.balsamiq.mockups::Paragraph" x="296" y="468" w="295" h="43" measuredW="275" measuredH="80" zOrder="21" locked="false" isInGroup="-1">
       <controlProperties>
         <size>16</size>
         <text>%22I%20didn%27t%20think%20it%20possible%20to%20learn%20so%20much%20in%20so%20little%20time.%22</text>
       </controlProperties>
     </control>
-    <control controlID="27" controlTypeID="__group__" x="139" y="458" w="135" h="48" measuredW="135" measuredH="48" zOrder="17" locked="false" isInGroup="-1">
+    <control controlID="27" controlTypeID="__group__" x="139" y="463" w="135" h="48" measuredW="135" measuredH="48" zOrder="22" locked="false" isInGroup="-1">
       <groupChildrenDescriptors>
         <control controlID="0" controlTypeID="com.balsamiq.mockups::Icon" x="0" y="0" w="-1" h="-1" measuredW="48" measuredH="48" zOrder="0" locked="false" isInGroup="27">
           <controlProperties>
@@ -117,13 +117,13 @@
         </control>
       </groupChildrenDescriptors>
     </control>
-    <control controlID="28" controlTypeID="com.balsamiq.mockups::Paragraph" x="139" y="514" w="295" h="60" measuredW="275" measuredH="80" zOrder="18" locked="false" isInGroup="-1">
+    <control controlID="28" controlTypeID="com.balsamiq.mockups::Paragraph" x="139" y="529" w="295" h="60" measuredW="275" measuredH="80" zOrder="23" locked="false" isInGroup="-1">
       <controlProperties>
         <size>16</size>
         <text>%22My%20team%20is%20so%20much%20more%20productive%20since%20Zee%20helped%20us%20establish%20a%20peer-mentorship%20practice.%22</text>
       </controlProperties>
     </control>
-    <control controlID="29" controlTypeID="__group__" x="449" y="520" w="135" h="54" measuredW="135" measuredH="54" zOrder="19" locked="false" isInGroup="-1">
+    <control controlID="29" controlTypeID="__group__" x="449" y="535" w="135" h="54" measuredW="135" measuredH="54" zOrder="24" locked="false" isInGroup="-1">
       <groupChildrenDescriptors>
         <control controlID="0" controlTypeID="com.balsamiq.mockups::Icon" x="0" y="0" w="-1" h="-1" measuredW="48" measuredH="48" zOrder="0" locked="false" isInGroup="29">
           <controlProperties>
@@ -138,37 +138,37 @@
         </control>
       </groupChildrenDescriptors>
     </control>
-    <control controlID="30" controlTypeID="com.balsamiq.mockups::Paragraph" x="139" y="587" w="228" h="31" measuredW="275" measuredH="80" zOrder="20" locked="false" isInGroup="-1">
+    <control controlID="30" controlTypeID="com.balsamiq.mockups::Paragraph" x="139" y="601" w="228" h="31" measuredW="275" measuredH="80" zOrder="25" locked="false" isInGroup="-1">
       <controlProperties>
         <size>24</size>
         <text>Learn%20More</text>
       </controlProperties>
     </control>
-    <control controlID="31" controlTypeID="com.balsamiq.mockups::TextInput" x="139" y="712" w="209" h="-1" measuredW="165" measuredH="32" zOrder="21" locked="false" isInGroup="-1">
+    <control controlID="31" controlTypeID="com.balsamiq.mockups::TextInput" x="139" y="731" w="209" h="-1" measuredW="165" measuredH="32" zOrder="1" locked="false" isInGroup="-1">
       <controlProperties>
         <size>18</size>
         <text>you@example.com</text>
       </controlProperties>
     </control>
-    <control controlID="32" controlTypeID="com.balsamiq.mockups::Button" x="139" y="750" w="208" h="35" measuredW="145" measuredH="27" zOrder="22" locked="false" isInGroup="-1">
+    <control controlID="32" controlTypeID="com.balsamiq.mockups::Button" x="139" y="769" w="208" h="35" measuredW="145" measuredH="27" zOrder="2" locked="false" isInGroup="-1">
       <controlProperties>
         <size>18</size>
         <text>Subscribe%20Now</text>
       </controlProperties>
     </control>
-    <control controlID="33" controlTypeID="com.balsamiq.mockups::Paragraph" x="139" y="620" w="209" h="92" measuredW="275" measuredH="80" zOrder="23" locked="false" isInGroup="-1">
+    <control controlID="33" controlTypeID="com.balsamiq.mockups::Paragraph" x="139" y="639" w="209" h="92" measuredW="275" measuredH="80" zOrder="3" locked="false" isInGroup="-1">
       <controlProperties>
         <size>18</size>
         <text>*Mastery%20E-Zine*%0A_Free%2C%20exclusive%20articles%20and%20updates%20delivered%20monthly%20to%20your%20inbox._</text>
       </controlProperties>
     </control>
-    <control controlID="39" controlTypeID="com.balsamiq.mockups::Paragraph" x="367" y="618" w="209" h="126" measuredW="275" measuredH="80" zOrder="24" locked="false" isInGroup="-1">
+    <control controlID="39" controlTypeID="com.balsamiq.mockups::Paragraph" x="367" y="637" w="209" h="126" measuredW="275" measuredH="80" zOrder="4" locked="false" isInGroup="-1">
       <controlProperties>
         <size>18</size>
         <text>*Unclogging%20the%20Learning%20Bottleneck*%0A_Unlock%20your%20teams%20potential%20with%20on-the-job%20learning_%0A%20%0A%5BRead%20Online%5D</text>
       </controlProperties>
     </control>
-    <control controlID="40" controlTypeID="com.balsamiq.mockups::Button" x="363" y="750" w="208" h="35" measuredW="93" measuredH="27" zOrder="25" locked="false" isInGroup="-1">
+    <control controlID="40" controlTypeID="com.balsamiq.mockups::Button" x="363" y="769" w="208" h="35" measuredW="93" measuredH="27" zOrder="5" locked="false" isInGroup="-1">
       <controlProperties>
         <size>18</size>
         <text>Buy%20Now</text>
