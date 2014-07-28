@@ -39,10 +39,10 @@
         <text>blerp.%20wurp%20hurp%20blurpy%20wurpawurp.%20Herp%20wurp%20wurpawerp%20werp%20werp%20hurp.%20blurp%20wurpablurpy%20durp%20herp%20werpy%20durpawurp.</text>
       </controlProperties>
     </control>
-    <control controlID="9" controlTypeID="com.balsamiq.mockups::LinkBar" x="143" y="806" w="-1" h="-1" measuredW="222" measuredH="24" zOrder="9" locked="false" isInGroup="-1">
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::LinkBar" x="143" y="806" w="-1" h="-1" measuredW="184" measuredH="24" zOrder="9" locked="false" isInGroup="-1">
       <controlProperties>
         <size>18</size>
-        <text>Discuss%2C%20Source%2C%20Related</text>
+        <text>Explore%2C%20Contact%20Zee</text>
       </controlProperties>
     </control>
     <control controlID="10" controlTypeID="com.balsamiq.mockups::Icon" x="511" y="802" w="-1" h="-1" measuredW="32" measuredH="32" zOrder="10" locked="false" isInGroup="-1">
@@ -143,10 +143,10 @@
         <text>Copyright%202004%20-%202014%20Zee%20Spencer.%20Licensed%20under%20Creative%20Commons%20Attribution%20Share-Alike%20Non-Commercial.%20Some%20Rights%20Reserved.</text>
       </controlProperties>
     </control>
-    <control controlID="33" controlTypeID="com.balsamiq.mockups::LinkBar" x="1115" y="841" w="-1" h="-1" measuredW="222" measuredH="24" zOrder="29" locked="false" isInGroup="-1">
+    <control controlID="33" controlTypeID="com.balsamiq.mockups::LinkBar" x="1115" y="841" w="-1" h="-1" measuredW="184" measuredH="24" zOrder="29" locked="false" isInGroup="-1">
       <controlProperties>
         <size>18</size>
-        <text>Discuss%2C%20Source%2C%20Related</text>
+        <text>Explore%2C%20Contact%20Zee</text>
       </controlProperties>
     </control>
     <control controlID="36" controlTypeID="com.balsamiq.mockups::Paragraph" x="1837" y="600" w="239" h="33" measuredW="275" measuredH="80" zOrder="30" locked="false" isInGroup="-1">
