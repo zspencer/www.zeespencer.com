@@ -1,177 +1,56 @@
 @import "_base";
 @import "_pygments";
-@import "compass/reset";
+@import "bourbon/bourbon";
+@import "base/grid-settings";
+@import "neat/neat";
+@import "base/base";
+@import "stick_footer";
 
-// -------------------------------------------------- 
-//    Table of Contents
-// --------------------------------------------------
-// :: Mixins
-// :: Shared Styles
-// :: Home
-// :: Musings
-
-
-
-// -----------------------------------------
-//    Mixins
-// -----------------------------------------
-
-@mixin centered-column {
-  width: $main-width;
-  text-align: left;
-  margin-left: auto;
-  margin-right: auto
+ul {
+  @extend %default-ul;
 }
 
-// -----------------------------------------
-//    Shared Styles
-// -----------------------------------------
+ol {
+  @extend %default-ol;
+}
+
+
+//
+// Grid Layout
+//
 
 body {
-  background: darken($primary-color, 2%);
-  color: $font-color;
-  font-family: helvetica, arial, sans-serif;
-  font-size: $base-font-size;
-  line-height: $line-height / $base-font-size;
-}
+  header {
+    @include outer-container;
+  }
 
-#header {
-  background: $secondary-color;
-  text-align: center;
-}
-
-
-#header h1 {
-  @include centered-column;
-  padding: $base-font-size/2 1em 0 1em;
-  text-align: center;
-}
-
-#footer {
-  background: $secondary-color;
-  clear: both;
-
-  h3 {
-    text-align: center;
-    padding: $base-font-size/2 0 $base-font-size/2 0;
+  #content {
+    @include outer-container;
+  }
+  footer {
+    #footer-content {
+      @include outer-container;
+      nav {
+        @include span-columns(3);
+      }
+      .follow {
+        @include span-columns(2);
+        @include omega();
+      }
+      .license {
+        @include span-columns(7);
+      }
+    }
   }
 }
 
+//
+// Footer
+//
 
-#main {
-  background-color: $primary-color;
-  @include centered-column;
-  box-shadow: 0 0 2px $secondary-color;
-  clear: both;
-  padding: 1em;
-}
-
-h1 {
-  font-size: $title-heading-font-size;
-}
-
-h2 {
-  font-size: $main-heading-font-size;
-}
-
-h3 {
-  font-size: $sub-heading-font-size;
-}
-
-h4 {
-  font-style: italic;
-}
-
-
-strong {
-  font-weight: bold;
-}
-
-em {
-
-  font-style: italic;
-}
-
-a {
-  color: $tertiary-color;
-  &:visited { color: $visited-link-color }
-  &:hover { color: $hover-link-color }
-}
-
-
-li pre, li code,  p pre, p code {
-  background-color: $secondary-color;
-}
-
-code, pre {
-  font-size: .85em;
-  font-family: Monaco, monospace
-}
-
-ul, p, ol {
-  margin-bottom: $vertical-spacing / 2;
-  margin-top: $vertical-spacing / 2;
-}
-ul { list-style-type: disc }
-ol { list-style-type: cjk-ideographic }
-
-li {
-    margin-left:  -1em;
-    padding-left: 1em;
-}
-blockquote {
-  font-style: italic;
-  margin: 0 $base-font-size
-
-}
-// -----------------------------------------
-//    Home
-// -----------------------------------------
-.thing-i-do {
-  display: inline-block;
-
-  h2, .content { width: $column_width }
-  h2 {
-    font-size: $title-heading-font-size;
-    float: left; text-align: right;
-  }
-  .content {
-    font-size: $main-heading-font-size;
-    float: right;
-    p, ul, ol { margin-top: 0; margin-bottom: $vertical-spacing; }
-    ul, ol { list-style: none; }
+footer {
+  nav a::before, .follow a::before {
+    content: "| ";
   }
 }
 
-// -----------------------------------------
-//    Musings
-// -----------------------------------------
-.musing, .article, .question {
-  font-size: $base-font-size / 2;
-  width: $column-width - 6%;
-  margin-right: $gutter-width;
-  margin-bottom: $vertical-spacing;
-  display: inline-block;
-}
-
-#post-tags {
-  @include centered-column;
-  text-align: center;
-}
-
-#nav {
-  @include centered-column;
-  list-style-type: none;
-  text-align: center;
-  margin-bottom: 0;
-  padding-bottom: $vertical-spacing;
-
-  li {
-    display: inline-block;
-    margin-right: $gutter-width;
-  }
-}
-
-.call-to-action {
-  font-style: italic;
-}

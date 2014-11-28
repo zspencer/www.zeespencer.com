@@ -4,40 +4,46 @@
   <title>{{ page.title }} -- Zee Spencer</title>
   <link type="text/css" rel="stylesheet" href="{{ 'app.css' | stylesheet_path }}"/>
   <link type="text/atom+xml" rel="alternate" href="http://feeds.feedburner.com/zeespencer"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <script type="text/javascript">
-    var _gaq = _gaq || [];
-    var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
-    _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
-    _gaq.push(['_setAccount', 'UA-28034607-1']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-
-    })();
+    !function(){var analytics=window.analytics=window.analytics||[];if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.0";
+    analytics.load("DEDSLhOPXKFCHg4NglvHWqtQg6BgqJy2");
+    analytics.page()
+    }}();
   </script>
 </head>
 <body>
-  <div id="header">
+  <div id="page">
+  <header>
     <h1>{{ page.title }}</h1>
-    <ul id="nav">
-      <li><a href="/">home</a></li>
-      <li><a href="/articles.html">articles</a></li>
-      <li><a href="/musings.html">musings</a></li></li>
-      <li><a href="/pgp-key.txt">pgp</a></li></li>
-    </ul>
-  </div>
-  <div id="main">
+  </header>
+  <section id="content">
     {{ content }}
+  </section>
+  <div class="push"></div>
   </div>
-  <div id="footer">
-    <ul id="nav">
-      <li><a href="/">home</a></li>
-      <li><a href="/articles.html">articles</a></li>
-      <li><a href="/musings.html">musings</a></li></li>
-      <li><a href="/pgp-key.txt">pgp</a></li></li>
-    </ul>
-  </div>
+  <footer>
+    <section id="footer-content">
+    <nav>
+      <a href="/articles.html">Explore</a>
+      <a href="/contact.html">Contact Zee</a>
+    </nav>
+
+    <p class="license">
+      Copyright 2004 - 2014 Zee Spencer. Licensed under
+      a <a
+         rel="license"
+         href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+         Commons Attribution-NonCommercial-ShareAlike 4.0
+         International License</a>.
+    </p>
+
+    <p class="follow">
+      <a href="http://twitter.com/zspencer">Twitter</a>
+      <a href="http://github.com/zspencer">Github</a>
+      <a href="http://feeds.feedburner.com/zeespencer">RSS</a>
+    </p>
+    </section>
+  </footer>
 </body>
 </html>

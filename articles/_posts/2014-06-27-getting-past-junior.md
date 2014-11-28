@@ -13,7 +13,7 @@ solutions for complex problems.</p>
 <p>Senior developers make simple solutions for complex problems.</p>
 
 <footer>
-<cite>-- Unknown
+<cite>Unknown</cite>
 </footer></blockquote>
 
 I was pairing with a friend of mine who is working as a junior developer. We

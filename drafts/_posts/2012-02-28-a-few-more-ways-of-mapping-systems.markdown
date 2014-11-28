@@ -1,4 +1,5 @@
 ---
+published: false
 layout: article
 title: More Methods of Mapping Systems
 tags: [draft]
