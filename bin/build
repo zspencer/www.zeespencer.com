@@ -1,2 +1,4 @@
 #!/bin/bash
-bin/compass compile -s compressed -e production --force && JEKYLL_ENV=hosted bin/jekyll build
+set -e
+bin/sass --update --style compressed --force  _precompiled/scss:assets/stylesheets
+JEKYLL_ENV=hosted bin/jekyll build
