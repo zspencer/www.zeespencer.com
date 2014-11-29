@@ -1,0 +1,34 @@
+@import "shared";
+
+//
+// Grid Layout
+//
+
+body {
+  footer {
+    #footer-content {
+      nav {
+        @include span-columns(3);
+      }
+      .follow {
+        @include span-columns(2);
+        @include omega();
+      }
+      .license {
+        @include span-columns(12);
+      }
+    }
+  }
+  // Home page
+  #latest {
+    section {
+      article {
+        @include span-columns(4);
+        @include omega(3n);
+        min-height: 4em;
+      }
+    }
+  }
+}
+
+

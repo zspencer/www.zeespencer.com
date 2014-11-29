@@ -9,7 +9,7 @@ redirects:
   <div class="musing">
     <h3>{{ post.title }}</h3>
     {{ post.content }}
-    <p>Posted on <a href="{{post.url}}">{{ post.date | date_to_string }}</a> -
+    <p>Posted on <a href="{{post.url}}">{{ post.date | pretty_date }}</a> -
     about {{ post | tags }}</P>
   </div>
 {% endfor %}

@@ -1,0 +1,42 @@
+@import "_base";
+@import "_pygments";
+@import "bourbon/bourbon";
+@import "base/grid-settings";
+@import "neat/neat";
+@import "base/base";
+@import "stick_footer";
+
+ul {
+  @extend %default-ul;
+}
+
+ol {
+  @extend %default-ol;
+}
+
+// Layout
+
+body {
+  header {
+    @include outer-container;
+  }
+
+  #content {
+    @include outer-container;
+  }
+
+  #footer-content {
+    @include outer-container;
+  }
+}
+
+//
+// Footer
+//
+
+footer {
+  nav a::before, .follow a::before {
+    content: "| ";
+  }
+}
+

@@ -1,0 +1,31 @@
+@import "shared";
+
+body {
+  @include media($small-screen) {
+    footer {
+      #footer-content {
+        nav {
+          @include span-columns(2);
+        }
+        .follow {
+          @include span-columns(2);
+          @include omega();
+        }
+        .license {
+          @include span-columns(4);
+        }
+      }
+    }
+
+    // Home page
+    #latest {
+      section {
+        article {
+          @include span-columns(2);
+          @include omega(2n);
+          min-height: 4em;
+        }
+      }
+    }
+  }
+}

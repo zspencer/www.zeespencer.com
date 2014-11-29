@@ -54,3 +54,19 @@ footer {
   }
 }
 
+
+// Home page
+#latest {
+  section {
+    article {
+      @include span-columns(4);
+      @include omega(3n);
+      min-height: 4em;
+
+      @include media($small-screen) {
+        @include span-columns(2);
+        @include omega(2n);
+      }
+    }
+  }
+}

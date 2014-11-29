@@ -499,61 +499,50 @@ body #content {
     content: "";
     display: table;
     clear: both; }
-body footer #footer-content {
+body #footer-content {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto; }
-  body footer #footer-content:after {
+  body #footer-content:after {
     content: "";
     display: table;
     clear: both; }
+
+footer nav a::before, footer .follow a::before {
+  content: "| "; }
+
+@media screen and (max-width: 53.75em) {
   body footer #footer-content nav {
     float: left;
     display: block;
-    margin-right: 2.35765%;
-    width: 23.23176%; }
+    margin-right: 7.42297%;
+    width: 46.28851%; }
     body footer #footer-content nav:last-child {
       margin-right: 0; }
   body footer #footer-content .follow {
     float: left;
     display: block;
-    margin-right: 2.35765%;
-    width: 14.70196%;
+    margin-right: 7.42297%;
+    width: 46.28851%;
     margin-right: 0; }
     body footer #footer-content .follow:last-child {
       margin-right: 0; }
   body footer #footer-content .license {
     float: left;
     display: block;
-    margin-right: 2.35765%;
-    width: 57.35098%; }
+    margin-right: 7.42297%;
+    width: 100%; }
     body footer #footer-content .license:last-child {
       margin-right: 0; }
-
-footer nav a::before, footer .follow a::before {
-  content: "| "; }
-
-#latest section article {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%;
-  min-height: 4em; }
-  #latest section article:last-child {
-    margin-right: 0; }
-  #latest section article:nth-child(3n) {
-    margin-right: 0; }
-  #latest section article:nth-child(3n+1) {
-    clear: left; }
-  @media screen and (max-width: 53.75em) {
-    #latest section article {
-      float: left;
-      display: block;
-      margin-right: 7.42297%;
-      width: 46.28851%; }
-      #latest section article:last-child {
-        margin-right: 0; }
-      #latest section article:nth-child(2n) {
-        margin-right: 0; }
-      #latest section article:nth-child(2n+1) {
-        clear: left; } }
+  body #latest section article {
+    float: left;
+    display: block;
+    margin-right: 7.42297%;
+    width: 46.28851%;
+    min-height: 4em; }
+    body #latest section article:last-child {
+      margin-right: 0; }
+    body #latest section article:nth-child(2n) {
+      margin-right: 0; }
+    body #latest section article:nth-child(2n+1) {
+      clear: left; } }
