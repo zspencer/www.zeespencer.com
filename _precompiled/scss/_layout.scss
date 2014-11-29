@@ -6,6 +6,23 @@
   #page, #footer-content {
     @include outer-container;
   }
+
+  #content {
+    @include span-columns(4 of 4);
+  }
+
+  #page > header {
+    figure {
+      @include span-columns(2 of 4);
+      @include shift(2);
+    }
+    h1 {
+      @include span-columns(4 of 4);
+    }
+    nav {
+      @include span-columns(4 of 4);
+    }
+  }
   .articles {
     article {
       @include span-columns(4 of 4);
@@ -27,6 +44,24 @@
   #page, #footer-content {
     @include outer-container;
   }
+
+  #content {
+    @include span-columns(6 of 6);
+  }
+
+  #page > header {
+
+    figure {
+      @include span-columns(2 of 6);
+      @include shift(3);
+    }
+    h1 {
+      @include span-columns(6 of 6);
+    }
+    nav {
+      @include span-columns(6 of 6);
+    }
+  }
   .articles {
     article {
       @include span-columns(3 of 6);
@@ -45,39 +80,60 @@
       @include omega();
     }
   }
-}
-
-@include media($large-screen) {
-  body {
-    #page, #footer-content {
-      @include outer-container;
-    }
-
-    .articles {
-      article {
-        @include span-columns(4);
-        @include omega(3n);
-        min-height: 4em;
-      }
-    }
-
-    section.newsletter-cta {
-      article {
-        @include span-columns(8);
-      }
-
-      aside {
-        @include span-columns(4);
-        @include omega();
-      }
-    }
-  }
   #page {
-    margin-bottom: -5em;
+    margin-bottom: -7em;
   }
 
   body > footer, .push {
-    height: 5em;
+    height: 7em;
+  }
+}
+
+@include media($large-screen) {
+  #page, #footer-content {
+    @include outer-container;
+  }
+
+  #page > header {
+    figure {
+      @include span-columns(2 of 12);
+      @include shift(5);
+    }
+    h1 {
+      @include span-columns(12 of 12);
+    }
+    nav {
+      @include span-columns(12 of 12);
+    }
+  }
+  #content {
+    @include span-columns(12 of 12);
+  }
+
+  .articles {
+    article {
+      @include span-columns(4);
+      @include omega(3n);
+      min-height: 4em;
+    }
+  }
+
+  section.newsletter-cta {
+    article {
+      @include span-columns(8);
+    }
+
+    aside {
+      @include span-columns(4);
+      @include omega();
+    }
+  }
+  #page {
+    margin-bottom: -7em;
+  }
+
+  body > footer, .push {
+    height: 7em;
   }
 
 
@@ -90,5 +146,4 @@
       @include omega();
     }
   }
-
 }
