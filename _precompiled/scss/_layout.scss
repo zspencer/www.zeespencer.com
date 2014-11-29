@@ -33,8 +33,16 @@
   .testimonials {
     blockquote {
       @include span-columns(4 of 4);
+      figure {
+        @include span-columns(4 of 4);
+        img {
+          @include span-columns(1 of 4);
+        }
+        cite {
+          @include span-columns(3 of 4);
+        }
+      }
     }
-    figure { display: none; }
   }
 
   body > footer { display: none; }
@@ -72,13 +80,21 @@
 
   .testimonials {
     blockquote {
-      @include span-columns(4 of 6);
+      p {
+        @include span-columns(3 of 6);
+      }
+      figure {
+        @include span-columns(3 of 6);
+        @include omega();
+        img {
+          @include span-columns(1 of 3);
+        }
+        cite {
+          @include span-columns(2 of 3);
+        }
+      }
     }
 
-    figure {
-      @include span-columns(2 of 6);
-      @include omega();
-    }
   }
   #page {
     margin-bottom: -7em;
@@ -139,11 +155,21 @@
 
   .testimonials {
     blockquote {
-      @include span-columns(10 of 12);
-    }
-    figure {
-      @include span-columns(2 of 12);
-      @include omega();
+      p {
+        @include span-columns(8 of 12);
+      }
+
+      figure {
+        @include span-columns(4 of 12);
+        img {
+          @include span-columns(1 of 4);
+        }
+        cite {
+          @include span-columns(3 of 4);
+
+        }
+        @include omega();
+      }
     }
   }
 }

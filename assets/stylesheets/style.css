@@ -539,8 +539,27 @@ html, body {
     width: 100%; }
     .testimonials blockquote:last-child {
       margin-right: 0; }
-  .testimonials figure {
-    display: none; }
+    .testimonials blockquote figure {
+      float: left;
+      display: block;
+      margin-right: 7.42297%;
+      width: 100%; }
+      .testimonials blockquote figure:last-child {
+        margin-right: 0; }
+      .testimonials blockquote figure img {
+        float: left;
+        display: block;
+        margin-right: 7.42297%;
+        width: 19.43277%; }
+        .testimonials blockquote figure img:last-child {
+          margin-right: 0; }
+      .testimonials blockquote figure cite {
+        float: left;
+        display: block;
+        margin-right: 7.42297%;
+        width: 73.14426%; }
+        .testimonials blockquote figure cite:last-child {
+          margin-right: 0; }
 
   body > footer {
     display: none; } }
@@ -598,21 +617,35 @@ html, body {
     .articles article:nth-child(2n+1) {
       clear: left; }
 
-  .testimonials blockquote {
+  .testimonials blockquote p {
     float: left;
     display: block;
     margin-right: 4.82916%;
-    width: 65.05695%; }
-    .testimonials blockquote:last-child {
+    width: 47.58542%; }
+    .testimonials blockquote p:last-child {
       margin-right: 0; }
-  .testimonials figure {
+  .testimonials blockquote figure {
     float: left;
     display: block;
     margin-right: 4.82916%;
-    width: 30.11389%;
+    width: 47.58542%;
     margin-right: 0; }
-    .testimonials figure:last-child {
+    .testimonials blockquote figure:last-child {
       margin-right: 0; }
+    .testimonials blockquote figure img {
+      float: left;
+      display: block;
+      margin-right: 10.1484%;
+      width: 26.56773%; }
+      .testimonials blockquote figure img:last-child {
+        margin-right: 0; }
+    .testimonials blockquote figure cite {
+      float: left;
+      display: block;
+      margin-right: 10.1484%;
+      width: 63.28387%; }
+      .testimonials blockquote figure cite:last-child {
+        margin-right: 0; }
 
   #page {
     margin-bottom: -7em; }
@@ -695,21 +728,35 @@ html, body {
   body > footer, .push {
     height: 7em; }
 
-  .testimonials blockquote {
+  .testimonials blockquote p {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 82.94039%; }
-    .testimonials blockquote:last-child {
+    width: 65.88078%; }
+    .testimonials blockquote p:last-child {
       margin-right: 0; }
-  .testimonials figure {
+  .testimonials blockquote figure {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 14.70196%;
+    width: 31.76157%;
     margin-right: 0; }
-    .testimonials figure:last-child {
-      margin-right: 0; } }
+    .testimonials blockquote figure:last-child {
+      margin-right: 0; }
+    .testimonials blockquote figure img {
+      float: left;
+      display: block;
+      margin-right: 7.42297%;
+      width: 19.43277%; }
+      .testimonials blockquote figure img:last-child {
+        margin-right: 0; }
+    .testimonials blockquote figure cite {
+      float: left;
+      display: block;
+      margin-right: 7.42297%;
+      width: 73.14426%; }
+      .testimonials blockquote figure cite:last-child {
+        margin-right: 0; } }
 body {
   margin: 0;
   padding: 0; }
