@@ -1,6 +1,7 @@
 ---
 title: Contact Zee
 layout: default
+name: Contact
 ---
 
 * Email: [hello@zeespencer.com](mailto: hello@zeespencer.com")

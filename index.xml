@@ -29,5 +29,4 @@ layout: nil
   </entry>
   {% endunless %}
   {% endfor %}
-
 </feed>
