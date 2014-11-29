@@ -483,46 +483,45 @@ html, body {
 body > footer, .push {
   height: 5em; }
 
-body header {
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto; }
-  body header:after {
-    content: "";
-    display: table;
-    clear: both; }
-body #content {
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto; }
-  body #content:after {
-    content: "";
-    display: table;
-    clear: both; }
-body #footer-content {
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto; }
-  body #footer-content:after {
-    content: "";
-    display: table;
-    clear: both; }
-
 nav a::before, .follow a::before {
   content: "| "; }
 
 @media screen and (max-width: 53.75em) {
-  .articles article {
+  body header {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto; }
+    body header:after {
+      content: "";
+      display: table;
+      clear: both; }
+  body #content {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto; }
+    body #content:after {
+      content: "";
+      display: table;
+      clear: both; }
+  body #footer-content {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto; }
+    body #footer-content:after {
+      content: "";
+      display: table;
+      clear: both; }
+  body .articles article {
     float: left;
     display: block;
-    margin-right: 2.35765%;
-    width: 14.70196%;
+    margin-right: 7.42297%;
+    width: 46.28851%;
     min-height: 4em; }
-    .articles article:last-child {
+    body .articles article:last-child {
       margin-right: 0; }
-    .articles article:nth-child(2n) {
+    body .articles article:nth-child(2n) {
       margin-right: 0; }
-    .articles article:nth-child(2n+1) {
+    body .articles article:nth-child(2n+1) {
       clear: left; } }
 
 /*# sourceMappingURL=mobile.css.map */

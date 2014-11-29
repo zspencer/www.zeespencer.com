@@ -1,9 +1,21 @@
 @import "shared";
+body {
+  header {
+    @include outer-container;
+  }
 
-.articles {
-  article {
-    @include span-columns(4);
-    @include omega(3n);
-    min-height: 4em;
+  #content {
+    @include outer-container;
+  }
+
+  #footer-content {
+    @include outer-container;
+  }
+  .articles {
+    article {
+      @include span-columns(4);
+      @include omega(3n);
+      min-height: 4em;
+    }
   }
 }

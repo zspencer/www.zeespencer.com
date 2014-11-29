@@ -16,20 +16,6 @@ ol {
 
 // Layout
 
-body {
-  header {
-    @include outer-container;
-  }
-
-  #content {
-    @include outer-container;
-  }
-
-  #footer-content {
-    @include outer-container;
-  }
-}
-
 //
 // Nav
 //

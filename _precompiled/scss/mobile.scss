@@ -1,11 +1,25 @@
 @import "shared";
 
-@include media($small-screen) {
-  .articles {
-    article {
-      @include span-columns(2);
-      @include omega(2n);
-      min-height: 4em;
+
+body {
+  @include media($small-screen) {
+    header {
+      @include outer-container;
+    }
+
+    #content {
+      @include outer-container;
+    }
+
+    #footer-content {
+      @include outer-container;
+    }
+    .articles {
+      article {
+        @include span-columns(2 of 4);
+        @include omega(2n);
+        min-height: 4em;
+      }
     }
   }
 }

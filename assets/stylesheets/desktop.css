@@ -483,6 +483,9 @@ html, body {
 body > footer, .push {
   height: 5em; }
 
+nav a::before, .follow a::before {
+  content: "| "; }
+
 body header {
   max-width: 68em;
   margin-left: auto;
@@ -507,21 +510,17 @@ body #footer-content {
     content: "";
     display: table;
     clear: both; }
-
-nav a::before, .follow a::before {
-  content: "| "; }
-
-.articles article {
+body .articles article {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 31.76157%;
   min-height: 4em; }
-  .articles article:last-child {
+  body .articles article:last-child {
     margin-right: 0; }
-  .articles article:nth-child(3n) {
+  body .articles article:nth-child(3n) {
     margin-right: 0; }
-  .articles article:nth-child(3n+1) {
+  body .articles article:nth-child(3n+1) {
     clear: left; }
 
 /*# sourceMappingURL=desktop.css.map */
