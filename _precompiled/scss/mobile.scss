@@ -3,15 +3,7 @@
 
 body {
   @include media($small-screen) {
-    header {
-      @include outer-container;
-    }
-
-    #content {
-      @include outer-container;
-    }
-
-    #footer-content {
+    #page, #footer-content {
       @include outer-container;
     }
     .articles {

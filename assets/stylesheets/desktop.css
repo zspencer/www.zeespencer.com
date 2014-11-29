@@ -497,6 +497,9 @@ nav a::before, .follow a::before {
 body {
   background-color: #fff8e6; }
 
+#page, #footer-content {
+  padding: 1em; }
+
 form input[type=submit], form button {
   width: 100%; }
 

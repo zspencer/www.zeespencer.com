@@ -30,8 +30,14 @@ nav a::before, .follow a::before {
   background-color: $content-background-color;
 }
 
+
+
 body {
   background-color: $base-background-color;
+}
+
+#page, #footer-content {
+  padding: 1em;
 }
 
 // Forms
