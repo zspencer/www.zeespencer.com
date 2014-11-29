@@ -14,7 +14,7 @@
   #page > header {
     figure {
       @include span-columns(2 of 4);
-      @include shift(2);
+      @include shift(3);
     }
     h1 {
       @include span-columns(4 of 4);
@@ -53,7 +53,7 @@
 
     figure {
       @include span-columns(2 of 6);
-      @include shift(3);
+      @include shift(4);
     }
     h1 {
       @include span-columns(6 of 6);
