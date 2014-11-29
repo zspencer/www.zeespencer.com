@@ -479,6 +479,9 @@ html, body {
   height: auto !important;
   height: 100%; }
 
+.push {
+  clear: both; }
+
 @media screen and (max-width: 45em) {
   #page, #footer-content {
     max-width: 68em;
