@@ -513,8 +513,7 @@ body > footer {
 body #page, body #footer-content {
   max-width: 68em;
   margin-left: auto;
-  margin-right: auto;
-  padding: 1em; }
+  margin-right: auto; }
   body #page:after, body #footer-content:after {
     content: "";
     display: table;

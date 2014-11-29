@@ -2,8 +2,8 @@
 body {
   #page, #footer-content {
     @include outer-container;
-    padding: 1em;
   }
+
   .articles {
     article {
       @include span-columns(4);
