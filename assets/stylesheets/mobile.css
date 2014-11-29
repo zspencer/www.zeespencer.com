@@ -512,15 +512,15 @@ footer nav a::before, footer .follow a::before {
   content: "| "; }
 
 @media screen and (max-width: 53.75em) {
-  body #latest section article {
+  .articles article {
     float: left;
     display: block;
     margin-right: 7.42297%;
     width: 46.28851%;
     min-height: 4em; }
-    body #latest section article:last-child {
+    .articles article:last-child {
       margin-right: 0; }
-    body #latest section article:nth-child(2n) {
+    .articles article:nth-child(2n) {
       margin-right: 0; }
-    body #latest section article:nth-child(2n+1) {
+    .articles article:nth-child(2n+1) {
       clear: left; } }

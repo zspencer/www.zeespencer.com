@@ -2,9 +2,12 @@
 layout: default
 title: Explore
 ---
-{% for post in site.posts %}
-<div class="article">
-  <h3><a href="{{post.url}}">{{ post.title }}</a></h3>
-  <p>Posted on {{ post.date | pretty_date }} - about {{ post | tags }}
-</div>
-{% endfor %}
+<section class="articles">
+  {% for post in site.posts %}
+  <article>
+    <h3><a href="{{post.url}}">{{ post.title }}</a></h3>
+    <p>{{ post.excerpt }}</p>
+    <p>Posted on {{ post.date | pretty_date }} - about {{ post | tags }}
+  </article>
+  {% endfor %}
+</section>

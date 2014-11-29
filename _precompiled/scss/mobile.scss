@@ -1,16 +1,11 @@
 @import "shared";
 
-body {
-  @include media($small-screen) {
-    // Home page
-    #latest {
-      section {
-        article {
-          @include span-columns(2);
-          @include omega(2n);
-          min-height: 4em;
-        }
-      }
+@include media($small-screen) {
+  .articles {
+    article {
+      @include span-columns(2);
+      @include omega(2n);
+      min-height: 4em;
     }
   }
 }

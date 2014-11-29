@@ -511,15 +511,15 @@ body #footer-content {
 footer nav a::before, footer .follow a::before {
   content: "| "; }
 
-body #latest section article {
+.articles article {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 31.76157%;
   min-height: 4em; }
-  body #latest section article:last-child {
+  .articles article:last-child {
     margin-right: 0; }
-  body #latest section article:nth-child(3n) {
+  .articles article:nth-child(3n) {
     margin-right: 0; }
-  body #latest section article:nth-child(3n+1) {
+  .articles article:nth-child(3n+1) {
     clear: left; }
