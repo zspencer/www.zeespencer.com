@@ -15,7 +15,7 @@ Or (when we remove the linearity of it):
 
 > As we shape our society, it also shapes us.
 
-I propose the following two notions which shape society:
+It's possible the following are which shape society:
 
 1. Space - The opportunities/lack of opportunities to exercise
    [agency](http://www.zeespencer.com/articles/agency-society-and-invention/).
@@ -34,14 +34,14 @@ Structure can be thought of as the rules, norms, physical constraints,
 expectations, obligations, habits, or similar
 [affordances](https://en.wikipedia.org/wiki/Affordance).
 
-## Conclusion
+## Space and Structure
 
-Space and structure are related. The only way to change space is to adjust
-structure. Given the impact structural changes have, they should be intentional
-and thoughtful.
+Space and structure are related. If we wish to change space we must adjust
+structure. Given the impact structural changes have, these changes should be
+intentional and thoughtful.
 
 Some questions to consider when changing structure:
 
 1. What unintended obstacles may this change introduce?
-2. What supports may be at risk from this change?
-3. What lessons from applying this structure elsewhere may not apply here?
+2. What supports we rely on may this change put at risk?
+3. What lessons learned from this structure elsewhere may not apply here?
