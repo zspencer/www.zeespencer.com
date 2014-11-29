@@ -1,26 +1,35 @@
-// http://paletton.com/#uid=40m0u0kaVz800++35S5koohvQeQ
-
-$primary: rgba(255,200,168,1);
-$primary-lightest: rgba(255,255,255,1);
-$primary-light: rgba(255,240,230,1);
-$primary-dark: rgba(193,116, 70,1);
-$primary-darkest: rgba(118, 44,  1,1);
-
-$secondary: rgba(121,145,176,1);
-$secondary-lightest:  rgba(255,255,255,1);
-$secondary-light: rgba(210,219,231,1);
-$secondary-dark: rgba( 53, 85,127,1);
-$secondary-darkest: rgba(  7, 38, 78,1);
-
-$tertiary: rgba(169,223,147,1);
-$tertiary-lightest: rgba(255,255,255,1);
-$tertiary-light: rgba(228,245,221,1);
-$tertiary-dark: rgba( 92,166, 60,1);
-$tertiary-darkest: rgba( 31,102,  1,1);
+//  Color Palette by Paletton.com
+//  Palette URL: http://paletton.com/#uid=43r0u0k7UUa3cZA5wXlogqGyAc0
 
 
-$complement: rgba(115,174,160,1);
-$complement-lightest: rgba(255,255,255,1);
-$complement-light: rgba(208,230,225,1);
-$complement-dark: rgba( 46,126,106,1);
-$complement-darkest: rgba(  0, 77, 58,1);
+// Primary color: Kind of a seafoam
+
+   $primary: rgba(180,218,235,1);
+   $primary-lightest: rgba(227,244,251,1);
+   $primary-light: rgba(204,232,244,1);
+   $primary-dark: rgba( 37,105,134,1);
+   $primary-darkest: rgba(  3, 43, 60,1);
+
+// Secondary color (1): Kind of an ochre or amber?
+
+   $secondary: rgba(255,237,192,1);
+   $secondary-lightest: rgba(255,248,230,1);
+   $secondary-light: rgba(255,243,211,1);
+   $secondary-dark: rgba(213,167, 51,1);
+   $secondary-darkest: rgba( 96, 69,  0,1);
+
+// Secondary color (2): A nice red
+
+   $tertiary: rgba(255,204,192,1);
+   $tertiary-lightest: rgba(255,234,230,1);
+   $tertiary-light: rgba(255,220,211,1);
+   $tertiary-dark: rgba(213, 82, 51,1);
+   $tertiary-darkest: rgba( 96, 18,  0,1);
+
+// Complement color:
+
+   $complement: rgba(255,225,192,1);
+   $complement-lightest: rgba(255,243,230,1);
+   $complement-light: rgba(255,234,211,1);
+   $complement-dark: rgba(213,137, 51,1);
+   $complement-darkest: rgba( 96, 51,  0,1);
