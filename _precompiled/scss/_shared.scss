@@ -24,3 +24,8 @@ nav a::before, .follow a::before {
   content: "| ";
 }
 
+body {
+  @include background-image(linear-gradient(rgba($base-background-color, .90),
+  rgba($base-background-color, .90)),
+    url("/assets/images/symphony.png"));
+}

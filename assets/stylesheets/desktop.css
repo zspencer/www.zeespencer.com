@@ -486,6 +486,10 @@ body > footer, .push {
 nav a::before, .follow a::before {
   content: "| "; }
 
+body {
+  background-image: -webkit-linear-gradient( rgba(255, 248, 230, 0.9), rgba(255, 248, 230, 0.9)), url("/assets/images/symphony.png");
+  background-image: linear-gradient( rgba(255, 248, 230, 0.9), rgba(255, 248, 230, 0.9)), url("/assets/images/symphony.png"); }
+
 body header {
   max-width: 68em;
   margin-left: auto;
