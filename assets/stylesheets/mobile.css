@@ -493,6 +493,14 @@ body {
 form input[type=submit], form button {
   width: 100%; }
 
+footer {
+  box-shadow: 0px 0px 10px #601200;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff8e6; }
+
 @media screen and (max-width: 53.75em) {
   body header {
     max-width: 68em;
@@ -530,5 +538,8 @@ form input[type=submit], form button {
       margin-right: 0; }
     body .articles article:nth-child(2n+1) {
       clear: left; } }
+
+footer .license {
+  display: none; }
 
 /*# sourceMappingURL=mobile.css.map */

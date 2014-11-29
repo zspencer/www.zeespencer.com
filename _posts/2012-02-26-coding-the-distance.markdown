@@ -2,6 +2,8 @@
 layout: article
 title: Coding the Distance
 tags: [parody, songs]
+excerpt: Reluctantly Crouched at the command line, Keyboards clicking and
+         clacking in time...
 ---
 
 Reluctantly crouched at the command line<br />
