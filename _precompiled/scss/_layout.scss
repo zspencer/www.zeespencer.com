@@ -1,0 +1,94 @@
+@import "base/grid-settings";
+@import "neat/neat";
+@import "stick_footer";
+
+@include media($small-screen) {
+  #page, #footer-content {
+    @include outer-container;
+  }
+  .articles {
+    article {
+      @include span-columns(4 of 4);
+      min-height: 4em;
+    }
+  }
+
+  .testimonials {
+    blockquote {
+      @include span-columns(4 of 4);
+    }
+    figure { display: none; }
+  }
+
+  body > footer { display: none; }
+}
+
+@include media($middle-screen) {
+  #page, #footer-content {
+    @include outer-container;
+  }
+  .articles {
+    article {
+      @include span-columns(3 of 6);
+      @include omega(2n);
+      min-height: 4em;
+    }
+  }
+
+  .testimonials {
+    blockquote {
+      @include span-columns(4 of 6);
+    }
+
+    figure {
+      @include span-columns(2 of 6);
+      @include omega();
+    }
+  }
+}
+
+@include media($large-screen) {
+  body {
+    #page, #footer-content {
+      @include outer-container;
+    }
+
+    .articles {
+      article {
+        @include span-columns(4);
+        @include omega(3n);
+        min-height: 4em;
+      }
+    }
+
+    section.newsletter-cta {
+      article {
+        @include span-columns(8);
+      }
+
+      aside {
+        @include span-columns(4);
+        @include omega();
+      }
+    }
+  }
+  #page {
+    margin-bottom: -5em;
+  }
+
+  body > footer, .push {
+    height: 5em;
+  }
+
+
+  .testimonials {
+    blockquote {
+      @include span-columns(10);
+    }
+    figure {
+      @include span-columns(2);
+      @include omega();
+    }
+  }
+
+}

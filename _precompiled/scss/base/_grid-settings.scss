@@ -11,5 +11,5 @@ $small-screen-size: em(720);
 $middle-screen-size: em(1080);
 
 $small-screen: new-breakpoint(max-width $small-screen-size 4);
-$middle-screen: new-breakpoint(min-width ($small-screen-size + 1) max-width $middle-screen-size 6);
-$large-screen: new-breakpoint(min-width ($middle-screen-size +1) 12);
+$middle-screen: new-breakpoint(min-width ($small-screen-size) max-width $middle-screen-size 6);
+$large-screen: new-breakpoint(min-width ($middle-screen-size) 12);

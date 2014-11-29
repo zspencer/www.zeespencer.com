@@ -235,11 +235,6 @@
   color: #ae81ff; }
 
 /* Literal.Number.Integer.Long */
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
 /* Bitters 0.10.0
  * http://bitters.bourbon.io
  * Copyright 2013–2014 thoughtbot, inc.
@@ -471,43 +466,18 @@ input[type="submit"] {
   vertical-align: middle;
   white-space: nowrap; }
 
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 html, body {
   height: 100%; }
 
 #page {
   min-height: 100%;
   height: auto !important;
-  height: 100%;
-  margin-bottom: -5em; }
-
-body > footer, .push {
-  height: 5em; }
-
-body {
-  margin: 0;
-  padding: 0; }
-
-nav a::before, .follow a::before {
-  content: "| "; }
-
-#page, body > footer {
-  box-shadow: 0px 0px 7px #601200;
-  background-color: #e3f4fb; }
-
-body {
-  background-color: #fff8e6; }
-
-#page, #footer-content {
-  padding: 1em; }
-
-form input[type=submit], form button {
-  width: 100%; }
-
-body > footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%; }
+  height: 100%; }
 
 @media screen and (max-width: 45em) {
   #page, #footer-content {
@@ -528,9 +498,19 @@ body > footer {
     .articles article:last-child {
       margin-right: 0; }
 
+  .testimonials blockquote {
+    float: left;
+    display: block;
+    margin-right: 7.42297%;
+    width: 100%; }
+    .testimonials blockquote:last-child {
+      margin-right: 0; }
+  .testimonials figure {
+    display: none; }
+
   body > footer {
     display: none; } }
-@media screen and (min-width: 46em) and (max-width: 67.5em) {
+@media screen and (min-width: 45em) and (max-width: 67.5em) {
   #page, #footer-content {
     max-width: 68em;
     margin-left: auto;
@@ -551,6 +531,115 @@ body > footer {
     .articles article:nth-child(2n) {
       margin-right: 0; }
     .articles article:nth-child(2n+1) {
-      clear: left; } }
+      clear: left; }
 
-/*# sourceMappingURL=mobile.css.map */
+  .testimonials blockquote {
+    float: left;
+    display: block;
+    margin-right: 4.82916%;
+    width: 65.05695%; }
+    .testimonials blockquote:last-child {
+      margin-right: 0; }
+  .testimonials figure {
+    float: left;
+    display: block;
+    margin-right: 4.82916%;
+    width: 30.11389%;
+    margin-right: 0; }
+    .testimonials figure:last-child {
+      margin-right: 0; } }
+@media screen and (min-width: 67.5em) {
+  body #page, body #footer-content {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto; }
+    body #page:after, body #footer-content:after {
+      content: "";
+      display: table;
+      clear: both; }
+  body .articles article {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    min-height: 4em; }
+    body .articles article:last-child {
+      margin-right: 0; }
+    body .articles article:nth-child(3n) {
+      margin-right: 0; }
+    body .articles article:nth-child(3n+1) {
+      clear: left; }
+  body section.newsletter-cta article {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%; }
+    body section.newsletter-cta article:last-child {
+      margin-right: 0; }
+  body section.newsletter-cta aside {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    margin-right: 0; }
+    body section.newsletter-cta aside:last-child {
+      margin-right: 0; }
+
+  #page {
+    margin-bottom: -5em; }
+
+  body > footer, .push {
+    height: 5em; }
+
+  .testimonials blockquote {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%; }
+    .testimonials blockquote:last-child {
+      margin-right: 0; }
+  .testimonials figure {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 14.70196%;
+    margin-right: 0; }
+    .testimonials figure:last-child {
+      margin-right: 0; } }
+body {
+  margin: 0;
+  padding: 0; }
+
+nav a::before, .follow a::before {
+  content: "| "; }
+
+#page, body > footer {
+  box-shadow: 0px 0px 7px #601200;
+  background-color: #e3f4fb; }
+
+body {
+  background-color: #fff8e6; }
+
+#page, #footer-content {
+  padding: 1em; }
+
+form input[type=submit], form button {
+  width: 100%; }
+
+figure {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0; }
+
+body > footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%; }
+
+.testimonials blockquote {
+  padding-left: 0;
+  border: 0; }
+
+/*# sourceMappingURL=style.css.map */
