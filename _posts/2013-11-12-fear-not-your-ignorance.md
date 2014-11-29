@@ -4,10 +4,7 @@ tags: [mastery]
 layout: article
 ---
 
-Ignorance is a blessing. An opportunity.
-
-Ignorance is where possibilities are boundless.
-
-Don't fear it. Embrace it.
-
-Once again explore the unknown.
+Ignorance is a blessing. An opportunity.<br />
+Ignorance is where possibilities are boundless.<br />
+Don't fear it. Embrace it.<br />
+Explore the unknown.<br />
