@@ -6,6 +6,11 @@
 @import "base/base";
 @import "stick_footer";
 
+body {
+  margin: 0;
+  padding: 0;
+
+}
 ul {
   @extend %default-ul;
 }
@@ -20,10 +25,13 @@ nav a::before, .follow a::before {
 }
 
 // Background
+#page, body > footer {
+  box-shadow: 0px 0px 10px $tertiary-darkest;
+  background-color: $content-background-color;
+}
+
 body {
-  @include background-image(linear-gradient(rgba($base-background-color, .90),
-  rgba($base-background-color, .90)),
-  url("/assets/images/symphony.png"));
+  background-color: $base-background-color;
 }
 
 // Forms
@@ -35,11 +43,10 @@ form {
 
 // footer
 
-footer {
+body > footer {
   box-shadow: 0px 0px 10px $tertiary-darkest;
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: $base-background-color;
 }

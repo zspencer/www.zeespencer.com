@@ -1,15 +1,8 @@
 @import "shared";
 body {
-  header {
+  #page, #footer-content {
     @include outer-container;
-  }
-
-  #content {
-    @include outer-container;
-  }
-
-  #footer-content {
-    @include outer-container;
+    padding: 1em;
   }
   .articles {
     article {
