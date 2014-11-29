@@ -8,5 +8,5 @@ tag_page_dir: tags
 ignored_tags: [draft, things_i_do]
 pygments: true
 asset_url:
-  - hosted: /assets
+  - production: /assets
   - local: /assets

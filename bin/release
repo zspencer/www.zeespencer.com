@@ -1,4 +1,4 @@
 #!/bin/bash
 
-bin/build
+JEKYLL_ENV=production bin/build
 bin/s3_website push
