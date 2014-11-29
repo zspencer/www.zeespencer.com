@@ -29,13 +29,8 @@ nav a::before, .follow a::before {
 }
 
 
-
 body {
   background-color: $base-background-color;
-}
-
-#page, #footer-content {
-  padding: 1em;
 }
 
 // Forms
@@ -46,14 +41,26 @@ form {
 }
 
 
+#page, #footer-content {
+  padding: 1em;
+}
+
 figure {
+  margin-before: 0;
+  margin-after: 0;
+  margin-start: 0;
+  margin-end: 0;
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
   -webkit-margin-start: 0;
   -webkit-margin-end: 0;
+  -moz-margin-before: 0;
+  -moz-margin-after: 0;
+  -moz-margin-start: 0;
+  -moz-margin-end: 0;
 }
-// footer
 
+// footer
 body > footer {
   position: fixed;
   left: 0;
@@ -61,6 +68,8 @@ body > footer {
   width: 100%;
 }
 
+
+// Testimonials
 .testimonials {
   blockquote {
     padding-left: 0;
