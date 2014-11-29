@@ -80,6 +80,7 @@ GEM
     redcarpet (3.2.1)
     rerun (0.10.0)
       listen (~> 2.7, >= 2.7.3)
+    rouge (1.7.4)
     ruby-nuggets (1.0.0)
       nuggets (= 1.0.0)
     s3_website (2.7.1)
@@ -110,5 +111,6 @@ DEPENDENCIES
   kramdown
   neat
   rerun
+  rouge
   s3_website
   sass

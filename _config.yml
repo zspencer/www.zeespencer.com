@@ -5,7 +5,7 @@ markdown: redcarpet
 redirects: yes
 tag_page_layout: tag_page
 tag_page_dir: tags
-highlighter: 'pygments'
+highlighter: 'rouge'
 asset_url:
   - production: /assets
   - local: /assets
