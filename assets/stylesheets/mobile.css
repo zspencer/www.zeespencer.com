@@ -490,6 +490,9 @@ body {
   background-image: -webkit-linear-gradient( rgba(255, 248, 230, 0.9), rgba(255, 248, 230, 0.9)), url("/assets/images/symphony.png");
   background-image: linear-gradient( rgba(255, 248, 230, 0.9), rgba(255, 248, 230, 0.9)), url("/assets/images/symphony.png"); }
 
+form input[type=submit], form button {
+  width: 100%; }
+
 @media screen and (max-width: 53.75em) {
   body header {
     max-width: 68em;

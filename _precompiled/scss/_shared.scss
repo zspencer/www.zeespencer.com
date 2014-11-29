@@ -14,18 +14,21 @@ ol {
   @extend %default-ol;
 }
 
-// Layout
-
-//
 // Nav
-//
-
 nav a::before, .follow a::before {
   content: "| ";
 }
 
+// Background
 body {
   @include background-image(linear-gradient(rgba($base-background-color, .90),
   rgba($base-background-color, .90)),
-    url("/assets/images/symphony.png"));
+  url("/assets/images/symphony.png"));
+}
+
+// Forms
+form {
+  input[type=submit], button {
+    width: 100%;
+  }
 }

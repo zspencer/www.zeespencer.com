@@ -490,6 +490,9 @@ body {
   background-image: -webkit-linear-gradient( rgba(255, 248, 230, 0.9), rgba(255, 248, 230, 0.9)), url("/assets/images/symphony.png");
   background-image: linear-gradient( rgba(255, 248, 230, 0.9), rgba(255, 248, 230, 0.9)), url("/assets/images/symphony.png"); }
 
+form input[type=submit], form button {
+  width: 100%; }
+
 body header {
   max-width: 68em;
   margin-left: auto;
@@ -526,5 +529,20 @@ body .articles article {
     margin-right: 0; }
   body .articles article:nth-child(3n+1) {
     clear: left; }
+body section.newsletter-cta article {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%; }
+  body section.newsletter-cta article:last-child {
+    margin-right: 0; }
+body section.newsletter-cta aside {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  margin-right: 0; }
+  body section.newsletter-cta aside:last-child {
+    margin-right: 0; }
 
 /*# sourceMappingURL=desktop.css.map */

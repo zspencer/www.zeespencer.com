@@ -10,7 +10,7 @@ meta:
   content: Long Form
 ctas:
   - type: form
-    location: center
+    location: right
     id: subscribe-to-newsletter
     color: Light Green
     text: Subscribe
@@ -19,23 +19,28 @@ ctas:
     type: Button
     pageSubject: "Twitter account"
 ---
-<p>Woah! Super stoked you liked my tweets enough to click on that link thing
-beneath my face. Hell, if I'd seen that face I wouldn't want to click anywhere
-near it!</p>
+<section class="newsletter-cta">
+  <article>
+    <p>Woah! Super stoked you liked my tweets enough to click on that link thing
+    beneath my face. Hell, if I'd seen that face I wouldn't want to click anywhere
+    near it!</p>
 
-<p>Since you seem like such a hoopy frood, perhaps you'd like to sign up for my
-semi-regular newsletter?</p>
+    <p>Since you seem like such a hoopy frood, perhaps you'd like to sign up for my
+    semi-regular newsletter?</p>
 
-<p>It's a far less noisy way to keep up with my thoughts on:</p>
-<ul>
-  <li>Well crafted software</li>
-  <li>Technical leadership</li>
-  <li>Social justice</li>
-</ul>
-
-<form id="subscribe-to-newsletter" action="https://tinyletter.com/zspencer" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/zspencer', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
-  <p><label for="tlemail">Enter your email address</label>
-  <input type="text" name="email" id="tlemail" /></p>
-  <input type="hidden" value="1" name="embed"/></p>
-  <p><input class="button" type="submit" value="Subscribe" /></p>
-</form>
+    <p>It's a far less noisy way to keep up with my thoughts on:</p>
+    <ul>
+      <li>Well crafted software</li>
+      <li>Technical leadership</li>
+      <li>Social justice</li>
+    </ul>
+  </article>
+  <aside>
+    <form id="subscribe-to-newsletter" action="https://tinyletter.com/zspencer" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/zspencer', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+      <p><label for="tlemail">Enter your email address</label>
+      <input type="text" name="email" id="tlemail" /></p>
+      <input type="hidden" value="1" name="embed"/></p>
+      <p><input class="button" type="submit" value="Subscribe" /></p>
+    </form>
+  </aside>
+</section>

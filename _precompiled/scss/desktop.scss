@@ -18,4 +18,17 @@ body {
       min-height: 4em;
     }
   }
+
+  section.newsletter-cta {
+    article {
+      @include span-columns(8);
+    }
+
+    aside {
+      @include span-columns(4);
+      @include omega();
+    }
+
+
+  }
 }
