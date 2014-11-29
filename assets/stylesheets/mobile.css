@@ -512,28 +512,6 @@ footer nav a::before, footer .follow a::before {
   content: "| "; }
 
 @media screen and (max-width: 53.75em) {
-  body footer #footer-content nav {
-    float: left;
-    display: block;
-    margin-right: 7.42297%;
-    width: 46.28851%; }
-    body footer #footer-content nav:last-child {
-      margin-right: 0; }
-  body footer #footer-content .follow {
-    float: left;
-    display: block;
-    margin-right: 7.42297%;
-    width: 46.28851%;
-    margin-right: 0; }
-    body footer #footer-content .follow:last-child {
-      margin-right: 0; }
-  body footer #footer-content .license {
-    float: left;
-    display: block;
-    margin-right: 7.42297%;
-    width: 100%; }
-    body footer #footer-content .license:last-child {
-      margin-right: 0; }
   body #latest section article {
     float: left;
     display: block;

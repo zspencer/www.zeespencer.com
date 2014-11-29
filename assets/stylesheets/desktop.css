@@ -511,28 +511,6 @@ body #footer-content {
 footer nav a::before, footer .follow a::before {
   content: "| "; }
 
-body footer #footer-content nav {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%; }
-  body footer #footer-content nav:last-child {
-    margin-right: 0; }
-body footer #footer-content .follow {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 14.70196%;
-  margin-right: 0; }
-  body footer #footer-content .follow:last-child {
-    margin-right: 0; }
-body footer #footer-content .license {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%; }
-  body footer #footer-content .license:last-child {
-    margin-right: 0; }
 body #latest section article {
   float: left;
   display: block;

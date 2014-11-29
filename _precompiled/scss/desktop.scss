@@ -5,20 +5,6 @@
 //
 
 body {
-  footer {
-    #footer-content {
-      nav {
-        @include span-columns(3);
-      }
-      .follow {
-        @include span-columns(2);
-        @include omega();
-      }
-      .license {
-        @include span-columns(12);
-      }
-    }
-  }
   // Home page
   #latest {
     section {
