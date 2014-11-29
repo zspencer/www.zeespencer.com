@@ -309,12 +309,12 @@ a {
   -webkit-transition: color 0.1s linear;
   -moz-transition: color 0.1s linear;
   transition: color 0.1s linear;
-  color: #d55233;
+  color: #601200;
   text-decoration: none; }
   a:hover {
-    color: #601200; }
+    color: #d55233; }
   a:active, a:focus {
-    color: #601200;
+    color: #d55233;
     outline: none; }
 
 hr {
@@ -387,8 +387,8 @@ select[multiple=multiple] {
   textarea:focus,
   input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus,
   select[multiple=multiple]:focus {
-    border-color: #d55233;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(198, 71, 41, 0.7);
+    border-color: #ffccc0;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(255, 183, 166, 0.7);
     outline: none; }
 
 textarea {
@@ -491,7 +491,7 @@ nav a::before, .follow a::before {
   content: "| "; }
 
 #page, body > footer {
-  box-shadow: 0px 0px 10px #601200;
+  box-shadow: 0px 0px 7px #601200;
   background-color: #e3f4fb; }
 
 body {
@@ -504,46 +504,46 @@ form input[type=submit], form button {
   width: 100%; }
 
 body > footer {
-  box-shadow: 0px 0px 10px #601200;
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%; }
 
-body #page, body #footer-content {
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto; }
-  body #page:after, body #footer-content:after {
-    content: "";
-    display: table;
-    clear: both; }
-body .articles article {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%;
-  min-height: 4em; }
-  body .articles article:last-child {
+@media screen and (min-width: 68.5em) {
+  body #page, body #footer-content {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto; }
+    body #page:after, body #footer-content:after {
+      content: "";
+      display: table;
+      clear: both; }
+  body .articles article {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    min-height: 4em; }
+    body .articles article:last-child {
+      margin-right: 0; }
+    body .articles article:nth-child(3n) {
+      margin-right: 0; }
+    body .articles article:nth-child(3n+1) {
+      clear: left; }
+  body section.newsletter-cta article {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%; }
+    body section.newsletter-cta article:last-child {
+      margin-right: 0; }
+  body section.newsletter-cta aside {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
     margin-right: 0; }
-  body .articles article:nth-child(3n) {
-    margin-right: 0; }
-  body .articles article:nth-child(3n+1) {
-    clear: left; }
-body section.newsletter-cta article {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 65.88078%; }
-  body section.newsletter-cta article:last-child {
-    margin-right: 0; }
-body section.newsletter-cta aside {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%;
-  margin-right: 0; }
-  body section.newsletter-cta aside:last-child {
-    margin-right: 0; }
+    body section.newsletter-cta aside:last-child {
+      margin-right: 0; } }
 
 /*# sourceMappingURL=desktop.css.map */
