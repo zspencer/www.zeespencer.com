@@ -31,12 +31,10 @@ body {
 }
 
 //
-// Footer
+// Nav
 //
 
-footer {
-  nav a::before, .follow a::before {
-    content: "| ";
-  }
+nav a::before, .follow a::before {
+  content: "| ";
 }
 

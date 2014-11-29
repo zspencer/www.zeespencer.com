@@ -508,7 +508,7 @@ body #footer-content {
     display: table;
     clear: both; }
 
-footer nav a::before, footer .follow a::before {
+nav a::before, .follow a::before {
   content: "| "; }
 
 @media screen and (max-width: 53.75em) {
