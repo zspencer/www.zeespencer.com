@@ -5,8 +5,7 @@ markdown: redcarpet
 redirects: yes
 tag_page_layout: tag_page
 tag_page_dir: tags
-ignored_tags: [draft, things_i_do]
-pygments: true
+highlighter: 'pygments'
 asset_url:
   - production: /assets
   - local: /assets

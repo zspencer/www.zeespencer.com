@@ -1,7 +1,7 @@
 ---
 title: Contact Zee
 layout: default
-name: Contact
+track_as: Contact
 ---
 
 * Email: [hello@zeespencer.com](mailto: hello@zeespencer.com")
