@@ -51,8 +51,8 @@ $light-yellow: $tertiary-light;
 $light-green: $complement-light;
 
 // Background Color
-$base-background-color: $primary-lightest;
-$content-background-color: $secondary-lightest;
+$base-background-color: lighten($primary-lightest, 1.5%);
+$content-background-color: lighten($secondary-lightest, 1.5%);
 
 // Font Colors
 $base-font-color: $primary-darkest;
