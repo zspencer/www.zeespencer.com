@@ -24,7 +24,10 @@ nav a::before, .follow a::before {
 }
 
 body {
-  background-color: $base-background-color;
+  @include background-image(
+    url("/assets/images/symphony.png"),
+    linear-gradient(rgba($base-background-color, .8), rgba($base-background-color, .8))
+  );
 }
 
 // Forms

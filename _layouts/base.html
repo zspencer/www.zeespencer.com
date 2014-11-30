@@ -31,14 +31,7 @@
       <img src="{{ 'images/zee.png' | asset_path }}" alt="Zee Spencer" />
     </figure>
     <h1>{{ page.title }}</h1>
-    <nav>
-      <a href="/">Explore</a>
-      <a href="/newsletter.html">Follow my Musings and Mutterings</a>
-      <a href="/contact.html">Contact Me</a>
-      <a href="http://twitter.com/zspencer">Twitter</a>
-      <a href="http://github.com/zspencer">Github</a>
-      <a href="http://feeds.feedburner.com/zeespencer">RSS</a>
-    </p>
+    {% include nav.html %}
 
   </header>
   <section id="content">
@@ -48,24 +41,15 @@
   </div>
   <footer>
     <section id="footer-content">
-    <p class="license">
-      Copyright 2004 - 2014 Zee Spencer. Licensed under
-      a <a
-         rel="license"
-         href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
-         Commons Attribution-NonCommercial-ShareAlike 4.0
-         International License</a>.
-    </p>
-    <nav>
-      <a href="/">Explore</a>
-      <a href="/newsletter.html">Follow my Musings and Mutterings</a>
-      <a href="/contact.html">Contact Me</a>
-      <a href="http://twitter.com/zspencer">Twitter</a>
-      <a href="http://github.com/zspencer">Github</a>
-      <a href="http://feeds.feedburner.com/zeespencer">RSS</a>
-    </p>
-
-
+      {% include nav.html %}
+      <p class="license">
+        Copyright 2004 - 2014 Zee Spencer. Licensed under
+        a <a
+           rel="license"
+           href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+           Commons Attribution-NonCommercial-ShareAlike 4.0
+           International License</a>.
+      </p>
     </section>
   </footer>
 
