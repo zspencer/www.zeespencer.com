@@ -4,62 +4,7 @@
 @import "bourbon/bourbon";
 @import "base/base";
 @import "layout";
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
-ul {
-  @extend %default-ul;
-}
-
-ol {
-  @extend %default-ol;
-}
-
-h1 {
-  font-size: $h1-font-size;
-  line-height: $h1-line * $h1-lines;
-  margin-top: 2 * $h1-line;
-  margin-bottom: 1 * $h1-line;
-}
-
-h2 {
-  font-size: $h2-font-size;
-  line-height: $h2-line * $h2-lines;
-  margin-top: 2 * $h2-line;
-  margin-bottom: 1 * $h2-line;
-}
-
-h3 {
-  font-size: $h3-font-size;
-  line-height: $h3-line * $h3-lines;
-  margin-top: 1 * $h3-line;
-  margin-bottom: 1 * $h3-line;
-}
-
-h4, h5, h6 {
-  font-size: $h4-font-size;
-  line-height: $h4-line * $h4-lines;
-  margin-top: 1 * $h4-line;
-  margin-bottom: 1 * $h4-line;
-}
-
-blockquote {
-  color: $base-font-color;
-  cite {
-    font-style: normal;
-    color: $base-font-color;
-  }
-
-  p::before {
-    content: "“";
-  }
-  p::after {
-    content: "”";
-  }
-}
+@import "bitters_overrides";
 
 // header
 #page > header h1 {
@@ -78,7 +23,6 @@ nav a::before, .follow a::before {
   background-color: $content-background-color;
 }
 
-
 body {
   background-color: $base-background-color;
 }
@@ -91,28 +35,13 @@ form {
 }
 
 
-#page, #footer-content {
-  padding: 1em;
-}
-
-figure {
-  margin-before: 0;
-  margin-after: 0;
-  margin-start: 0;
-  margin-end: 0;
-  -webkit-margin-before: 0;
-  -webkit-margin-after: 0;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
-  -moz-margin-before: 0;
-  -moz-margin-after: 0;
-  -moz-margin-start: 0;
-  -moz-margin-end: 0;
-}
-
 // footer
 body > footer {
   width: 100%;
+}
+
+#page, #footer-content {
+  padding: 1em;
 }
 
 
@@ -123,6 +52,28 @@ body > footer {
   }
 }
 
-blockquote {
-  border: 0;
+.next-steps {
+  clear: both;
+  @include display(flex);
+  @include flex-wrap(wrap);
+  @include flex-direction(row);
+
+  article {
+    @include display(flex);
+    @include flex-direction(column);
+    main {
+      @include flex(1);
+    }
+  }
+
+  #send-email-button {
+    @extend %button;
+    @include appearance(none);
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
 }

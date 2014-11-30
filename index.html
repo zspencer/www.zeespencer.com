@@ -2,6 +2,34 @@
 title: Zee. Software Developer. Educator.
 layout: default
 track_as: Landing
+ctas:
+  - type: form
+    location: right
+    id: subscribe-to-newsletter
+    color: Red
+    text: Subscribe
+    CTA: Newsletter Subscription
+    category: Landing
+    type: Button
+    pageSubject: "Home page"
+  - type: link
+    location: left
+    id: send-email
+    color: Red
+    text: hello@zeespencer.com
+    CTA: Email me
+    category: Landing
+    type: Link
+    pageSubject: "Home page"
+  - type: link
+    location: left
+    id: send-email-button
+    color: Red
+    text: Send me an email!
+    CTA: Email me
+    category: Landing
+    type: Button
+    pageSubject: "Home page"
 ---
 <section class="testimonials">
   <article>
@@ -23,7 +51,37 @@ track_as: Landing
     </blockquote>
 
   </article>
+</section>
 
+<section class="next-steps">
+  <article>
+    <header>
+    <h3>Send me an Email</h3>
+    </header>
+    <main>
+    <p>I'm always happy to chat! If you have questions about my writing, want
+    some advice, or want to hire me for training or consulting; just send an
+    email to <a id="send-email" href="mailto:
+    hello@zeespencer.com">hello@zeespencer.com</a></p>
+    </main>
+    <footer>
+      <a id="send-email-button" href="mailto: hello@zeespencer.com">Go ahead! Send me an Email!</a>
+    </footer>
+  </article>
+
+  <article>
+    <header>
+    <h3>Subscribe to my Newsletter</h3>
+    </header>
+
+    <main>
+    <p>My newsletter is a weekly-ish set of interesting links and a short
+    essay. The essay may be about programming, design, technical leadership, or
+    anything that strikes my fancy.</p>
+
+    {% include newsletter_form.html %}
+    </main>
+  <article>
 </section>
 
 <section class="articles">

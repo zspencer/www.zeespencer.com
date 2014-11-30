@@ -28,19 +28,11 @@ ctas:
     <p>Since you seem like such a hoopy frood, perhaps you'd like to sign up for my
     semi-regular newsletter?</p>
 
-    <p>It's a far less noisy way to keep up with my thoughts on:</p>
-    <ul>
-      <li>Well crafted software</li>
-      <li>Technical leadership</li>
-      <li>Social justice</li>
-    </ul>
+    <p>The newsletter is a weekly-ish set of interesting links as well as a
+    short essay. The essay may be about programming, design, technical
+    leadership, or anything that strikes my fancy.</p>
   </article>
   <aside>
-    <form id="subscribe-to-newsletter" action="https://tinyletter.com/zspencer" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/zspencer', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
-      <p><label for="tlemail">Enter your email address</label>
-      <input type="text" name="email" id="tlemail" /></p>
-      <input type="hidden" value="1" name="embed"/></p>
-      <p><input class="button" type="submit" value="Subscribe" /></p>
-    </form>
+    {% include newsletter_form.html %}
   </aside>
 </section>

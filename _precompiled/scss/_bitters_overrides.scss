@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  @extend %default-ul;
+}
+
+ol {
+  @extend %default-ol;
+}
+
+figure {
+  margin-before: 0;
+  margin-after: 0;
+  margin-start: 0;
+  margin-end: 0;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -moz-margin-before: 0;
+  -moz-margin-after: 0;
+  -moz-margin-start: 0;
+  -moz-margin-end: 0;
+}
+h1 {
+  font-size: $h1-font-size;
+  line-height: $h1-line * $h1-lines;
+  margin-top: 2 * $h1-line;
+  margin-bottom: 1 * $h1-line;
+}
+
+h2 {
+  font-size: $h2-font-size;
+  line-height: $h2-line * $h2-lines;
+  margin-top: 2 * $h2-line;
+  margin-bottom: 1 * $h2-line;
+}
+
+h3 {
+  font-size: $h3-font-size;
+  line-height: $h3-line * $h3-lines;
+  margin-top: 1 * $h3-line;
+  margin-bottom: 1 * $h3-line;
+}
+
+h4, h5, h6 {
+  font-size: $h4-font-size;
+  line-height: $h4-line * $h4-lines;
+  margin-top: 1 * $h4-line;
+  margin-bottom: 1 * $h4-line;
+}
+
+blockquote {
+  border: 0;
+  color: $base-font-color;
+  cite {
+    font-style: normal;
+    color: $base-font-color;
+  }
+
+  p::before {
+    content: "“";
+  }
+  p::after {
+    content: "”";
+  }
+}

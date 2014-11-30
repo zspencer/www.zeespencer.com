@@ -32,11 +32,6 @@ ctas:
   </article>
 
   <aside>
-    <form id="subscribe-to-newsletter" action="https://tinyletter.com/zspencer" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/zspencer', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
-      <p><label for="tlemail">Email address:</label>
-      <input type="text" name="email" id="tlemail" /></p>
-      <input type="hidden" value="1" name="embed"/>
-      <p><input class="button" type="submit" value="Subscribe" /></p>
-    </form>
+    {% include newsletter_form.html %}
   </aside>
 </section>

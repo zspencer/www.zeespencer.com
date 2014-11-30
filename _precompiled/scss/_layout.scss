@@ -7,34 +7,20 @@
     @include outer-container;
   }
 
-  #content {
-    @include span-columns(4 of 4);
-  }
-
   #page > header {
     figure {
       @include span-columns(2 of 4);
       @include shift(3);
     }
-    h1 {
-      @include span-columns(4 of 4);
-    }
-    nav {
-      @include span-columns(4 of 4);
-    }
   }
-  .articles {
-    article {
-      @include span-columns(4 of 4);
-      min-height: 4em;
-    }
+
+  .next-steps, .testimonials, .articles {
+    @include span-columns(4 of 4);
   }
 
   .testimonials {
     blockquote {
-      @include span-columns(4 of 4);
       figure {
-        @include span-columns(4 of 4);
         img {
           @include span-columns(1 of 4);
         }
@@ -68,11 +54,10 @@
       @include span-columns(6 of 6);
     }
   }
-  .articles {
+  .articles, .next-steps {
     article {
       @include span-columns(3 of 6);
       @include omega(2n);
-      min-height: 4em;
     }
   }
 
@@ -92,13 +77,13 @@
         }
       }
     }
-
   }
+
   #page {
     margin-bottom: -7em;
   }
 
-  body > footer, .push {
+  body > footer, #page .push {
     height: 7em;
   }
 }
@@ -150,6 +135,17 @@
     height: 7em;
   }
 
+
+  .next-steps, .testimonials, .articles {
+    @include span-columns(12 of 12);
+  }
+
+  .next-steps {
+    article {
+      @include span-columns(6 of 12);
+      @include omega(2n);
+    }
+  }
 
   .testimonials {
     blockquote {
