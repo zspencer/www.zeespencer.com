@@ -6,7 +6,6 @@ excerpt: Junior developers have a unique struggle. How can they know when
          they're "good enough" to be a non-junior developer? How can they move
          quickly from the novice or advanced beginner level and into competent?
 ---
-
 <blockquote>
 <p>Junior developers make complex solutions for simple problems.</p>
 

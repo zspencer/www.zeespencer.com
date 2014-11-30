@@ -5,17 +5,36 @@ $base-font-family: $sans-serif;
 $header-font-family: $base-font-family;
 
 // Font Sizes
-$base-font-size: 1.2em;
-$h1-font-size: $base-font-size * 2.25;
-$h2-font-size: $base-font-size * 2;
-$h3-font-size: $base-font-size * 1.75;
-$h4-font-size: $base-font-size * 1.5;
-$h5-font-size: $base-font-size * 1.25;
-$h6-font-size: $base-font-size;
+$base-font-size: 1.125em;
+
+$h1-font-size: 3.5625rem;
+$h1-line: 1.6875rem;
+$h1-lines: 3;
+
+$h2-font-size: 2rem;
+$h2-line: 1.6875rem;
+$h2-lines: 2;
+
+
+$h3-font-size: 1.5rem;
+$h3-line: 1.6875rem;
+$h3-lines: 1;
+
+$h4-font-size: 1.125rem;
+$h4-line: 1.6875rem;
+$h4-lines: 1;
+
+$h5-font-size: 1.125rem;
+$h5-line: 1.6875rem;
+$h5-lines: 1;
+
+$h6-font-size: 1.125rem;
+$h6-line: 1.6875rem;
+$h6-lines: 1;
 
 // Line height
 $base-line-height: 1.5;
-$header-line-height: 1.25;
+$header-line-height: 1.5;
 
 // Other Sizes
 $base-border-radius: 3px;
@@ -32,8 +51,8 @@ $light-yellow: $tertiary-light;
 $light-green: $complement-light;
 
 // Background Color
-$base-background-color: $secondary-lightest;
-$content-background-color: $primary-lightest;
+$base-background-color: $primary-lightest;
+$content-background-color: $secondary-lightest;
 
 // Font Colors
 $base-font-color: $primary-darkest;

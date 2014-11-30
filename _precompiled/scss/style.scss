@@ -17,6 +17,54 @@ ol {
   @extend %default-ol;
 }
 
+h1 {
+  font-size: $h1-font-size;
+  line-height: $h1-line * $h1-lines;
+  margin-top: 2 * $h1-line;
+  margin-bottom: 1 * $h1-line;
+}
+
+h2 {
+  font-size: $h2-font-size;
+  line-height: $h2-line * $h2-lines;
+  margin-top: 2 * $h2-line;
+  margin-bottom: 1 * $h2-line;
+}
+
+h3 {
+  font-size: $h3-font-size;
+  line-height: $h3-line * $h3-lines;
+  margin-top: 1 * $h3-line;
+  margin-bottom: 1 * $h3-line;
+}
+
+h4, h5, h6 {
+  font-size: $h4-font-size;
+  line-height: $h4-line * $h4-lines;
+  margin-top: 1 * $h4-line;
+  margin-bottom: 1 * $h4-line;
+}
+
+blockquote {
+  color: $base-font-color;
+  cite {
+    font-style: normal;
+    color: $base-font-color;
+  }
+
+  p::before {
+    content: "“";
+  }
+  p::after {
+    content: "”";
+  }
+}
+
+// header
+#page > header h1 {
+  margin-bottom: 0;
+}
+
 // Nav
 nav a::before, .follow a::before {
   content: "| ";

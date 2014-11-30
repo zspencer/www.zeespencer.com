@@ -3,6 +3,7 @@ title: The Chef's Tale
 layout: article
 tags: [parables, mastery]
 ---
+
 Once upon a time there was a Chef. This Chef was sought by all of the rulers in
 the land to cater their feasts. The Chef was ferried from castle to castle;
 delighting all for whom they cooked.
