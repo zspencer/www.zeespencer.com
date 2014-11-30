@@ -1,8 +1,25 @@
 s3_id: <%=ENV['AWS_ACCESS_KEY_ID']%>
 s3_secret: <%=ENV['AWS_SECRET_ACCESS_KEY']%>
 s3_bucket: www.zeespencer.com
+cloudfront_distribution_id: E3P67R0ENEBC6O
 gzip:
   - .html
   - .js
   - .css
 
+routing_rules:
+  - condition:
+      key_prefix_equals: articles/
+    redirect:
+      replace_key_prefix_with: ""
+      http_redirect_code: 301
+  - condition:
+      key_prefix_equals: musings/
+    redirect:
+      replace_key_prefix_with: ""
+      http_redirect_code: 301
+  - condition:
+      key_prefix_equals: songs/
+    redirect:
+      replace_key_prefix_with: ""
+      http_redirect_code: 301
