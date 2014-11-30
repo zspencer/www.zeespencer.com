@@ -113,7 +113,6 @@
     article {
       @include span-columns(4);
       @include omega(3n);
-      min-height: 4em;
     }
   }
 
@@ -126,13 +125,6 @@
       @include span-columns(4);
       @include omega();
     }
-  }
-  #page {
-    margin-bottom: -7em;
-  }
-
-  body > footer, .push {
-    height: 7em;
   }
 
 
@@ -165,5 +157,12 @@
         @include omega();
       }
     }
+  }
+  #page {
+    margin-bottom: -7em;
+  }
+
+  body > footer, .push {
+    height: 7em;
   }
 }
