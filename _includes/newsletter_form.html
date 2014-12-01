@@ -2,5 +2,21 @@
   <p><label for="tlemail">Email address:</label>
   <input placeholder="your-email@example.com" type="text" name="email" id="tlemail" /></p>
   <input type="hidden" value="1" name="embed"/>
-  <input class="button" type="submit" value="Subscribe" />
+  <input class="button" type="submit" value="Subscribe Now!" />
 </form>
+
+<script type="text/javascript">
+var ctaElement = document.getElementById('subscribe-to-newsletter');
+  analytics.trackForm(ctaElement, 'Clicked CTA', {
+  location: '{{ include.location | default: "Center" }}',
+  color: 'Red',
+  text: 'Subscribe Now!',
+  CTA: 'Newsletter Subscription',
+  category: 'Subscribe',
+  type: 'Button',
+  pageSubject: '{{ include.page_subject | default: "Newsletter" }}',
+  pageTitle: document.title,
+  pageUrl: location.href,
+  pagePath: location.pathname
+});
+</script>

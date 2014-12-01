@@ -1,0 +1,19 @@
+<script type="text/javascript">
+var ctaElement = document.getElementById('{{ include.cta.id }}');
+{% if cta.type == "form" %}
+analytics.trackForm(ctaElement, 'Clicked CTA', {
+{% else %}
+analytics.trackLink(ctaElement, 'Clicked CTA', {
+{% endif %}
+  location: '{{ include.cta.location }}',
+  color: '{{ include.cta.color }}',
+  text: '{{ include.cta.text }}',
+  CTA: '{{ include.cta.CTA }}',
+  category: '{{ include.cta.category }}',
+  type: '{{ include.cta.type }}',
+  pageSubject: "{{ include.cta.pageSubject }}",
+  pageTitle: document.title,
+  pageUrl: location.href,
+  pagePath: location.pathname
+});
+</script>

@@ -54,25 +54,7 @@
   </footer>
 
 {% for cta in page.ctas %}
-<script type="text/javascript">
-var ctaElement = document.getElementById('{{cta.id}}');
-{% if cta.type == "form" %}
-analytics.trackForm(ctaElement, 'Clicked CTA', {
-{% else %}
-analytics.trackLink(ctaElement, 'Clicked CTA', {
-{% endif %}
-  location: '{{ cta.location }}',
-  color: '{{ cta.color }}',
-  text: '{{ cta.text }}',
-  CTA: '{{ cta.CTA }}',
-  category: '{{ cta.category }}',
-  type: '{{ cta.type }}',
-  pageSubject: "{{ cta.pageSubject }}",
-  pageTitle: document.title,
-  pageUrl: location.href,
-  pagePath: location.pathname
-});
-</script>
+{% include cta_js.html cta=cta %}
 {% endfor %}
 </body>
 </html>

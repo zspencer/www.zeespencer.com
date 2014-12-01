@@ -8,16 +8,6 @@ meta:
   goal: Click to Newsletter Subscription
   design: Default
   content: Long Form
-ctas:
-  - type: form
-    location: right
-    id: subscribe-to-newsletter
-    color: Light Green
-    text: Subscribe
-    CTA: Newsletter Subscription
-    category: Landing
-    type: Button
-    pageSubject: "Twitter account"
 ---
 <section class="newsletter-cta">
   <article>
@@ -33,6 +23,6 @@ ctas:
     leadership, or anything that strikes my fancy.</p>
   </article>
   <aside>
-    {% include newsletter_form.html %}
+    {% include newsletter_form.html location="Right" page_subject="Twitter account" %}
   </aside>
 </section>

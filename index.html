@@ -3,22 +3,13 @@ title: Zee. Software Developer. Educator.
 layout: default
 track_as: Landing
 ctas:
-  - type: form
-    location: right
-    id: subscribe-to-newsletter
-    color: Red
-    text: Subscribe
-    CTA: Newsletter Subscription
-    category: Landing
-    type: Button
-    pageSubject: "Home page"
   - type: link
     location: left
     id: send-email
     color: Red
     text: hello@zeespencer.com
     CTA: Email me
-    category: Landing
+    category: Contact
     type: Link
     pageSubject: "Home page"
   - type: link
@@ -27,7 +18,7 @@ ctas:
     color: Red
     text: Send me an email!
     CTA: Email me
-    category: Landing
+    category: Contact
     type: Button
     pageSubject: "Home page"
 ---
@@ -79,7 +70,7 @@ ctas:
     essay. The essay may be about programming, design, technical leadership, or
     anything that strikes my fancy.</p>
 
-    {% include newsletter_form.html %}
+    {% include newsletter_form.html location="Right" page_subject="Home page" %}
     </main>
   <article>
 </section>
