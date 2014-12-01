@@ -25,6 +25,7 @@ the primary way society is shaped:
 ## Space
 
 Space may be thought of as _the availability of resources_. Including, but not limited to:
+
 * Time to use as we see fit.
 * Money to spend in a way we believe most beneficial.
 * Information, both accurate and accessible for our reference.
@@ -38,6 +39,7 @@ a rejection of the time scarcity that is so prevalent today.
 ## Structure
 
 Structure can be thought of as:
+
 * The official, known rules we follow.
 * The social norms we conform to.
 * Physical constraints, such as the maximum speed for safe travel in an
