@@ -62,7 +62,7 @@ I had to choose between walking and a shitty chair. Now that I have the Leap I
 sit way too often. Ah well. Lesson learned! Don't buy a nice chair if you want to walk more!
 
 The TR1200 is a reasonable treadmill. While not noisy enough to bother me while listening to music, 
-I tend to use [Shush](Shush) to enable push to
+I tend to use [Shush](http://mizage.com/shush/) to enable push to
 talk when on calls. My MacBook Air's microphone seems to pick up a gentle
 "whoosh whoosh" of the belt and the "slap slap" of my feet.
 
