@@ -6,6 +6,7 @@
 @import "layout";
 @import "bitters_overrides";
 @import "home";
+@import "article";
 
 // header
 #page > header h1 {
@@ -80,4 +81,8 @@ body > footer {
     vertical-align: middle;
     white-space: nowrap;
   }
+}
+
+#post-tags {
+  clear: both;
 }
