@@ -1,13 +1,25 @@
 ---
 layout: base
 ---
-<article id="article">
+<section id="article">
 {{ content }}
-</article>
-<div id="post-tags">
-  <hr />
-  <p>Like this? More posts about:
+</section>
+
+<hr />
+<section id="post-tags">
+  <p>Browse posts about:
+  <ul>
   {% for tag in page.tags %}
-    <a href="{{ tag | tag_url }}">{{tag}}</a> 
-  {% endfor %}</p>
-</div>
+  <li><a href="{{ tag | tag_url }}">{{tag}}</a></li>
+  {% endfor %}
+  </ul></p>
+</section>
+
+<section id="newsletter-signup">
+  <p>Want to get notified when I publish new articles or update old ones?
+  Subscribe to my newsletter. It's a weekly-ish set of interesting links with a
+  short essay on programming, design, technical leadership, or anything else
+  that strikes my fancy.</p>
+
+  {% include newsletter_form.html location="Bottom of Page" page_subject="Article" %}
+</section>
