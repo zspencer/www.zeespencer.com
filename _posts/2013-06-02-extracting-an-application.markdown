@@ -1,7 +1,7 @@
 ---
 title: Splitting codebases
 layout: article
-tags: [code, design]
+tags: [software, design]
 ---
 
 As programmers, we split our code along what job those bits of code do for us.

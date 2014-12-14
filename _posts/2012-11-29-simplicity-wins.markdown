@@ -1,7 +1,7 @@
 ---
 title: Simplicity Wins
 layout: article
-tags: [code, design, mastery]
+tags: [software, design, mastery]
 ---
 
 Occam's Razor applies to your business plan.

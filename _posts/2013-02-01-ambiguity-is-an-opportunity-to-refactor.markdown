@@ -1,7 +1,7 @@
 ---
 title: Ambiguity In Code Is an Opportunity to Refactor
 layout: article
-tags: [code, ruby, tapas, design]
+tags: [software, ruby, tapas, design]
 
 redirects:
   - /musings/ambiguity-is-an-opportunity-to-refactor/

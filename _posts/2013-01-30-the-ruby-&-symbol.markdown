@@ -1,7 +1,7 @@
 ---
 layout: article
 title: The Ruby & Symbol
-tags: [code, ruby, tapas]
+tags: [software, ruby, tapas]
 redirects:
   - /musings/the-ruby-&-symbol/
 ---

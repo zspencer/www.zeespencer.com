@@ -1,7 +1,7 @@
 ---
 title: The Vim Lovers Guide to Editing Clojure
 layout: article
-tags: [clojure, devenvironment, vim, code]
+tags: [clojure, devenvironment, vim, software]
 ---
 
 I've recently started a Clojure gig, which has a pretty emacs-oriented language

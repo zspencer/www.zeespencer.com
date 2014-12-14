@@ -1,7 +1,7 @@
 ---
 title: Teach Yourself Programming in 10,000 Hours
 layout: article
-tags: [mastery, code, learning]
+tags: [mastery, software, learning]
 ---
 
 Becoming an excellent programmer is hard. It takes [deliberate

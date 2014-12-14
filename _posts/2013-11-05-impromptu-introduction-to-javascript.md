@@ -1,7 +1,7 @@
 ---
 title: Intro to JavaScript - TDD a Palindrome Checker
 layout: article
-tags: [javascript, video, code, tdd, beginner]
+tags: [javascript, video, software, testing, beginner]
 ---
 
 I was hanging out at the [Software Craftsmanship Guild](http://swcguild.com/)

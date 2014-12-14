@@ -1,6 +1,6 @@
 ---
 layout: article
-tags: [code]
+tags: [software, career]
 title: Back to Codin'
 ---
 

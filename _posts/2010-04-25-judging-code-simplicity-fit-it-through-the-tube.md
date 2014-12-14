@@ -1,6 +1,6 @@
 ---
 layout: article
-tags: [code, design, code-as-craft]
+tags: [software, design, software-as-craft]
 ---
 
 We coders have all kinds of definitions of simple code. To some, simple code is

@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Using Nil Effectively
-tags: [tapas, ruby, code]
+tags: [tapas, ruby, software]
 ---
 
 We seem to use `nil`s in place of a default return value in a function. Say you

@@ -1,7 +1,7 @@
 ---
 title: Point Victor
 layout: article
-tags: [business, code, mastery, poetry]
+tags: [business, software, mastery, poetry]
 ---
 
 There was a young lad named Rictor<br />

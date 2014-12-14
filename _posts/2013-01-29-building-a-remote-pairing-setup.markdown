@@ -1,7 +1,7 @@
 ---
 title: Build a Command Line Remote Pairing Setup
 layout: article
-tags: [pairing, code-as-craft, devenvironment]
+tags: [pairing, software-as-craft, devenvironment]
 ---
 
 Over the past couple years I've done a bit of remote pairing. When I need a GUI
