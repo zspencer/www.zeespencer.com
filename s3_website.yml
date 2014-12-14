@@ -6,9 +6,6 @@ gzip:
   - .html
   - .js
   - .css
-
-redirects:
-  /2010/03/judging-code-simplicity-fit-it-through-the-tube/: /judging-code-simplicity-fit-it-through-the-tube/
 routing_rules:
   - condition:
       key_prefix_equals: articles/
@@ -24,4 +21,9 @@ routing_rules:
       key_prefix_equals: songs/
     redirect:
       replace_key_prefix_with: ""
+      http_redirect_code: 301
+  - condition:
+      key_prefix_equals: 2010/03/judging-code-simplicity-fit-it-through-the-tube/
+    redirect:
+      replace_key_prefix_with: judging-code-simplicity-fit-it-through-the-tube/
       http_redirect_code: 301
