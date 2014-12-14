@@ -6,7 +6,7 @@ tags: [software, testing]
 Michael Bolton wrote an exceptional article listing [three reasons for software
 testers to learn to write
 code](http://www.google.com/url?q=http%3A%2F%2Fwww.developsense.com%2Fblog%2F2011%2F09%2Fat-least-three-good-reasons-for-testers-to-learn-to-program%2F&sa=D&sntz=1&usg=AFQjCNHXDMFi5sz7HvSmAi40Munf2ClJcg).
-Here's three reasons why a tester *shouldn't* a tester learn to code.
+Here's three reasons why a tester *shouldn't* learn to code.
 
 On one hand, this is incredibly important. After all, learning as much as we can
 about as many things as we can is a powerful career move.
