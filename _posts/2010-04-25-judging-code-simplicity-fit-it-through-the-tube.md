@@ -23,7 +23,7 @@ When you read a function, does it do what you expected given it's method
 signature? How long does it take to figure out what the code does?
 
 ### Browsable
-Can the code be browsed in an IDE? How quickly does someone who didn’t write the
+Can the code be browsed in an IDE? How quickly does someone who didn't write the
 code find what they're looking for?
 
 ### Explainable

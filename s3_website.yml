@@ -7,6 +7,8 @@ gzip:
   - .js
   - .css
 
+redirects:
+  /2010/03/judging-code-simplicity-fit-it-through-the-tube/: /judging-code-simplicity-fit-it-through-the-tube/
 routing_rules:
   - condition:
       key_prefix_equals: articles/
