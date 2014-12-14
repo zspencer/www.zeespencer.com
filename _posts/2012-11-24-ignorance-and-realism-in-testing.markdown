@@ -1,7 +1,7 @@
 ---
 title: Ignorance and Realism in Testing
 layout: article
-tags: [code, craftsmanship]
+tags: [code, code-as-craft]
 ---
 
 I was talking through some of my thoughts on applying visual and interaction
