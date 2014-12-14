@@ -11,15 +11,15 @@ Here's three reasons why a tester *shouldn't* a tester learn to code.
 On one hand, this is incredibly important. After all, learning as much as we can
 about as many things as we can is a powerful career move.
 
-Yet there are some decent reasons why a software tester shouldn’t learn how to
-program. Bear in mind, I’m not saying we shouldn't learn to program. I’m merely
+Yet there are some decent reasons why a software tester shouldn't learn how to
+program. Bear in mind, I'm not saying we shouldn't learn to program. I'm merely
 stating there are repercussions to learning to code which can harm our
-awesomeness as a tester if we’re not careful.
+awesomeness as a tester if we're not careful.
 
 
 ### 1. The More We Think Like A Computer, The Less We Think Like a Person.
 
-Computers, eh? All those zero’s and one’s. **All that reductionist logic.
+Computers, eh? All those zero's and one's. **All that reductionist logic.
 Absolutely zero innovation.** As we learn to program, we discover
 to program well we have to think like a computer. As we think like a computer,
 we begin to focus on the happy path: "What is the one thing I need to
@@ -27,7 +27,7 @@ do to verify this bit works." This focus blinds us to the less-happy path.
 
 The more we learn to isolate, the harder it is to notice emergent issues.
 Reductionism is powerful. Experiment driven systems like the scientific method
-have reshaped our planet’s surface and sent us to space.
+have reshaped our planet's surface and sent us to space.
 
 But reductionism sucks when it comes to emergent properties. Bad. The best
 testers are the adept at seeing the whole. They notice that twiddling this
@@ -37,9 +37,9 @@ reductionist in nature, which is why we developers often screw up integration.**
 ### 2. Coding is Hard. Developers Are Good At It.
 
 Do you know how to write maintainable, expressive, working code? No? Neither do
-I. And neither do most coders. But they’re probably better at it than we are,
+I. And neither do most coders. But they're probably better at it than we are,
 for now. After a while we can be a code master, but until then we run the risk
-of creating automated checks that are less reliable than the code they’re
+of creating automated checks that are less reliable than the code they're
 checking. This causes false positives and a high cost of ownership.
 
 But hey! If we follow some basic principles, devote ourselves to learning, and
@@ -51,9 +51,9 @@ and laughed at our test plans!  Oh yes... Vengeance...
 
 Given the [definition of checking and
 testing](http://www.developsense.com/blog/2009/08/testing-vs-checking/), test
-automation is often not testing, it’s the verification of testing.  I’m not
+automation is often not testing, it's the verification of testing.  I'm not
 advocating avoiding automating checks. That way lies madness. And bad software.
-And tears. I’m suggesting **testers are highly skilled contextual evaluatores
+And tears. I'm suggesting **testers are highly skilled contextual evaluatores
 who evaluate and communicate risk and reward to decision makers more effectively
 than any automated check.** Excellent testers prioritize that over learning the
 intricacies of a programming language.
