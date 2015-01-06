@@ -153,4 +153,4 @@ way in freeing up a teams mental capacity.
 
 I'd love to hear your thoughts on how anxiety and uncertainty affects software
 teams! Why not <a id="send-email" href="mailto: hello@zeespencer.com">drop me a
-line</a>.
+line</a>?
