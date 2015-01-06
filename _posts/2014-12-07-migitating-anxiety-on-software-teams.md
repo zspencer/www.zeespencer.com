@@ -1,42 +1,61 @@
 ---
 layout: article
 tags: [software, leadership, culture]
+ctas:
+  - type: link
+    location: bottom
+    id: send-email
+    color: Red
+    text: drop me a line
+    CTA: Email me
+    category: Contact
+    type: Link
+    pageSubject: "Mitigating anxiety on software teams"
 ---
 
-Software development is a creative pursuit. It takes intense focus and time away
-from the problem to for your subconscious to work. Both of these cognitive modes
-are easily affected by stress and anxiety.
+software development is a creative pursuit. it takes intense focus as well as
+time away from a problem to for subconscious work. both of these cognitive modes
+are debilitated by stress and anxiety.
 
-One of the major sources of anxiety is uncertainty. Uncertainy is almost always
-deeply personal, and may be about many things:
+a major source of anxiety is uncertainty. uncertainy is almost always deeply
+personal, and may be about many things:
 
-* Are we earning enough to live comfortably?
-* Are we compensated fairly for our time, effort and skills?
-* Are our skills improving in a worth-while direction at a reasonable rate?
-* Are we learning what we want to learn?
-* Is our work of a good quality?
-* How do others perceive us? (Especially those we respect or in positions of authority.)
-* Is our work environment comfortable and condusive to our work style?
-* Does our work matter?
-* And many, many more.
+* are we earning enough to live comfortably?
+* are we compensated fairly for our time, effort and skills?
+* are our skills improving in a worth-while direction at a reasonable rate?
+* are we learning what we want to learn?
+* am i at risk of [stereotype
+  threat](http://www.apa.org/research/action/stereotype.aspx)?
+* is our work of a good quality?
+* how do others perceive us? (especially those we respect or in positions of authority.)
+* is our work environment comfortable and condusive to our work style?
+* does our work matter?
+* am i representing [people like me poorly](http://xkcd.com/385)?
+* and many, many more.
 
 
-For those of you familiar with the writings of [Daniel
-Pink](http://www.danpink.com), you may be already mapping these to his three
-drivers for motivation: mastery, autonomy, and purpose. This is because anxiety
-saps our motivation. It hampers our ability to execute by draining our conscious
-and sub-concious attention, and may dissuade us from applying any effort.
+We may map these reasons to [dan pink's](http://danpink.com) three drivers for
+motivation:
 
-In a well-adjusted software team, we make an effort to:
+ * Mastery
+ * Autonomy
+ * Purpose
+
+Anxiety saps our motivation by discouraging or obscuring mastery, making us
+subservient to our fears, and keeps us focused inward instead of on the effect
+of the work we're doing. When we are anxious our conscious and sub-concious
+attention is drained, preventing us from executing.
+
+In a well-adjusted team, we must make an effort to:
 
 * Understand the anxieties we face individually and as a group.
-* Take concrete steps to address and alleviate specific anxieties.
+* Take concrete steps to address and alleviate anxieties.
 * Advocate for and make systemic changes which mitigate these anxieties.
 
-Our responses to how anxiety manifests are often personal as well. There's no
-"one size fits all" approach that ensures people to maintain a state of flow
+Our responses to how anxiety manifests are often personal. There's no "one size
+fits all" approach to ensure people maintain a state of productive flow
 unhindered by uncertainty and anxiety; however there are some things that have
-significant bearing:
+significant impact:
 
 * Compensation
 * Education
@@ -44,32 +63,33 @@ significant bearing:
 
 ### Compensation
 
-Anxieties rooted in finances are often sticky. People feel uncomfortable
-discussing money, and companies prefer to keep personnel costs low. This is
-especially true in software teams, which almost always have most of their budget
-devoted to salaries and benefits.
+Anxieties rooted in finances are sticky. People feel uncomfortable discussing
+money and companies prefer to keep personnel costs low. This is especially true
+in software companies which have most of their budget devoted to salaries and
+benefits.
 
 Some companies are taking radical steps, such as [using a salary
 formula](http://www.management30.com/workout/salary-formula/) and [publicly
 publishing salary
 data](https://open.bufferapp.com/introducing-open-salaries-at-buffer-including-our-transparent-formula-and-all-individual-salaries/).
-I'm personally not 100% sold on this level of transparency, but I agree it's a
-really powerful way to address perceived fairness. Here are a few other steps
-to reduce anxiety and maintain high levels of creativity, attention, and
-motivation:
+I'm not 100% sold on this level of transparency, but it is a powerful way to
+address perceived fairness. Here are a few other steps to reduce anxiety and
+maintain high levels of creativity, attention, and motivation:
 
 
-* Pay people well and fairly, regardless of role. This helps avoid a role
-  hierarchy. Role hierarchies cause people to resent or disdain between people
-  in roles in different pay levels, especially when there's a large disconnect
-  between the kind of work being done.
-* Don't trade "culture" for compensation. Sure office toys and work-cations are
+* Pay people well and fairly, regardless of role. Pay hierarchies cause people
+  to resent others in roles at different pay levels, especially when there's not
+  many opportunities to understand and appreciate the work others are doing.
+* Don't trade "culture" for compensation. Office toys and work-cations are
   fun, but it doesn't put food on the table; and they [can cause unintended
-  division](https://modelviewculture.com/pieces/how-perks-can-divide-us)
-  perks taking priority over respect.
+  division](https://modelviewculture.com/pieces/how-perks-can-divide-us). Perks
+  can't take priority over respect.
 * Don't over-sell equity. Future income doesn't alleviate current financial
   pressure. A high-value on equity may encourage distrust, since the founders,
-  executives or board members "selling" the equity tend to over-value it.
+  executives or board members "selling" the equity tend to over-value it. Plus,
+  startup equity [disproportionaly benefits
+  owners](http://danilocampos.com/2015/01/startup-equity-benefits-your-boss-not-you/)
+  over employees.
 
 
 ### Education
@@ -86,16 +106,16 @@ be in fashion, we can:
   explicitely defining what makes a "Senior" engineer vs. a "Junior" one, we
   create a mirror for people to look into and self-evaluate that the skills they
   have are valuable.
-* Focus on fundamentals and core skills, instead of frameworks and technologies.
+* Focus on fundamentals and core skills instead of frameworks and technologies.
   New techniques, libraries, and concepts come and go in the software world. By
   encouraging people to level up their core skills we create current and future safety.
 * Support new ideas and techniques. Discouraging teammates from trying out a new
   technology or user research technique is an easy way to cause self-doubt and
   anxiety.
 * Support learning. Encourage reading at work. Provide a budget for
-  self-improvement that doesn't have to be spent on going to a conference.
-  Support people in the things *they* want to learn, not just the things a
-  company deems worthwhile.
+  self-improvement that doesn't have to be spent on conferences.  Support people
+  in the things and ways *they* want to learn, not just what a company deems
+  worthwhile.
 
 
 ### Information
@@ -114,20 +134,23 @@ anxiety inducing questions are:
 * Are there up-coming organizational changes that may affect how I do my work?
 
 How each company addresses these kinds of questions is tough. No matter how you
-choose to do so, there's a few tactics that are very effective:
+choose to do so, there's a few tactics that are effective:
 
-* Terseness is a virtue. Long meandering reports of supporting data is more
-  interesting for the person doing the analysis than the people effected by it.
+* Terseness is a virtue. Long meandering reports are more interesting for the
+  person doing the reporting than the people effected by it.
 * Make it consumable asyncronously. Being able to read and review information at
-  ones own convenience is a huge step in reducing anxiety.
+  ones own convenience allows people to decide when and what to explore.
 * Consistency is huge. Consistency in both delivery and type of information
-  presented helps people establish trends.
+  presented helps people notice trends.
 * _Don't mandate it_. Not everyone wants all the information or even the same
-  information. Distributing knowledge via  a mandatory meeting can cast people
-  who are already confident as disengaged.
-
+  information. Distributing knowledge via a mandatory meeting can cast people
+  who are not anxious about the information as disengaged.
 
 Providing financial stability, direction and time for improving skills, and
 knowledge about the current and likely future state of a company all go a long
-way in freeing up a teams mental capacity. I'd love to hear your thoughts on how
-anxiety and uncertainty affects software teams!
+way in freeing up a teams mental capacity.
+
+
+I'd love to hear your thoughts on how anxiety and uncertainty affects software
+teams! Why not <a id="send-email" href="mailto: hello@zeespencer.com">drop me a
+line</a>.
