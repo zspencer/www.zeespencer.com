@@ -12,27 +12,25 @@ ctas:
     type: Link
     pageSubject: "Mitigating anxiety on software teams"
 ---
-
-software development is a creative pursuit. it takes intense focus as well as
-time away from a problem to for subconscious work. both of these cognitive modes
+Software development is a creative pursuit. It takes intense focus as well as
+time away from a problem to for subconscious work. Both of these cognitive modes
 are debilitated by stress and anxiety.
 
-a major source of anxiety is uncertainty. uncertainy is almost always deeply
+A major source of anxiety is uncertainty. Uncertainty is almost always deeply
 personal, and may be about many things:
 
-* are we earning enough to live comfortably?
-* are we compensated fairly for our time, effort and skills?
-* are our skills improving in a worth-while direction at a reasonable rate?
-* are we learning what we want to learn?
-* am i at risk of [stereotype
+* Are we earning enough to live comfortably?
+* Are we compensated fairly for our time, effort and skills?
+* Are our skills improving in a worth-while direction at a reasonable rate?
+* Are we learning what we want to learn?
+* Am we at risk of [stereotype
   threat](http://www.apa.org/research/action/stereotype.aspx)?
-* is our work of a good quality?
-* how do others perceive us? (especially those we respect or in positions of authority.)
-* is our work environment comfortable and condusive to our work style?
-* does our work matter?
-* am i representing [people like me poorly](http://xkcd.com/385)?
-* and many, many more.
-
+* Is our work of a good quality?
+* How do others perceive us? (especially those we respect or in positions of authority.)
+* Is our work environment comfortable and condusive to our work style?
+* Does our work matter?
+* Are we representing [people like me poorly](http://xkcd.com/385)?
+* And many, many more.
 
 We may map these reasons to [dan pink's](http://danpink.com) three drivers for
 motivation:
