@@ -3,6 +3,24 @@ layout: article
 tags: [software, testing, ruby, devenvironment]
 ctas:
   - type: link
+    location: middle
+    id: make-many-rubies-mid
+    color: Red
+    text: make-many-rubies
+    CTA: View Project
+    category: Investigate me
+    type: Link
+    pageSubject: "Running tests across multiple ruby versions with rbenv and make"
+  - type: link
+    location: bottom
+    id: make-many-rubies-bot
+    color: Red
+    text: make-many-rubies
+    CTA: View Project
+    category: Investigate me
+    type: Link
+    pageSubject: "Running tests across multiple ruby versions with rbenv and make"
+  - type: link
     location: bottom
     id: send-email
     color: Red
@@ -35,7 +53,8 @@ After a bit of prototyping, I settled on:
  * [GNU Make](https://www.gnu.org/software/make/manual/) for defining tasks.
 
 For those of you who want the code right now, grab my
-[make-many-rubies](https://github.com/zspencer/make-many-rubies) repo. For those
+<a href="https://github.com/zspencer/make-many-rubies"
+id="make-many-rubies-mid">make-many-rubies</a> repo. For those
 interested in the thought process, read on.
 
 ### Make and Rake, Better Together.
@@ -44,7 +63,7 @@ Make is a powerful build system. While Rake is great for complex tasks that
 require a language with functions and lists, Make
 shines at discoverability ([free
 tab-completion!](http://bash-completion.alioth.debian.org) woo!) and
-cross-language support. 
+cross-language support.
 
 I tend to have a Makefile in every project I work on which encapsulate the primary
 commands:
@@ -61,6 +80,14 @@ These tasks allow projects to have a common interface no matter what
 language, deployment strategy, or test framework we use.  Not every project has
 every task of course; but the convention makes switching between different kinds
 of projects in different languages a bit easier.
+
+### Read the Source, Luke!
+
+If you haven't already, check out the <a
+href="https://github.com/zspencer/make-many-rubies"
+id="make-many-rubies-bot">make-many-rubies</a> repo. The Makefile is annotated
+on every single line; and the Readme provides (hopefully useful) usage
+instructions.
 
 Did you find this helpful? I'd love to hear how you keep your code working
 across multiple ruby versions or use make to create a common interface
