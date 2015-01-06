@@ -2,14 +2,11 @@
 layout: article
 tags: [software, leadership, culture]
 ctas:
-  - type: link
-    location: bottom
-    id: send-email
+  - location: bottom
+    selector: '#send-email'
     color: Red
-    text: drop me a line
     CTA: Email me
     category: Contact
-    type: Link
     pageSubject: "Mitigating anxiety on software teams"
 ---
 Software development is a creative pursuit. It takes intense focus as well as

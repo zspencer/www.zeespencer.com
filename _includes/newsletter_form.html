@@ -10,31 +10,17 @@
 
 
 <script type="text/javascript">
-var ctaElement = document.getElementById('subscribe-to-newsletter');
-  analytics.trackForm(ctaElement, 'Clicked CTA', {
+Track.cta("#subscribe-to-newsletter", "Newsletter Subscription", {
   location: '{{ include.location | default: "Center" }}',
   color: 'Red',
-  text: 'Subscribe Now!',
-  CTA: 'Newsletter Subscription',
   category: 'Subscribe',
-  type: 'Button',
-  pageSubject: '{{ include.page_subject | default: "Newsletter" }}',
-  pageTitle: document.title,
-  pageUrl: location.href,
-  pagePath: location.pathname
+  pageSubject: '{{ include.page_subject | default: "Newsletter" }}'
 });
 
-var ctaElement = document.getElementById('newsletter-archive');
-  analytics.trackLink(ctaElement, 'Clicked CTA', {
+Track.cta("#newsletter-archive", "Check the Newsletter Archive", {
   location: '{{ include.location | default: "Center" }}',
   color: 'Red',
-  text: 'Read the archive.',
-  CTA: 'Check the Newsletter Archive',
   category: 'Investigate me',
-  type: 'Link',
-  pageSubject: '{{ include.page_subject | default: "Newsletter" }}',
-  pageTitle: document.title,
-  pageUrl: location.href,
-  pagePath: location.pathname
+  pageSubject: '{{ include.page_subject | default: "Newsletter" }}'
 });
 </script>

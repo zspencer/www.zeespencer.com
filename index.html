@@ -3,24 +3,16 @@ title: Zee. Software Developer. Educator.
 layout: default
 track_as: Landing
 ctas:
-  - type: link
-    location: left
-    id: send-email
+  - location: left
+    selector: '#send-email'
     color: Red
-    text: hello@zeespencer.com
     CTA: Email me
     category: Contact
-    type: Link
-    pageSubject: "Home page"
-  - type: link
-    location: left
-    id: send-email-button
+  - location: left
+    selector: '#send-email-button'
     color: Red
-    text: Send me an email!
     CTA: Email me
     category: Contact
-    type: Button
-    pageSubject: "Home page"
 ---
 <section class="testimonials">
   <article>
@@ -58,7 +50,7 @@ ctas:
     </main>
 
     <footer>
-      <a id="send-email-button" href="mailto: hello@zeespencer.com">Go ahead! Send me an Email!</a>
+      <a id="send-email-button" class="button" href="mailto: hello@zeespencer.com">Go ahead! Send me an Email!</a>
     </footer>
   </article>
 

@@ -23,6 +23,7 @@
       {% endif %}
       }}();
     </script>
+    <script type="text/javascript" src="{{ 'js/site.js' | asset_path }}"></script>
 </head>
 <body>
   <div id="page">
@@ -53,8 +54,15 @@
     </section>
   </footer>
 
+<script type="text/javascript">
 {% for cta in page.ctas %}
-{% include cta_js.html cta=cta %}
+Track.cta('{{ cta.selector }}', '{{ cta.CTA }}', {
+  color: '{{ cta.color }}',
+  location: '{{ cta.location }}',
+  category: '{{ cta.category }}',
+  pageSubject: "{{ cta.pageSubject }}",
+});
 {% endfor %}
+</script>
 </body>
 </html>

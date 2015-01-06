@@ -2,33 +2,21 @@
 layout: article
 tags: [software, testing, ruby, devenvironment]
 ctas:
-  - type: link
-    location: middle
-    id: make-many-rubies-mid
+  - location: middle
+    selector: '#make-many-rubies-mid'
     color: Red
-    text: make-many-rubies
     CTA: View Project
     category: Investigate me
-    type: Link
-    pageSubject: "Running tests across multiple ruby versions with rbenv and make"
-  - type: link
-    location: bottom
-    id: make-many-rubies-bot
+  - location: bottom
+    selector: '#make-many-rubies-bot'
     color: Red
-    text: make-many-rubies
     CTA: View Project
     category: Investigate me
-    type: Link
-    pageSubject: "Running tests across multiple ruby versions with rbenv and make"
-  - type: link
-    location: bottom
-    id: send-email
+  - location: bottom
+    selector: '#send-email'
     color: Red
-    text: drop me a line
     CTA: Email me
     category: Contact
-    type: Link
-    pageSubject: "Running tests across multiple ruby versions with rbenv and make"
 ---
 
 When writing [gems](http://glossary.codeunion.io/gem/), we frequently want to

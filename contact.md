@@ -3,41 +3,28 @@ title: Contact Zee
 layout: default
 track_as: Landing
 ctas:
-  - type: link
-    location: first
-    id: send-email
+  - location: first
+    selector: '#send-email'
     color: Red
-    text: hello@zeespencer.com
     CTA: Email Me
     category: Contact
-    type: Link
     pageSubject: "Contact me"
-  - type: link
-    location: second
-    id: visit-twitter
+  - selector: "#visit-twitter"
     color: Red
-    text: "@zspencer"
     CTA: Check my Twitter
     category: Investigate me
-    type: Link
     pageSubject: "Contact me"
-  - type: link
-    location: third
-    id: visit-github
+  - location: third
+    selector: '#visit-github'
     color: Red
-    text: zspencer
     CTA: Check my Github
     category: Investigate me
-    type: link
     pageSubject: "Contact me"
-  - type: link
-    location: fourth
-    id: visit-linked-in
+  - location: fourth
+    selector: '#visit-linked-in'
     color: Red
-    text: Zee Spencer
     CTA: Check my LinkedIn
     category: Investigate me
-    type: link
     pageSubject: "Contact me"
 ---
 Feel free to reach out to me in whatever medium you find most convenient.
