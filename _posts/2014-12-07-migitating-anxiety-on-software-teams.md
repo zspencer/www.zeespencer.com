@@ -29,7 +29,7 @@ personal, and may be about many things:
 * How do others perceive us? (especially those we respect or in positions of authority.)
 * Is our work environment comfortable and condusive to our work style?
 * Does our work matter?
-* Are we representing [people like me poorly](http://xkcd.com/385)?
+* Do people expect us to represent [other people like us](http://xkcd.com/385)?
 * And many, many more.
 
 We may map these reasons to [dan pink's](http://danpink.com) three drivers for
