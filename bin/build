@@ -1,4 +1,0 @@
-#!/bin/bash
-set -e
-bin/sass --update --style compressed --force  _precompiled/scss:assets/stylesheets
-bin/jekyll build
