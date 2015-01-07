@@ -1,6 +1,7 @@
 ---
 permalink:   /:categories/:title
 exclude: [Gemfile, Gemfile.lock, config.rb]
+include: [_precompiled]
 markdown: redcarpet
 redirects: yes
 tag_page_layout: tag_page
