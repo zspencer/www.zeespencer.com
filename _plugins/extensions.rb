@@ -9,6 +9,12 @@ module Jekyll
     end
   end
 
+  module HandleizeFilter
+    def handleize(input)
+      input.downcase.gsub(/[^a-zA-Z0-9\s]/,'').gsub(/\s/,'-')
+    end
+  end
+
   class EnvironmentVariablesGenerator < Generator
     def generate(site)
       site.config['env'] = ENV['JEKYLL_ENV'] || "development"
@@ -17,3 +23,4 @@ module Jekyll
 end
 
 Liquid::Template.register_filter(Jekyll::DateFilter)
+Liquid::Template.register_filter(Jekyll::HandleizeFilter)
