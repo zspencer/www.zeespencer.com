@@ -1,6 +1,12 @@
 ---
 title: Logo Design, Typography and Branding Inception for ZincMade
 layout: default
+ctas:
+  - location: footer
+    selector: '.job-application-email'
+    color: Red
+    CTA: Apply to Job
+    category: Contact
 ---
 
 ZincMade is a recently incorporated business focused on technical team training,
@@ -52,7 +58,7 @@ license that allows unlimited print and digital use.
 
 ### To Apply
 
-Email <a href="mailto:
+Email <a class="job-application-email" href="mailto:
 zee+zincmadebranding@zeespencer.com">zee+zincmadebranding@zeespencer.com</a> a
 proposal with:
 
