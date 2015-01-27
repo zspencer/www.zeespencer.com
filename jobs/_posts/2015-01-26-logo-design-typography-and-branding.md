@@ -1,6 +1,11 @@
 ---
-title: Logo Design, Typography and Branding Inception for ZincMade
-layout: default
+title: "Branding Inception: $2,000"
+layout: article
+tags:
+  - remote
+  - design
+  - short-term
+  - part-time
 ctas:
   - location: footer
     selector: '.job-application-email'

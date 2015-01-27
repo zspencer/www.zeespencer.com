@@ -9,12 +9,17 @@
 @import "article";
 
 // header
-#page > header h1 {
+#page > header h1, #page > header h2 {
   margin-bottom: 0;
+  clear: both;
   margin-top: 0;
 }
 
 // Nav
+#page > header > nav {
+  clear: both;
+}
+
 nav a::before, .follow a::before {
   content: "| ";
 }
