@@ -38,7 +38,7 @@ Not the goal.
 When we test, we get *critical design feedback*.
 
 When we use tests to explore and refine our code's design, we *create nuanced,
-educationl conversations*
+educational conversations*
 
 Well designed code *lets us take advantage of opportunities* that would
 otherwise be out of reach.
