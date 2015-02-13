@@ -22,28 +22,28 @@ ctas:
 ---
 Tests are use cases.
 
-They illustrate *how to use* the code they're testing.
+They illustrate **how to use** the code they're testing.
 
-They provide *examples* of how the code works in a given context.
+They provide **examples** of how the code works in a given context.
 
-They are a *describe in detail* the code's behavior.
+They are a **describe in detail** the code's behavior.
 
-They *highlight pain* in how to use the code.
+They **highlight pain** in how to use the code.
 
-They *expose complexity* in our model of the business domain.
+They **expose complexity** in our model of the business domain.
 
-When they *notify us* the code no longer behaves as specified? That's a bonus.
+When they **notify us** the code no longer behaves as specified? That's a bonus.
 Not the goal.
 
-When we test, we get *critical design feedback*.
+When we test, we get **critical design feedback**.
 
-When we use tests to explore and refine our code's design, we *create nuanced,
-educational conversations*.
+When we use tests to explore and refine our code's design, we **create nuanced,
+educational conversations**.
 
-Well designed code *lets us take advantage of opportunities* that would
+**Well-designed code lets us take advantage of opportunities** that would
 otherwise be out of reach.
 
-When we take advantage of unexpected opportunities, we *create value*.
+When we take advantage of unexpected opportunities, we **create value**.
 
 This is why I test. There may be other reasons, but these are mine.
 
