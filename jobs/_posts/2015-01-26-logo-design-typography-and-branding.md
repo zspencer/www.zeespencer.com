@@ -1,5 +1,5 @@
 ---
-title: "Branding Inception: $2,000"
+title: "Branding Inception: $2,000 - CLOSED"
 layout: article
 tags:
   - remote
