@@ -10,3 +10,6 @@ highlighter: 'rouge'
 asset_url:
   - production: /assets
   - local: /assets
+
+redcarpet:
+  extensions: [with_toc_data]
