@@ -14,18 +14,17 @@ ctas:
     category: Contact
 ---
 
-Code review gets a bad rap, especially in 'Agile' circles. The primary
-arguments are that code reviews slow teams down, create conflict between team
-members, or disempower team members by taking decision making authority away
-from them.
+Code review gets a bad rap. People worry that code reviews slow teams down,
+create conflict between team members, or disempower team members by taking away
+decision making authority.
 
-I believe these anti-patterns indicate a team is using code review for
-_criticism_ as opposed to _critique_. What's the difference? *Critique is
-focused on  specific parameters, where criticism is unbound.*
+I believe these concers are anti-patterns that indicate a team is using code
+review for _criticism_ as opposed to _critique_. What's the difference?
+*Critique is focused on  specific parameters, where criticism is unbound.*
 
-That said, many programmers are unclear how to constrain code reviews to a
-managable set of concerns. The following are a series of suggestions which may
-help move code reviews from criticism to critique:
+That said, many programmers are unclear how to perform judgement free code
+reviews. The following are a series of suggestions which may help move code
+reviews from criticism to critique:
 
 * [Start with compassion](#start-with-compassion)
 * [Working code wins](#working-code-wins)
@@ -34,35 +33,27 @@ help move code reviews from criticism to critique:
 * [Follow up](#follow-up)
 
 ## Start With Compassion
-Begin each review by reflecting on the context of the person submitting the
-code. Are they experienced team members or novices? Do you have good rapport
-with them? Are they under schedule or personal or professional pressure?
+I like to begin each review by reflecting on the context of the person
+submitting the code. Are they experienced team members or novices? Do you have
+good rapport with them? Are they under schedule or personal or professional
+pressure?
 
-I like to start by reminding myself of a variation on the retrospective prime
-directive; the submitter is doing the best they can given their past
-experiences and current context. This isn't to say if the work is of poor
-quality they are above reproach; but that even in the absolute worst case, the
-submitter is not a bad actor intentionally causing harm.
+I follow that up by reminding myself of a variation on the retrospective prime
+directive; the submitter is doing the best they can given their past experiences
+and current context. This isn't to say the work is above reproach; but that the
+submitter is doing the best they can.
 
 ## Working Code Wins
-Code review is often used as a gate to prevent technically concerning code from
-entering the system. I believe this is a flawed approach to code review; as it
-introduces an unpredictable amount of latency in a workflow. Instead, I prefer
-to merge code right away, so long as the submitter has reasonable
+Code review may be used as a gate to prevent technically concerning code from
+entering the system. This is a flawed approach to code review as it introduces
+an unpredictable amount of latency in a workflow and implies distrust. I prefer
+to allow anyone to merge the code right away, so long as the merger has
 confidence that the change causes benefits from the user or business
-perspective.
+perspective. I ask myself the following questions:
 
-* Do we understand the goals of the change?
-* Does it meet our understanding of their needs?
-* May the change cause unintended side effects?
-
-If the code can be said to be working; then it may be merged ASAP. This means
-that code review for a piece of work may continue *past* a change being
-released into production.
-
-That said, having some guidelines about what it means to be confident in a
-change is powerful:
-
+* Do I understand the goals of the change?
+* Does it meet my understanding of user or business needs?
+* What are the changes potential unintended side effects?
 * Does the change update the user facing documentation?
 * Do tests demonstrate the features functionality? These don't need to go
   through the UI, especialls when there's reasonable confidence in the code
@@ -71,41 +62,41 @@ change is powerful:
   to the change? This makes it much easier for team members to evaluate the
   change from a users perspective.
 
-I prefer a workflow where anyone may carry forward or merge a change; as this
-encourages low cycle times, high flow, and tight collaboration between team
-members.
+If the code can be said to be working; then it may be merged ASAP. Further code
+review for a piece of work may continue *past* the change being released into
+production.
+
+Allowing anyone to carry forward or merge a change at any time encourages low
+cycle times, high flow, and tight collaboration between team members.
 
 ## Discuss Clarity, Coupling, Cohesion, and Encapsulation
-Code reviews can sometimes focus on style over substance. I prefer to ban
-stylistic comments by integrating linters or automated style checkers into the
-build. This frees up team members to focus on how a change impacts
-maintainability of the sofware. The four aspects I recommend focusing on are
-clarity, coupling, cohesion, and encapsulation.
+Code reviews often focus on style over substance. I prefer to use linters or
+automated style checkers in the build to pre-empt stylistic comments. This frees
+up team members to focus on how a change impacts maintainability of the sofware.
+The four aspects I focus on are clarity, coupling, cohesion, and encapsulation.
 
 
 ### Clarity - What Does This Code Mean?
-Clarity is focused on names, documentation, tests, types, etc.  Clear code
-helps future maintainers to understand the intent of the code as well as the
-implementation. Are the commit messages and notes coherent? Are the names of
-variables and methods reasonable? Is the public surface area and implementation
-sizes of functions or namespaces reasonable? Are there usage examples? Are
-types or shapes of data demonstrated or enforced?
+Clarity is all about names, documentation, tests, types, etc. Clear code helps
+future maintainers to understand the intent of the code as well as the
+implementation. Are commit messages and notes coherent? Are the names of
+variables and methods reasonable? Are there usage examples? Are types or shapes
+of data demonstrated or enforced?
 
-Unclear code is often an indicator that a change lacks cohesion, has
-unnecessary coupling, or poorly encapsulates the goal of the change. It can
-also signal the goals of the change are uncertain.
-
+Unclear code indicates a change lacks cohesion, has unnecessary coupling, or
+poorly encapsulates the goal of the change. By paying attention to the clarity,
+we make it easier to pick up the code and make changes later on.
 
 ### Coupling - What Does This Code Work With?
-Coupling is when changes to other components may require changes in
-this section of code. How many external collaborators are used to do the work?
-How deeply does this code reach into it's collaborators? How many of their
-functions are being used? In cases where coupling with external collaborators
-is both wide and deep it can be valuable to create an intermediary that sits
-between the collaborators and this code.
+Coupling is when changes to other components may require changes in this section
+of code. How many external collaborators are used to do the work?  How deeply
+does this code reach into it's collaborators? How many of their functions are
+being used? In cases where coupling with external collaborators is both wide and
+deep it can be valuable to write an intermediary to wrap the collaborators and
+expose a smaller surface area to the new code.
 
-By drawing attention to coupling, we may reduce the cost of future change so
-long as we don't decrease clarity while doing so.
+By drawing attention to coupling, we may reduce the likelihood that we'll have
+to change this code when another component changes.
 
 
 ### Encapsulation - How Will Others Use This Code?
@@ -114,8 +105,8 @@ encapsulation is how outside consumers interact with a given component. One
 indicator of a loosely encapsulated component is difficulty in testing. A
 component that is hard to test is difficult to use. This is likely because the
 the code unintentionally exposes it's implementation. Sometimes the difficulty
-in testing is hidden behind test helpers; where a more effective approach may
-be to improve the interface of the component itself.
+in testing is hidden behind test helpers; where a more effective approach may be
+to improve the interface of the component itself.
 
 Long argument lists, callbacks, option hashes with required keys, and parameter
 objects are all indicators of loose encapsulation. In many cases these are
@@ -124,7 +115,7 @@ likely diminishes it's utility. In other cases, it's a sign the component may
 be doing too much.
 
 When we draw attention to codes encapsulation during review, it creates an
-opportunity to simplify interfaces and decrease the cost of re-using a
+opportunity to simplify interfaces and decrease the cost of re-using the
 component.
 
 ### Cohesion - What Is The Codes Job?
