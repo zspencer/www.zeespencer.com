@@ -16,16 +16,15 @@ ctas:
 
 About a year ago I got back into freelancing and started building a small,
 distributed development studio. While I enjoyed the freedom and the people; I
-can't sustain the constant sales cycle I also discovered management and
+couldn't sustain the constant sales cycle and also discovered management and
 operations is a recipe for burnout for me. My constant agony over payroll,
 bookkeeping and cashflow was/is debilitating.
 
-
 I could write in depth about what I've learned about myself and running a
-business over the past year; or describe the agony of laying off good people
-who will struggle to find new work due to systemic bias; or tipping into
-depression due to a combination of burnout and the erosion of my
-self-confidence. But instead I'd like to look forward. It's less painful.
+business over the past year; or describe the agony of laying off good people who
+may struggle to find new work due to systemic bias; or tipping into depression
+due to a combination of burnout and the erosion of my self-confidence. But
+instead I'd like to look forward. It's less painful.
 
 It has come time to shut down the consultancy side of Zinc. Zinc will remain
 focused on [The Apprenticeship Community](https://apprenticeship.community) and
