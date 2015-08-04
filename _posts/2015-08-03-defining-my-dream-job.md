@@ -59,8 +59,8 @@ growth "happens naturally." It takes intentional investment in time and money.
 It requires recognition that social and personal structures are a critical part
 of a learning culture.
 
-This isn't to say I won't be coding. Collaborating on projects is a required 
-to understand someone and assist them in planning their growth. I want
+This isn't to say I won't be coding. Collaborating on projects is required to
+understand someone and assist them in planning their growth. I want
 contributions to be evaluated not by features shipped or tasks completed but by
 my fellow-workers ability to plan, observe and measure their professional
 growth.
