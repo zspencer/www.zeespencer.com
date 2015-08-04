@@ -93,4 +93,5 @@ do so until I find the right place. How would I describe this place?
    Montreal, Quebec.
 
 If you are interested, I'd love to [get in touch](mailto:zee@zeespencer.com).
-If you're not, I'd appreciate a signal boost on social media.
+If you're not, I'd appreciate [a signal boost on social
+media](https://twitter.com/zspencer/status/628566493748289536).
