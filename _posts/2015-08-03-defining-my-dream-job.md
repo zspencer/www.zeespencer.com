@@ -83,7 +83,7 @@ I can subsist as an independent freelancer indefinitely; and will continue to
 do so until I find the right place. How would I describe this place?
 
 1. It recognizes the insiduous, destructive nature of micro-aggressions and
-   sublte \*isms and considers compassion a core skill.
+   subtle \*isms and considers compassion a core skill.
 2. It has inoculated itself against "senior-coder-itis" and actively hires
    across skill levels and specializations; while paying equitable salaries.
 3. It prioritizes perks such as 401(k)s, trans-inclusive health care, and
