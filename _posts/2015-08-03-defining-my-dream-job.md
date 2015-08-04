@@ -18,7 +18,7 @@ About a year ago I got back into freelancing and started building a small,
 distributed development studio. While I enjoyed the freedom and the people; I
 couldn't sustain the constant sales cycle and discovered management and
 operations is a recipe for burnout for me. My constant anxiety over payroll,
-bookkeeping and cashflow was/is debilitating.
+bookkeeping and cash flow was/is debilitating.
 
 I could write in depth about what I've learned about myself and running a
 business over the past year; or describe the agony of laying off good people who
@@ -30,7 +30,7 @@ It is time to shut down the consultancy side of Zinc. Zinc will remain focused
 on [The Apprenticeship Community](https://apprenticeship.community) and [Just
 Enough Media](https://leanpub.com/u/justenoughmedia). We've ramped down our
 delivery team, and while most have found new homes already; if you're a
-pairing company looking for junior and/or senior javascript / ruby developers
+pairing company looking for junior and/or senior Javascript / Ruby developers
 [ping me](mailto:zee@zeespencer.com).
 
 This also means I am officially looking for full or part-time work; and do not
@@ -74,7 +74,7 @@ If I were to write my own job description, it would look something like this:
   doing work.
 * Facilitates one-on-one and/or small group learning planning and reflection.
 * Ships software as part of a set of teams, with an emphasis on
-  cross-polination.
+  cross-pollination.
 
 Alternatively, I'd be happy to work with a company that can demonstrate that
 these responsibilities are taken care of already.
@@ -82,7 +82,7 @@ these responsibilities are taken care of already.
 I can subsist as an independent freelancer indefinitely; and will continue to
 do so until I find the right place. How would I describe this place?
 
-1. It recognizes the insiduous, destructive nature of micro-aggressions and
+1. It recognizes the insidious, destructive nature of micro-aggressions and
    subtle \*isms and considers compassion a core skill.
 2. It has inoculated itself against "senior-coder-itis" and actively hires
    across skill levels and specializations; while paying equitable salaries.
