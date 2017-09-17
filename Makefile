@@ -1,7 +1,7 @@
 build: build-js build-sass build-site
 
 build-js:
-	uglifyjs _precompiled/js/*.js --source-map assets/js/site.js.map --source-map-url /assets/js/site.js.map --source-map-root / -c -o assets/js/site.js
+	uglifyjs _precompiled/js/*.js --source-map -c -o assets/js/site.js
 
 re-build-js:
 	wach -o "_precompiled/js/**/*" make compile-js
