@@ -65,9 +65,9 @@ Hopefully it'll also help you!
 Developers](https://medium.com/@growdevelopers/designing-a-personal-learning-plan-3755e953e85e).*
 
 Have other advice on how to improve your programming skills? <a
-class="feedback-email" href="mailto: hello@zeespencer.com">Send me your
+class="feedback-email" href="mailto: zee@wecohere.com">Send me your
 thoughts.</a>
 
-Are you or your team interested in personalized coaching as you learn to program? 
-I'd love to <a class="lead-email" href="mailto: hello@zeespencer.com">help you
-design a personal learning plan for your or your team!</a>
+Are you or your team interested in personalized coaching as you learn to
+program?  I'd love to <a class="lead-email" href="mailto: zee@wecohere.com">help
+you design a personal learning plan for your or your team!</a>

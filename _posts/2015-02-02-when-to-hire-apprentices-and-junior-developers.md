@@ -96,7 +96,7 @@ lack the experience necessary to contribute effectively on the team.
 
 Is your team or company interested in hiring junior team members or building an
 apprenticeship program? I'd be happy to <a class="lead-email" href="mailto:
-hello@zeespencer.com">hear your questions and help out!</a>
+zee@wecohere.com">hear your questions and help out!</a>
 
 Disagree with something I've said? <a class="feedback-email" href="mailto:
-hello@zeespencer.com">Tell me what I could do better.</a>
+zee@wecohere.com">Tell me what I could do better.</a>

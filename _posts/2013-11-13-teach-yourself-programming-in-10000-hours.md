@@ -21,5 +21,5 @@ pieces of [structure](/articles/structure-and-space/) to support an online
 community of programmers who are constantly leveling up.
 
 If you are interested in any way, drop me a line at
-[hello@zeespencer.com](mailto:hello+gd@zeespencer.com) and we can level up
+[zee@wecohere.com](mailto:zee@wecohere.com) and we can level up
 together.

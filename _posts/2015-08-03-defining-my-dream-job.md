@@ -31,7 +31,7 @@ on [The Apprenticeship Community](https://apprenticeship.community) and [Just
 Enough Media](https://leanpub.com/u/justenoughmedia). We've ramped down our
 delivery team, and while most have found new homes already; if you're a
 pairing company looking for junior and/or senior Javascript / Ruby developers
-[ping me](mailto:zee@zeespencer.com).
+[ping me](mailto:zee@wecohere.com).
 
 This also means I am officially looking for full or part-time work; and do not
 intend to continue consulting (at least, not primarily as a deliverer of
@@ -92,6 +92,6 @@ do so until I find the right place. How would I describe this place?
    currently based out of Oakland, California and am highly interested in
    Montreal, Quebec.
 
-If you are interested, I'd love to [get in touch](mailto:zee@zeespencer.com).
+If you are interested, I'd love to [get in touch](mailto:zee@wecohere.com).
 If you're not, I'd appreciate [a signal boost on social
 media](https://twitter.com/zspencer/status/628566493748289536).

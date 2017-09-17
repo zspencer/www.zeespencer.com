@@ -78,9 +78,9 @@ Here's the recipe I follow when facilitating distributed retrospectives:
 * * *
 
 What patterns have worked for you in your distributed retrospectives? I'd love
-to <a class="feedback-email" href="mailto: zee@zeespencer.com">hear your
+to <a class="feedback-email" href="mailto: zee@wecohere.com">hear your
 ideas!</a>
 
 I'm available to provide training and coaching around effective practices on
 distributed technical teams. <a href="lead-email" href="mailto:
-yo@zincma.de">Let me know</a> if you're interested!
+zee@wecohere.com">Let me know</a> if you're interested!

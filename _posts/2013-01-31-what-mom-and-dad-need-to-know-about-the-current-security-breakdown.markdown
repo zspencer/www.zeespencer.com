@@ -113,5 +113,5 @@ McKenzie](http://www.kalzumeus.com/2013/01/31/what-the-rails-security-issue-mean
 <div class="call-to-action"><p>Are you a business owner or manager responsible
 for a rails app? I'm available to help ensure your customers are safe. Just send
   me an email: <a href="mailto:
-  hello@createwithcognizance.com">hello@createwithcognizance.com</a></p></div>
+  zee@wecohere.com">zee@wecohere.com</a></p></div>
 

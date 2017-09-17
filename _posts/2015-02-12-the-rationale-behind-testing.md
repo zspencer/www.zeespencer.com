@@ -49,9 +49,9 @@ This is why I test. There may be other reasons, but these are mine.
 
 * * *
 
-Why do you test? Care to <a class="feedback-email" href="mailto: zee@zeespencer.com">Share your
+Why do you test? Care to <a class="feedback-email" href="mailto: zee@wecohere.com">Share your
 reasons?</a>
 
 I help teams learn effective testing practices in Java, Ruby, JavaScript, and
 Clojure. If this sounds like something you're interested in, <a
-href="lead-email" href="mailto: yo@zincma.de">drop me a line</a>.
+href="lead-email" href="mailto: zee@wecohere.com">drop me a line</a>.

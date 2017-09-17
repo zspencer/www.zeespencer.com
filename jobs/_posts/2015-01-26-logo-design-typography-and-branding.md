@@ -64,7 +64,7 @@ license that allows unlimited print and digital use.
 ### To Apply
 
 Email <a class="job-application-email" href="mailto:
-zee+zincmadebranding@zeespencer.com">zee+zincmadebranding@zeespencer.com</a> a
+zee@wecohere.com">zee+zincmadebranding@wecohere.com</a> a
 proposal with:
 
 1. Your portfolio.

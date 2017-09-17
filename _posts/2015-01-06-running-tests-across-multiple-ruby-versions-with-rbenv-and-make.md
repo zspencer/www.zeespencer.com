@@ -80,4 +80,4 @@ instructions.
 Did you find this helpful? I'd love to hear how you keep your code working
 across multiple ruby versions or use make to create a common interface
 across teams and projects!  Why not <a id="send-email" href="mailto:
-hello@zeespencer.com">drop me a line</a>?
+zee@wecohere.com">drop me a line</a>?

@@ -26,4 +26,4 @@ time to recharge, relax, and **build some software**.
 3. To build something hard/fun/meaningful
 
 If you are interested, I'd love to chat. My email is
-[hello@zeespencer.com](mailto:hello+availability@zeespencer.com)
+[zee@wecohere.com](mailto:zee@wecohere.com)

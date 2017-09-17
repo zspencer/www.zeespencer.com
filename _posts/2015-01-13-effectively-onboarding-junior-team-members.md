@@ -256,9 +256,9 @@ the organization.
 * * *
 
 Is your team or company interested in bringing on junior team members? I'd be
-happy to <a class="lead-email" href="mailto: hello@zeespencer.com">listen to
+happy to <a class="lead-email" href="mailto: zee@wecohere.com">listen to
 your questions and provide advice or consulting</a>
 
 
 Disagree with something I've said? I'd love to <a class="feedback-email" href="mailto:
-hello@zeespencer.com">hear your thoughts.</a>
+zee@wecohere.com">hear your thoughts.</a>
