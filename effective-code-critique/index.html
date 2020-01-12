@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Effective Code Critique</title>
+  <link href="/assets/stylesheets/style.css?1578858160" type="text/css" rel="stylesheet" />
+  
+  <link rel="canonical" href="" />
+  
+
+  <link type="text/atom+xml" rel="alternate" href="http://feeds.feedburner.com/zeespencer"/>
+  <meta name="viewport" content="initial-scale=1" />
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.0";
+      
+      analytics.load("bxOoLxuBH6d2dOUkRUFibICbl0hKFCSy");
+      
+
+      
+        analytics.page("Article", null);
+      
+      }}();
+    </script>
+    <script type="text/javascript" src="/assets/js/site.js?1578858160"></script>
+</head>
+<body>
+  <div id="page">
+  <header>
+    <figure>
+      <img src="/assets/images/zee.png?1578858160" alt="Zee Spencer" />
+    </figure>
+    
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <h2>Effective Code Critique</h2>
+    
+
+  </header>
+  <main id="content">
+    <section id="article">
+<p>Code review gets a bad rap. People worry that code reviews slow teams down,
+create conflict between team members, or disempower team members by taking away
+decision making authority.</p>
+
+<p>I believe these concers are anti-patterns that indicate a team is using code
+review for <em>criticism</em> as opposed to <em>critique</em>. What&#39;s the difference?
+<em>Critique is focused on  specific parameters, where criticism is unbound.</em></p>
+
+<p>That said, many programmers are unclear how to perform judgement free code
+reviews. The following are a series of suggestions which may help move code
+reviews from criticism to critique:</p>
+
+<ul>
+<li><a href="#start-with-compassion">Start with compassion</a></li>
+<li><a href="#working-code-wins">Working code wins</a></li>
+<li><a href="#discuss-clarity,-coupling,-cohesion,-and-encapsulation">Discuss clarity, coupling, cohesion, and encapsulation</a></li>
+<li><a href="#celebrate-intentionally">Celebrate intentionally</a></li>
+<li><a href="#follow-up">Follow up</a></li>
+</ul>
+
+<h2 id="start-with-compassion">Start With Compassion</h2>
+
+<p>I like to begin each review by reflecting on the context of the person
+submitting the code. Are they experienced team members or novices? Do you have
+good rapport with them? Are they under schedule or personal or professional
+pressure?</p>
+
+<p>I follow that up by reminding myself of a variation on the retrospective prime
+directive; the submitter is doing the best they can given their past experiences
+and current context. This isn&#39;t to say the work is above reproach; but that the
+submitter is doing the best they can.</p>
+
+<h2 id="working-code-wins">Working Code Wins</h2>
+
+<p>Code review may be used as a gate to prevent technically concerning code from
+entering the system. This is a flawed approach to code review as it introduces
+an unpredictable amount of latency in a workflow and implies distrust. I prefer
+to allow anyone to merge the code right away, so long as the merger has
+confidence that the change causes benefits from the user or business
+perspective. I ask myself the following questions:</p>
+
+<ul>
+<li>Do I understand the goals of the change?</li>
+<li>Does it meet my understanding of user or business needs?</li>
+<li>What are the changes potential unintended side effects?</li>
+<li>Does the change update the user facing documentation?</li>
+<li>Do tests demonstrate the features functionality? These don&#39;t need to go
+through the UI, especialls when there&#39;s reasonable confidence in the code
+connecting the interface to the feature.</li>
+<li>Is there an image, gif, or video demonstrating the feature in use attached
+to the change? This makes it much easier for team members to evaluate the
+change from a users perspective.</li>
+</ul>
+
+<p>If the code can be said to be working; then it may be merged ASAP. Further code
+review for a piece of work may continue <em>past</em> the change being released into
+production.</p>
+
+<p>Allowing anyone to carry forward or merge a change at any time encourages low
+cycle times, high flow, and tight collaboration between team members.</p>
+
+<h2 id="discuss-clarity-coupling-cohesion-and-encapsulation">Discuss Clarity, Coupling, Cohesion, and Encapsulation</h2>
+
+<p>Code reviews often focus on style over substance. I prefer to use linters or
+automated style checkers in the build to pre-empt stylistic comments. This frees
+up team members to focus on how a change impacts maintainability of the sofware.
+The four aspects I focus on are clarity, coupling, cohesion, and encapsulation.</p>
+
+<h3 id="clarity-what-does-this-code-mean">Clarity - What Does This Code Mean?</h3>
+
+<p>Clarity is all about names, documentation, tests, types, etc. Clear code helps
+future maintainers to understand the intent of the code as well as the
+implementation. Are commit messages and notes coherent? Are the names of
+variables and methods reasonable? Are there usage examples? Are types or shapes
+of data demonstrated or enforced?</p>
+
+<p>Unclear code indicates a change lacks cohesion, has unnecessary coupling, or
+poorly encapsulates the goal of the change. By paying attention to the clarity,
+we make it easier to pick up the code and make changes later on.</p>
+
+<h3 id="coupling-what-does-this-code-work-with">Coupling - What Does This Code Work With?</h3>
+
+<p>Coupling is when changes to other components may require changes in this section
+of code. How many external collaborators are used to do the work?  How deeply
+does this code reach into it&#39;s collaborators? How many of their functions are
+being used? In cases where coupling with external collaborators is both wide and
+deep it can be valuable to write an intermediary to wrap the collaborators and
+expose a smaller surface area to the new code.</p>
+
+<p>By drawing attention to coupling, we may reduce the likelihood that we&#39;ll have
+to change this code when another component changes.</p>
+
+<h3 id="encapsulation-how-will-others-use-this-code">Encapsulation - How Will Others Use This Code?</h3>
+
+<p>While coupling is how a component interacts with outside collaborators;
+encapsulation is how outside consumers interact with a given component. One
+indicator of a loosely encapsulated component is difficulty in testing. A
+component that is hard to test is difficult to use. This is likely because the
+the code unintentionally exposes it&#39;s implementation. Sometimes the difficulty
+in testing is hidden behind test helpers; where a more effective approach may be
+to improve the interface of the component itself.</p>
+
+<p>Long argument lists, callbacks, option hashes with required keys, and parameter
+objects are all indicators of loose encapsulation. In many cases these are
+completely reasonable; after all reducing the surface area of an interface
+likely diminishes it&#39;s utility. In other cases, it&#39;s a sign the component may
+be doing too much.</p>
+
+<p>When we draw attention to codes encapsulation during review, it creates an
+opportunity to simplify interfaces and decrease the cost of re-using the
+component.</p>
+
+<h3 id="cohesion-what-is-the-codes-job">Cohesion - What Is The Codes Job?</h3>
+
+<p>The clearest example of non-cohesive code is a horror story from my youth.
+There was a SQL query which had hardcoded values it would return in order to
+change the color of a label. The argument could be made that this encapsulated
+the behavior of the feature; but in doing so it mixed the responsibility of
+retrieving data with the responsibility of presenting the data. Cohesive code
+eschews additional responsibilities wherever it can; resulting in horizontal
+layers and vertical slices.</p>
+
+<p>By drawing attention to the cohesion of code we create opportunities to improve
+clarity by grouping related functionality and un-grouping un-related
+functionality. This un-related functionality may become either a collaborator or a
+consumer of the component it was extracted from.</p>
+
+<p>When we frame our code review in terms of clarity, coupling, encapsulation, and
+cohesion we change the focus from the programmer and place it squarely on the
+artifact. It also moves us out of the world of moral judgement such as what&#39;s
+the &quot;best&quot; way to do something and into a conversation about the
+tradeoffs that we make as we build a software system together.</p>
+
+<h2 id="celebrate-intentionally">Celebrate Intentionally</h2>
+
+<p>Despite our best intentions; no matter how well a code review goes it is still
+a high pressure situation for the submitter. No matter how I try, I still feel
+a bit sad when someone critiques my code. To counter the inevitable bummer of
+critical feedback I try to comment on parts of the code that are of high quality
+or teach me something. It can also help to use celebratory emoji.</p>
+
+<p>The important part is to always be genuine in your celebration; as it is often
+impossible to discern between sarcasm or mockery and genuine excitement or
+positivity. Especially for people who struggle to value their own contributions
+already.</p>
+
+<h2 id="follow-up">Follow Up</h2>
+
+<p>If there&#39;s valuable changes to be made from code review but the work was merged
+already; it&#39;s OK to add the desired changes in your task or project tracking
+system. I generally prefer that the team has sole discretion on when to
+complete those tasks; as they&#39;ll have a better understanding of the cost of
+delaying clean up as well as the impact that maintainability improvements will
+have on short and long term goals.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Overall, I believe a compassionate, critique-oriented code review practice
+results in high quality code and allows companies to include team members who
+struggle with pair or mob programming.</p>
+
+</section>
+
+<hr />
+<section id="post-tags">
+  <p>Browse posts about:
+  <ul>
+  
+  <li><a href="/tags/software-as-craft.html">software-as-craft</a></li>
+  
+  <li><a href="/tags/mastery.html">mastery</a></li>
+  
+  <li><a href="/tags/culture.html">culture</a></li>
+  
+  </ul></p>
+</section>
+
+<section id="newsletter-signup">
+  <p>Want to get notified when I publish new articles or update old ones?
+  Subscribe to my newsletter. It's a weekly-ish set of interesting links with a
+  short essay on programming, design, technical leadership, or anything else
+  that strikes my fancy.</p>
+
+  <form id="subscribe-to-newsletter" action="https://tinyletter.com/zspencer" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/zspencer', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+  <p><label for="tlemail">Email address:</label>
+  <input placeholder="your-email@example.com" type="text" name="email" id="tlemail" /></p>
+  <input type="hidden" value="1" name="embed"/>
+
+  <p>Not sure? <a id="newsletter-archive" href="http://tinyletter.com/zspencer/archive">Read the
+    archive.</a></p>
+  <input class="button" type="submit" value="Subscribe Now!" />
+</form>
+
+<script type="text/javascript">
+Track.cta("#subscribe-to-newsletter", "Newsletter Subscription", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Subscribe',
+  pageSubject: 'Article'
+});
+
+Track.cta("#newsletter-archive", "Check the Newsletter Archive", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Investigate me',
+  pageSubject: 'Article'
+});
+</script>
+
+</section>
+
+  </main>
+  <div class="push"></div>
+  </div>
+  <footer>
+    <section id="footer-content">
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <p class="license">
+        Copyright 2004 - 2014 Zee Spencer. Licensed under
+        a <a
+           rel="license"
+           href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+           Commons Attribution-NonCommercial-ShareAlike 4.0
+           International License</a>.
+      </p>
+    </section>
+  </footer>
+
+<script type="text/javascript">
+
+Track.cta('.feedback-email', 'Email me', {
+  color: 'Red',
+  location: 'bottom',
+  category: 'Contact',
+  pageSubject: "",
+});
+
+Track.cta('.lead-email', 'Email me', {
+  color: 'Red',
+  location: 'bottom',
+  category: 'Contact',
+  pageSubject: "",
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "name": "zeespencer.com",
+  "version": "1.0.0",
+  "description": "Personal website of Zee Spencer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/zspencer/www.zeespencer.com.git"
+  },
+  "author": "Zee Spencer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zspencer/www.zeespencer.com/issues"
+  },
+  "homepage": "https://github.com/zspencer/www.zeespencer.com#readme",
+  "dependencies": {
+    "uglifyjs": "^2.4.11"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2",
+    "uglify-js": "^3.7.5",
+    "watch": "^1.0.2"
+  }
+}

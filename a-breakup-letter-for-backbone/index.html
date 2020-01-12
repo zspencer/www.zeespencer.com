@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Breaking Up With Backbone</title>
+  <link href="/assets/stylesheets/style.css?1578858160" type="text/css" rel="stylesheet" />
+  
+  <link rel="canonical" href="" />
+  
+
+  <link type="text/atom+xml" rel="alternate" href="http://feeds.feedburner.com/zeespencer"/>
+  <meta name="viewport" content="initial-scale=1" />
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.0";
+      
+      analytics.load("bxOoLxuBH6d2dOUkRUFibICbl0hKFCSy");
+      
+
+      
+        analytics.page("Article", null);
+      
+      }}();
+    </script>
+    <script type="text/javascript" src="/assets/js/site.js?1578858160"></script>
+</head>
+<body>
+  <div id="page">
+  <header>
+    <figure>
+      <img src="/assets/images/zee.png?1578858160" alt="Zee Spencer" />
+    </figure>
+    
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <h2>Breaking Up With Backbone</h2>
+    
+
+  </header>
+  <main id="content">
+    <section id="article">
+<p>Dear Backbone,</p>
+
+<p>It&#39;s been fun. We&#39;ve had some incredible times together. But I just
+don&#39;t see us working out.</p>
+
+<p>Don&#39;t get me wrong, you have some nice features, your code base is relatively
+clean, you have good test coverage, and features don&#39;t change drastically
+between releases.</p>
+
+<p>But you don&#39;t seem to understand what I want. I mean, yea, I <em>crave</em> a clear
+separation of concerns between domain, persistance, and presentation layers. I
+<em>demand</em> a way to keep my html free from javascript (and vice versa). I may even
+sometimes want a way to play nicely with the browser history as people interact
+broadly with my app.</p>
+
+<p>But dammit, I don&#39;t need something that binds events for me. I don&#39;t need
+something to determine which code to execute based upon which url I happen to be
+on. I&#39;ll be damned if I start treating javascript like a &quot;class inheritance&quot;
+system when it&#39;s prototypical. I sure as hell don&#39;t want to throw away what
+little knowledge I have of javascript to follow one of many competing half baked
+idioms for javascript application structure.</p>
+
+<p>Maybe I don&#39;t get it. Maybe it&#39;s me, not you. But let&#39;s face it: You don&#39;t help
+me be more productive. That&#39;s why I use rails in spite of it&#39;s crazy desire to
+modify base objects, poor architecture, silly ActiveRecord, and absurd routing
+system. I can go from 0 to app in about 5 minutes with Rails. With you, it is
+30~45. Part of it is lack of practice, but part of it is how little you actually
+do for me. Sure, your persistence layer is fantastic.  But your views? Now
+you&#39;re just getting in the way of javascript&#39;s event binding! Don&#39;t even get me
+started on routing. If a query variable is part of the URL it breaks? Really?!</p>
+
+<p>I&#39;m burnt out on javascript app frameworks. I think I&#39;ll stick with jQuery.</p>
+
+<p>I know it isn&#39;t sexy. I know 99% of jQuery plugins are giant pile of poo. I
+know jQuery doesn&#39;t provide me with a reasonable way to separate my concerns.
+That&#39;s why I lean on libraries like
+<a href="http://westcoastlogic.com/lawnchair/">lawnchair</a>,
+<a href="http://pjax.heroku.com/">pjax</a>, <a href="http://handlebarsjs.com/">handlebars</a>, and
+<a href="http://documentcloud.github.com/underscore/">underscore</a>.</p>
+
+<p>They don&#39;t make javascript into something else, work well in greenfield or
+legacy applications, and can be used independently without significantly
+altering your codebase or workflow.</p>
+
+<p>Without a framework it&#39;s up to me to ensure I don&#39;t create a big ball of mud.
+It&#39;s up to me to make sure I seperate my concerns. It&#39;s up to me to create clean
+code.</p>
+
+<p>To be honest, that&#39;s how I like it.</p>
+
+</section>
+
+<hr />
+<section id="post-tags">
+  <p>Browse posts about:
+  <ul>
+  
+  <li><a href="/tags/js.html">js</a></li>
+  
+  <li><a href="/tags/software.html">software</a></li>
+  
+  </ul></p>
+</section>
+
+<section id="newsletter-signup">
+  <p>Want to get notified when I publish new articles or update old ones?
+  Subscribe to my newsletter. It's a weekly-ish set of interesting links with a
+  short essay on programming, design, technical leadership, or anything else
+  that strikes my fancy.</p>
+
+  <form id="subscribe-to-newsletter" action="https://tinyletter.com/zspencer" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/zspencer', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+  <p><label for="tlemail">Email address:</label>
+  <input placeholder="your-email@example.com" type="text" name="email" id="tlemail" /></p>
+  <input type="hidden" value="1" name="embed"/>
+
+  <p>Not sure? <a id="newsletter-archive" href="http://tinyletter.com/zspencer/archive">Read the
+    archive.</a></p>
+  <input class="button" type="submit" value="Subscribe Now!" />
+</form>
+
+<script type="text/javascript">
+Track.cta("#subscribe-to-newsletter", "Newsletter Subscription", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Subscribe',
+  pageSubject: 'Article'
+});
+
+Track.cta("#newsletter-archive", "Check the Newsletter Archive", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Investigate me',
+  pageSubject: 'Article'
+});
+</script>
+
+</section>
+
+  </main>
+  <div class="push"></div>
+  </div>
+  <footer>
+    <section id="footer-content">
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <p class="license">
+        Copyright 2004 - 2014 Zee Spencer. Licensed under
+        a <a
+           rel="license"
+           href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+           Commons Attribution-NonCommercial-ShareAlike 4.0
+           International License</a>.
+      </p>
+    </section>
+  </footer>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Using Nil Effectively</title>
+  <link href="/assets/stylesheets/style.css?1578858160" type="text/css" rel="stylesheet" />
+  
+  <link rel="canonical" href="" />
+  
+
+  <link type="text/atom+xml" rel="alternate" href="http://feeds.feedburner.com/zeespencer"/>
+  <meta name="viewport" content="initial-scale=1" />
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.0";
+      
+      analytics.load("bxOoLxuBH6d2dOUkRUFibICbl0hKFCSy");
+      
+
+      
+        analytics.page("Article", null);
+      
+      }}();
+    </script>
+    <script type="text/javascript" src="/assets/js/site.js?1578858160"></script>
+</head>
+<body>
+  <div id="page">
+  <header>
+    <figure>
+      <img src="/assets/images/zee.png?1578858160" alt="Zee Spencer" />
+    </figure>
+    
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <h2>Using Nil Effectively</h2>
+    
+
+  </header>
+  <main id="content">
+    <section id="article">
+<p>We seem to use <code>nil</code>s in place of a default return value in a function. Say you
+wanted to write a function that splits a string on its commas:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">def nil_split_on_comma(string)
+  return nil unless string.include? ","
+  string.split(",")
+end
+</code></pre></div>
+<p>While this seems reasonable it can have some unfortunate side effects:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">p nil_split_on_comma("asdfqwer").map(&amp;:length)
+</code></pre></div>
+<p>Woops! Undefined method map for <code>nil</code> class! Let&#39;s try again!</p>
+<div class="highlight"><pre><code class="language-" data-lang="">def better_split_on_comma(string)
+  return [] unless string.include? ","
+  string.split(",")
+end
+
+p better_split_on_comma("asdfqwer").map(&amp;:length)
+</code></pre></div>
+<p>Ah! Much better! Because this function always returns an object of the same type
+it can be used without checking the value! The astute reader will spot this as
+an example of the <a href="http://c2.com/cgi/wiki?NullObject">Null Object Pattern</a></p>
+
+<p>In spite of it&#39;s lack of suitability as a replacement for a reasonable default
+value, I&#39;m a fan of <code>nil</code>. I especially like it&#39;s use as a <a href="http://en.wikipedia.org/wiki/Null_character">null
+terminator</a>:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">def iterable_fetch_val(index)
+  data = "1234567890"
+  data[index]
+end
+
+index = 0
+
+while iterable_fetch_val(index)
+  p iterable_fetch_val(index)
+  index += 1
+end
+</code></pre></div>
+<p>Here we&#39;re relying on the side effect that a <code>nil</code> value is also falsey. I&#39;m
+less edgey about this because this functions use case is an iterator, instead of
+an accessor; but it&#39;s still a little iffy.</p>
+
+<p>However, if you return an empty string instead of a falsey value it requires an
+additional method call to use as an iterator:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">def uniterable_fetch_val(index)
+  data = "1234567890"
+  data[index] || ""
+end
+
+index = 0
+until uniterable_fetch_val(index).empty?
+  p uniterable_fetch_val(index)
+  index += 1
+end
+</code></pre></div>
+<p>As you can see, <code>nil</code>&#39;s aren&#39;t all bad. However they should be used with
+precision. Think about how varyied return types can cause complexity to move
+through the code.</p>
+
+</section>
+
+<hr />
+<section id="post-tags">
+  <p>Browse posts about:
+  <ul>
+  
+  <li><a href="/tags/tapas.html">tapas</a></li>
+  
+  <li><a href="/tags/ruby.html">ruby</a></li>
+  
+  <li><a href="/tags/software.html">software</a></li>
+  
+  </ul></p>
+</section>
+
+<section id="newsletter-signup">
+  <p>Want to get notified when I publish new articles or update old ones?
+  Subscribe to my newsletter. It's a weekly-ish set of interesting links with a
+  short essay on programming, design, technical leadership, or anything else
+  that strikes my fancy.</p>
+
+  <form id="subscribe-to-newsletter" action="https://tinyletter.com/zspencer" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/zspencer', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+  <p><label for="tlemail">Email address:</label>
+  <input placeholder="your-email@example.com" type="text" name="email" id="tlemail" /></p>
+  <input type="hidden" value="1" name="embed"/>
+
+  <p>Not sure? <a id="newsletter-archive" href="http://tinyletter.com/zspencer/archive">Read the
+    archive.</a></p>
+  <input class="button" type="submit" value="Subscribe Now!" />
+</form>
+
+<script type="text/javascript">
+Track.cta("#subscribe-to-newsletter", "Newsletter Subscription", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Subscribe',
+  pageSubject: 'Article'
+});
+
+Track.cta("#newsletter-archive", "Check the Newsletter Archive", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Investigate me',
+  pageSubject: 'Article'
+});
+</script>
+
+</section>
+
+  </main>
+  <div class="push"></div>
+  </div>
+  <footer>
+    <section id="footer-content">
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <p class="license">
+        Copyright 2004 - 2014 Zee Spencer. Licensed under
+        a <a
+           rel="license"
+           href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+           Commons Attribution-NonCommercial-ShareAlike 4.0
+           International License</a>.
+      </p>
+    </section>
+  </footer>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

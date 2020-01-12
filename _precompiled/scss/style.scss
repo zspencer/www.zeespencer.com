@@ -1,0 +1,89 @@
+@import "base";
+@import "fonts";
+@import "pygments";
+@import "bourbon/bourbon";
+@import "base/base";
+@import "layout";
+@import "bitters_overrides";
+@import "home";
+@import "article";
+
+// header
+#page > header h1, #page > header h2 {
+  margin-bottom: 0;
+  clear: both;
+  margin-top: 0;
+}
+
+// Nav
+#page > header > nav {
+  clear: both;
+}
+
+nav a::before, .follow a::before {
+  content: "| ";
+}
+
+// Background
+#page, body > footer {
+  box-shadow: 0px 0px 7px $tertiary-darkest;
+  background-color: $content-background-color;
+}
+
+body {
+  @include background-image(
+    url("/assets/images/symphony.png"),
+    linear-gradient(rgba($base-background-color, .8), rgba($base-background-color, .8))
+  );
+}
+
+// Forms
+form {
+  input[type=submit], button {
+    width: 100%;
+  }
+}
+
+
+// footer
+body > footer {
+  width: 100%;
+}
+
+#page, #footer-content {
+  padding: 1em;
+}
+
+
+// Testimonials
+.testimonials {
+  blockquote {
+    padding-left: 0;
+  }
+}
+
+.next-steps {
+  clear: both;
+  @include display(flex);
+  @include flex-wrap(wrap);
+  @include flex-direction(row);
+
+  article {
+    @include display(flex);
+    @include flex-direction(column);
+    main {
+      @include flex(1);
+    }
+  }
+
+  #send-email-button {
+    @extend %button;
+    @include appearance(none);
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+}
