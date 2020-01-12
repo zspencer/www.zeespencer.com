@@ -1,10 +1,19 @@
+setup: setup-bundle-install setup-npm-install
+
 build: build-js build-sass build-site
 
-build-js:
-	uglifyjs _precompiled/js/*.js --source-map -c -o assets/js/site.js
+run:
+	bin/foreman start
 
-re-build-js:
-	wach -o "_precompiled/js/**/*" make compile-js
+release:
+	JEKYLL_ENV=production make build
+	bin/s3_website push
+
+build-js:
+	npx uglifyjs _precompiled/js/*.js --source-map -c -o assets/js/site.js
+
+build-js-continuously:
+	npx watch "make build-js" _precompiled
 
 build-sass:
 	bin/sass --update --style compressed --force  _precompiled/scss:assets/stylesheets
@@ -12,11 +21,8 @@ build-sass:
 build-site:
 	bin/jekyll build
 
-release:
-	JEKYLL_ENV=production make build
-	bin/s3_website push
+setup-bundle-install:
+	bundle install
 
-
-
-run:
-	bin/foreman start
+setup-npm-install:
+	npm i

@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'jekyll', "2.5.1"
+gem 'jekyll', "~> 2.5"
 gem 'jekyll-cdn'
 gem 's3_website'
 gem 'jekyll-redirects'
