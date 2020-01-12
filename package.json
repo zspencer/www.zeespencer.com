@@ -11,16 +11,13 @@
     "url": "git+ssh://git@github.com/zspencer/www.zeespencer.com.git"
   },
   "author": "Zee Spencer",
-  "license": "ISC",
+  "license": "CC-BY-SA-4.0",
   "bugs": {
     "url": "https://github.com/zspencer/www.zeespencer.com/issues"
   },
   "homepage": "https://github.com/zspencer/www.zeespencer.com#readme",
-  "dependencies": {
-    "uglifyjs": "^2.4.11"
-  },
   "devDependencies": {
-    "nodemon": "^2.0.2",
+    "gh-pages": "^2.2.0",
     "uglify-js": "^3.7.5",
     "watch": "^1.0.2"
   }

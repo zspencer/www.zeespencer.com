@@ -5,9 +5,10 @@ build: build-js build-sass build-site
 run:
 	bin/foreman start
 
-release:
+release: build-production push-production
+
+build-production:
 	JEKYLL_ENV=production make build
-	bin/s3_website push
 
 build-js:
 	npx uglifyjs _precompiled/js/*.js --source-map -c -o assets/js/site.js
@@ -26,3 +27,6 @@ setup-bundle-install:
 
 setup-npm-install:
 	npm i
+
+push-production:
+	npx gh-pages -d _site
