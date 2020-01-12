@@ -1,0 +1,24 @@
+page_rules:
+  - match: zeespencer.com/*
+    state: on
+    rule:
+      type: forwarding_url
+      status_code: 301
+      destination_url: https://www.zeespencer.com/$1
+  - match: http://www.zeespencer.com/*
+    state: on
+    rule: always_use_https
+
+entries:
+  - name: www
+    type: CNAME
+    content: zspencer.github.io
+  - name: @
+    type: CNAME
+    content: www.zspencer.com
+  - name: vpn
+    type: A
+    content: 135.180.50.185
+  - name: prime
+    type: A
+    content: 71.19.149.74
