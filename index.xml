@@ -4,13 +4,92 @@
   <title>Musings and Mutterings of Zee Spencer</title>
   <link rel="self" type="application/atom+xml" href="http://zeespencer.com/index.xml" />
   <link href="http://zeespencer.com/" />
-  <updated>2020-02-02T10:17:26-08:00</updated>
+  <updated>2020-02-08T12:26:16-08:00</updated>
   <id>http://zeespencer.com/</id>
   <author>
     <name>Zee</name>
     <email>zee@zeespencer.com</email>
   </author>
 
+  
+  
+  <entry>
+    <id>http://zeespencer.com/drift-work-and-shift-work</id>
+    <link type="text/html" rel="alternate" href="http://zeespencer.com/drift-work-and-shift-work"/>
+    <title>Drift Work, Shift Work</title>
+    <updated>2020-01-08T00:00:00-08:00</updated>
+    <author>
+      <name>Zee</name>
+      <uri>http://zeespencer.com/</uri>
+    </author>
+    <content type="html">&lt;p&gt;Over the years, I&amp;#39;ve heard many ways to frame the tradeoff in work conditions that optimize contributors&amp;#39; work productivity and managers&amp;#39; work productivity.
+The most popular being &amp;quot;Maker schedule, manager schedule.&amp;quot;
+While I agree that some kinds of work are best suited to specific work conditions, I&amp;#39;m unconvinced a manager versus individual contributor framing is helpful when attempting to determine how to structure my workday.
+Why?&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;It exacerbates tensions between management practices and software development practices.&lt;/li&gt;
+&lt;li&gt;It &amp;quot;walls off&amp;quot; work tactics or strategies that may be suitable across roles behind role boundaries.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I suggest an alternative: shift work and drift work.
+Instead of splitting work between a boss/worker hierarchy, we acknowledge that work fits best when and where the time and attention the worker has is well suited to the task at hand.&lt;/p&gt;
+
+&lt;p&gt;Thinking in terms of shift work and drift work gives us options for mitigating tensions around what work is and is not getting done.
+We can evaluate the work that is missing, determine whether it&amp;#39;s more amenable to shift work or drift work, and adjust our work-schedules as appropriate.&lt;/p&gt;
+
+&lt;h2 id=&quot;shift-work&quot;&gt;Shift Work&lt;/h2&gt;
+
+&lt;p&gt;Shift work is &lt;em&gt;focused.&lt;/em&gt;
+It&amp;#39;s the work where we are at our best in a &lt;a href=&quot;https://en.wikipedia.org/wiki/Flow_(psychology)&quot;&gt;flow state&lt;/a&gt;.
+Our goal is to complete &lt;em&gt;all the things&lt;/em&gt; or perform a particularly time-intensive task to completion.
+Work like debugging, designing test plans,  processing support tickets, shipping a feature, intensively reading a book or following a course, or providing thoughtful critique are some examples of &lt;em&gt;shift work&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Shift work responds well to &lt;em&gt;structures that enable a state of flow&lt;/em&gt; while performing that work.
+For some, these structures may be working in a particular place at a specific time.
+For others, they may be having the flexibility to drop deeply into work when inspiration strikes.
+Perhaps someone achieves flow when their workflow bubbles up the next piece of work worth doing.
+Or maybe it&amp;#39;s easier to achieve flow in a distraction-free environment where only the current task matters.&lt;/p&gt;
+
+&lt;p&gt;There is no &amp;quot;right&amp;quot; or &amp;quot;wrong&amp;quot; way to perform shift work, and &lt;strong&gt;what works well for me may not work well for you.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;drift-work&quot;&gt;Drift Work&lt;/h2&gt;
+
+&lt;p&gt;Conversely, drift work is &lt;em&gt;unfocused.&lt;/em&gt;
+The goal with drift work is not &amp;quot;complete all the things,&amp;quot; but rather &amp;quot;notice what wants doing, and (perhaps!) do it.&amp;quot;
+When doing drift work, we do not try to complete a known set of tasks.
+Instead, we try to take care of the things that may be at risk of falling through the cracks.
+Some examples of drift work are catching up on correspondence, double checking some numbers, jotting out a rough draft, fiddling a bit with a design that isn&amp;#39;t quite baked, skimming a monitoring suite to evaluate system health, or casually reading a book or following a course.&lt;/p&gt;
+
+&lt;p&gt;Drift work responds well to &lt;em&gt;structures that increase spaciousness&lt;/em&gt; while performing the work.
+For some, having clear time-budgets encourages spaciousness.
+For others, time limits feel constraining and over-bearing.
+Some drift work requires availability to be interrupted.
+Other drift work is done best when you don&amp;#39;t have to worry about other people or pressing tasks wanting your attention.&lt;/p&gt;
+
+&lt;p&gt;Like shift work, there is no right or wrong way to make space and perform drift work.&lt;/p&gt;
+
+&lt;h2 id=&quot;make-time-for-both&quot;&gt;Make Time for Both&lt;/h2&gt;
+
+&lt;p&gt;In systems where people are not doing enough drift work may have stresses and tensions emerge where people feel there &amp;quot;isn&amp;#39;t enough time&amp;quot; to get &amp;quot;all the things done.&amp;quot;
+These tensions emerge not because there is not enough time to get all the things done, but because we are not doing enough drift to evaluate what is genuinely valuable and what appears urgent or critical at first glance.&lt;/p&gt;
+
+&lt;p&gt;Conversely, in systems where people are not doing enough shift work struggle to execute on work worth doing.
+People may feel pulled in too many directions, or like there isn&amp;#39;t a &lt;em&gt;point&lt;/em&gt; to the conversations they&amp;#39;re having at work. After all, &lt;em&gt;nothing gets done anyway.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;It may come as no surprise that different people within the same team or organization may perceive the tensions as having different causes.
+People who feel most productive doing shift work or enjoy the feeling of pushing their limits may feel like doubling down on getting things done will make the tensions go away.
+People with a strong preference for drift work may feel exhausted by spending even a few hours a day in a focused, high-activation work state.
+Even more confounding, the same person may have different needs applying the drift work/shift work spectrum based upon factors outside the context of the organization.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-works-well-for-me-for-now&quot;&gt;What Works Well For Me (For Now)&lt;/h2&gt;
+
+&lt;p&gt;I&amp;#39;ve found that my most productive days are ones where I can take thirty minutes in a &amp;quot;triage and respond shift&amp;quot; that slowly transitions into drift work.
+Once I no longer have things pulling my attention, I take a break, eat some food, move around a bit, and wash up.
+Once restored, I&amp;#39;m ready for some tightly-focused shift-work that can last two to six hours and ends when I&amp;#39;m fatigued or otherwise &amp;#39;done.&amp;#39;&lt;/p&gt;
+</content>
+  </entry>
+  
   
   
   <entry>
@@ -1297,7 +1376,7 @@ on the problem at hand.&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;figure&gt;
-  &lt;a href=&quot;/assets/images/standing-desk-with-treadmill-and-chair.jpg?1580667446&quot;&gt;
+  &lt;a href=&quot;/assets/images/standing-desk-with-treadmill-and-chair.jpg?1581193577&quot;&gt;
     &lt;img alt=&quot;Standing desk with treadmill and chair&quot;
          src=&quot;/assets/images/standing-desk-with-treadmill-and-chair.jpg&quot; /&gt;
     &lt;figcaption&gt;The Jarvis, TR1200, and Leap&lt;/figcaption&gt;
