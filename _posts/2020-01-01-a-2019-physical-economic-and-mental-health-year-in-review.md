@@ -2,8 +2,7 @@
 title: 2019 Year in Review
 layout: article
 tags: [finance, personal, health]
-excerpt: <p>In 2018, I set out to establish habits that made me physically, economically, and mentally               healthier. It's been tough, but worth it. And it gets easier every day.</p>
-         <p>Here's the metrics I've used to guide me, the goals I set to improve those metrics, and where I am now.</p>
+excerpt: <p>In 2018, I set out to establish habits that made me physically,    economically, and mentally healthier. It's been tough, but worth it. And it gets easier every day.</p> <p>Here's the metrics I've used to guide me, the goals I set to improve those metrics, and where I am now.</p>
 ---
 In 2018, I set out to establish habits that made me physically, economically, and mentally healthier. It's been tough, but worth it. And it gets easier every day.
 
