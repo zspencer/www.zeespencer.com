@@ -2,7 +2,7 @@
 <html>
 <head>
   <title></title>
-  <link href="/assets/stylesheets/style.css?1581193630" type="text/css" rel="stylesheet" />
+  <link href="style.css" type="text/css" rel="stylesheet" />
   
   <link rel="canonical" href="" />
   
@@ -20,13 +20,13 @@
       
       }}();
     </script>
-    <script type="text/javascript" src="/assets/js/site.js?1581193630"></script>
+    <script type="text/javascript" src="js/site.js"></script>
 </head>
 <body>
   <div id="page">
   <header>
     <figure>
-      <img src="/assets/images/zee.png?1581193630" alt="Zee Spencer" />
+      <img src="images/zee.png" alt="Zee Spencer" />
     </figure>
     
       <nav>
@@ -48,21 +48,542 @@
 
   
   <li>Using Nil Effectively &ndash;
-      <a href="/tags/tapas.html" rel="tag">tapas</a>, <a href="/tags/ruby.html" rel="tag">ruby</a>, <a href="/tags/software.html" rel="tag">software</a><br />
+      <!DOCTYPE html>
+<html>
+<head>
+  <title>Using Nil Effectively</title>
+  <link href="style.css" type="text/css" rel="stylesheet" />
+  
+  <link rel="canonical" href="" />
+  
+
+  <link type="text/atom+xml" rel="alternate" href="http://feeds.feedburner.com/zeespencer"/>
+  <meta name="viewport" content="initial-scale=1" />
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.0";
+      
+      analytics.load("DEDSLhOPXKFCHg4NglvHWqtQg6BgqJy2");
+      
+
+      
+        analytics.page();
+      
+      }}();
+    </script>
+    <script type="text/javascript" src="js/site.js"></script>
+</head>
+<body>
+  <div id="page">
+  <header>
+    <figure>
+      <img src="images/zee.png" alt="Zee Spencer" />
+    </figure>
+    
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <h2>Using Nil Effectively</h2>
+    
+
+  </header>
+  <main id="content">
+    <section id="article">
+<p>We seem to use <code>nil</code>s in place of a default return value in a function. Say you
+wanted to write a function that splits a string on its commas:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">def nil_split_on_comma(string)
+  return nil unless string.include? ","
+  string.split(",")
+end
+</code></pre></div>
+<p>While this seems reasonable it can have some unfortunate side effects:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">p nil_split_on_comma("asdfqwer").map(&amp;:length)
+</code></pre></div>
+<p>Woops! Undefined method map for <code>nil</code> class! Let&#39;s try again!</p>
+<div class="highlight"><pre><code class="language-" data-lang="">def better_split_on_comma(string)
+  return [] unless string.include? ","
+  string.split(",")
+end
+
+p better_split_on_comma("asdfqwer").map(&amp;:length)
+</code></pre></div>
+<p>Ah! Much better! Because this function always returns an object of the same type
+it can be used without checking the value! The astute reader will spot this as
+an example of the <a href="http://c2.com/cgi/wiki?NullObject">Null Object Pattern</a></p>
+
+<p>In spite of it&#39;s lack of suitability as a replacement for a reasonable default
+value, I&#39;m a fan of <code>nil</code>. I especially like it&#39;s use as a <a href="http://en.wikipedia.org/wiki/Null_character">null
+terminator</a>:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">def iterable_fetch_val(index)
+  data = "1234567890"
+  data[index]
+end
+
+index = 0
+
+while iterable_fetch_val(index)
+  p iterable_fetch_val(index)
+  index += 1
+end
+</code></pre></div>
+<p>Here we&#39;re relying on the side effect that a <code>nil</code> value is also falsey. I&#39;m
+less edgey about this because this functions use case is an iterator, instead of
+an accessor; but it&#39;s still a little iffy.</p>
+
+<p>However, if you return an empty string instead of a falsey value it requires an
+additional method call to use as an iterator:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">def uniterable_fetch_val(index)
+  data = "1234567890"
+  data[index] || ""
+end
+
+index = 0
+until uniterable_fetch_val(index).empty?
+  p uniterable_fetch_val(index)
+  index += 1
+end
+</code></pre></div>
+<p>As you can see, <code>nil</code>&#39;s aren&#39;t all bad. However they should be used with
+precision. Think about how varyied return types can cause complexity to move
+through the code.</p>
+
+</section>
+
+<hr />
+<section id="post-tags">
+  <p>Browse posts about:
+  <ul>
+  
+  <li><a href="tapas">tapas</a></li>
+  
+  <li><a href="ruby">ruby</a></li>
+  
+  <li><a href="software">software</a></li>
+  
+  </ul></p>
+</section>
+
+<section id="newsletter-signup">
+  <p>Want to get notified when I publish new articles or update old ones?
+  Subscribe to my newsletter. It's a weekly-ish set of interesting links with a
+  short essay on programming, design, technical leadership, or anything else
+  that strikes my fancy.</p>
+
+  <form id="subscribe-to-newsletter" action="https://tinyletter.com/zspencer" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/zspencer', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+  <p><label for="tlemail">Email address:</label>
+  <input placeholder="your-email@example.com" type="text" name="email" id="tlemail" /></p>
+  <input type="hidden" value="1" name="embed"/>
+
+  <p>Not sure? <a id="newsletter-archive" href="http://tinyletter.com/zspencer/archive">Read the
+    archive.</a></p>
+  <input class="button" type="submit" value="Subscribe Now!" />
+</form>
+
+<script type="text/javascript">
+Track.cta("#subscribe-to-newsletter", "Newsletter Subscription", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Subscribe',
+  pageSubject: 'Article'
+});
+
+Track.cta("#newsletter-archive", "Check the Newsletter Archive", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Investigate me',
+  pageSubject: 'Article'
+});
+</script>
+
+</section>
+
+  </main>
+  <div class="push"></div>
+  </div>
+  <footer>
+    <section id="footer-content">
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <p class="license">
+        Copyright 2004 - 2020 Zee Spencer. Licensed under
+        a <a
+           rel="license"
+           href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+           Commons Attribution-NonCommercial-ShareAlike 4.0
+           International License</a>.
+      </p>
+    </section>
+  </footer>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
+<br />
       <a href="/using-nil-effectively">17 Feb 2013</a>
   </li>
   
 
   
   <li>Ambiguity In Code Is an Opportunity to Refactor &ndash;
-      <a href="/tags/software.html" rel="tag">software</a>, <a href="/tags/ruby.html" rel="tag">ruby</a>, <a href="/tags/tapas.html" rel="tag">tapas</a>, <a href="/tags/design.html" rel="tag">design</a><br />
+      <!DOCTYPE html>
+<html>
+<head>
+  <title>Ambiguity In Code Is an Opportunity to Refactor</title>
+  <link href="style.css" type="text/css" rel="stylesheet" />
+  
+  <link rel="canonical" href="" />
+  
+
+  <link type="text/atom+xml" rel="alternate" href="http://feeds.feedburner.com/zeespencer"/>
+  <meta name="viewport" content="initial-scale=1" />
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.0";
+      
+      analytics.load("DEDSLhOPXKFCHg4NglvHWqtQg6BgqJy2");
+      
+
+      
+        analytics.page();
+      
+      }}();
+    </script>
+    <script type="text/javascript" src="js/site.js"></script>
+</head>
+<body>
+  <div id="page">
+  <header>
+    <figure>
+      <img src="images/zee.png" alt="Zee Spencer" />
+    </figure>
+    
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <h2>Ambiguity In Code Is an Opportunity to Refactor</h2>
+    
+
+  </header>
+  <main id="content">
+    <section id="article">
+<p>There&#39;s a common design principle that states &quot;Design the system to prevent
+errors from occuring.&quot; Lean manufacturing calls this
+<em><a href="http://en.wikipedia.org/wiki/Poka-yoke">Poka-yoke</a></em>. Interaction design calls
+these <em><a href="http://www.interaction-design.org/encyclopedia/forcing_functions.html">forcing
+functions</a></em>.</p>
+
+<p>Since a much of the time building software is spent reading code, it&#39;s
+important to decrease the amount of errors in understanding while we read.</p>
+
+<p>One way to do this is to decrease ambiguity. Consider the <code>&amp;</code> symbol in Ruby.
+It&#39;s a method call on some ruby classes, <a href="/musings/the-ruby-&-symbol/">a unary
+operator</a> for converting objects to blocks, and a
+binary operator for calling the <code>&amp;</code> method without using a <code>.</code>.</p>
+
+<p>In order to properly understand what the <code>&amp;</code> is doing you have to figure out
+which of it&#39;s three roles it&#39;s fulfilling. If it&#39;s a binary operator or a method
+call you also must understand what that method is in the context of which object
+it&#39;s using.</p>
+
+<p>For example, <code>1 | 5</code> is a <a href="http://en.wikipedia.org/wiki/Bitwise_operation#OR">bitwise
+or</a> operation, while <code>[1,3,5]
+| [3,5,7]</code> is a [set union](http://en.wikipedia.org/wiki/Union<em>(set</em>theory).</p>
+
+<p>While we learn to infer this over time there is some cognitive overhead as we
+read. To combat this, I propose we take a cue from the <a href="http://www.python.org/dev/peps/pep-0020/">zen of
+python</a>, which states <em>explicit is
+better than implicit</em>. In that spirit, python provides <a href="http://docs.python.org/2/library/stdtypes.html#set.intersection">two
+ways</a> to do set
+intersections: the <code>&amp;</code> operator, and the <code>intersection</code> function.</p>
+
+<p>Since ruby does not always provide named variants for ambiguous symbols this
+provides us with an opportunity to refactor. When we encounter ambiguity, maybe
+it&#39;s time to extract a method to describes the operation more explicitely than
+<code>|</code> or <code>&amp;</code>.</p>
+
+</section>
+
+<hr />
+<section id="post-tags">
+  <p>Browse posts about:
+  <ul>
+  
+  <li><a href="software">software</a></li>
+  
+  <li><a href="ruby">ruby</a></li>
+  
+  <li><a href="tapas">tapas</a></li>
+  
+  <li><a href="design">design</a></li>
+  
+  </ul></p>
+</section>
+
+<section id="newsletter-signup">
+  <p>Want to get notified when I publish new articles or update old ones?
+  Subscribe to my newsletter. It's a weekly-ish set of interesting links with a
+  short essay on programming, design, technical leadership, or anything else
+  that strikes my fancy.</p>
+
+  <form id="subscribe-to-newsletter" action="https://tinyletter.com/zspencer" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/zspencer', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+  <p><label for="tlemail">Email address:</label>
+  <input placeholder="your-email@example.com" type="text" name="email" id="tlemail" /></p>
+  <input type="hidden" value="1" name="embed"/>
+
+  <p>Not sure? <a id="newsletter-archive" href="http://tinyletter.com/zspencer/archive">Read the
+    archive.</a></p>
+  <input class="button" type="submit" value="Subscribe Now!" />
+</form>
+
+<script type="text/javascript">
+Track.cta("#subscribe-to-newsletter", "Newsletter Subscription", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Subscribe',
+  pageSubject: 'Article'
+});
+
+Track.cta("#newsletter-archive", "Check the Newsletter Archive", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Investigate me',
+  pageSubject: 'Article'
+});
+</script>
+
+</section>
+
+  </main>
+  <div class="push"></div>
+  </div>
+  <footer>
+    <section id="footer-content">
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <p class="license">
+        Copyright 2004 - 2020 Zee Spencer. Licensed under
+        a <a
+           rel="license"
+           href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+           Commons Attribution-NonCommercial-ShareAlike 4.0
+           International License</a>.
+      </p>
+    </section>
+  </footer>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
+<br />
       <a href="/ambiguity-is-an-opportunity-to-refactor">01 Feb 2013</a>
   </li>
   
 
   
   <li>The Ruby & Symbol &ndash;
-      <a href="/tags/software.html" rel="tag">software</a>, <a href="/tags/ruby.html" rel="tag">ruby</a>, <a href="/tags/tapas.html" rel="tag">tapas</a><br />
+      <!DOCTYPE html>
+<html>
+<head>
+  <title>The Ruby & Symbol</title>
+  <link href="style.css" type="text/css" rel="stylesheet" />
+  
+  <link rel="canonical" href="" />
+  
+
+  <link type="text/atom+xml" rel="alternate" href="http://feeds.feedburner.com/zeespencer"/>
+  <meta name="viewport" content="initial-scale=1" />
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.0";
+      
+      analytics.load("DEDSLhOPXKFCHg4NglvHWqtQg6BgqJy2");
+      
+
+      
+        analytics.page();
+      
+      }}();
+    </script>
+    <script type="text/javascript" src="js/site.js"></script>
+</head>
+<body>
+  <div id="page">
+  <header>
+    <figure>
+      <img src="images/zee.png" alt="Zee Spencer" />
+    </figure>
+    
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <h2>The Ruby & Symbol</h2>
+    
+
+  </header>
+  <main id="content">
+    <section id="article">
+<p>&amp; is a powerful ruby operator, when you use it as a unary operator it has two
+main use cases:</p>
+
+<p>The most common is to pass an object as a block to a method, like this:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="kp">nil</span><span class="p">,</span> <span class="mi">3</span><span class="p">].</span><span class="nf">reject</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:nil?</span><span class="p">)</span></code></pre></figure>
+
+<p>This calls <code>#to_proc</code> on the symbol <code>:nil?</code>, converts the result into a block,
+and passes it to the reject method. A line by line breakdown looks something
+like this:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="kp">nil</span><span class="p">,</span> <span class="mi">3</span><span class="p">].</span><span class="nf">reject</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:nil?</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="kp">nil</span><span class="p">,</span><span class="mi">3</span><span class="p">].</span><span class="nf">reject</span><span class="p">(</span><span class="o">&amp;</span><span class="p">(</span><span class="nb">proc</span> <span class="o">=</span> <span class="ss">:nil?</span><span class="p">.</span><span class="nf">to_proc</span><span class="p">))</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="kp">nil</span><span class="p">,</span><span class="mi">3</span><span class="p">].</span><span class="nf">reject</span><span class="p">(</span><span class="o">&amp;</span><span class="nb">proc</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="kp">nil</span><span class="p">,</span><span class="mi">3</span><span class="p">].</span><span class="nf">reject</span> <span class="p">{</span> <span class="o">|</span><span class="n">e</span><span class="o">|</span> <span class="n">e</span><span class="p">.</span><span class="nf">nil?</span> <span class="p">}</span></code></pre></figure>
+
+<p>The second is explicitly declaring a block by using the <code>&amp;</code> in a method
+definition:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_results</span><span class="p">(</span><span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+  <span class="nb">p</span> <span class="n">block</span><span class="p">.</span><span class="nf">yield</span>
+<span class="k">end</span>
+
+<span class="n">print_results</span> <span class="p">{</span> <span class="s2">"bar"</span> <span class="p">}</span></code></pre></figure>
+
+<p>With an explicitly named block you can do useful things, like map a block to
+all the columns in a table:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">column_map</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+  <span class="n">table</span><span class="p">.</span><span class="nf">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span> <span class="n">row</span><span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="o">&amp;</span><span class="n">block</span><span class="p">)</span> <span class="p">}</span>
+<span class="k">end</span>
+
+<span class="n">column_map</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]])</span> <span class="p">{</span> <span class="o">|</span><span class="n">v</span><span class="o">|</span> <span class="n">v</span> <span class="o">+</span> <span class="mi">5</span> <span class="p">}</span></code></pre></figure>
+
+<p>And of course, explicitly named blocks still allow you to expand an object to a
+block:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">column_map</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]],</span> <span class="o">&amp;</span><span class="ss">:odd?</span><span class="p">)</span></code></pre></figure>
+
+<p>For more reading on the &amp; operator, check out  <em><a href="http://ablogaboutcode.com/2012/01/04/the-ampersand-operator-in-ruby/">The Ampersand Operator in
+Ruby</a></em> by
+<a href="https://twitter.com/panthomakos">Pan Thomakos</a>.</p>
+
+<p>I you want to grok blocks, I&#39;d recommend the excellent <em><a href="http://www.robertsosinski.com/2008/12/21/understanding-ruby-blocks-procs-and-lambdas/">Understanding Ruby
+Blocks, Procs and
+Lambdas</a></em>
+by <a href="http://www.robertsosinski.com/">Robert Sosinki</a></p>
+
+</section>
+
+<hr />
+<section id="post-tags">
+  <p>Browse posts about:
+  <ul>
+  
+  <li><a href="software">software</a></li>
+  
+  <li><a href="ruby">ruby</a></li>
+  
+  <li><a href="tapas">tapas</a></li>
+  
+  </ul></p>
+</section>
+
+<section id="newsletter-signup">
+  <p>Want to get notified when I publish new articles or update old ones?
+  Subscribe to my newsletter. It's a weekly-ish set of interesting links with a
+  short essay on programming, design, technical leadership, or anything else
+  that strikes my fancy.</p>
+
+  <form id="subscribe-to-newsletter" action="https://tinyletter.com/zspencer" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/zspencer', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+  <p><label for="tlemail">Email address:</label>
+  <input placeholder="your-email@example.com" type="text" name="email" id="tlemail" /></p>
+  <input type="hidden" value="1" name="embed"/>
+
+  <p>Not sure? <a id="newsletter-archive" href="http://tinyletter.com/zspencer/archive">Read the
+    archive.</a></p>
+  <input class="button" type="submit" value="Subscribe Now!" />
+</form>
+
+<script type="text/javascript">
+Track.cta("#subscribe-to-newsletter", "Newsletter Subscription", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Subscribe',
+  pageSubject: 'Article'
+});
+
+Track.cta("#newsletter-archive", "Check the Newsletter Archive", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Investigate me',
+  pageSubject: 'Article'
+});
+</script>
+
+</section>
+
+  </main>
+  <div class="push"></div>
+  </div>
+  <footer>
+    <section id="footer-content">
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <p class="license">
+        Copyright 2004 - 2020 Zee Spencer. Licensed under
+        a <a
+           rel="license"
+           href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+           Commons Attribution-NonCommercial-ShareAlike 4.0
+           International License</a>.
+      </p>
+    </section>
+  </footer>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
+<br />
       <a href="/the-ruby-&-symbol">30 Jan 2013</a>
   </li>
   
@@ -71,7 +592,7 @@
 
 <div id="tag-cloud">
   <h3>Find something to read in the following topics:</h3>
-  <a href="/tags/agency.html" class="set-1">agency</a> <a href="/tags/beginner.html" class="set-1">beginner</a> <a href="/tags/book-review.html" class="set-1">book-review</a> <a href="/tags/business.html" class="set-2">business</a> <a href="/tags/career.html" class="set-1">career</a> <a href="/tags/clojure.html" class="set-1">clojure</a> <a href="/tags/community.html" class="set-2">community</a> <a href="/tags/culture.html" class="set-1">culture</a> <a href="/tags/design.html" class="set-2">design</a> <a href="/tags/devenvironment.html" class="set-1">devenvironment</a> <a href="/tags/empathy.html" class="set-2">empathy</a> <a href="/tags/family.html" class="set-1">family</a> <a href="/tags/finance.html" class="set-1">finance</a> <a href="/tags/health.html" class="set-1">health</a> <a href="/tags/javascript.html" class="set-1">javascript</a> <a href="/tags/jekyll.html" class="set-1">jekyll</a> <a href="/tags/js.html" class="set-1">js</a> <a href="/tags/leadership.html" class="set-1">leadership</a> <a href="/tags/lean.html" class="set-1">lean</a> <a href="/tags/learning.html" class="set-1">learning</a> <a href="/tags/love.html" class="set-1">love</a> <a href="/tags/makermenagerie.html" class="set-1">makermenagerie</a> <a href="/tags/mastery.html" class="set-5">mastery</a> <a href="/tags/mentors.html" class="set-1">mentors</a> <a href="/tags/opportunity.html" class="set-1">opportunity</a> <a href="/tags/ops.html" class="set-1">ops</a> <a href="/tags/pairing.html" class="set-1">pairing</a> <a href="/tags/parables.html" class="set-2">parables</a> <a href="/tags/parody.html" class="set-1">parody</a> <a href="/tags/part-time.html" class="set-1">part-time</a> <a href="/tags/personal.html" class="set-1">personal</a> <a href="/tags/poetry.html" class="set-2">poetry</a> <a href="/tags/productivity.html" class="set-1">productivity</a> <a href="/tags/project-management.html" class="set-1">project-management</a> <a href="/tags/questions.html" class="set-1">questions</a> <a href="/tags/rails.html" class="set-1">rails</a> <a href="/tags/remote.html" class="set-1">remote</a> <a href="/tags/ruby.html" class="set-1">ruby</a> <a href="/tags/security.html" class="set-1">security</a> <a href="/tags/short-term.html" class="set-1">short-term</a> <a href="/tags/society.html" class="set-1">society</a> <a href="/tags/software.html" class="set-5">software</a> <a href="/tags/software-as-craft.html" class="set-2">software-as-craft</a> <a href="/tags/songs.html" class="set-1">songs</a> <a href="/tags/tapas.html" class="set-1">tapas</a> <a href="/tags/testing.html" class="set-1">testing</a> <a href="/tags/theory.html" class="set-1">theory</a> <a href="/tags/video.html" class="set-1">video</a> <a href="/tags/vim.html" class="set-1">vim</a> <a href="/tags/work.html" class="set-1">work</a>
+  Jekyll::Drops::SiteDrop
 </div>
 
 

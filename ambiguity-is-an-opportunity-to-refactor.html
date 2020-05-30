@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ambiguity In Code Is an Opportunity to Refactor</title>
+  <link href="style.css" type="text/css" rel="stylesheet" />
+  
+  <link rel="canonical" href="" />
+  
+
+  <link type="text/atom+xml" rel="alternate" href="http://feeds.feedburner.com/zeespencer"/>
+  <meta name="viewport" content="initial-scale=1" />
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.0";
+      
+      analytics.load("DEDSLhOPXKFCHg4NglvHWqtQg6BgqJy2");
+      
+
+      
+        analytics.page();
+      
+      }}();
+    </script>
+    <script type="text/javascript" src="js/site.js"></script>
+</head>
+<body>
+  <div id="page">
+  <header>
+    <figure>
+      <img src="images/zee.png" alt="Zee Spencer" />
+    </figure>
+    
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <h2>Ambiguity In Code Is an Opportunity to Refactor</h2>
+    
+
+  </header>
+  <main id="content">
+    <section id="article">
+<p>There&#39;s a common design principle that states &quot;Design the system to prevent
+errors from occuring.&quot; Lean manufacturing calls this
+<em><a href="http://en.wikipedia.org/wiki/Poka-yoke">Poka-yoke</a></em>. Interaction design calls
+these <em><a href="http://www.interaction-design.org/encyclopedia/forcing_functions.html">forcing
+functions</a></em>.</p>
+
+<p>Since a much of the time building software is spent reading code, it&#39;s
+important to decrease the amount of errors in understanding while we read.</p>
+
+<p>One way to do this is to decrease ambiguity. Consider the <code>&amp;</code> symbol in Ruby.
+It&#39;s a method call on some ruby classes, <a href="/musings/the-ruby-&-symbol/">a unary
+operator</a> for converting objects to blocks, and a
+binary operator for calling the <code>&amp;</code> method without using a <code>.</code>.</p>
+
+<p>In order to properly understand what the <code>&amp;</code> is doing you have to figure out
+which of it&#39;s three roles it&#39;s fulfilling. If it&#39;s a binary operator or a method
+call you also must understand what that method is in the context of which object
+it&#39;s using.</p>
+
+<p>For example, <code>1 | 5</code> is a <a href="http://en.wikipedia.org/wiki/Bitwise_operation#OR">bitwise
+or</a> operation, while <code>[1,3,5]
+| [3,5,7]</code> is a [set union](http://en.wikipedia.org/wiki/Union<em>(set</em>theory).</p>
+
+<p>While we learn to infer this over time there is some cognitive overhead as we
+read. To combat this, I propose we take a cue from the <a href="http://www.python.org/dev/peps/pep-0020/">zen of
+python</a>, which states <em>explicit is
+better than implicit</em>. In that spirit, python provides <a href="http://docs.python.org/2/library/stdtypes.html#set.intersection">two
+ways</a> to do set
+intersections: the <code>&amp;</code> operator, and the <code>intersection</code> function.</p>
+
+<p>Since ruby does not always provide named variants for ambiguous symbols this
+provides us with an opportunity to refactor. When we encounter ambiguity, maybe
+it&#39;s time to extract a method to describes the operation more explicitely than
+<code>|</code> or <code>&amp;</code>.</p>
+
+</section>
+
+<hr />
+<section id="post-tags">
+  <p>Browse posts about:
+  <ul>
+  
+  <li><a href="software">software</a></li>
+  
+  <li><a href="ruby">ruby</a></li>
+  
+  <li><a href="tapas">tapas</a></li>
+  
+  <li><a href="design">design</a></li>
+  
+  </ul></p>
+</section>
+
+<section id="newsletter-signup">
+  <p>Want to get notified when I publish new articles or update old ones?
+  Subscribe to my newsletter. It's a weekly-ish set of interesting links with a
+  short essay on programming, design, technical leadership, or anything else
+  that strikes my fancy.</p>
+
+  <form id="subscribe-to-newsletter" action="https://tinyletter.com/zspencer" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/zspencer', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+  <p><label for="tlemail">Email address:</label>
+  <input placeholder="your-email@example.com" type="text" name="email" id="tlemail" /></p>
+  <input type="hidden" value="1" name="embed"/>
+
+  <p>Not sure? <a id="newsletter-archive" href="http://tinyletter.com/zspencer/archive">Read the
+    archive.</a></p>
+  <input class="button" type="submit" value="Subscribe Now!" />
+</form>
+
+<script type="text/javascript">
+Track.cta("#subscribe-to-newsletter", "Newsletter Subscription", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Subscribe',
+  pageSubject: 'Article'
+});
+
+Track.cta("#newsletter-archive", "Check the Newsletter Archive", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Investigate me',
+  pageSubject: 'Article'
+});
+</script>
+
+</section>
+
+  </main>
+  <div class="push"></div>
+  </div>
+  <footer>
+    <section id="footer-content">
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <p class="license">
+        Copyright 2004 - 2020 Zee Spencer. Licensed under
+        a <a
+           rel="license"
+           href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+           Commons Attribution-NonCommercial-ShareAlike 4.0
+           International License</a>.
+      </p>
+    </section>
+  </footer>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

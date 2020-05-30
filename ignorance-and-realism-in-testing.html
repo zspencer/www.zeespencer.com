@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ignorance and Realism in Testing</title>
+  <link href="style.css" type="text/css" rel="stylesheet" />
+  
+  <link rel="canonical" href="" />
+  
+
+  <link type="text/atom+xml" rel="alternate" href="http://feeds.feedburner.com/zeespencer"/>
+  <meta name="viewport" content="initial-scale=1" />
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.0";
+      
+      analytics.load("DEDSLhOPXKFCHg4NglvHWqtQg6BgqJy2");
+      
+
+      
+        analytics.page();
+      
+      }}();
+    </script>
+    <script type="text/javascript" src="js/site.js"></script>
+</head>
+<body>
+  <div id="page">
+  <header>
+    <figure>
+      <img src="images/zee.png" alt="Zee Spencer" />
+    </figure>
+    
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <h2>Ignorance and Realism in Testing</h2>
+    
+
+  </header>
+  <main id="content">
+    <section id="article">
+<p>I was talking through some of my thoughts on applying visual and interaction
+design critique principles to code with <a href="http://www.ecomba.org/">Enrique Comba</a>.
+At the time, I was in the middle of analyzing the differences between <a href="https://gist.github.com/4141476#file_normal_spec.rb">directly
+calling the method</a> under
+test, <a href="https://gist.github.com/4141476#file_let_spec.rb">nested describes and
+lets</a>, and using a <a href="https://gist.github.com/4141476#file_custom_assertion_spec.rb">custom
+assertion</a>.</p>
+
+<p>I was pointing out how moving the method call out to a custom assert hid a
+breadcrumb developers would use when understanding the system under test, while
+leaving it in a let would at least keep it in the same test file. Enrique
+responded with an interesting perspective:</p>
+
+<p><strong>&quot;That&#39;s the point of BDD. Your tests shouldn&#39;t care about your implementation
+at all.&quot;</strong></p>
+
+<p>I was a little taken aback. One of my favorite parts about clearly written specs
+is how they give the programmer direction in the use of the code being tested.
+If the test code is completely ignorant of the implementation, how can it
+provide those insights?!</p>
+
+<p>After an hour or so, I started thinking about <a href="http://about.me/searls">Justin
+Searls</a> recent presentation on <a href="http://oredev.org/2012/sessions/budgeting-reality-a-new-approach-to-mock-objects">realism in
+tests</a>.
+This got me thinking: <strong>What if the level of realism and the level of ignorance
+of a test are two related variables?</strong> A test which provides a high level of
+realism of the system under test may not mock out external services the system
+uses because it does not know about them. Conversely, tests which provides a low
+level of realism often very clearly point out how its collaborators must be
+formed, as well as the usage of the code under test.</p>
+
+<p>Hopefully these complementary insights will provide me with more purposeful,
+better organized test suites in the future.</p>
+
+</section>
+
+<hr />
+<section id="post-tags">
+  <p>Browse posts about:
+  <ul>
+  
+  <li><a href="software">software</a></li>
+  
+  <li><a href="software-as-craft">software-as-craft</a></li>
+  
+  </ul></p>
+</section>
+
+<section id="newsletter-signup">
+  <p>Want to get notified when I publish new articles or update old ones?
+  Subscribe to my newsletter. It's a weekly-ish set of interesting links with a
+  short essay on programming, design, technical leadership, or anything else
+  that strikes my fancy.</p>
+
+  <form id="subscribe-to-newsletter" action="https://tinyletter.com/zspencer" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/zspencer', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+  <p><label for="tlemail">Email address:</label>
+  <input placeholder="your-email@example.com" type="text" name="email" id="tlemail" /></p>
+  <input type="hidden" value="1" name="embed"/>
+
+  <p>Not sure? <a id="newsletter-archive" href="http://tinyletter.com/zspencer/archive">Read the
+    archive.</a></p>
+  <input class="button" type="submit" value="Subscribe Now!" />
+</form>
+
+<script type="text/javascript">
+Track.cta("#subscribe-to-newsletter", "Newsletter Subscription", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Subscribe',
+  pageSubject: 'Article'
+});
+
+Track.cta("#newsletter-archive", "Check the Newsletter Archive", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Investigate me',
+  pageSubject: 'Article'
+});
+</script>
+
+</section>
+
+  </main>
+  <div class="push"></div>
+  </div>
+  <footer>
+    <section id="footer-content">
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <p class="license">
+        Copyright 2004 - 2020 Zee Spencer. Licensed under
+        a <a
+           rel="license"
+           href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+           Commons Attribution-NonCommercial-ShareAlike 4.0
+           International License</a>.
+      </p>
+    </section>
+  </footer>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

@@ -2,7 +2,7 @@
 <html>
 <head>
   <title></title>
-  <link href="/assets/stylesheets/style.css?1581193630" type="text/css" rel="stylesheet" />
+  <link href="style.css" type="text/css" rel="stylesheet" />
   
   <link rel="canonical" href="" />
   
@@ -20,13 +20,13 @@
       
       }}();
     </script>
-    <script type="text/javascript" src="/assets/js/site.js?1581193630"></script>
+    <script type="text/javascript" src="js/site.js"></script>
 </head>
 <body>
   <div id="page">
   <header>
     <figure>
-      <img src="/assets/images/zee.png?1581193630" alt="Zee Spencer" />
+      <img src="images/zee.png" alt="Zee Spencer" />
     </figure>
     
       <nav>
@@ -48,126 +48,3384 @@
 
   
   <li>Running Tests Across Multiple Ruby Versions With Rbenv And Make &ndash;
-      <a href="/tags/software.html" rel="tag">software</a>, <a href="/tags/testing.html" rel="tag">testing</a>, <a href="/tags/ruby.html" rel="tag">ruby</a>, <a href="/tags/devenvironment.html" rel="tag">devenvironment</a><br />
+      <!DOCTYPE html>
+<html>
+<head>
+  <title>Running Tests Across Multiple Ruby Versions With Rbenv And Make</title>
+  <link href="style.css" type="text/css" rel="stylesheet" />
+  
+  <link rel="canonical" href="" />
+  
+
+  <link type="text/atom+xml" rel="alternate" href="http://feeds.feedburner.com/zeespencer"/>
+  <meta name="viewport" content="initial-scale=1" />
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.0";
+      
+      analytics.load("DEDSLhOPXKFCHg4NglvHWqtQg6BgqJy2");
+      
+
+      
+        analytics.page();
+      
+      }}();
+    </script>
+    <script type="text/javascript" src="js/site.js"></script>
+</head>
+<body>
+  <div id="page">
+  <header>
+    <figure>
+      <img src="images/zee.png" alt="Zee Spencer" />
+    </figure>
+    
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <h2>Running Tests Across Multiple Ruby Versions With Rbenv And Make</h2>
+    
+
+  </header>
+  <main id="content">
+    <section id="article">
+<p>When writing <a href="http://glossary.codeunion.io/gem/">gems</a>, we frequently want to
+verify behavior across a variety of ruby versions. While this is quite <a href="http://docs.travis-ci.com/user/languages/ruby/#Choosing-Ruby-versions-and-implementations-to-test-against">easy
+with travis
+ci</a>,
+running microtests before pushing shrinks the likelihood of breaking the build.</p>
+
+<p>My objectives were to:</p>
+
+<ul>
+<li>Run tests against different ruby versions in parallel. I&#39;ve got all these
+cores, why not use them?</li>
+<li>Auto-run tests on file system changes.</li>
+<li>Commands must be discoverable with tab-completion.</li>
+<li>Adding additional versions must be relatively painless.</li>
+</ul>
+
+<p>After a bit of prototyping, I settled on:</p>
+
+<ul>
+<li>The <a href="https://github.com/sstephenson/rbenv">rbenv ruby version manager</a></li>
+<li><a href="https://github.com/quackingduck/wach">Wach</a> for re-running a task on file
+system change.</li>
+<li><a href="https://www.gnu.org/software/make/manual/">GNU Make</a> for defining tasks.</li>
+</ul>
+
+<p>For those of you who want the code right now, grab my
+<a href="https://github.com/zspencer/make-many-rubies"
+id="make-many-rubies-mid">make-many-rubies</a> repo. For those
+interested in the thought process, read on.</p>
+
+<h3 id="make-and-rake-better-together">Make and Rake, Better Together.</h3>
+
+<p>Make is a powerful build system. While Rake is great for complex tasks that
+require a language with functions and lists, Make
+shines at discoverability (<a href="http://bash-completion.alioth.debian.org">free
+tab-completion!</a> woo!) and
+cross-language support.</p>
+
+<p>I tend to have a Makefile in every project I work on which encapsulate the primary
+commands:</p>
+
+<ul>
+<li><code>make run</code>     - Runs the project</li>
+<li><code>make test</code>    - Tests the project</li>
+<li><code>make build</code>   - Builds the project</li>
+<li><code>make release</code> - Releases the project artifact.</li>
+<li><code>make deploy</code>  - Deploys the project to production.</li>
+<li><code>make tbrd</code>    - Pronounced &quot;Tee-bird&quot; tests, builds, releases and deploys
+                the project.</li>
+</ul>
+
+<p>These tasks allow projects to have a common interface no matter what
+language, deployment strategy, or test framework we use.  Not every project has
+every task of course; but the convention makes switching between different kinds
+of projects in different languages a bit easier.</p>
+
+<h3 id="read-the-source-luke">Read the Source, Luke!</h3>
+
+<p>If you haven&#39;t already, check out the <a
+href="https://github.com/zspencer/make-many-rubies"
+id="make-many-rubies-bot">make-many-rubies</a> repo. The Makefile is annotated
+on every single line; and the Readme provides (hopefully useful) usage
+instructions.</p>
+
+<p>Did you find this helpful? I&#39;d love to hear how you keep your code working
+across multiple ruby versions or use make to create a common interface
+across teams and projects!  Why not <a id="send-email" href="mailto:
+zee@wecohere.com">drop me a line</a>?</p>
+
+</section>
+
+<hr />
+<section id="post-tags">
+  <p>Browse posts about:
+  <ul>
+  
+  <li><a href="software">software</a></li>
+  
+  <li><a href="testing">testing</a></li>
+  
+  <li><a href="ruby">ruby</a></li>
+  
+  <li><a href="devenvironment">devenvironment</a></li>
+  
+  </ul></p>
+</section>
+
+<section id="newsletter-signup">
+  <p>Want to get notified when I publish new articles or update old ones?
+  Subscribe to my newsletter. It's a weekly-ish set of interesting links with a
+  short essay on programming, design, technical leadership, or anything else
+  that strikes my fancy.</p>
+
+  <form id="subscribe-to-newsletter" action="https://tinyletter.com/zspencer" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/zspencer', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+  <p><label for="tlemail">Email address:</label>
+  <input placeholder="your-email@example.com" type="text" name="email" id="tlemail" /></p>
+  <input type="hidden" value="1" name="embed"/>
+
+  <p>Not sure? <a id="newsletter-archive" href="http://tinyletter.com/zspencer/archive">Read the
+    archive.</a></p>
+  <input class="button" type="submit" value="Subscribe Now!" />
+</form>
+
+<script type="text/javascript">
+Track.cta("#subscribe-to-newsletter", "Newsletter Subscription", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Subscribe',
+  pageSubject: 'Article'
+});
+
+Track.cta("#newsletter-archive", "Check the Newsletter Archive", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Investigate me',
+  pageSubject: 'Article'
+});
+</script>
+
+</section>
+
+  </main>
+  <div class="push"></div>
+  </div>
+  <footer>
+    <section id="footer-content">
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <p class="license">
+        Copyright 2004 - 2020 Zee Spencer. Licensed under
+        a <a
+           rel="license"
+           href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+           Commons Attribution-NonCommercial-ShareAlike 4.0
+           International License</a>.
+      </p>
+    </section>
+  </footer>
+
+<script type="text/javascript">
+
+Track.cta('#make-many-rubies-mid', 'View Project', {
+  color: 'Red',
+  location: 'middle',
+  category: 'Investigate me',
+  pageSubject: "",
+});
+
+Track.cta('#make-many-rubies-bot', 'View Project', {
+  color: 'Red',
+  location: 'bottom',
+  category: 'Investigate me',
+  pageSubject: "",
+});
+
+Track.cta('#send-email', 'Email me', {
+  color: 'Red',
+  location: 'bottom',
+  category: 'Contact',
+  pageSubject: "",
+});
+
+</script>
+</body>
+</html>
+<br />
       <a href="/running-tests-across-multiple-ruby-versions-with-rbenv-and-make">06 Jan 2015</a>
   </li>
   
 
   
   <li>Migitating Anxiety On Software Teams &ndash;
-      <a href="/tags/software.html" rel="tag">software</a>, <a href="/tags/leadership.html" rel="tag">leadership</a>, <a href="/tags/culture.html" rel="tag">culture</a><br />
+      <!DOCTYPE html>
+<html>
+<head>
+  <title>Migitating Anxiety On Software Teams</title>
+  <link href="style.css" type="text/css" rel="stylesheet" />
+  
+  <link rel="canonical" href="" />
+  
+
+  <link type="text/atom+xml" rel="alternate" href="http://feeds.feedburner.com/zeespencer"/>
+  <meta name="viewport" content="initial-scale=1" />
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.0";
+      
+      analytics.load("DEDSLhOPXKFCHg4NglvHWqtQg6BgqJy2");
+      
+
+      
+        analytics.page();
+      
+      }}();
+    </script>
+    <script type="text/javascript" src="js/site.js"></script>
+</head>
+<body>
+  <div id="page">
+  <header>
+    <figure>
+      <img src="images/zee.png" alt="Zee Spencer" />
+    </figure>
+    
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <h2>Migitating Anxiety On Software Teams</h2>
+    
+
+  </header>
+  <main id="content">
+    <section id="article">
+<p>Software development is a creative pursuit. It takes intense focus as well as
+time away from a problem to for subconscious work. Both of these cognitive modes
+are debilitated by stress and anxiety.</p>
+
+<p>A major source of anxiety is uncertainty. Uncertainty is almost always deeply
+personal, and may be about many things:</p>
+
+<ul>
+<li>Are we earning enough to live comfortably?</li>
+<li>Are we compensated fairly for our time, effort and skills?</li>
+<li>Are our skills improving in a worth-while direction at a reasonable rate?</li>
+<li>Are we learning what we want to learn?</li>
+<li>Am we at risk of <a href="http://www.apa.org/research/action/stereotype.aspx">stereotype
+threat</a>?</li>
+<li>Is our work of a good quality?</li>
+<li>How do others perceive us? (especially those we respect or in positions of authority.)</li>
+<li>Is our work environment comfortable and condusive to our work style?</li>
+<li>Does our work matter?</li>
+<li>Do people expect us to represent <a href="http://xkcd.com/385">other people like us</a>?</li>
+<li>And many, many more.</li>
+</ul>
+
+<p>We may map these reasons to <a href="http://danpink.com">dan pink&#39;s</a> three drivers for
+motivation:</p>
+
+<ul>
+<li>Mastery</li>
+<li>Autonomy</li>
+<li>Purpose</li>
+</ul>
+
+<p>Anxiety saps our motivation by discouraging or obscuring mastery, making us
+subservient to our fears, and keeps us focused inward instead of on the effect
+of the work we&#39;re doing. When we are anxious our conscious and sub-concious
+attention is drained, preventing us from executing.</p>
+
+<p>In a well-adjusted team, we must make an effort to:</p>
+
+<ul>
+<li>Understand the anxieties we face individually and as a group.</li>
+<li>Take concrete steps to address and alleviate anxieties.</li>
+<li>Advocate for and make systemic changes which mitigate these anxieties.</li>
+</ul>
+
+<p>Our responses to how anxiety manifests are often personal. There&#39;s no &quot;one size
+fits all&quot; approach to ensure people maintain a state of productive flow
+unhindered by uncertainty and anxiety; however there are some things that have
+significant impact:</p>
+
+<ul>
+<li>Compensation</li>
+<li>Education</li>
+<li>Information</li>
+</ul>
+
+<h3 id="compensation">Compensation</h3>
+
+<p>Anxieties rooted in finances are sticky. People feel uncomfortable discussing
+money and companies prefer to keep personnel costs low. This is especially true
+in software companies which have most of their budget devoted to salaries and
+benefits.</p>
+
+<p>Some companies are taking radical steps, such as <a href="http://www.management30.com/workout/salary-formula/">using a salary
+formula</a> and <a href="https://open.bufferapp.com/introducing-open-salaries-at-buffer-including-our-transparent-formula-and-all-individual-salaries/">publicly
+publishing salary
+data</a>.
+I&#39;m not 100% sold on this level of transparency, but it is a powerful way to
+address perceived fairness. Here are a few other steps to reduce anxiety and
+maintain high levels of creativity, attention, and motivation:</p>
+
+<ul>
+<li>Pay people well and fairly, regardless of role. Pay hierarchies cause people
+to resent others in roles at different pay levels, especially when there&#39;s not
+many opportunities to understand and appreciate the work others are doing.</li>
+<li>Don&#39;t trade &quot;culture&quot; for compensation. Office toys and work-cations are
+fun, but it doesn&#39;t put food on the table; and they <a href="https://modelviewculture.com/pieces/how-perks-can-divide-us">can cause unintended
+division</a>. Perks
+can&#39;t take priority over respect.</li>
+<li>Don&#39;t over-sell equity. Future income doesn&#39;t alleviate current financial
+pressure. A high-value on equity may encourage distrust, since the founders,
+executives or board members &quot;selling&quot; the equity tend to over-value it. Plus,
+startup equity <a href="http://danilocampos.com/2015/01/startup-equity-benefits-your-boss-not-you/">disproportionaly benefits
+owners</a>
+over employees.</li>
+</ul>
+
+<h3 id="education">Education</h3>
+
+<p>Many software professionals are driven by our ability to create. We want to see
+our abilities deepen and learn complementary skills. At the same time, we fear
+our work is sub-par or we <a href="http://www.huffingtonpost.com/morty-lefkoe/do-you-suffer-from-the-im_b_4791763.html">don&#39;t
+belong</a>.</p>
+
+<p>While we can&#39;t guarantee the language or framework we&#39;re using will continue to
+be in fashion, we can:</p>
+
+<ul>
+<li>Provide a set of expectations about what skills are valued in a given role. By
+explicitely defining what makes a &quot;Senior&quot; engineer vs. a &quot;Junior&quot; one, we
+create a mirror for people to look into and self-evaluate that the skills they
+have are valuable.</li>
+<li>Focus on fundamentals and core skills instead of frameworks and technologies.
+New techniques, libraries, and concepts come and go in the software world. By
+encouraging people to level up their core skills we create current and future safety.</li>
+<li>Support new ideas and techniques. Discouraging teammates from trying out a new
+technology or user research technique is an easy way to cause self-doubt and
+anxiety.</li>
+<li>Support learning. Encourage reading at work. Provide a budget for
+self-improvement that doesn&#39;t have to be spent on conferences.  Support people
+in the things and ways <em>they</em> want to learn, not just what a company deems
+worthwhile.</li>
+</ul>
+
+<h3 id="information">Information</h3>
+
+<p>Layoffs and re-organizations are almost always a source of anxiety. Buffer has a
+very interesting approach of <a href="https://open.bufferapp.com/buffer-november-update-2347000-run-rate-1189000-users/">publicizing their financial data every
+month</a>.
+While, again, this may not work for every business; providing reliable
+information that builds trust among the people in the business is crucial. Some
+anxiety inducing questions are:</p>
+
+<ul>
+<li>Are our sales healthy?</li>
+<li>Is there a connection between the work we&#39;re doing and customer
+satisfaction/financial stability?</li>
+<li>What are the risks people see and how are we avoiding them?</li>
+<li>Are there up-coming organizational changes that may affect how I do my work?</li>
+</ul>
+
+<p>How each company addresses these kinds of questions is tough. No matter how you
+choose to do so, there&#39;s a few tactics that are effective:</p>
+
+<ul>
+<li>Terseness is a virtue. Long meandering reports are more interesting for the
+person doing the reporting than the people effected by it.</li>
+<li>Make it consumable asyncronously. Being able to read and review information at
+ones own convenience allows people to decide when and what to explore.</li>
+<li>Consistency is huge. Consistency in both delivery and type of information
+presented helps people notice trends.</li>
+<li><em>Don&#39;t mandate it</em>. Not everyone wants all the information or even the same
+information. Distributing knowledge via a mandatory meeting can cast people
+who are not anxious about the information as disengaged.</li>
+</ul>
+
+<p>Providing financial stability, direction and time for improving skills, and
+knowledge about the current and likely future state of a company all go a long
+way in freeing up a teams mental capacity.</p>
+
+<p>I&#39;d love to hear your thoughts on how anxiety and uncertainty affects software
+teams! Why not <a id="send-email" href="mailto: zee@wecohere.com">drop me a
+line</a>?</p>
+
+</section>
+
+<hr />
+<section id="post-tags">
+  <p>Browse posts about:
+  <ul>
+  
+  <li><a href="software">software</a></li>
+  
+  <li><a href="leadership">leadership</a></li>
+  
+  <li><a href="culture">culture</a></li>
+  
+  </ul></p>
+</section>
+
+<section id="newsletter-signup">
+  <p>Want to get notified when I publish new articles or update old ones?
+  Subscribe to my newsletter. It's a weekly-ish set of interesting links with a
+  short essay on programming, design, technical leadership, or anything else
+  that strikes my fancy.</p>
+
+  <form id="subscribe-to-newsletter" action="https://tinyletter.com/zspencer" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/zspencer', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+  <p><label for="tlemail">Email address:</label>
+  <input placeholder="your-email@example.com" type="text" name="email" id="tlemail" /></p>
+  <input type="hidden" value="1" name="embed"/>
+
+  <p>Not sure? <a id="newsletter-archive" href="http://tinyletter.com/zspencer/archive">Read the
+    archive.</a></p>
+  <input class="button" type="submit" value="Subscribe Now!" />
+</form>
+
+<script type="text/javascript">
+Track.cta("#subscribe-to-newsletter", "Newsletter Subscription", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Subscribe',
+  pageSubject: 'Article'
+});
+
+Track.cta("#newsletter-archive", "Check the Newsletter Archive", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Investigate me',
+  pageSubject: 'Article'
+});
+</script>
+
+</section>
+
+  </main>
+  <div class="push"></div>
+  </div>
+  <footer>
+    <section id="footer-content">
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <p class="license">
+        Copyright 2004 - 2020 Zee Spencer. Licensed under
+        a <a
+           rel="license"
+           href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+           Commons Attribution-NonCommercial-ShareAlike 4.0
+           International License</a>.
+      </p>
+    </section>
+  </footer>
+
+<script type="text/javascript">
+
+Track.cta('#send-email', 'Email me', {
+  color: 'Red',
+  location: 'bottom',
+  category: 'Contact',
+  pageSubject: "Mitigating anxiety on software teams",
+});
+
+</script>
+</body>
+</html>
+<br />
       <a href="/migitating-anxiety-on-software-teams">07 Dec 2014</a>
   </li>
   
 
   
   <li>Getting Past Junior &ndash;
-      <a href="/tags/learning.html" rel="tag">learning</a>, <a href="/tags/software.html" rel="tag">software</a>, <a href="/tags/software-as-craft.html" rel="tag">software-as-craft</a><br />
+      <!DOCTYPE html>
+<html>
+<head>
+  <title>Getting Past Junior</title>
+  <link href="style.css" type="text/css" rel="stylesheet" />
+  
+  <link rel="canonical" href="https://medium.com/get-absurdist/getting-past-junior-50a1b1a7927" />
+  
+
+  <link type="text/atom+xml" rel="alternate" href="http://feeds.feedburner.com/zeespencer"/>
+  <meta name="viewport" content="initial-scale=1" />
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.0";
+      
+      analytics.load("DEDSLhOPXKFCHg4NglvHWqtQg6BgqJy2");
+      
+
+      
+        analytics.page();
+      
+      }}();
+    </script>
+    <script type="text/javascript" src="js/site.js"></script>
+</head>
+<body>
+  <div id="page">
+  <header>
+    <figure>
+      <img src="images/zee.png" alt="Zee Spencer" />
+    </figure>
+    
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <h2>Getting Past Junior</h2>
+    
+
+  </header>
+  <main id="content">
+    <section id="article">
+<blockquote>
+<p>Junior developers make complex solutions for simple problems.</p>
+
+<p>Average developers make simple solutions for simple problems and complex
+solutions for complex problems.</p>
+
+<p>Senior developers make simple solutions for complex problems.</p>
+
+<footer>
+<cite>Unknown</cite>
+</footer></blockquote>
+
+<p>I was pairing with a friend of mine who is working as a junior developer. We
+were reviewing and rewriting some of the code, and he asked &quot;I can see this is
+better, but how did you know to do it?&quot;</p>
+
+<p>Well.</p>
+
+<p>That&#39;s a hard question. I mumbled something about &quot;When you&#39;ve been doing
+this as long as I have...&quot;</p>
+
+<p>And that&#39;s a bullshit answer.</p>
+
+<p>Much of my judgement comes from seeing what has worked and what didn&#39;t; yet
+that&#39;s only part of the story. I take several deliberate actions to hone my
+judgement:</p>
+
+<ol>
+<li>I Write throw-away code</li>
+<li>I Surround myself with expertise</li>
+<li>I Read. Constantly.</li>
+<li>I Turn the knob to 11</li>
+</ol>
+
+<h3 id="write-throw-away-code">Write Throw-Away Code</h3>
+
+<p>Whether I&#39;m working on a
+<a href="http://codekata.com/kata/codekata-how-it-started/">kata</a> or a <a href="http://chimera.labs.oreilly.com/books/1234000001813/ch05.html#breakable_toys">breakable
+toy</a>
+or even production software; I throw away most of the code I write. Why? Because
+my first attempt is a poor attempt. I use my first pass as a
+<a href="http://www.extremeprogramming.org/rules/spike.html">&quot;spike&quot;</a>, a kind of
+hands-on learning opportunity.</p>
+
+<p>This gives me the freedom to experiment and explore without worrying about
+adding unnecessary <a href="https://en.wikipedia.org/wiki/Technical_debt">technical
+debt</a>. This lets me go off the
+beaten path a bit and try things I never would have if I knew it had to go into
+production. Sure, some of these experiments are dead ends; but they invariably
+provide me with more information about how to solve the kind of problem I&#39;m
+working in.</p>
+
+<p>Safety to experiment is crucial for building judgement.</p>
+
+<h3 id="surround-yourself-with-expertise">Surround Yourself With Expertise</h3>
+
+<p>While I may think I&#39;m pretty hot shit when it comes to software development, the
+fact of the matter is that there are thousands of developers with more experience,
+better judgement, and deeper understanding than I. Add in the sheer breadth of
+specialities in software and it&#39;s pretty overwhelming. And humbling!</p>
+
+<p>I&#39;ve spent the past 6 years building a network of people across a wide range of
+specialities. From software testers to interaction designers to operations
+engineers to machine learning scientists. When I have a problem, I can send off
+an email or aks a question in IRC or Twitter.</p>
+
+<p>By investing in friendships across disciplines I &quot;outsource&quot; my judgement. This
+helps me build judgement in a new territory quickly and effectively.</p>
+
+<h3 id="read-constantly">Read. Constantly.</h3>
+
+<p>And not just books. Read code. Find small code bases that do specific things and
+read and annotate them. Find large code bases and skim them. I regularly
+practice diving into an unfamiliar project and figuring out what&#39;s going on.</p>
+
+<p>This builds judgement by letting me see how people I&#39;ve never even met solve
+problems. It also builds my ability to understand unfamiliar code.</p>
+
+<p>Not to undervalue books at all. I easily spend $500+ a year in technology books;
+mostly when I&#39;m learning a framework, language or tool.</p>
+
+<h3 id="turn-the-knob-to-11">Turn The Knob To 11</h3>
+
+<p>Turning the knob to 11 is when you take a very specific concept; and over-apply
+it. Over-applying a technique or technology is the easiest way to find its
+shortcomings. Want to learn to TDD? TDD <em>everything</em> for a year. At the end
+you&#39;ll have a solid understanding of when to and when not to TDD.</p>
+
+<p>I love turning the knob to 11; but since it is directly intended to discover
+where something breaks down it isn&#39;t always a good practice to apply to
+production code.</p>
+
+<h3 id="judgement-makes-perfect">Judgement Makes Perfect</h3>
+
+<p>Practice makes permanent, feedback and judgement makes perfect. Reflect on
+your work. Intentionally seek the edges of your skills. This is how you move
+beyond junior.</p>
+
+</section>
+
+<hr />
+<section id="post-tags">
+  <p>Browse posts about:
+  <ul>
+  
+  <li><a href="learning">learning</a></li>
+  
+  <li><a href="software">software</a></li>
+  
+  <li><a href="software-as-craft">software-as-craft</a></li>
+  
+  </ul></p>
+</section>
+
+<section id="newsletter-signup">
+  <p>Want to get notified when I publish new articles or update old ones?
+  Subscribe to my newsletter. It's a weekly-ish set of interesting links with a
+  short essay on programming, design, technical leadership, or anything else
+  that strikes my fancy.</p>
+
+  <form id="subscribe-to-newsletter" action="https://tinyletter.com/zspencer" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/zspencer', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+  <p><label for="tlemail">Email address:</label>
+  <input placeholder="your-email@example.com" type="text" name="email" id="tlemail" /></p>
+  <input type="hidden" value="1" name="embed"/>
+
+  <p>Not sure? <a id="newsletter-archive" href="http://tinyletter.com/zspencer/archive">Read the
+    archive.</a></p>
+  <input class="button" type="submit" value="Subscribe Now!" />
+</form>
+
+<script type="text/javascript">
+Track.cta("#subscribe-to-newsletter", "Newsletter Subscription", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Subscribe',
+  pageSubject: 'Article'
+});
+
+Track.cta("#newsletter-archive", "Check the Newsletter Archive", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Investigate me',
+  pageSubject: 'Article'
+});
+</script>
+
+</section>
+
+  </main>
+  <div class="push"></div>
+  </div>
+  <footer>
+    <section id="footer-content">
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <p class="license">
+        Copyright 2004 - 2020 Zee Spencer. Licensed under
+        a <a
+           rel="license"
+           href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+           Commons Attribution-NonCommercial-ShareAlike 4.0
+           International License</a>.
+      </p>
+    </section>
+  </footer>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
+<br />
       <a href="/getting-past-junior">27 Jun 2014</a>
   </li>
   
 
   
   <li>The Vim Lovers Guide to Editing Clojure &ndash;
-      <a href="/tags/clojure.html" rel="tag">clojure</a>, <a href="/tags/devenvironment.html" rel="tag">devenvironment</a>, <a href="/tags/vim.html" rel="tag">vim</a>, <a href="/tags/software.html" rel="tag">software</a><br />
+      <!DOCTYPE html>
+<html>
+<head>
+  <title>The Vim Lovers Guide to Editing Clojure</title>
+  <link href="style.css" type="text/css" rel="stylesheet" />
+  
+  <link rel="canonical" href="" />
+  
+
+  <link type="text/atom+xml" rel="alternate" href="http://feeds.feedburner.com/zeespencer"/>
+  <meta name="viewport" content="initial-scale=1" />
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.0";
+      
+      analytics.load("DEDSLhOPXKFCHg4NglvHWqtQg6BgqJy2");
+      
+
+      
+        analytics.page();
+      
+      }}();
+    </script>
+    <script type="text/javascript" src="js/site.js"></script>
+</head>
+<body>
+  <div id="page">
+  <header>
+    <figure>
+      <img src="images/zee.png" alt="Zee Spencer" />
+    </figure>
+    
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <h2>The Vim Lovers Guide to Editing Clojure</h2>
+    
+
+  </header>
+  <main id="content">
+    <section id="article">
+<p>I&#39;ve recently started a Clojure gig, which has a pretty emacs-oriented language
+ecosystem. Emacs uses Cider and Paredit to make it super easy to:</p>
+
+<ol>
+<li>Move parenthesis around S-Expressions (aka &#39;slurping&#39; and &#39;barfing&#39;)</li>
+<li>Access a Clojure REPL</li>
+<li>Surround lines, words, etc. with parenthesis, braces, brackets and quotes</li>
+</ol>
+
+<p>Unfortunately I don&#39;t really know emacs and would rather focus on learning a
+language than an editor; so I set out to find vim equivalents. Wonder of
+wonders, I happened upon:</p>
+
+<ol>
+<li><code>vim-fireplace</code> for dead-simple REPL functionality, jump-to-source, omni-complete, and a host of other goodies</li>
+<li><code>surround.vim</code> for changing, adding and removing braces, parenthesis, etc</li>
+<li><code>paredit.vim</code> for slurping and keeping parenthesis matching</li>
+</ol>
+
+<h3 id="vim-fireplace">Vim Fireplace</h3>
+
+<p>Vim Fireplace is by none other than The Lord of Viml himself, Tim Pope. By
+default it connects to the repl defined in <code>target/repl-port</code> which makes it
+pretty drop-in-and-go. Some of my favorite normal mode commands:</p>
+
+<ol>
+<li><code>cpp</code> - Evaluate the s-expression and print the results</li>
+<li><code>K</code>   - Print the Clojure documentation for the symbol under the cursor</li>
+<li><code>cqc</code> - Open a mini-repl for executing arbitrary Clojure code</li>
+<li><code>cqq</code> - Open a mini-repl, with the current S-expression pre-entered</li>
+<li><code>[d</code>  - Print the Clojure source for the symbol under the cursor</li>
+<li><code>[C-d</code>  - Go to the definition of the symbol under the cursor</li>
+</ol>
+
+<p>It also comes with some nice command mode helpers as well:</p>
+
+<ol>
+<li><code>:A</code> - Opens the test file for the given source file in the current buffer
+(and vice versa). <code>AV</code>/<code>AS</code>/<code>AT</code> are similar but are vsplit, split, and tab
+respectively.</li>
+<li><code>:Apropos &lt;keyword&gt;</code> - Searches the current class path for symbols which
+match the keyword</li>
+<li><code>:Eval &lt;clojure code&gt;</code> - Executes arbitrary Clojure code and prints the result</li>
+</ol>
+
+<h3 id="surround-vim">Surround.vim</h3>
+
+<p>Surround.vim (also by Tim Pope) is great for manipulating parenthesis, quotes,
+or brackets around your code. While initially designed for manipulating XML
+documents and swapping tags, it&#39;s definitely a handy tool for a new-found lisper.
+Some normal mode commands:</p>
+
+<ol>
+<li><code>ys&lt;motion&gt;&lt;char&gt;</code> - E.g. <code>ys$&quot;</code> surrounds the current line with quotation
+marks I use &quot;You&#39;re surrounded <code>motion</code> by <code>char</code>!&quot; for a mnemonic for this</li>
+<li><code>cs&lt;motion&gt;&lt;current-char&gt;&lt;new-char&gt;</code> - Change Surrounding, E.g. <code>cs([</code>
+changes <code>(foo) to [foo]</code></li>
+<li><code>ds&lt;char&gt;</code> - Deletes the surrounding character. E.g. <code>ds(</code> would change
+<code>((foo))</code> to <code>(foo)</code></li>
+</ol>
+
+<h3 id="paredit-vim">Paredit.vim</h3>
+
+<p>Paredit.vim by Tamas Kavacs was extracted from Slimv, a much broader alternative
+to vim-fireplace. Paredit.vim keeps your parenthesis  well balanced, as well as
+builds in slurping and barfing for your S Expressions.</p>
+
+<p>Paredit.vim is reasonably good, but if you use <code>\</code> for your <code>leader</code> key you&#39;ll
+want to add <code>let g:paredit_leader = &#39;\&#39;</code> to your <code>.vimrc</code></p>
+
+<p>Unfortunately I&#39;ve found it&#39;s possible to accidentally unbalance your code,
+making paredit.vim start to get in the way. The best way I&#39;ve found to resolve
+this is to select the offending character in visual mode and use <code>X</code> to delete
+it. This is because  paredit does not seem to override <code>X</code> in visual mode.</p>
+
+<h3 id="happy-clojurevimming">Happy ClojureVimming!</h3>
+
+<p>Overall, I&#39;m pretty happy with this setup for now.  It gives enough
+functionality for me to focus on Clojure instead of the editor. Admittedly, I&#39;ll
+probably want to pick up emacs as soon as I&#39;m reasonably comfortable in clojure.</p>
+
+</section>
+
+<hr />
+<section id="post-tags">
+  <p>Browse posts about:
+  <ul>
+  
+  <li><a href="clojure">clojure</a></li>
+  
+  <li><a href="devenvironment">devenvironment</a></li>
+  
+  <li><a href="vim">vim</a></li>
+  
+  <li><a href="software">software</a></li>
+  
+  </ul></p>
+</section>
+
+<section id="newsletter-signup">
+  <p>Want to get notified when I publish new articles or update old ones?
+  Subscribe to my newsletter. It's a weekly-ish set of interesting links with a
+  short essay on programming, design, technical leadership, or anything else
+  that strikes my fancy.</p>
+
+  <form id="subscribe-to-newsletter" action="https://tinyletter.com/zspencer" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/zspencer', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+  <p><label for="tlemail">Email address:</label>
+  <input placeholder="your-email@example.com" type="text" name="email" id="tlemail" /></p>
+  <input type="hidden" value="1" name="embed"/>
+
+  <p>Not sure? <a id="newsletter-archive" href="http://tinyletter.com/zspencer/archive">Read the
+    archive.</a></p>
+  <input class="button" type="submit" value="Subscribe Now!" />
+</form>
+
+<script type="text/javascript">
+Track.cta("#subscribe-to-newsletter", "Newsletter Subscription", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Subscribe',
+  pageSubject: 'Article'
+});
+
+Track.cta("#newsletter-archive", "Check the Newsletter Archive", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Investigate me',
+  pageSubject: 'Article'
+});
+</script>
+
+</section>
+
+  </main>
+  <div class="push"></div>
+  </div>
+  <footer>
+    <section id="footer-content">
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <p class="license">
+        Copyright 2004 - 2020 Zee Spencer. Licensed under
+        a <a
+           rel="license"
+           href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+           Commons Attribution-NonCommercial-ShareAlike 4.0
+           International License</a>.
+      </p>
+    </section>
+  </footer>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
+<br />
       <a href="/the-vim-lovers-guide-to-editing-clojure">05 Dec 2013</a>
   </li>
   
 
   
   <li>Teach Yourself Programming in 10,000 Hours &ndash;
-      <a href="/tags/mastery.html" rel="tag">mastery</a>, <a href="/tags/software.html" rel="tag">software</a>, <a href="/tags/learning.html" rel="tag">learning</a><br />
+      <!DOCTYPE html>
+<html>
+<head>
+  <title>Teach Yourself Programming in 10,000 Hours</title>
+  <link href="style.css" type="text/css" rel="stylesheet" />
+  
+  <link rel="canonical" href="" />
+  
+
+  <link type="text/atom+xml" rel="alternate" href="http://feeds.feedburner.com/zeespencer"/>
+  <meta name="viewport" content="initial-scale=1" />
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.0";
+      
+      analytics.load("DEDSLhOPXKFCHg4NglvHWqtQg6BgqJy2");
+      
+
+      
+        analytics.page();
+      
+      }}();
+    </script>
+    <script type="text/javascript" src="js/site.js"></script>
+</head>
+<body>
+  <div id="page">
+  <header>
+    <figure>
+      <img src="images/zee.png" alt="Zee Spencer" />
+    </figure>
+    
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <h2>Teach Yourself Programming in 10,000 Hours</h2>
+    
+
+  </header>
+  <main id="content">
+    <section id="article">
+<p>Becoming an excellent programmer is hard. It takes <a href="http://expertenough.com/1423/deliberate-practice">deliberate
+practice</a>,
+<a href="http://chimera.labs.oreilly.com/books/1234000001813/ch04.html#find_mentors">mentorship</a>,
+and availability of <a href="http://teamtreehouse.com/home">quality</a>
+<a href="https://www.codeschool.com/">resources</a>.</p>
+
+<p>It takes [thousands of hours](https://en.wikipedia.org/wiki/Outliers_(book)) to
+become en expert in a field, and programming is no exception.</p>
+
+<p>I want to help people get their 10,000 hours. So I&#39;m relaunching <a href="http://growingdevelopers.com">Growing
+Developers</a>.</p>
+
+<p>Growing Developers will offer discussion groups, chat rooms, hangouts, and other
+pieces of <a href="/articles/structure-and-space/">structure</a> to support an online
+community of programmers who are constantly leveling up.</p>
+
+<p>If you are interested in any way, drop me a line at
+<a href="mailto:zee@wecohere.com">zee@wecohere.com</a> and we can level up
+together.</p>
+
+</section>
+
+<hr />
+<section id="post-tags">
+  <p>Browse posts about:
+  <ul>
+  
+  <li><a href="mastery">mastery</a></li>
+  
+  <li><a href="software">software</a></li>
+  
+  <li><a href="learning">learning</a></li>
+  
+  </ul></p>
+</section>
+
+<section id="newsletter-signup">
+  <p>Want to get notified when I publish new articles or update old ones?
+  Subscribe to my newsletter. It's a weekly-ish set of interesting links with a
+  short essay on programming, design, technical leadership, or anything else
+  that strikes my fancy.</p>
+
+  <form id="subscribe-to-newsletter" action="https://tinyletter.com/zspencer" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/zspencer', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+  <p><label for="tlemail">Email address:</label>
+  <input placeholder="your-email@example.com" type="text" name="email" id="tlemail" /></p>
+  <input type="hidden" value="1" name="embed"/>
+
+  <p>Not sure? <a id="newsletter-archive" href="http://tinyletter.com/zspencer/archive">Read the
+    archive.</a></p>
+  <input class="button" type="submit" value="Subscribe Now!" />
+</form>
+
+<script type="text/javascript">
+Track.cta("#subscribe-to-newsletter", "Newsletter Subscription", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Subscribe',
+  pageSubject: 'Article'
+});
+
+Track.cta("#newsletter-archive", "Check the Newsletter Archive", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Investigate me',
+  pageSubject: 'Article'
+});
+</script>
+
+</section>
+
+  </main>
+  <div class="push"></div>
+  </div>
+  <footer>
+    <section id="footer-content">
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <p class="license">
+        Copyright 2004 - 2020 Zee Spencer. Licensed under
+        a <a
+           rel="license"
+           href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+           Commons Attribution-NonCommercial-ShareAlike 4.0
+           International License</a>.
+      </p>
+    </section>
+  </footer>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
+<br />
       <a href="/teach-yourself-programming-in-10000-hours">13 Nov 2013</a>
   </li>
   
 
   
   <li>Intro to JavaScript - TDD a Palindrome Checker &ndash;
-      <a href="/tags/javascript.html" rel="tag">javascript</a>, <a href="/tags/video.html" rel="tag">video</a>, <a href="/tags/software.html" rel="tag">software</a>, <a href="/tags/testing.html" rel="tag">testing</a>, <a href="/tags/beginner.html" rel="tag">beginner</a><br />
+      <!DOCTYPE html>
+<html>
+<head>
+  <title>Intro to JavaScript - TDD a Palindrome Checker</title>
+  <link href="style.css" type="text/css" rel="stylesheet" />
+  
+  <link rel="canonical" href="" />
+  
+
+  <link type="text/atom+xml" rel="alternate" href="http://feeds.feedburner.com/zeespencer"/>
+  <meta name="viewport" content="initial-scale=1" />
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.0";
+      
+      analytics.load("DEDSLhOPXKFCHg4NglvHWqtQg6BgqJy2");
+      
+
+      
+        analytics.page();
+      
+      }}();
+    </script>
+    <script type="text/javascript" src="js/site.js"></script>
+</head>
+<body>
+  <div id="page">
+  <header>
+    <figure>
+      <img src="images/zee.png" alt="Zee Spencer" />
+    </figure>
+    
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <h2>Intro to JavaScript - TDD a Palindrome Checker</h2>
+    
+
+  </header>
+  <main id="content">
+    <section id="article">
+<p>I was hanging out at the <a href="http://swcguild.com/">Software Craftsmanship Guild</a>
+today, and after a short conversation about managing complexity and the four
+rules of simple design; they asked for an introduction to JavaScript.</p>
+
+<p>So of course I obliged. Here I impromptu TDD a palindrome checker in
+JavaScript.</p>
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/OWL-ev-j89s"
+frameborder="0" allowfullscreen></iframe>
+
+</section>
+
+<hr />
+<section id="post-tags">
+  <p>Browse posts about:
+  <ul>
+  
+  <li><a href="javascript">javascript</a></li>
+  
+  <li><a href="video">video</a></li>
+  
+  <li><a href="software">software</a></li>
+  
+  <li><a href="testing">testing</a></li>
+  
+  <li><a href="beginner">beginner</a></li>
+  
+  </ul></p>
+</section>
+
+<section id="newsletter-signup">
+  <p>Want to get notified when I publish new articles or update old ones?
+  Subscribe to my newsletter. It's a weekly-ish set of interesting links with a
+  short essay on programming, design, technical leadership, or anything else
+  that strikes my fancy.</p>
+
+  <form id="subscribe-to-newsletter" action="https://tinyletter.com/zspencer" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/zspencer', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+  <p><label for="tlemail">Email address:</label>
+  <input placeholder="your-email@example.com" type="text" name="email" id="tlemail" /></p>
+  <input type="hidden" value="1" name="embed"/>
+
+  <p>Not sure? <a id="newsletter-archive" href="http://tinyletter.com/zspencer/archive">Read the
+    archive.</a></p>
+  <input class="button" type="submit" value="Subscribe Now!" />
+</form>
+
+<script type="text/javascript">
+Track.cta("#subscribe-to-newsletter", "Newsletter Subscription", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Subscribe',
+  pageSubject: 'Article'
+});
+
+Track.cta("#newsletter-archive", "Check the Newsletter Archive", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Investigate me',
+  pageSubject: 'Article'
+});
+</script>
+
+</section>
+
+  </main>
+  <div class="push"></div>
+  </div>
+  <footer>
+    <section id="footer-content">
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <p class="license">
+        Copyright 2004 - 2020 Zee Spencer. Licensed under
+        a <a
+           rel="license"
+           href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+           Commons Attribution-NonCommercial-ShareAlike 4.0
+           International License</a>.
+      </p>
+    </section>
+  </footer>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
+<br />
       <a href="/impromptu-introduction-to-javascript">05 Nov 2013</a>
   </li>
   
 
   
   <li>Back to Codin' &ndash;
-      <a href="/tags/software.html" rel="tag">software</a>, <a href="/tags/career.html" rel="tag">career</a><br />
+      <!DOCTYPE html>
+<html>
+<head>
+  <title>Back to Codin'</title>
+  <link href="style.css" type="text/css" rel="stylesheet" />
+  
+  <link rel="canonical" href="" />
+  
+
+  <link type="text/atom+xml" rel="alternate" href="http://feeds.feedburner.com/zeespencer"/>
+  <meta name="viewport" content="initial-scale=1" />
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.0";
+      
+      analytics.load("DEDSLhOPXKFCHg4NglvHWqtQg6BgqJy2");
+      
+
+      
+        analytics.page();
+      
+      }}();
+    </script>
+    <script type="text/javascript" src="js/site.js"></script>
+</head>
+<body>
+  <div id="page">
+  <header>
+    <figure>
+      <img src="images/zee.png" alt="Zee Spencer" />
+    </figure>
+    
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <h2>Back to Codin'</h2>
+    
+
+  </header>
+  <main id="content">
+    <section id="article">
+<p>The last 9 months have been some of the most amazing, fullfilling, enjoyable
+months I&#39;ve ever had.</p>
+
+<p>I&#39;ve been lucky enough to teach nearly 150 hard working, passionate people the
+basics of development and help launch their career in a field I love.</p>
+
+<p>This has consumed every ounce of my energy, so I&#39;m looking forward to taking
+time to recharge, relax, and <strong>build some software</strong>.</p>
+
+<h4 id="i-can-provide">I can provide:</h4>
+
+<ol>
+<li>Some competence at writing useful, clean code</li>
+<li>Mentoring for developers, project/product managers, or interaction designers</li>
+<li>Horrible puns</li>
+</ol>
+
+<h4 id="im-looking-for">I&#39;m looking for:</h4>
+
+<ol>
+<li>A distributed team to work with</li>
+<li>For 10~30 hours a week</li>
+<li>To build something hard/fun/meaningful</li>
+</ol>
+
+<p>If you are interested, I&#39;d love to chat. My email is
+<a href="mailto:zee@wecohere.com">zee@wecohere.com</a></p>
+
+</section>
+
+<hr />
+<section id="post-tags">
+  <p>Browse posts about:
+  <ul>
+  
+  <li><a href="software">software</a></li>
+  
+  <li><a href="career">career</a></li>
+  
+  </ul></p>
+</section>
+
+<section id="newsletter-signup">
+  <p>Want to get notified when I publish new articles or update old ones?
+  Subscribe to my newsletter. It's a weekly-ish set of interesting links with a
+  short essay on programming, design, technical leadership, or anything else
+  that strikes my fancy.</p>
+
+  <form id="subscribe-to-newsletter" action="https://tinyletter.com/zspencer" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/zspencer', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+  <p><label for="tlemail">Email address:</label>
+  <input placeholder="your-email@example.com" type="text" name="email" id="tlemail" /></p>
+  <input type="hidden" value="1" name="embed"/>
+
+  <p>Not sure? <a id="newsletter-archive" href="http://tinyletter.com/zspencer/archive">Read the
+    archive.</a></p>
+  <input class="button" type="submit" value="Subscribe Now!" />
+</form>
+
+<script type="text/javascript">
+Track.cta("#subscribe-to-newsletter", "Newsletter Subscription", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Subscribe',
+  pageSubject: 'Article'
+});
+
+Track.cta("#newsletter-archive", "Check the Newsletter Archive", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Investigate me',
+  pageSubject: 'Article'
+});
+</script>
+
+</section>
+
+  </main>
+  <div class="push"></div>
+  </div>
+  <footer>
+    <section id="footer-content">
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <p class="license">
+        Copyright 2004 - 2020 Zee Spencer. Licensed under
+        a <a
+           rel="license"
+           href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+           Commons Attribution-NonCommercial-ShareAlike 4.0
+           International License</a>.
+      </p>
+    </section>
+  </footer>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
+<br />
       <a href="/back-to-coding">25 Oct 2013</a>
   </li>
   
 
   
   <li>Splitting codebases &ndash;
-      <a href="/tags/software.html" rel="tag">software</a>, <a href="/tags/design.html" rel="tag">design</a><br />
+      <!DOCTYPE html>
+<html>
+<head>
+  <title>Splitting codebases</title>
+  <link href="style.css" type="text/css" rel="stylesheet" />
+  
+  <link rel="canonical" href="" />
+  
+
+  <link type="text/atom+xml" rel="alternate" href="http://feeds.feedburner.com/zeespencer"/>
+  <meta name="viewport" content="initial-scale=1" />
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.0";
+      
+      analytics.load("DEDSLhOPXKFCHg4NglvHWqtQg6BgqJy2");
+      
+
+      
+        analytics.page();
+      
+      }}();
+    </script>
+    <script type="text/javascript" src="js/site.js"></script>
+</head>
+<body>
+  <div id="page">
+  <header>
+    <figure>
+      <img src="images/zee.png" alt="Zee Spencer" />
+    </figure>
+    
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <h2>Splitting codebases</h2>
+    
+
+  </header>
+  <main id="content">
+    <section id="article">
+<p>As programmers, we split our code along what job those bits of code do for us.
+We pontificate about whether MVVM or MVC or another pattern is the appropriate
+way to build an app for the given language, environment, or problem domain.</p>
+
+<p>This is valuable! Adaptable code knows little about other parts of the system,
+and good application design patterns guide us to writing adaptable code with
+little effort.</p>
+
+<p>I am curious: how does slicing code along the job code does for users impact how
+we build software?</p>
+
+<p>Consider the following:</p>
+
+<p>An application that has two user archetypes: a visitor and a regular
+user. Regular users wind up using the messaging and content creation features
+quite regularly, while visitors mostly visit pages which display content.</p>
+
+<p>If we care about separating concerns based upon what the code did for the
+coders, we would build the content display feature and the content creation
+features into the same application.</p>
+
+<p>If we care about separating code based upon what the code does for a person, we
+could build the content display feature and the content creation features into
+two different applications and route users to the appropriate application.</p>
+
+<p>Splitting these features into independent applications provides two advantages:</p>
+
+<ol>
+<li>It allows for experimentation. If I can route users based upon type to a separate app
+seamlessly, the jump to routing users based upon cohort becomes much simpler.</li>
+<li>It allows for optimization. If we split our application, we could provide the
+visitor application with caching without burdening the registered user
+application.</li>
+</ol>
+
+<p>This isn&#39;t free, however, it requires answering some hard questions:</p>
+
+<ol>
+<li>How do we extract components to share between applications?</li>
+<li>How do we manage changes to shared components?</li>
+<li>How does this impact the complexity of our network layer?</li>
+<li>What is the appropriate timing to extract an application?</li>
+<li>What skills would I need to do so effectively?</li>
+</ol>
+
+<p>Answering these questions will be most beneficial to those of us who are
+designing our applications for experimentation and/or working on systems with
+large differences in the resource demands between user types.</p>
+
+<p>From these groups, I expect to see the next generation of application patterns.
+Patterns which make splitting codebases by what it does for a user as
+commonplace as frameworks designed to make splitting codebases by what it does
+for us programmers.</p>
+
+</section>
+
+<hr />
+<section id="post-tags">
+  <p>Browse posts about:
+  <ul>
+  
+  <li><a href="software">software</a></li>
+  
+  <li><a href="design">design</a></li>
+  
+  </ul></p>
+</section>
+
+<section id="newsletter-signup">
+  <p>Want to get notified when I publish new articles or update old ones?
+  Subscribe to my newsletter. It's a weekly-ish set of interesting links with a
+  short essay on programming, design, technical leadership, or anything else
+  that strikes my fancy.</p>
+
+  <form id="subscribe-to-newsletter" action="https://tinyletter.com/zspencer" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/zspencer', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+  <p><label for="tlemail">Email address:</label>
+  <input placeholder="your-email@example.com" type="text" name="email" id="tlemail" /></p>
+  <input type="hidden" value="1" name="embed"/>
+
+  <p>Not sure? <a id="newsletter-archive" href="http://tinyletter.com/zspencer/archive">Read the
+    archive.</a></p>
+  <input class="button" type="submit" value="Subscribe Now!" />
+</form>
+
+<script type="text/javascript">
+Track.cta("#subscribe-to-newsletter", "Newsletter Subscription", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Subscribe',
+  pageSubject: 'Article'
+});
+
+Track.cta("#newsletter-archive", "Check the Newsletter Archive", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Investigate me',
+  pageSubject: 'Article'
+});
+</script>
+
+</section>
+
+  </main>
+  <div class="push"></div>
+  </div>
+  <footer>
+    <section id="footer-content">
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <p class="license">
+        Copyright 2004 - 2020 Zee Spencer. Licensed under
+        a <a
+           rel="license"
+           href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+           Commons Attribution-NonCommercial-ShareAlike 4.0
+           International License</a>.
+      </p>
+    </section>
+  </footer>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
+<br />
       <a href="/extracting-an-application">02 Jun 2013</a>
   </li>
   
 
   
   <li>Using Nil Effectively &ndash;
-      <a href="/tags/tapas.html" rel="tag">tapas</a>, <a href="/tags/ruby.html" rel="tag">ruby</a>, <a href="/tags/software.html" rel="tag">software</a><br />
+      <!DOCTYPE html>
+<html>
+<head>
+  <title>Using Nil Effectively</title>
+  <link href="style.css" type="text/css" rel="stylesheet" />
+  
+  <link rel="canonical" href="" />
+  
+
+  <link type="text/atom+xml" rel="alternate" href="http://feeds.feedburner.com/zeespencer"/>
+  <meta name="viewport" content="initial-scale=1" />
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.0";
+      
+      analytics.load("DEDSLhOPXKFCHg4NglvHWqtQg6BgqJy2");
+      
+
+      
+        analytics.page();
+      
+      }}();
+    </script>
+    <script type="text/javascript" src="js/site.js"></script>
+</head>
+<body>
+  <div id="page">
+  <header>
+    <figure>
+      <img src="images/zee.png" alt="Zee Spencer" />
+    </figure>
+    
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <h2>Using Nil Effectively</h2>
+    
+
+  </header>
+  <main id="content">
+    <section id="article">
+<p>We seem to use <code>nil</code>s in place of a default return value in a function. Say you
+wanted to write a function that splits a string on its commas:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">def nil_split_on_comma(string)
+  return nil unless string.include? ","
+  string.split(",")
+end
+</code></pre></div>
+<p>While this seems reasonable it can have some unfortunate side effects:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">p nil_split_on_comma("asdfqwer").map(&amp;:length)
+</code></pre></div>
+<p>Woops! Undefined method map for <code>nil</code> class! Let&#39;s try again!</p>
+<div class="highlight"><pre><code class="language-" data-lang="">def better_split_on_comma(string)
+  return [] unless string.include? ","
+  string.split(",")
+end
+
+p better_split_on_comma("asdfqwer").map(&amp;:length)
+</code></pre></div>
+<p>Ah! Much better! Because this function always returns an object of the same type
+it can be used without checking the value! The astute reader will spot this as
+an example of the <a href="http://c2.com/cgi/wiki?NullObject">Null Object Pattern</a></p>
+
+<p>In spite of it&#39;s lack of suitability as a replacement for a reasonable default
+value, I&#39;m a fan of <code>nil</code>. I especially like it&#39;s use as a <a href="http://en.wikipedia.org/wiki/Null_character">null
+terminator</a>:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">def iterable_fetch_val(index)
+  data = "1234567890"
+  data[index]
+end
+
+index = 0
+
+while iterable_fetch_val(index)
+  p iterable_fetch_val(index)
+  index += 1
+end
+</code></pre></div>
+<p>Here we&#39;re relying on the side effect that a <code>nil</code> value is also falsey. I&#39;m
+less edgey about this because this functions use case is an iterator, instead of
+an accessor; but it&#39;s still a little iffy.</p>
+
+<p>However, if you return an empty string instead of a falsey value it requires an
+additional method call to use as an iterator:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">def uniterable_fetch_val(index)
+  data = "1234567890"
+  data[index] || ""
+end
+
+index = 0
+until uniterable_fetch_val(index).empty?
+  p uniterable_fetch_val(index)
+  index += 1
+end
+</code></pre></div>
+<p>As you can see, <code>nil</code>&#39;s aren&#39;t all bad. However they should be used with
+precision. Think about how varyied return types can cause complexity to move
+through the code.</p>
+
+</section>
+
+<hr />
+<section id="post-tags">
+  <p>Browse posts about:
+  <ul>
+  
+  <li><a href="tapas">tapas</a></li>
+  
+  <li><a href="ruby">ruby</a></li>
+  
+  <li><a href="software">software</a></li>
+  
+  </ul></p>
+</section>
+
+<section id="newsletter-signup">
+  <p>Want to get notified when I publish new articles or update old ones?
+  Subscribe to my newsletter. It's a weekly-ish set of interesting links with a
+  short essay on programming, design, technical leadership, or anything else
+  that strikes my fancy.</p>
+
+  <form id="subscribe-to-newsletter" action="https://tinyletter.com/zspencer" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/zspencer', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+  <p><label for="tlemail">Email address:</label>
+  <input placeholder="your-email@example.com" type="text" name="email" id="tlemail" /></p>
+  <input type="hidden" value="1" name="embed"/>
+
+  <p>Not sure? <a id="newsletter-archive" href="http://tinyletter.com/zspencer/archive">Read the
+    archive.</a></p>
+  <input class="button" type="submit" value="Subscribe Now!" />
+</form>
+
+<script type="text/javascript">
+Track.cta("#subscribe-to-newsletter", "Newsletter Subscription", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Subscribe',
+  pageSubject: 'Article'
+});
+
+Track.cta("#newsletter-archive", "Check the Newsletter Archive", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Investigate me',
+  pageSubject: 'Article'
+});
+</script>
+
+</section>
+
+  </main>
+  <div class="push"></div>
+  </div>
+  <footer>
+    <section id="footer-content">
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <p class="license">
+        Copyright 2004 - 2020 Zee Spencer. Licensed under
+        a <a
+           rel="license"
+           href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+           Commons Attribution-NonCommercial-ShareAlike 4.0
+           International License</a>.
+      </p>
+    </section>
+  </footer>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
+<br />
       <a href="/using-nil-effectively">17 Feb 2013</a>
   </li>
   
 
   
   <li>Point Victor &ndash;
-      <a href="/tags/business.html" rel="tag">business</a>, <a href="/tags/software.html" rel="tag">software</a>, <a href="/tags/mastery.html" rel="tag">mastery</a>, <a href="/tags/poetry.html" rel="tag">poetry</a><br />
+      <!DOCTYPE html>
+<html>
+<head>
+  <title>Point Victor</title>
+  <link href="style.css" type="text/css" rel="stylesheet" />
+  
+  <link rel="canonical" href="" />
+  
+
+  <link type="text/atom+xml" rel="alternate" href="http://feeds.feedburner.com/zeespencer"/>
+  <meta name="viewport" content="initial-scale=1" />
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.0";
+      
+      analytics.load("DEDSLhOPXKFCHg4NglvHWqtQg6BgqJy2");
+      
+
+      
+        analytics.page();
+      
+      }}();
+    </script>
+    <script type="text/javascript" src="js/site.js"></script>
+</head>
+<body>
+  <div id="page">
+  <header>
+    <figure>
+      <img src="images/zee.png" alt="Zee Spencer" />
+    </figure>
+    
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <h2>Point Victor</h2>
+    
+
+  </header>
+  <main id="content">
+    <section id="article">
+<p>There was a young lad named Rictor<br />
+Who gloated he was the <em>Point Victor</em><br />
+But the cards he&#39;d &quot;completed&quot;<br />
+Had bugs left untreated<br />
+And rejection befell poor young Rictor<br /></p>
+
+</section>
+
+<hr />
+<section id="post-tags">
+  <p>Browse posts about:
+  <ul>
+  
+  <li><a href="business">business</a></li>
+  
+  <li><a href="software">software</a></li>
+  
+  <li><a href="mastery">mastery</a></li>
+  
+  <li><a href="poetry">poetry</a></li>
+  
+  </ul></p>
+</section>
+
+<section id="newsletter-signup">
+  <p>Want to get notified when I publish new articles or update old ones?
+  Subscribe to my newsletter. It's a weekly-ish set of interesting links with a
+  short essay on programming, design, technical leadership, or anything else
+  that strikes my fancy.</p>
+
+  <form id="subscribe-to-newsletter" action="https://tinyletter.com/zspencer" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/zspencer', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+  <p><label for="tlemail">Email address:</label>
+  <input placeholder="your-email@example.com" type="text" name="email" id="tlemail" /></p>
+  <input type="hidden" value="1" name="embed"/>
+
+  <p>Not sure? <a id="newsletter-archive" href="http://tinyletter.com/zspencer/archive">Read the
+    archive.</a></p>
+  <input class="button" type="submit" value="Subscribe Now!" />
+</form>
+
+<script type="text/javascript">
+Track.cta("#subscribe-to-newsletter", "Newsletter Subscription", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Subscribe',
+  pageSubject: 'Article'
+});
+
+Track.cta("#newsletter-archive", "Check the Newsletter Archive", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Investigate me',
+  pageSubject: 'Article'
+});
+</script>
+
+</section>
+
+  </main>
+  <div class="push"></div>
+  </div>
+  <footer>
+    <section id="footer-content">
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <p class="license">
+        Copyright 2004 - 2020 Zee Spencer. Licensed under
+        a <a
+           rel="license"
+           href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+           Commons Attribution-NonCommercial-ShareAlike 4.0
+           International License</a>.
+      </p>
+    </section>
+  </footer>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
+<br />
       <a href="/point-victor">10 Feb 2013</a>
   </li>
   
 
   
   <li>Ambiguity In Code Is an Opportunity to Refactor &ndash;
-      <a href="/tags/software.html" rel="tag">software</a>, <a href="/tags/ruby.html" rel="tag">ruby</a>, <a href="/tags/tapas.html" rel="tag">tapas</a>, <a href="/tags/design.html" rel="tag">design</a><br />
+      <!DOCTYPE html>
+<html>
+<head>
+  <title>Ambiguity In Code Is an Opportunity to Refactor</title>
+  <link href="style.css" type="text/css" rel="stylesheet" />
+  
+  <link rel="canonical" href="" />
+  
+
+  <link type="text/atom+xml" rel="alternate" href="http://feeds.feedburner.com/zeespencer"/>
+  <meta name="viewport" content="initial-scale=1" />
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.0";
+      
+      analytics.load("DEDSLhOPXKFCHg4NglvHWqtQg6BgqJy2");
+      
+
+      
+        analytics.page();
+      
+      }}();
+    </script>
+    <script type="text/javascript" src="js/site.js"></script>
+</head>
+<body>
+  <div id="page">
+  <header>
+    <figure>
+      <img src="images/zee.png" alt="Zee Spencer" />
+    </figure>
+    
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <h2>Ambiguity In Code Is an Opportunity to Refactor</h2>
+    
+
+  </header>
+  <main id="content">
+    <section id="article">
+<p>There&#39;s a common design principle that states &quot;Design the system to prevent
+errors from occuring.&quot; Lean manufacturing calls this
+<em><a href="http://en.wikipedia.org/wiki/Poka-yoke">Poka-yoke</a></em>. Interaction design calls
+these <em><a href="http://www.interaction-design.org/encyclopedia/forcing_functions.html">forcing
+functions</a></em>.</p>
+
+<p>Since a much of the time building software is spent reading code, it&#39;s
+important to decrease the amount of errors in understanding while we read.</p>
+
+<p>One way to do this is to decrease ambiguity. Consider the <code>&amp;</code> symbol in Ruby.
+It&#39;s a method call on some ruby classes, <a href="/musings/the-ruby-&-symbol/">a unary
+operator</a> for converting objects to blocks, and a
+binary operator for calling the <code>&amp;</code> method without using a <code>.</code>.</p>
+
+<p>In order to properly understand what the <code>&amp;</code> is doing you have to figure out
+which of it&#39;s three roles it&#39;s fulfilling. If it&#39;s a binary operator or a method
+call you also must understand what that method is in the context of which object
+it&#39;s using.</p>
+
+<p>For example, <code>1 | 5</code> is a <a href="http://en.wikipedia.org/wiki/Bitwise_operation#OR">bitwise
+or</a> operation, while <code>[1,3,5]
+| [3,5,7]</code> is a [set union](http://en.wikipedia.org/wiki/Union<em>(set</em>theory).</p>
+
+<p>While we learn to infer this over time there is some cognitive overhead as we
+read. To combat this, I propose we take a cue from the <a href="http://www.python.org/dev/peps/pep-0020/">zen of
+python</a>, which states <em>explicit is
+better than implicit</em>. In that spirit, python provides <a href="http://docs.python.org/2/library/stdtypes.html#set.intersection">two
+ways</a> to do set
+intersections: the <code>&amp;</code> operator, and the <code>intersection</code> function.</p>
+
+<p>Since ruby does not always provide named variants for ambiguous symbols this
+provides us with an opportunity to refactor. When we encounter ambiguity, maybe
+it&#39;s time to extract a method to describes the operation more explicitely than
+<code>|</code> or <code>&amp;</code>.</p>
+
+</section>
+
+<hr />
+<section id="post-tags">
+  <p>Browse posts about:
+  <ul>
+  
+  <li><a href="software">software</a></li>
+  
+  <li><a href="ruby">ruby</a></li>
+  
+  <li><a href="tapas">tapas</a></li>
+  
+  <li><a href="design">design</a></li>
+  
+  </ul></p>
+</section>
+
+<section id="newsletter-signup">
+  <p>Want to get notified when I publish new articles or update old ones?
+  Subscribe to my newsletter. It's a weekly-ish set of interesting links with a
+  short essay on programming, design, technical leadership, or anything else
+  that strikes my fancy.</p>
+
+  <form id="subscribe-to-newsletter" action="https://tinyletter.com/zspencer" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/zspencer', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+  <p><label for="tlemail">Email address:</label>
+  <input placeholder="your-email@example.com" type="text" name="email" id="tlemail" /></p>
+  <input type="hidden" value="1" name="embed"/>
+
+  <p>Not sure? <a id="newsletter-archive" href="http://tinyletter.com/zspencer/archive">Read the
+    archive.</a></p>
+  <input class="button" type="submit" value="Subscribe Now!" />
+</form>
+
+<script type="text/javascript">
+Track.cta("#subscribe-to-newsletter", "Newsletter Subscription", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Subscribe',
+  pageSubject: 'Article'
+});
+
+Track.cta("#newsletter-archive", "Check the Newsletter Archive", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Investigate me',
+  pageSubject: 'Article'
+});
+</script>
+
+</section>
+
+  </main>
+  <div class="push"></div>
+  </div>
+  <footer>
+    <section id="footer-content">
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <p class="license">
+        Copyright 2004 - 2020 Zee Spencer. Licensed under
+        a <a
+           rel="license"
+           href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+           Commons Attribution-NonCommercial-ShareAlike 4.0
+           International License</a>.
+      </p>
+    </section>
+  </footer>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
+<br />
       <a href="/ambiguity-is-an-opportunity-to-refactor">01 Feb 2013</a>
   </li>
   
 
   
   <li>What Mom and Dad Need to Know About the Rails Security Exploit &ndash;
-      <a href="/tags/ruby.html" rel="tag">ruby</a>, <a href="/tags/software.html" rel="tag">software</a>, <a href="/tags/rails.html" rel="tag">rails</a>, <a href="/tags/security.html" rel="tag">security</a><br />
+      <!DOCTYPE html>
+<html>
+<head>
+  <title>What Mom and Dad Need to Know About the Rails Security Exploit</title>
+  <link href="style.css" type="text/css" rel="stylesheet" />
+  
+  <link rel="canonical" href="" />
+  
+
+  <link type="text/atom+xml" rel="alternate" href="http://feeds.feedburner.com/zeespencer"/>
+  <meta name="viewport" content="initial-scale=1" />
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.0";
+      
+      analytics.load("DEDSLhOPXKFCHg4NglvHWqtQg6BgqJy2");
+      
+
+      
+        analytics.page();
+      
+      }}();
+    </script>
+    <script type="text/javascript" src="js/site.js"></script>
+</head>
+<body>
+  <div id="page">
+  <header>
+    <figure>
+      <img src="images/zee.png" alt="Zee Spencer" />
+    </figure>
+    
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <h2>What Mom and Dad Need to Know About the Rails Security Exploit</h2>
+    
+
+  </header>
+  <main id="content">
+    <section id="article">
+<p>Dear Mom, Dad, Gramma, Brothers, Aunts and Uncles</p>
+
+<p>I&#39;ve got some bad news. You may have some work to do to keep your private
+information safe and prevent people from being able to impersonate you on the
+Internet.</p>
+
+<p>As you know, I&#39;m a computer programmer. Or a nerd. Or whatever. Essentially
+people give me money to sit on my butt and get fatter. Yes Mom, I know I haven&#39;t
+called in a few weeks. I&#39;m sorry. Anyway, my people have really let you all down
+right now.</p>
+
+<p>You see, there&#39;s a problem with the Internet right now. It&#39;s even worse because
+Facebook, Twitter, and Google are central to our digital lives.</p>
+
+<p>You know how when you sign in to Yelp on your phone it asks you to log in with
+Facebook? Or how more and more web pages ask you to Log in with Google? Well,
+that&#39;s gotten a bit more dangerous in the last month.</p>
+
+<p>Essentially there is a security problem in a very common framework, called Ruby
+on Rails. This framework runs a lot of websites. Websites like
+<a href="http://meetup.com">Meetup.com</a>, tons of facebook games, and quite a few
+business applications like <a href="http://www.getharvest.com/">Harvest</a></p>
+
+<p>If an app you added on Facebook, Twitter, Google or LinkedIn is compromised it
+gives the attacker the ability to do whatever that app is allowed to
+do on facebook, twitter, google or linked in.</p>
+
+<p>Even worse many of the applications we developers make are greedy about what we
+want you to allow the app to do. Some social games require you to give them the
+right to post things on your friends timeline before they&#39;ll even let you play!
+What dirtbags, right?</p>
+
+<p>I figured I should apologize for all of us, as well as inform
+you of the risks that you are now being exposed to, as well as what steps to
+take to make yourself a little safer.</p>
+
+<h3 id="protecting-your-google-accounts">Protecting Your Google Accounts</h3>
+
+<p>Google is the largest concern for me. I use it to log in to all kinds of things
+and it has tons of my personal data in it. Including client lists, budgets, and
+things like that.</p>
+
+<p>Apps you log in to with Google can access all kinds of things; like your
+contacts, email, calendar, documents in google drive, and even
+your chat history if you use google chat!</p>
+
+<p>Thankfully it&#39;s pretty straightforward to revoke access with Google, though a
+bit time consuming. They have a <a href="http://support.google.com/accounts/bin/answer.py?hl=en&answer=41236">support page explaining
+how</a>,
+located here:
+<a href="http://support.google.com/accounts/bin/answer.py?hl=en&answer=41236">http://support.google.com/accounts/bin/answer.py?hl=en&amp;answer=41236</a></p>
+
+<h3 id="protecting-your-facebook-account">Protecting Your Facebook Account</h3>
+
+<p>Most Facebook apps are allowed to get your contact information, many can post
+status or pictures, and a few can add or remove friends.</p>
+
+<p>If your not cool that some stranger on the Internet can someday possibly
+impersonate you on Facebook, even if you change your password you may want to
+follow
+<a href="http://howto.cnet.com/8301-11310_39-57347928-285/how-to-revoke-facebook-app-permissions/">these
+instructions</a>.</p>
+
+<p>I know, I know. It&#39;s painful. You have to click twice per app you want to
+remove, and if you&#39;re like me you somehow have accumulated dozens of them over
+the years. Oops. I&#39;ll think twice before logging in with facebook!</p>
+
+<h3 id="protecting-your-linked-in-account">Protecting Your Linked In Account</h3>
+
+<p>Most LinkedIn apps can access your personal information, as well as
+post updates to your timeline. Some can update your work history, or send
+private messages.</p>
+
+<p>It&#39;s easy to <a href="http://www.linkedin.com/answers/using-linkedIn/ULI/868108-1020804">revoke access on
+LinkedIn</a>,
+especially because there are so few apps for the platform!</p>
+
+<h3 id="protecting-your-twitter-account">Protecting Your Twitter Account</h3>
+
+<p>Most twitter apps can update your status, some can send DMs. A lot of my
+personal brand is tied up in Twitter, so this is more important for me than
+LinkedIn, but I&#39;m assuming the opposite is true for you.</p>
+
+<p><a href="https://support.twitter.com/articles/76052-how-to-connect-and-revoke-third-party-applications">Revoking twitter
+access</a>
+is a joy compared to Facebook!</p>
+
+<h3 id="the-thrilling-conclusion">The Thrilling Conclusion</h3>
+
+<p>I would strongly recommend removing all access for Facebook, Twitter, Google,
+and LinkedIn apps for the time being. If you <em>really need</em> whatever app it was,
+contact the apps support team and ask them if they are using rails, and if so if
+they are up to date with the latest security patches. If they say yes, then
+you&#39;re good to go!</p>
+
+<p>I wish I could say this was all you should be worried about, but we&#39;re in for a
+bumpy ride over the next few months.</p>
+
+<h3 id="more-details">More Details</h3>
+
+<p>For a more detailed understanding of the security exploit, you should read this
+article by <a href="http://www.kalzumeus.com/2013/01/31/what-the-rails-security-issue-means-for-your-startup/">Patrick
+McKenzie</a>.</p>
+
+<div class="call-to-action"><p>Are you a business owner or manager responsible
+for a rails app? I'm available to help ensure your customers are safe. Just send
+  me an email: <a href="mailto:
+  zee@wecohere.com">zee@wecohere.com</a></p></div>
+
+</section>
+
+<hr />
+<section id="post-tags">
+  <p>Browse posts about:
+  <ul>
+  
+  <li><a href="ruby">ruby</a></li>
+  
+  <li><a href="software">software</a></li>
+  
+  <li><a href="rails">rails</a></li>
+  
+  <li><a href="security">security</a></li>
+  
+  </ul></p>
+</section>
+
+<section id="newsletter-signup">
+  <p>Want to get notified when I publish new articles or update old ones?
+  Subscribe to my newsletter. It's a weekly-ish set of interesting links with a
+  short essay on programming, design, technical leadership, or anything else
+  that strikes my fancy.</p>
+
+  <form id="subscribe-to-newsletter" action="https://tinyletter.com/zspencer" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/zspencer', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+  <p><label for="tlemail">Email address:</label>
+  <input placeholder="your-email@example.com" type="text" name="email" id="tlemail" /></p>
+  <input type="hidden" value="1" name="embed"/>
+
+  <p>Not sure? <a id="newsletter-archive" href="http://tinyletter.com/zspencer/archive">Read the
+    archive.</a></p>
+  <input class="button" type="submit" value="Subscribe Now!" />
+</form>
+
+<script type="text/javascript">
+Track.cta("#subscribe-to-newsletter", "Newsletter Subscription", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Subscribe',
+  pageSubject: 'Article'
+});
+
+Track.cta("#newsletter-archive", "Check the Newsletter Archive", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Investigate me',
+  pageSubject: 'Article'
+});
+</script>
+
+</section>
+
+  </main>
+  <div class="push"></div>
+  </div>
+  <footer>
+    <section id="footer-content">
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <p class="license">
+        Copyright 2004 - 2020 Zee Spencer. Licensed under
+        a <a
+           rel="license"
+           href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+           Commons Attribution-NonCommercial-ShareAlike 4.0
+           International License</a>.
+      </p>
+    </section>
+  </footer>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
+<br />
       <a href="/what-mom-and-dad-need-to-know-about-the-current-security-breakdown">31 Jan 2013</a>
   </li>
   
 
   
   <li>The Ruby & Symbol &ndash;
-      <a href="/tags/software.html" rel="tag">software</a>, <a href="/tags/ruby.html" rel="tag">ruby</a>, <a href="/tags/tapas.html" rel="tag">tapas</a><br />
+      <!DOCTYPE html>
+<html>
+<head>
+  <title>The Ruby & Symbol</title>
+  <link href="style.css" type="text/css" rel="stylesheet" />
+  
+  <link rel="canonical" href="" />
+  
+
+  <link type="text/atom+xml" rel="alternate" href="http://feeds.feedburner.com/zeespencer"/>
+  <meta name="viewport" content="initial-scale=1" />
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.0";
+      
+      analytics.load("DEDSLhOPXKFCHg4NglvHWqtQg6BgqJy2");
+      
+
+      
+        analytics.page();
+      
+      }}();
+    </script>
+    <script type="text/javascript" src="js/site.js"></script>
+</head>
+<body>
+  <div id="page">
+  <header>
+    <figure>
+      <img src="images/zee.png" alt="Zee Spencer" />
+    </figure>
+    
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <h2>The Ruby & Symbol</h2>
+    
+
+  </header>
+  <main id="content">
+    <section id="article">
+<p>&amp; is a powerful ruby operator, when you use it as a unary operator it has two
+main use cases:</p>
+
+<p>The most common is to pass an object as a block to a method, like this:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="kp">nil</span><span class="p">,</span> <span class="mi">3</span><span class="p">].</span><span class="nf">reject</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:nil?</span><span class="p">)</span></code></pre></figure>
+
+<p>This calls <code>#to_proc</code> on the symbol <code>:nil?</code>, converts the result into a block,
+and passes it to the reject method. A line by line breakdown looks something
+like this:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="kp">nil</span><span class="p">,</span> <span class="mi">3</span><span class="p">].</span><span class="nf">reject</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:nil?</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="kp">nil</span><span class="p">,</span><span class="mi">3</span><span class="p">].</span><span class="nf">reject</span><span class="p">(</span><span class="o">&amp;</span><span class="p">(</span><span class="nb">proc</span> <span class="o">=</span> <span class="ss">:nil?</span><span class="p">.</span><span class="nf">to_proc</span><span class="p">))</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="kp">nil</span><span class="p">,</span><span class="mi">3</span><span class="p">].</span><span class="nf">reject</span><span class="p">(</span><span class="o">&amp;</span><span class="nb">proc</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="kp">nil</span><span class="p">,</span><span class="mi">3</span><span class="p">].</span><span class="nf">reject</span> <span class="p">{</span> <span class="o">|</span><span class="n">e</span><span class="o">|</span> <span class="n">e</span><span class="p">.</span><span class="nf">nil?</span> <span class="p">}</span></code></pre></figure>
+
+<p>The second is explicitly declaring a block by using the <code>&amp;</code> in a method
+definition:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_results</span><span class="p">(</span><span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+  <span class="nb">p</span> <span class="n">block</span><span class="p">.</span><span class="nf">yield</span>
+<span class="k">end</span>
+
+<span class="n">print_results</span> <span class="p">{</span> <span class="s2">"bar"</span> <span class="p">}</span></code></pre></figure>
+
+<p>With an explicitly named block you can do useful things, like map a block to
+all the columns in a table:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">column_map</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+  <span class="n">table</span><span class="p">.</span><span class="nf">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span> <span class="n">row</span><span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="o">&amp;</span><span class="n">block</span><span class="p">)</span> <span class="p">}</span>
+<span class="k">end</span>
+
+<span class="n">column_map</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]])</span> <span class="p">{</span> <span class="o">|</span><span class="n">v</span><span class="o">|</span> <span class="n">v</span> <span class="o">+</span> <span class="mi">5</span> <span class="p">}</span></code></pre></figure>
+
+<p>And of course, explicitly named blocks still allow you to expand an object to a
+block:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">column_map</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]],</span> <span class="o">&amp;</span><span class="ss">:odd?</span><span class="p">)</span></code></pre></figure>
+
+<p>For more reading on the &amp; operator, check out  <em><a href="http://ablogaboutcode.com/2012/01/04/the-ampersand-operator-in-ruby/">The Ampersand Operator in
+Ruby</a></em> by
+<a href="https://twitter.com/panthomakos">Pan Thomakos</a>.</p>
+
+<p>I you want to grok blocks, I&#39;d recommend the excellent <em><a href="http://www.robertsosinski.com/2008/12/21/understanding-ruby-blocks-procs-and-lambdas/">Understanding Ruby
+Blocks, Procs and
+Lambdas</a></em>
+by <a href="http://www.robertsosinski.com/">Robert Sosinki</a></p>
+
+</section>
+
+<hr />
+<section id="post-tags">
+  <p>Browse posts about:
+  <ul>
+  
+  <li><a href="software">software</a></li>
+  
+  <li><a href="ruby">ruby</a></li>
+  
+  <li><a href="tapas">tapas</a></li>
+  
+  </ul></p>
+</section>
+
+<section id="newsletter-signup">
+  <p>Want to get notified when I publish new articles or update old ones?
+  Subscribe to my newsletter. It's a weekly-ish set of interesting links with a
+  short essay on programming, design, technical leadership, or anything else
+  that strikes my fancy.</p>
+
+  <form id="subscribe-to-newsletter" action="https://tinyletter.com/zspencer" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/zspencer', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+  <p><label for="tlemail">Email address:</label>
+  <input placeholder="your-email@example.com" type="text" name="email" id="tlemail" /></p>
+  <input type="hidden" value="1" name="embed"/>
+
+  <p>Not sure? <a id="newsletter-archive" href="http://tinyletter.com/zspencer/archive">Read the
+    archive.</a></p>
+  <input class="button" type="submit" value="Subscribe Now!" />
+</form>
+
+<script type="text/javascript">
+Track.cta("#subscribe-to-newsletter", "Newsletter Subscription", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Subscribe',
+  pageSubject: 'Article'
+});
+
+Track.cta("#newsletter-archive", "Check the Newsletter Archive", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Investigate me',
+  pageSubject: 'Article'
+});
+</script>
+
+</section>
+
+  </main>
+  <div class="push"></div>
+  </div>
+  <footer>
+    <section id="footer-content">
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <p class="license">
+        Copyright 2004 - 2020 Zee Spencer. Licensed under
+        a <a
+           rel="license"
+           href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+           Commons Attribution-NonCommercial-ShareAlike 4.0
+           International License</a>.
+      </p>
+    </section>
+  </footer>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
+<br />
       <a href="/the-ruby-&-symbol">30 Jan 2013</a>
   </li>
   
 
   
   <li>Simplicity Wins &ndash;
-      <a href="/tags/software.html" rel="tag">software</a>, <a href="/tags/design.html" rel="tag">design</a>, <a href="/tags/mastery.html" rel="tag">mastery</a><br />
+      <!DOCTYPE html>
+<html>
+<head>
+  <title>Simplicity Wins</title>
+  <link href="style.css" type="text/css" rel="stylesheet" />
+  
+  <link rel="canonical" href="" />
+  
+
+  <link type="text/atom+xml" rel="alternate" href="http://feeds.feedburner.com/zeespencer"/>
+  <meta name="viewport" content="initial-scale=1" />
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.0";
+      
+      analytics.load("DEDSLhOPXKFCHg4NglvHWqtQg6BgqJy2");
+      
+
+      
+        analytics.page();
+      
+      }}();
+    </script>
+    <script type="text/javascript" src="js/site.js"></script>
+</head>
+<body>
+  <div id="page">
+  <header>
+    <figure>
+      <img src="images/zee.png" alt="Zee Spencer" />
+    </figure>
+    
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <h2>Simplicity Wins</h2>
+    
+
+  </header>
+  <main id="content">
+    <section id="article">
+<p>Occam&#39;s Razor applies to your business plan.</p>
+
+<p>Occam&#39;s Razor applies to your design.</p>
+
+<p>Occam&#39;s Razor applies to your code.</p>
+
+<p><em>Stop adding blades; dammit.</em></p>
+
+</section>
+
+<hr />
+<section id="post-tags">
+  <p>Browse posts about:
+  <ul>
+  
+  <li><a href="software">software</a></li>
+  
+  <li><a href="design">design</a></li>
+  
+  <li><a href="mastery">mastery</a></li>
+  
+  </ul></p>
+</section>
+
+<section id="newsletter-signup">
+  <p>Want to get notified when I publish new articles or update old ones?
+  Subscribe to my newsletter. It's a weekly-ish set of interesting links with a
+  short essay on programming, design, technical leadership, or anything else
+  that strikes my fancy.</p>
+
+  <form id="subscribe-to-newsletter" action="https://tinyletter.com/zspencer" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/zspencer', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+  <p><label for="tlemail">Email address:</label>
+  <input placeholder="your-email@example.com" type="text" name="email" id="tlemail" /></p>
+  <input type="hidden" value="1" name="embed"/>
+
+  <p>Not sure? <a id="newsletter-archive" href="http://tinyletter.com/zspencer/archive">Read the
+    archive.</a></p>
+  <input class="button" type="submit" value="Subscribe Now!" />
+</form>
+
+<script type="text/javascript">
+Track.cta("#subscribe-to-newsletter", "Newsletter Subscription", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Subscribe',
+  pageSubject: 'Article'
+});
+
+Track.cta("#newsletter-archive", "Check the Newsletter Archive", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Investigate me',
+  pageSubject: 'Article'
+});
+</script>
+
+</section>
+
+  </main>
+  <div class="push"></div>
+  </div>
+  <footer>
+    <section id="footer-content">
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <p class="license">
+        Copyright 2004 - 2020 Zee Spencer. Licensed under
+        a <a
+           rel="license"
+           href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+           Commons Attribution-NonCommercial-ShareAlike 4.0
+           International License</a>.
+      </p>
+    </section>
+  </footer>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
+<br />
       <a href="/simplicity-wins">29 Nov 2012</a>
   </li>
   
 
   
   <li>Ignorance and Realism in Testing &ndash;
-      <a href="/tags/software.html" rel="tag">software</a>, <a href="/tags/software-as-craft.html" rel="tag">software-as-craft</a><br />
+      <!DOCTYPE html>
+<html>
+<head>
+  <title>Ignorance and Realism in Testing</title>
+  <link href="style.css" type="text/css" rel="stylesheet" />
+  
+  <link rel="canonical" href="" />
+  
+
+  <link type="text/atom+xml" rel="alternate" href="http://feeds.feedburner.com/zeespencer"/>
+  <meta name="viewport" content="initial-scale=1" />
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.0";
+      
+      analytics.load("DEDSLhOPXKFCHg4NglvHWqtQg6BgqJy2");
+      
+
+      
+        analytics.page();
+      
+      }}();
+    </script>
+    <script type="text/javascript" src="js/site.js"></script>
+</head>
+<body>
+  <div id="page">
+  <header>
+    <figure>
+      <img src="images/zee.png" alt="Zee Spencer" />
+    </figure>
+    
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <h2>Ignorance and Realism in Testing</h2>
+    
+
+  </header>
+  <main id="content">
+    <section id="article">
+<p>I was talking through some of my thoughts on applying visual and interaction
+design critique principles to code with <a href="http://www.ecomba.org/">Enrique Comba</a>.
+At the time, I was in the middle of analyzing the differences between <a href="https://gist.github.com/4141476#file_normal_spec.rb">directly
+calling the method</a> under
+test, <a href="https://gist.github.com/4141476#file_let_spec.rb">nested describes and
+lets</a>, and using a <a href="https://gist.github.com/4141476#file_custom_assertion_spec.rb">custom
+assertion</a>.</p>
+
+<p>I was pointing out how moving the method call out to a custom assert hid a
+breadcrumb developers would use when understanding the system under test, while
+leaving it in a let would at least keep it in the same test file. Enrique
+responded with an interesting perspective:</p>
+
+<p><strong>&quot;That&#39;s the point of BDD. Your tests shouldn&#39;t care about your implementation
+at all.&quot;</strong></p>
+
+<p>I was a little taken aback. One of my favorite parts about clearly written specs
+is how they give the programmer direction in the use of the code being tested.
+If the test code is completely ignorant of the implementation, how can it
+provide those insights?!</p>
+
+<p>After an hour or so, I started thinking about <a href="http://about.me/searls">Justin
+Searls</a> recent presentation on <a href="http://oredev.org/2012/sessions/budgeting-reality-a-new-approach-to-mock-objects">realism in
+tests</a>.
+This got me thinking: <strong>What if the level of realism and the level of ignorance
+of a test are two related variables?</strong> A test which provides a high level of
+realism of the system under test may not mock out external services the system
+uses because it does not know about them. Conversely, tests which provides a low
+level of realism often very clearly point out how its collaborators must be
+formed, as well as the usage of the code under test.</p>
+
+<p>Hopefully these complementary insights will provide me with more purposeful,
+better organized test suites in the future.</p>
+
+</section>
+
+<hr />
+<section id="post-tags">
+  <p>Browse posts about:
+  <ul>
+  
+  <li><a href="software">software</a></li>
+  
+  <li><a href="software-as-craft">software-as-craft</a></li>
+  
+  </ul></p>
+</section>
+
+<section id="newsletter-signup">
+  <p>Want to get notified when I publish new articles or update old ones?
+  Subscribe to my newsletter. It's a weekly-ish set of interesting links with a
+  short essay on programming, design, technical leadership, or anything else
+  that strikes my fancy.</p>
+
+  <form id="subscribe-to-newsletter" action="https://tinyletter.com/zspencer" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/zspencer', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+  <p><label for="tlemail">Email address:</label>
+  <input placeholder="your-email@example.com" type="text" name="email" id="tlemail" /></p>
+  <input type="hidden" value="1" name="embed"/>
+
+  <p>Not sure? <a id="newsletter-archive" href="http://tinyletter.com/zspencer/archive">Read the
+    archive.</a></p>
+  <input class="button" type="submit" value="Subscribe Now!" />
+</form>
+
+<script type="text/javascript">
+Track.cta("#subscribe-to-newsletter", "Newsletter Subscription", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Subscribe',
+  pageSubject: 'Article'
+});
+
+Track.cta("#newsletter-archive", "Check the Newsletter Archive", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Investigate me',
+  pageSubject: 'Article'
+});
+</script>
+
+</section>
+
+  </main>
+  <div class="push"></div>
+  </div>
+  <footer>
+    <section id="footer-content">
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <p class="license">
+        Copyright 2004 - 2020 Zee Spencer. Licensed under
+        a <a
+           rel="license"
+           href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+           Commons Attribution-NonCommercial-ShareAlike 4.0
+           International License</a>.
+      </p>
+    </section>
+  </footer>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
+<br />
       <a href="/ignorance-and-realism-in-testing">24 Nov 2012</a>
   </li>
   
 
   
   <li>Breaking Up With Backbone &ndash;
-      <a href="/tags/js.html" rel="tag">js</a>, <a href="/tags/software.html" rel="tag">software</a><br />
+      <!DOCTYPE html>
+<html>
+<head>
+  <title>Breaking Up With Backbone</title>
+  <link href="style.css" type="text/css" rel="stylesheet" />
+  
+  <link rel="canonical" href="" />
+  
+
+  <link type="text/atom+xml" rel="alternate" href="http://feeds.feedburner.com/zeespencer"/>
+  <meta name="viewport" content="initial-scale=1" />
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.0";
+      
+      analytics.load("DEDSLhOPXKFCHg4NglvHWqtQg6BgqJy2");
+      
+
+      
+        analytics.page();
+      
+      }}();
+    </script>
+    <script type="text/javascript" src="js/site.js"></script>
+</head>
+<body>
+  <div id="page">
+  <header>
+    <figure>
+      <img src="images/zee.png" alt="Zee Spencer" />
+    </figure>
+    
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <h2>Breaking Up With Backbone</h2>
+    
+
+  </header>
+  <main id="content">
+    <section id="article">
+<p>Dear Backbone,</p>
+
+<p>It&#39;s been fun. We&#39;ve had some incredible times together. But I just
+don&#39;t see us working out.</p>
+
+<p>Don&#39;t get me wrong, you have some nice features, your code base is relatively
+clean, you have good test coverage, and features don&#39;t change drastically
+between releases.</p>
+
+<p>But you don&#39;t seem to understand what I want. I mean, yea, I <em>crave</em> a clear
+separation of concerns between domain, persistance, and presentation layers. I
+<em>demand</em> a way to keep my html free from javascript (and vice versa). I may even
+sometimes want a way to play nicely with the browser history as people interact
+broadly with my app.</p>
+
+<p>But dammit, I don&#39;t need something that binds events for me. I don&#39;t need
+something to determine which code to execute based upon which url I happen to be
+on. I&#39;ll be damned if I start treating javascript like a &quot;class inheritance&quot;
+system when it&#39;s prototypical. I sure as hell don&#39;t want to throw away what
+little knowledge I have of javascript to follow one of many competing half baked
+idioms for javascript application structure.</p>
+
+<p>Maybe I don&#39;t get it. Maybe it&#39;s me, not you. But let&#39;s face it: You don&#39;t help
+me be more productive. That&#39;s why I use rails in spite of it&#39;s crazy desire to
+modify base objects, poor architecture, silly ActiveRecord, and absurd routing
+system. I can go from 0 to app in about 5 minutes with Rails. With you, it is
+30~45. Part of it is lack of practice, but part of it is how little you actually
+do for me. Sure, your persistence layer is fantastic.  But your views? Now
+you&#39;re just getting in the way of javascript&#39;s event binding! Don&#39;t even get me
+started on routing. If a query variable is part of the URL it breaks? Really?!</p>
+
+<p>I&#39;m burnt out on javascript app frameworks. I think I&#39;ll stick with jQuery.</p>
+
+<p>I know it isn&#39;t sexy. I know 99% of jQuery plugins are giant pile of poo. I
+know jQuery doesn&#39;t provide me with a reasonable way to separate my concerns.
+That&#39;s why I lean on libraries like
+<a href="http://westcoastlogic.com/lawnchair/">lawnchair</a>,
+<a href="http://pjax.heroku.com/">pjax</a>, <a href="http://handlebarsjs.com/">handlebars</a>, and
+<a href="http://documentcloud.github.com/underscore/">underscore</a>.</p>
+
+<p>They don&#39;t make javascript into something else, work well in greenfield or
+legacy applications, and can be used independently without significantly
+altering your codebase or workflow.</p>
+
+<p>Without a framework it&#39;s up to me to ensure I don&#39;t create a big ball of mud.
+It&#39;s up to me to make sure I seperate my concerns. It&#39;s up to me to create clean
+code.</p>
+
+<p>To be honest, that&#39;s how I like it.</p>
+
+</section>
+
+<hr />
+<section id="post-tags">
+  <p>Browse posts about:
+  <ul>
+  
+  <li><a href="js">js</a></li>
+  
+  <li><a href="software">software</a></li>
+  
+  </ul></p>
+</section>
+
+<section id="newsletter-signup">
+  <p>Want to get notified when I publish new articles or update old ones?
+  Subscribe to my newsletter. It's a weekly-ish set of interesting links with a
+  short essay on programming, design, technical leadership, or anything else
+  that strikes my fancy.</p>
+
+  <form id="subscribe-to-newsletter" action="https://tinyletter.com/zspencer" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/zspencer', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+  <p><label for="tlemail">Email address:</label>
+  <input placeholder="your-email@example.com" type="text" name="email" id="tlemail" /></p>
+  <input type="hidden" value="1" name="embed"/>
+
+  <p>Not sure? <a id="newsletter-archive" href="http://tinyletter.com/zspencer/archive">Read the
+    archive.</a></p>
+  <input class="button" type="submit" value="Subscribe Now!" />
+</form>
+
+<script type="text/javascript">
+Track.cta("#subscribe-to-newsletter", "Newsletter Subscription", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Subscribe',
+  pageSubject: 'Article'
+});
+
+Track.cta("#newsletter-archive", "Check the Newsletter Archive", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Investigate me',
+  pageSubject: 'Article'
+});
+</script>
+
+</section>
+
+  </main>
+  <div class="push"></div>
+  </div>
+  <footer>
+    <section id="footer-content">
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <p class="license">
+        Copyright 2004 - 2020 Zee Spencer. Licensed under
+        a <a
+           rel="license"
+           href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+           Commons Attribution-NonCommercial-ShareAlike 4.0
+           International License</a>.
+      </p>
+    </section>
+  </footer>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
+<br />
       <a href="/a-breakup-letter-for-backbone">14 Feb 2012</a>
   </li>
   
 
   
   <li>Three Reasons For Testers Not To Learn To Code &ndash;
-      <a href="/tags/software.html" rel="tag">software</a>, <a href="/tags/testing.html" rel="tag">testing</a><br />
+      <!DOCTYPE html>
+<html>
+<head>
+  <title>Three Reasons For Testers Not To Learn To Code</title>
+  <link href="style.css" type="text/css" rel="stylesheet" />
+  
+  <link rel="canonical" href="" />
+  
+
+  <link type="text/atom+xml" rel="alternate" href="http://feeds.feedburner.com/zeespencer"/>
+  <meta name="viewport" content="initial-scale=1" />
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.0";
+      
+      analytics.load("DEDSLhOPXKFCHg4NglvHWqtQg6BgqJy2");
+      
+
+      
+        analytics.page();
+      
+      }}();
+    </script>
+    <script type="text/javascript" src="js/site.js"></script>
+</head>
+<body>
+  <div id="page">
+  <header>
+    <figure>
+      <img src="images/zee.png" alt="Zee Spencer" />
+    </figure>
+    
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <h2>Three Reasons For Testers Not To Learn To Code</h2>
+    
+
+  </header>
+  <main id="content">
+    <section id="article">
+<p>Michael Bolton wrote an exceptional article listing <a href="http://www.google.com/url?q=http%3A%2F%2Fwww.developsense.com%2Fblog%2F2011%2F09%2Fat-least-three-good-reasons-for-testers-to-learn-to-program%2F&sa=D&sntz=1&usg=AFQjCNHXDMFi5sz7HvSmAi40Munf2ClJcg">three reasons for software
+testers to learn to write
+code</a>.
+Here&#39;s three reasons why a tester <em>shouldn&#39;t</em> learn to code.</p>
+
+<p>On one hand, this is incredibly important. After all, learning as much as we can
+about as many things as we can is a powerful career move.</p>
+
+<p>Yet there are some decent reasons why a software tester shouldn&#39;t learn how to
+program. Bear in mind, I&#39;m not saying we shouldn&#39;t learn to program. I&#39;m merely
+stating there are repercussions to learning to code which can harm our
+awesomeness as a tester if we&#39;re not careful.</p>
+
+<h3 id="1-the-more-we-think-like-a-computer-the-less-we-think-like-a-person">1. The More We Think Like A Computer, The Less We Think Like a Person.</h3>
+
+<p>Computers, eh? All those zero&#39;s and one&#39;s. <strong>All that reductionist logic.
+Absolutely zero innovation.</strong> As we learn to program, we discover
+to program well we have to think like a computer. As we think like a computer,
+we begin to focus on the happy path: &quot;What is the one thing I need to
+do to verify this bit works.&quot; This focus blinds us to the less-happy path.</p>
+
+<p>The more we learn to isolate, the harder it is to notice emergent issues.
+Reductionism is powerful. Experiment driven systems like the scientific method
+have reshaped our planet&#39;s surface and sent us to space.</p>
+
+<p>But reductionism sucks when it comes to emergent properties. Bad. The best
+testers are the adept at seeing the whole. They notice that twiddling this
+feature here will impact the outcome of that feature there. <strong>Coding is
+reductionist in nature, which is why we developers often screw up integration.</strong></p>
+
+<h3 id="2-coding-is-hard-developers-are-good-at-it">2. Coding is Hard. Developers Are Good At It.</h3>
+
+<p>Do you know how to write maintainable, expressive, working code? No? Neither do
+I. And neither do most coders. But they&#39;re probably better at it than we are,
+for now. After a while we can be a code master, but until then we run the risk
+of creating automated checks that are less reliable than the code they&#39;re
+checking. This causes false positives and a high cost of ownership.</p>
+
+<p>But hey! If we follow some basic principles, devote ourselves to learning, and
+remain pragmatic we may wind up being one of the best coders on the team. Then
+our vengeance will be complete on those developers who spurned our bug reports
+and laughed at our test plans!  Oh yes... Vengeance...</p>
+
+<h3 id="3-the-more-time-we-spend-coding-the-less-time-we-spend-testing">3. The More Time We Spend Coding, The Less Time We Spend Testing.</h3>
+
+<p>Given the <a href="http://www.developsense.com/blog/2009/08/testing-vs-checking/">definition of checking and
+testing</a>, test
+automation is often not testing, it&#39;s the verification of testing.  I&#39;m not
+advocating avoiding automating checks. That way lies madness. And bad software.
+And tears. I&#39;m suggesting <strong>testers are highly skilled contextual evaluatores
+who evaluate and communicate risk and reward to decision makers more effectively
+than any automated check.</strong> Excellent testers prioritize that over learning the
+intricacies of a programming language.</p>
+
+<p>Learning to code as a way to improve your ability to evaluate risk and check for
+errors more effectively is reasonable. Learning to code to convert test plans to
+automated tests may not be.</p>
+
+<p><em>If you&#39;re a tester and you want to learn to code, consider checking out
+<a href="http://codeunion.io">codeunion.io</a>. We provide customized training to
+supercharge your technical career path, no matter what your current skill
+level.</em></p>
+
+</section>
+
+<hr />
+<section id="post-tags">
+  <p>Browse posts about:
+  <ul>
+  
+  <li><a href="software">software</a></li>
+  
+  <li><a href="testing">testing</a></li>
+  
+  </ul></p>
+</section>
+
+<section id="newsletter-signup">
+  <p>Want to get notified when I publish new articles or update old ones?
+  Subscribe to my newsletter. It's a weekly-ish set of interesting links with a
+  short essay on programming, design, technical leadership, or anything else
+  that strikes my fancy.</p>
+
+  <form id="subscribe-to-newsletter" action="https://tinyletter.com/zspencer" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/zspencer', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+  <p><label for="tlemail">Email address:</label>
+  <input placeholder="your-email@example.com" type="text" name="email" id="tlemail" /></p>
+  <input type="hidden" value="1" name="embed"/>
+
+  <p>Not sure? <a id="newsletter-archive" href="http://tinyletter.com/zspencer/archive">Read the
+    archive.</a></p>
+  <input class="button" type="submit" value="Subscribe Now!" />
+</form>
+
+<script type="text/javascript">
+Track.cta("#subscribe-to-newsletter", "Newsletter Subscription", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Subscribe',
+  pageSubject: 'Article'
+});
+
+Track.cta("#newsletter-archive", "Check the Newsletter Archive", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Investigate me',
+  pageSubject: 'Article'
+});
+</script>
+
+</section>
+
+  </main>
+  <div class="push"></div>
+  </div>
+  <footer>
+    <section id="footer-content">
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <p class="license">
+        Copyright 2004 - 2020 Zee Spencer. Licensed under
+        a <a
+           rel="license"
+           href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+           Commons Attribution-NonCommercial-ShareAlike 4.0
+           International License</a>.
+      </p>
+    </section>
+  </footer>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
+<br />
       <a href="/three-reasons-for-testers-not-to-learn-to-code">01 Sep 2011</a>
   </li>
   
 
   
   <li>Judging Code Simplicity Fit It Through The Tube &ndash;
-      <a href="/tags/software.html" rel="tag">software</a>, <a href="/tags/design.html" rel="tag">design</a>, <a href="/tags/software-as-craft.html" rel="tag">software-as-craft</a><br />
+      <!DOCTYPE html>
+<html>
+<head>
+  <title>Judging Code Simplicity Fit It Through The Tube</title>
+  <link href="style.css" type="text/css" rel="stylesheet" />
+  
+  <link rel="canonical" href="" />
+  
+
+  <link type="text/atom+xml" rel="alternate" href="http://feeds.feedburner.com/zeespencer"/>
+  <meta name="viewport" content="initial-scale=1" />
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.0";
+      
+      analytics.load("DEDSLhOPXKFCHg4NglvHWqtQg6BgqJy2");
+      
+
+      
+        analytics.page();
+      
+      }}();
+    </script>
+    <script type="text/javascript" src="js/site.js"></script>
+</head>
+<body>
+  <div id="page">
+  <header>
+    <figure>
+      <img src="images/zee.png" alt="Zee Spencer" />
+    </figure>
+    
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <h2>Judging Code Simplicity Fit It Through The Tube</h2>
+    
+
+  </header>
+  <main id="content">
+    <section id="article">
+<p>We coders have all kinds of definitions of simple code. To some, simple code is
+code they understand and read easily. Others believe simple code follows the
+coolest, most appropriate design pattern. Some say simple code has the fewest
+characters.</p>
+
+<p>Extreme Programming tries to setttle that debate by offering <a href="http://www.extremeprogramming.org/rules/simple.html">four qualities of
+simple code</a>: testability,
+browsability, understandability, and explainabilty.</p>
+
+<p>To make these qualities easier to remember I coin the mnemonic TUBE.</p>
+
+<h3 id="testable">Testable</h3>
+
+<p>Can automated tests be written for each piece of functionality and permutation
+of behavior? Are there positive <em>and</em> negative use-cases?</p>
+
+<h3 id="understandable">Understandable</h3>
+
+<p>When you read a function, does it do what you expected given it&#39;s method
+signature? How long does it take to figure out what the code does?</p>
+
+<h3 id="browsable">Browsable</h3>
+
+<p>Can the code be browsed in an IDE? How quickly does someone who didn&#39;t write the
+code find what they&#39;re looking for?</p>
+
+<h3 id="explainable">Explainable</h3>
+
+<p>I&#39;m pretty sure this is here twice because it&#39;s so important. Can a different
+developer tell you what the code does? Does their explanation match yours?</p>
+
+<p>If your code meets these criteria, congratulations! Your code fits in the TUBE,
+and when the TUBE fits, make commits!</p>
+
+</section>
+
+<hr />
+<section id="post-tags">
+  <p>Browse posts about:
+  <ul>
+  
+  <li><a href="software">software</a></li>
+  
+  <li><a href="design">design</a></li>
+  
+  <li><a href="software-as-craft">software-as-craft</a></li>
+  
+  </ul></p>
+</section>
+
+<section id="newsletter-signup">
+  <p>Want to get notified when I publish new articles or update old ones?
+  Subscribe to my newsletter. It's a weekly-ish set of interesting links with a
+  short essay on programming, design, technical leadership, or anything else
+  that strikes my fancy.</p>
+
+  <form id="subscribe-to-newsletter" action="https://tinyletter.com/zspencer" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/zspencer', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+  <p><label for="tlemail">Email address:</label>
+  <input placeholder="your-email@example.com" type="text" name="email" id="tlemail" /></p>
+  <input type="hidden" value="1" name="embed"/>
+
+  <p>Not sure? <a id="newsletter-archive" href="http://tinyletter.com/zspencer/archive">Read the
+    archive.</a></p>
+  <input class="button" type="submit" value="Subscribe Now!" />
+</form>
+
+<script type="text/javascript">
+Track.cta("#subscribe-to-newsletter", "Newsletter Subscription", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Subscribe',
+  pageSubject: 'Article'
+});
+
+Track.cta("#newsletter-archive", "Check the Newsletter Archive", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Investigate me',
+  pageSubject: 'Article'
+});
+</script>
+
+</section>
+
+  </main>
+  <div class="push"></div>
+  </div>
+  <footer>
+    <section id="footer-content">
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <p class="license">
+        Copyright 2004 - 2020 Zee Spencer. Licensed under
+        a <a
+           rel="license"
+           href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+           Commons Attribution-NonCommercial-ShareAlike 4.0
+           International License</a>.
+      </p>
+    </section>
+  </footer>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
+<br />
       <a href="/judging-code-simplicity-fit-it-through-the-tube">25 Apr 2010</a>
   </li>
   
@@ -176,7 +3434,7 @@
 
 <div id="tag-cloud">
   <h3>Find something to read in the following topics:</h3>
-  <a href="/tags/agency.html" class="set-1">agency</a> <a href="/tags/beginner.html" class="set-1">beginner</a> <a href="/tags/book-review.html" class="set-1">book-review</a> <a href="/tags/business.html" class="set-2">business</a> <a href="/tags/career.html" class="set-1">career</a> <a href="/tags/clojure.html" class="set-1">clojure</a> <a href="/tags/community.html" class="set-2">community</a> <a href="/tags/culture.html" class="set-1">culture</a> <a href="/tags/design.html" class="set-2">design</a> <a href="/tags/devenvironment.html" class="set-1">devenvironment</a> <a href="/tags/empathy.html" class="set-2">empathy</a> <a href="/tags/family.html" class="set-1">family</a> <a href="/tags/finance.html" class="set-1">finance</a> <a href="/tags/health.html" class="set-1">health</a> <a href="/tags/javascript.html" class="set-1">javascript</a> <a href="/tags/jekyll.html" class="set-1">jekyll</a> <a href="/tags/js.html" class="set-1">js</a> <a href="/tags/leadership.html" class="set-1">leadership</a> <a href="/tags/lean.html" class="set-1">lean</a> <a href="/tags/learning.html" class="set-1">learning</a> <a href="/tags/love.html" class="set-1">love</a> <a href="/tags/makermenagerie.html" class="set-1">makermenagerie</a> <a href="/tags/mastery.html" class="set-5">mastery</a> <a href="/tags/mentors.html" class="set-1">mentors</a> <a href="/tags/opportunity.html" class="set-1">opportunity</a> <a href="/tags/ops.html" class="set-1">ops</a> <a href="/tags/pairing.html" class="set-1">pairing</a> <a href="/tags/parables.html" class="set-2">parables</a> <a href="/tags/parody.html" class="set-1">parody</a> <a href="/tags/part-time.html" class="set-1">part-time</a> <a href="/tags/personal.html" class="set-1">personal</a> <a href="/tags/poetry.html" class="set-2">poetry</a> <a href="/tags/productivity.html" class="set-1">productivity</a> <a href="/tags/project-management.html" class="set-1">project-management</a> <a href="/tags/questions.html" class="set-1">questions</a> <a href="/tags/rails.html" class="set-1">rails</a> <a href="/tags/remote.html" class="set-1">remote</a> <a href="/tags/ruby.html" class="set-1">ruby</a> <a href="/tags/security.html" class="set-1">security</a> <a href="/tags/short-term.html" class="set-1">short-term</a> <a href="/tags/society.html" class="set-1">society</a> <a href="/tags/software.html" class="set-5">software</a> <a href="/tags/software-as-craft.html" class="set-2">software-as-craft</a> <a href="/tags/songs.html" class="set-1">songs</a> <a href="/tags/tapas.html" class="set-1">tapas</a> <a href="/tags/testing.html" class="set-1">testing</a> <a href="/tags/theory.html" class="set-1">theory</a> <a href="/tags/video.html" class="set-1">video</a> <a href="/tags/vim.html" class="set-1">vim</a> <a href="/tags/work.html" class="set-1">work</a>
+  Jekyll::Drops::SiteDrop
 </div>
 
 

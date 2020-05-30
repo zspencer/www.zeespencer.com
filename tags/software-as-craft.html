@@ -2,7 +2,7 @@
 <html>
 <head>
   <title></title>
-  <link href="/assets/stylesheets/style.css?1581193630" type="text/css" rel="stylesheet" />
+  <link href="style.css" type="text/css" rel="stylesheet" />
   
   <link rel="canonical" href="" />
   
@@ -20,13 +20,13 @@
       
       }}();
     </script>
-    <script type="text/javascript" src="/assets/js/site.js?1581193630"></script>
+    <script type="text/javascript" src="js/site.js"></script>
 </head>
 <body>
   <div id="page">
   <header>
     <figure>
-      <img src="/assets/images/zee.png?1581193630" alt="Zee Spencer" />
+      <img src="images/zee.png" alt="Zee Spencer" />
     </figure>
     
       <nav>
@@ -48,42 +48,1326 @@
 
   
   <li>Effective Code Critique &ndash;
-      <a href="/tags/software-as-craft.html" rel="tag">software-as-craft</a>, <a href="/tags/mastery.html" rel="tag">mastery</a>, <a href="/tags/culture.html" rel="tag">culture</a><br />
+      <!DOCTYPE html>
+<html>
+<head>
+  <title>Effective Code Critique</title>
+  <link href="style.css" type="text/css" rel="stylesheet" />
+  
+  <link rel="canonical" href="" />
+  
+
+  <link type="text/atom+xml" rel="alternate" href="http://feeds.feedburner.com/zeespencer"/>
+  <meta name="viewport" content="initial-scale=1" />
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.0";
+      
+      analytics.load("DEDSLhOPXKFCHg4NglvHWqtQg6BgqJy2");
+      
+
+      
+        analytics.page();
+      
+      }}();
+    </script>
+    <script type="text/javascript" src="js/site.js"></script>
+</head>
+<body>
+  <div id="page">
+  <header>
+    <figure>
+      <img src="images/zee.png" alt="Zee Spencer" />
+    </figure>
+    
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <h2>Effective Code Critique</h2>
+    
+
+  </header>
+  <main id="content">
+    <section id="article">
+<p>Code review gets a bad rap. People worry that code reviews slow teams down,
+create conflict between team members, or disempower team members by taking away
+decision making authority.</p>
+
+<p>I believe these concers are anti-patterns that indicate a team is using code
+review for <em>criticism</em> as opposed to <em>critique</em>. What&#39;s the difference?
+<em>Critique is focused on  specific parameters, where criticism is unbound.</em></p>
+
+<p>That said, many programmers are unclear how to perform judgement free code
+reviews. The following are a series of suggestions which may help move code
+reviews from criticism to critique:</p>
+
+<ul>
+<li><a href="#start-with-compassion">Start with compassion</a></li>
+<li><a href="#working-code-wins">Working code wins</a></li>
+<li><a href="#discuss-clarity,-coupling,-cohesion,-and-encapsulation">Discuss clarity, coupling, cohesion, and encapsulation</a></li>
+<li><a href="#celebrate-intentionally">Celebrate intentionally</a></li>
+<li><a href="#follow-up">Follow up</a></li>
+</ul>
+
+<h2 id="start-with-compassion">Start With Compassion</h2>
+
+<p>I like to begin each review by reflecting on the context of the person
+submitting the code. Are they experienced team members or novices? Do you have
+good rapport with them? Are they under schedule or personal or professional
+pressure?</p>
+
+<p>I follow that up by reminding myself of a variation on the retrospective prime
+directive; the submitter is doing the best they can given their past experiences
+and current context. This isn&#39;t to say the work is above reproach; but that the
+submitter is doing the best they can.</p>
+
+<h2 id="working-code-wins">Working Code Wins</h2>
+
+<p>Code review may be used as a gate to prevent technically concerning code from
+entering the system. This is a flawed approach to code review as it introduces
+an unpredictable amount of latency in a workflow and implies distrust. I prefer
+to allow anyone to merge the code right away, so long as the merger has
+confidence that the change causes benefits from the user or business
+perspective. I ask myself the following questions:</p>
+
+<ul>
+<li>Do I understand the goals of the change?</li>
+<li>Does it meet my understanding of user or business needs?</li>
+<li>What are the changes potential unintended side effects?</li>
+<li>Does the change update the user facing documentation?</li>
+<li>Do tests demonstrate the features functionality? These don&#39;t need to go
+through the UI, especialls when there&#39;s reasonable confidence in the code
+connecting the interface to the feature.</li>
+<li>Is there an image, gif, or video demonstrating the feature in use attached
+to the change? This makes it much easier for team members to evaluate the
+change from a users perspective.</li>
+</ul>
+
+<p>If the code can be said to be working; then it may be merged ASAP. Further code
+review for a piece of work may continue <em>past</em> the change being released into
+production.</p>
+
+<p>Allowing anyone to carry forward or merge a change at any time encourages low
+cycle times, high flow, and tight collaboration between team members.</p>
+
+<h2 id="discuss-clarity-coupling-cohesion-and-encapsulation">Discuss Clarity, Coupling, Cohesion, and Encapsulation</h2>
+
+<p>Code reviews often focus on style over substance. I prefer to use linters or
+automated style checkers in the build to pre-empt stylistic comments. This frees
+up team members to focus on how a change impacts maintainability of the sofware.
+The four aspects I focus on are clarity, coupling, cohesion, and encapsulation.</p>
+
+<h3 id="clarity-what-does-this-code-mean">Clarity - What Does This Code Mean?</h3>
+
+<p>Clarity is all about names, documentation, tests, types, etc. Clear code helps
+future maintainers to understand the intent of the code as well as the
+implementation. Are commit messages and notes coherent? Are the names of
+variables and methods reasonable? Are there usage examples? Are types or shapes
+of data demonstrated or enforced?</p>
+
+<p>Unclear code indicates a change lacks cohesion, has unnecessary coupling, or
+poorly encapsulates the goal of the change. By paying attention to the clarity,
+we make it easier to pick up the code and make changes later on.</p>
+
+<h3 id="coupling-what-does-this-code-work-with">Coupling - What Does This Code Work With?</h3>
+
+<p>Coupling is when changes to other components may require changes in this section
+of code. How many external collaborators are used to do the work?  How deeply
+does this code reach into it&#39;s collaborators? How many of their functions are
+being used? In cases where coupling with external collaborators is both wide and
+deep it can be valuable to write an intermediary to wrap the collaborators and
+expose a smaller surface area to the new code.</p>
+
+<p>By drawing attention to coupling, we may reduce the likelihood that we&#39;ll have
+to change this code when another component changes.</p>
+
+<h3 id="encapsulation-how-will-others-use-this-code">Encapsulation - How Will Others Use This Code?</h3>
+
+<p>While coupling is how a component interacts with outside collaborators;
+encapsulation is how outside consumers interact with a given component. One
+indicator of a loosely encapsulated component is difficulty in testing. A
+component that is hard to test is difficult to use. This is likely because the
+the code unintentionally exposes it&#39;s implementation. Sometimes the difficulty
+in testing is hidden behind test helpers; where a more effective approach may be
+to improve the interface of the component itself.</p>
+
+<p>Long argument lists, callbacks, option hashes with required keys, and parameter
+objects are all indicators of loose encapsulation. In many cases these are
+completely reasonable; after all reducing the surface area of an interface
+likely diminishes it&#39;s utility. In other cases, it&#39;s a sign the component may
+be doing too much.</p>
+
+<p>When we draw attention to codes encapsulation during review, it creates an
+opportunity to simplify interfaces and decrease the cost of re-using the
+component.</p>
+
+<h3 id="cohesion-what-is-the-codes-job">Cohesion - What Is The Codes Job?</h3>
+
+<p>The clearest example of non-cohesive code is a horror story from my youth.
+There was a SQL query which had hardcoded values it would return in order to
+change the color of a label. The argument could be made that this encapsulated
+the behavior of the feature; but in doing so it mixed the responsibility of
+retrieving data with the responsibility of presenting the data. Cohesive code
+eschews additional responsibilities wherever it can; resulting in horizontal
+layers and vertical slices.</p>
+
+<p>By drawing attention to the cohesion of code we create opportunities to improve
+clarity by grouping related functionality and un-grouping un-related
+functionality. This un-related functionality may become either a collaborator or a
+consumer of the component it was extracted from.</p>
+
+<p>When we frame our code review in terms of clarity, coupling, encapsulation, and
+cohesion we change the focus from the programmer and place it squarely on the
+artifact. It also moves us out of the world of moral judgement such as what&#39;s
+the &quot;best&quot; way to do something and into a conversation about the
+tradeoffs that we make as we build a software system together.</p>
+
+<h2 id="celebrate-intentionally">Celebrate Intentionally</h2>
+
+<p>Despite our best intentions; no matter how well a code review goes it is still
+a high pressure situation for the submitter. No matter how I try, I still feel
+a bit sad when someone critiques my code. To counter the inevitable bummer of
+critical feedback I try to comment on parts of the code that are of high quality
+or teach me something. It can also help to use celebratory emoji.</p>
+
+<p>The important part is to always be genuine in your celebration; as it is often
+impossible to discern between sarcasm or mockery and genuine excitement or
+positivity. Especially for people who struggle to value their own contributions
+already.</p>
+
+<h2 id="follow-up">Follow Up</h2>
+
+<p>If there&#39;s valuable changes to be made from code review but the work was merged
+already; it&#39;s OK to add the desired changes in your task or project tracking
+system. I generally prefer that the team has sole discretion on when to
+complete those tasks; as they&#39;ll have a better understanding of the cost of
+delaying clean up as well as the impact that maintainability improvements will
+have on short and long term goals.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Overall, I believe a compassionate, critique-oriented code review practice
+results in high quality code and allows companies to include team members who
+struggle with pair or mob programming.</p>
+
+</section>
+
+<hr />
+<section id="post-tags">
+  <p>Browse posts about:
+  <ul>
+  
+  <li><a href="software-as-craft">software-as-craft</a></li>
+  
+  <li><a href="mastery">mastery</a></li>
+  
+  <li><a href="culture">culture</a></li>
+  
+  </ul></p>
+</section>
+
+<section id="newsletter-signup">
+  <p>Want to get notified when I publish new articles or update old ones?
+  Subscribe to my newsletter. It's a weekly-ish set of interesting links with a
+  short essay on programming, design, technical leadership, or anything else
+  that strikes my fancy.</p>
+
+  <form id="subscribe-to-newsletter" action="https://tinyletter.com/zspencer" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/zspencer', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+  <p><label for="tlemail">Email address:</label>
+  <input placeholder="your-email@example.com" type="text" name="email" id="tlemail" /></p>
+  <input type="hidden" value="1" name="embed"/>
+
+  <p>Not sure? <a id="newsletter-archive" href="http://tinyletter.com/zspencer/archive">Read the
+    archive.</a></p>
+  <input class="button" type="submit" value="Subscribe Now!" />
+</form>
+
+<script type="text/javascript">
+Track.cta("#subscribe-to-newsletter", "Newsletter Subscription", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Subscribe',
+  pageSubject: 'Article'
+});
+
+Track.cta("#newsletter-archive", "Check the Newsletter Archive", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Investigate me',
+  pageSubject: 'Article'
+});
+</script>
+
+</section>
+
+  </main>
+  <div class="push"></div>
+  </div>
+  <footer>
+    <section id="footer-content">
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <p class="license">
+        Copyright 2004 - 2020 Zee Spencer. Licensed under
+        a <a
+           rel="license"
+           href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+           Commons Attribution-NonCommercial-ShareAlike 4.0
+           International License</a>.
+      </p>
+    </section>
+  </footer>
+
+<script type="text/javascript">
+
+Track.cta('.feedback-email', 'Email me', {
+  color: 'Red',
+  location: 'bottom',
+  category: 'Contact',
+  pageSubject: "",
+});
+
+Track.cta('.lead-email', 'Email me', {
+  color: 'Red',
+  location: 'bottom',
+  category: 'Contact',
+  pageSubject: "",
+});
+
+</script>
+</body>
+</html>
+<br />
       <a href="/effective-code-critique">26 Jul 2015</a>
   </li>
   
 
   
   <li>The Rationale Behind Testing &ndash;
-      <a href="/tags/software-as-craft.html" rel="tag">software-as-craft</a>, <a href="/tags/testing.html" rel="tag">testing</a>, <a href="/tags/mastery.html" rel="tag">mastery</a>, <a href="/tags/business.html" rel="tag">business</a><br />
+      <!DOCTYPE html>
+<html>
+<head>
+  <title>The Rationale Behind Testing</title>
+  <link href="style.css" type="text/css" rel="stylesheet" />
+  
+  <link rel="canonical" href="" />
+  
+
+  <link type="text/atom+xml" rel="alternate" href="http://feeds.feedburner.com/zeespencer"/>
+  <meta name="viewport" content="initial-scale=1" />
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.0";
+      
+      analytics.load("DEDSLhOPXKFCHg4NglvHWqtQg6BgqJy2");
+      
+
+      
+        analytics.page();
+      
+      }}();
+    </script>
+    <script type="text/javascript" src="js/site.js"></script>
+</head>
+<body>
+  <div id="page">
+  <header>
+    <figure>
+      <img src="images/zee.png" alt="Zee Spencer" />
+    </figure>
+    
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <h2>The Rationale Behind Testing</h2>
+    
+
+  </header>
+  <main id="content">
+    <section id="article">
+<p>Tests are use cases.</p>
+
+<p>They illustrate <strong>how to use</strong> the code they&#39;re testing.</p>
+
+<p>They provide <strong>examples</strong> of how the code works in a given context.</p>
+
+<p>They are a <strong>describe in detail</strong> the code&#39;s behavior.</p>
+
+<p>They <strong>highlight pain</strong> in how to use the code.</p>
+
+<p>They <strong>expose complexity</strong> in our model of the business domain.</p>
+
+<p>When they <strong>notify us</strong> the code no longer behaves as specified? That&#39;s a bonus.
+Not the goal.</p>
+
+<p>When we test, we get <strong>critical design feedback</strong>.</p>
+
+<p>When we use tests to explore and refine our code&#39;s design, we <strong>create nuanced,
+educational conversations</strong>.</p>
+
+<p><strong>Well-designed code lets us take advantage of opportunities</strong> that would
+otherwise be out of reach.</p>
+
+<p>When we take advantage of unexpected opportunities, we <strong>create value</strong>.</p>
+
+<p>This is why I test. There may be other reasons, but these are mine.</p>
+
+<hr>
+
+<p>Why do you test? Care to <a class="feedback-email" href="mailto: zee@wecohere.com">Share your
+reasons?</a></p>
+
+<p>I help teams learn effective testing practices in Java, Ruby, JavaScript, and
+Clojure. If this sounds like something you&#39;re interested in, <a
+href="lead-email" href="mailto: zee@wecohere.com">drop me a line</a>.</p>
+
+</section>
+
+<hr />
+<section id="post-tags">
+  <p>Browse posts about:
+  <ul>
+  
+  <li><a href="software-as-craft">software-as-craft</a></li>
+  
+  <li><a href="testing">testing</a></li>
+  
+  <li><a href="mastery">mastery</a></li>
+  
+  <li><a href="business">business</a></li>
+  
+  </ul></p>
+</section>
+
+<section id="newsletter-signup">
+  <p>Want to get notified when I publish new articles or update old ones?
+  Subscribe to my newsletter. It's a weekly-ish set of interesting links with a
+  short essay on programming, design, technical leadership, or anything else
+  that strikes my fancy.</p>
+
+  <form id="subscribe-to-newsletter" action="https://tinyletter.com/zspencer" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/zspencer', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+  <p><label for="tlemail">Email address:</label>
+  <input placeholder="your-email@example.com" type="text" name="email" id="tlemail" /></p>
+  <input type="hidden" value="1" name="embed"/>
+
+  <p>Not sure? <a id="newsletter-archive" href="http://tinyletter.com/zspencer/archive">Read the
+    archive.</a></p>
+  <input class="button" type="submit" value="Subscribe Now!" />
+</form>
+
+<script type="text/javascript">
+Track.cta("#subscribe-to-newsletter", "Newsletter Subscription", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Subscribe',
+  pageSubject: 'Article'
+});
+
+Track.cta("#newsletter-archive", "Check the Newsletter Archive", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Investigate me',
+  pageSubject: 'Article'
+});
+</script>
+
+</section>
+
+  </main>
+  <div class="push"></div>
+  </div>
+  <footer>
+    <section id="footer-content">
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <p class="license">
+        Copyright 2004 - 2020 Zee Spencer. Licensed under
+        a <a
+           rel="license"
+           href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+           Commons Attribution-NonCommercial-ShareAlike 4.0
+           International License</a>.
+      </p>
+    </section>
+  </footer>
+
+<script type="text/javascript">
+
+Track.cta('.feedback-email', 'Email me', {
+  color: 'Red',
+  location: 'bottom',
+  category: 'Contact',
+  pageSubject: "",
+});
+
+Track.cta('.lead-email', 'Email me', {
+  color: 'Red',
+  location: 'bottom',
+  category: 'Contact',
+  pageSubject: "",
+});
+
+</script>
+</body>
+</html>
+<br />
       <a href="/the-rationale-behind-testing">12 Feb 2015</a>
   </li>
   
 
   
   <li>Getting Past Junior &ndash;
-      <a href="/tags/learning.html" rel="tag">learning</a>, <a href="/tags/software.html" rel="tag">software</a>, <a href="/tags/software-as-craft.html" rel="tag">software-as-craft</a><br />
+      <!DOCTYPE html>
+<html>
+<head>
+  <title>Getting Past Junior</title>
+  <link href="style.css" type="text/css" rel="stylesheet" />
+  
+  <link rel="canonical" href="https://medium.com/get-absurdist/getting-past-junior-50a1b1a7927" />
+  
+
+  <link type="text/atom+xml" rel="alternate" href="http://feeds.feedburner.com/zeespencer"/>
+  <meta name="viewport" content="initial-scale=1" />
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.0";
+      
+      analytics.load("DEDSLhOPXKFCHg4NglvHWqtQg6BgqJy2");
+      
+
+      
+        analytics.page();
+      
+      }}();
+    </script>
+    <script type="text/javascript" src="js/site.js"></script>
+</head>
+<body>
+  <div id="page">
+  <header>
+    <figure>
+      <img src="images/zee.png" alt="Zee Spencer" />
+    </figure>
+    
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <h2>Getting Past Junior</h2>
+    
+
+  </header>
+  <main id="content">
+    <section id="article">
+<blockquote>
+<p>Junior developers make complex solutions for simple problems.</p>
+
+<p>Average developers make simple solutions for simple problems and complex
+solutions for complex problems.</p>
+
+<p>Senior developers make simple solutions for complex problems.</p>
+
+<footer>
+<cite>Unknown</cite>
+</footer></blockquote>
+
+<p>I was pairing with a friend of mine who is working as a junior developer. We
+were reviewing and rewriting some of the code, and he asked &quot;I can see this is
+better, but how did you know to do it?&quot;</p>
+
+<p>Well.</p>
+
+<p>That&#39;s a hard question. I mumbled something about &quot;When you&#39;ve been doing
+this as long as I have...&quot;</p>
+
+<p>And that&#39;s a bullshit answer.</p>
+
+<p>Much of my judgement comes from seeing what has worked and what didn&#39;t; yet
+that&#39;s only part of the story. I take several deliberate actions to hone my
+judgement:</p>
+
+<ol>
+<li>I Write throw-away code</li>
+<li>I Surround myself with expertise</li>
+<li>I Read. Constantly.</li>
+<li>I Turn the knob to 11</li>
+</ol>
+
+<h3 id="write-throw-away-code">Write Throw-Away Code</h3>
+
+<p>Whether I&#39;m working on a
+<a href="http://codekata.com/kata/codekata-how-it-started/">kata</a> or a <a href="http://chimera.labs.oreilly.com/books/1234000001813/ch05.html#breakable_toys">breakable
+toy</a>
+or even production software; I throw away most of the code I write. Why? Because
+my first attempt is a poor attempt. I use my first pass as a
+<a href="http://www.extremeprogramming.org/rules/spike.html">&quot;spike&quot;</a>, a kind of
+hands-on learning opportunity.</p>
+
+<p>This gives me the freedom to experiment and explore without worrying about
+adding unnecessary <a href="https://en.wikipedia.org/wiki/Technical_debt">technical
+debt</a>. This lets me go off the
+beaten path a bit and try things I never would have if I knew it had to go into
+production. Sure, some of these experiments are dead ends; but they invariably
+provide me with more information about how to solve the kind of problem I&#39;m
+working in.</p>
+
+<p>Safety to experiment is crucial for building judgement.</p>
+
+<h3 id="surround-yourself-with-expertise">Surround Yourself With Expertise</h3>
+
+<p>While I may think I&#39;m pretty hot shit when it comes to software development, the
+fact of the matter is that there are thousands of developers with more experience,
+better judgement, and deeper understanding than I. Add in the sheer breadth of
+specialities in software and it&#39;s pretty overwhelming. And humbling!</p>
+
+<p>I&#39;ve spent the past 6 years building a network of people across a wide range of
+specialities. From software testers to interaction designers to operations
+engineers to machine learning scientists. When I have a problem, I can send off
+an email or aks a question in IRC or Twitter.</p>
+
+<p>By investing in friendships across disciplines I &quot;outsource&quot; my judgement. This
+helps me build judgement in a new territory quickly and effectively.</p>
+
+<h3 id="read-constantly">Read. Constantly.</h3>
+
+<p>And not just books. Read code. Find small code bases that do specific things and
+read and annotate them. Find large code bases and skim them. I regularly
+practice diving into an unfamiliar project and figuring out what&#39;s going on.</p>
+
+<p>This builds judgement by letting me see how people I&#39;ve never even met solve
+problems. It also builds my ability to understand unfamiliar code.</p>
+
+<p>Not to undervalue books at all. I easily spend $500+ a year in technology books;
+mostly when I&#39;m learning a framework, language or tool.</p>
+
+<h3 id="turn-the-knob-to-11">Turn The Knob To 11</h3>
+
+<p>Turning the knob to 11 is when you take a very specific concept; and over-apply
+it. Over-applying a technique or technology is the easiest way to find its
+shortcomings. Want to learn to TDD? TDD <em>everything</em> for a year. At the end
+you&#39;ll have a solid understanding of when to and when not to TDD.</p>
+
+<p>I love turning the knob to 11; but since it is directly intended to discover
+where something breaks down it isn&#39;t always a good practice to apply to
+production code.</p>
+
+<h3 id="judgement-makes-perfect">Judgement Makes Perfect</h3>
+
+<p>Practice makes permanent, feedback and judgement makes perfect. Reflect on
+your work. Intentionally seek the edges of your skills. This is how you move
+beyond junior.</p>
+
+</section>
+
+<hr />
+<section id="post-tags">
+  <p>Browse posts about:
+  <ul>
+  
+  <li><a href="learning">learning</a></li>
+  
+  <li><a href="software">software</a></li>
+  
+  <li><a href="software-as-craft">software-as-craft</a></li>
+  
+  </ul></p>
+</section>
+
+<section id="newsletter-signup">
+  <p>Want to get notified when I publish new articles or update old ones?
+  Subscribe to my newsletter. It's a weekly-ish set of interesting links with a
+  short essay on programming, design, technical leadership, or anything else
+  that strikes my fancy.</p>
+
+  <form id="subscribe-to-newsletter" action="https://tinyletter.com/zspencer" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/zspencer', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+  <p><label for="tlemail">Email address:</label>
+  <input placeholder="your-email@example.com" type="text" name="email" id="tlemail" /></p>
+  <input type="hidden" value="1" name="embed"/>
+
+  <p>Not sure? <a id="newsletter-archive" href="http://tinyletter.com/zspencer/archive">Read the
+    archive.</a></p>
+  <input class="button" type="submit" value="Subscribe Now!" />
+</form>
+
+<script type="text/javascript">
+Track.cta("#subscribe-to-newsletter", "Newsletter Subscription", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Subscribe',
+  pageSubject: 'Article'
+});
+
+Track.cta("#newsletter-archive", "Check the Newsletter Archive", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Investigate me',
+  pageSubject: 'Article'
+});
+</script>
+
+</section>
+
+  </main>
+  <div class="push"></div>
+  </div>
+  <footer>
+    <section id="footer-content">
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <p class="license">
+        Copyright 2004 - 2020 Zee Spencer. Licensed under
+        a <a
+           rel="license"
+           href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+           Commons Attribution-NonCommercial-ShareAlike 4.0
+           International License</a>.
+      </p>
+    </section>
+  </footer>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
+<br />
       <a href="/getting-past-junior">27 Jun 2014</a>
   </li>
   
 
   
   <li>Build a Command Line Remote Pairing Setup &ndash;
-      <a href="/tags/pairing.html" rel="tag">pairing</a>, <a href="/tags/software-as-craft.html" rel="tag">software-as-craft</a>, <a href="/tags/devenvironment.html" rel="tag">devenvironment</a><br />
+      <!DOCTYPE html>
+<html>
+<head>
+  <title>Build a Command Line Remote Pairing Setup</title>
+  <link href="style.css" type="text/css" rel="stylesheet" />
+  
+  <link rel="canonical" href="" />
+  
+
+  <link type="text/atom+xml" rel="alternate" href="http://feeds.feedburner.com/zeespencer"/>
+  <meta name="viewport" content="initial-scale=1" />
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.0";
+      
+      analytics.load("DEDSLhOPXKFCHg4NglvHWqtQg6BgqJy2");
+      
+
+      
+        analytics.page();
+      
+      }}();
+    </script>
+    <script type="text/javascript" src="js/site.js"></script>
+</head>
+<body>
+  <div id="page">
+  <header>
+    <figure>
+      <img src="images/zee.png" alt="Zee Spencer" />
+    </figure>
+    
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <h2>Build a Command Line Remote Pairing Setup</h2>
+    
+
+  </header>
+  <main id="content">
+    <section id="article">
+<p>Over the past couple years I&#39;ve done a bit of remote pairing. When I need a GUI
+everything is pretty straightforward: <a href="http://join.me">Join.me</a> for
+screen/keyboard sharing and iPad with Skype or Google Hangout for video calls.
+This is pretty bandwidth intensive and can be slow, so I&#39;d rather keep as much
+as I can in a terminal.</p>
+
+<p>There&#39;s a few obstacles to that though:</p>
+
+<ul>
+<li> I travel a lot, so my network location is random and I can&#39;t change the
+coffee shops firewall</li>
+<li> I want to see anything my partner do</li>
+<li> I want to add partners easily</li>
+<li> I don&#39;t want to share any passwords.</li>
+</ul>
+
+<p>Thankfully a remote virtual machine, SSH, and tmux let me meet all these
+requirements. Hooray!</p>
+
+<h2 id="set-up-the-remote-server">Set up the remote server</h2>
+
+<p>I use <a href="http://prgmr.com/xen/">prgmr.com</a> for my utility server provider.
+They&#39;ve got great support, don&#39;t overload their servers, and they love their
+customers. This is a pretty low intensity server, so a 128MB instance is
+probably fine.</p>
+
+<p>Add two user accounts. One is for you to log in to and manage the server. Don&#39;t
+even think about using root! The other is for your partners to log in with. I
+use the name <code>pair</code> for mine.</p>
+
+<p>For some distributions of *nix you&#39;ll need to allow port forwarding over SSH.
+To do this open up the servers sshd_config as root (typically located at
+<code>/etc/ssh/sshd_config</code>), find or add the  <code>AllowTcpForwarding</code> line, set it to
+<code>yes</code>, and ensure it&#39;s uncommented.</p>
+
+<h3 id="configure-your-user">Configure your user</h3>
+
+<p>Your user&#39;s role on this server is to allow you to use SSH to forward a port on
+the server to your system. To be honest, you don&#39;t need to change anything, but
+I recommend using keys to access your server instead of a password. To do that,
+you&#39;ll need to create an <code>authorized_keys</code> file in your <code>~/.ssh</code> directory.
+This file must <em>be only accessible to your user</em> otherwise it will not be
+accepted by any sane distributions ssh server. To make it yours and yours
+alone, type <code>chmod 600 ~/.ssh/authorized_keys</code> before going forward.</p>
+
+<p>Now, append your public key to the <code>~/.ssh/authorized_keys</code> file. Github
+provides an <a href="https://help.github.com/articles/generating-ssh-keys">excellent tutorial on creating ssh
+keys</a> if you don&#39;t think
+you have a public key.</p>
+
+<p>From now on, typing <code>ssh your-user@your-server</code> will use key-pair
+encryption to verify your identity; which is far more secure than meager
+passwords. For an added security boost you may want to edit your
+<code>/etc/ssh/sshd_config</code> and change <code>PasswordAuthentication</code> to <code>no</code> <em>after
+you&#39;ve verified logging in without a password works.</em></p>
+
+<h3 id="configure-the-pair-user">Configure the pair user</h3>
+
+<p>The pair user is where the magic happens. Login to the pair user, and create an
+authorized keys file by typing <code>touch ~/.ssh/authorized_keys</code> and change it&#39;s
+permissions <code>chmod 600 ~/.ssh/authorized_keys</code>!</p>
+
+<h4 id="adding-a-partners-public-key">Adding a partners public key</h4>
+
+<p>When we append a partners public key to the authorized_keys file we want to
+prefix it with the <code>command</code> ssh directive:</p>
+
+<p><code>command=&quot;ssh &lt;my-user-name&gt;@localhost -p 1337&quot;,no-port-forwarding,no-X11-forwarding,no-agent-forwarding &lt;my-partners-public-key&gt;</code></p>
+
+<p>This forces the incoming connection to execute an ssh command to connect to
+localhost on port 1337, and once that is complete it will kill the connection.
+The <code>no-(agent|port|X11)-forwarding</code> directives are another security
+precaution. Now we can add anyone we want as a partner with very little fear.</p>
+
+<p>Go ahead and add your public key as a partner for now, then from your local
+machine type <code>ssh pair@your-server</code>. This should give you a message like
+<code>ssh: connect to host localhost port 1337: Connection refused</code></p>
+
+<p>This is good! It means that you successfully connected as <code>pair</code> on your server
+<em>and</em> it tried to connect to ssh on port 1337! Yay!</p>
+
+<p>All that&#39;s left to do now is to generate an ssh key for the pair user, so log
+back in to the server as <code>pair</code> and follow step 3 on the aforementioned <a href="https://help.github.com/articles/generating-ssh-keys">ssh
+key tutorial</a>. This is
+the key we&#39;ll give access rights to our machine; using the <code>command</code> directive
+to always force them into joining an existing tmux session.</p>
+
+<h2 id="set-up-your-machine">Set up your machine</h2>
+
+<h3 id="install-tmux">Install tmux</h3>
+
+<p>If you&#39;re on a Mac I recommend installing tmux through
+<a href="http://mxcl.github.com/homebrew/">homebrew</a>. Most Linux distributions come
+with it as a package in their standard repository now a days.</p>
+
+<h3 id="set-up-your-local-ssh-server-and-authorized_keys">Set up your local ssh server and authorized_keys</h3>
+
+<p>If you&#39;re on a mac, you&#39;ll need to <a href="http://osxdaily.com/2011/09/30/remote-login-ssh-server-mac-os-x/">enable remote
+login</a>. If
+you&#39;re a Linux person make sure you have the sshd package installed and the
+service running.</p>
+
+<p>Once that&#39;s done, set up your authorized_keys for your local machine: <code>touch
+~/.ssh/authorized_keys &amp;&amp; chmod 600 ~/.ssh/authorized_keys</code></p>
+
+<p>Now take the public key you created for the pair username, and add it to the
+end of your <code>~/.ssh/authorized_keys</code> file, like so:</p>
+
+<p><code>command=&quot;tmux attach&quot;,no-port-forwarding,no-X11-forwarding,no-agent-forwarding &lt;pair-users-ssh-public-key&gt;</code></p>
+
+<h3 id="test-it-out">Test it out</h3>
+
+<p>From your local machine open a new terminal and type <code>ssh -R1337:localhost:22
+your-user@your-server</code> . This sets up the network forwarding stuff. Yay!</p>
+
+<p>From a second terminal, type in <code>ssh pair@your-server</code>. This should give you
+at least these two lines:  <code>no sessions</code> and <code>Connection to localhost closed</code>.</p>
+
+<p>The <code>no sessions</code> line is letting us know tmux doesn&#39;t have anything to attach
+to. the <code>Connection to localhost closed</code> is letting us know that we were kicked
+off the system. As we should be!</p>
+
+<p>Now, on <em>another</em> terminal launch <code>tmux</code>, then from the second terminal try
+<code>ssh pair@your-server</code> again. If all goes well, you should see the contents
+of the third terminal in the second terminal, and it should redraw pretty fast.</p>
+
+<h3 id="further-enhancements">Further enhancements</h3>
+
+<p>This is my vanilla command line remote pairing environment. If you want more
+power, there&#39;s a few things you should do:</p>
+
+<ul>
+<li>Read the <a href="http://pragprog.com/book/bhtmux/tmux">tmux book</a></li>
+<li>Enhance tmux with <a href="https://github.com/zolrath/wemux">wemux</a> or <a href="https://github.com/benmills/vimux">vimux</a></li>
+<li>Look into <a href="http://mosh.mit.edu/">mosh</a> as an ssh alternative. It&#39;s supposed to be great for low-bandwidth situations.</li>
+</ul>
+
+</section>
+
+<hr />
+<section id="post-tags">
+  <p>Browse posts about:
+  <ul>
+  
+  <li><a href="pairing">pairing</a></li>
+  
+  <li><a href="software-as-craft">software-as-craft</a></li>
+  
+  <li><a href="devenvironment">devenvironment</a></li>
+  
+  </ul></p>
+</section>
+
+<section id="newsletter-signup">
+  <p>Want to get notified when I publish new articles or update old ones?
+  Subscribe to my newsletter. It's a weekly-ish set of interesting links with a
+  short essay on programming, design, technical leadership, or anything else
+  that strikes my fancy.</p>
+
+  <form id="subscribe-to-newsletter" action="https://tinyletter.com/zspencer" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/zspencer', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+  <p><label for="tlemail">Email address:</label>
+  <input placeholder="your-email@example.com" type="text" name="email" id="tlemail" /></p>
+  <input type="hidden" value="1" name="embed"/>
+
+  <p>Not sure? <a id="newsletter-archive" href="http://tinyletter.com/zspencer/archive">Read the
+    archive.</a></p>
+  <input class="button" type="submit" value="Subscribe Now!" />
+</form>
+
+<script type="text/javascript">
+Track.cta("#subscribe-to-newsletter", "Newsletter Subscription", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Subscribe',
+  pageSubject: 'Article'
+});
+
+Track.cta("#newsletter-archive", "Check the Newsletter Archive", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Investigate me',
+  pageSubject: 'Article'
+});
+</script>
+
+</section>
+
+  </main>
+  <div class="push"></div>
+  </div>
+  <footer>
+    <section id="footer-content">
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <p class="license">
+        Copyright 2004 - 2020 Zee Spencer. Licensed under
+        a <a
+           rel="license"
+           href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+           Commons Attribution-NonCommercial-ShareAlike 4.0
+           International License</a>.
+      </p>
+    </section>
+  </footer>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
+<br />
       <a href="/building-a-remote-pairing-setup">29 Jan 2013</a>
   </li>
   
 
   
   <li>Ignorance and Realism in Testing &ndash;
-      <a href="/tags/software.html" rel="tag">software</a>, <a href="/tags/software-as-craft.html" rel="tag">software-as-craft</a><br />
+      <!DOCTYPE html>
+<html>
+<head>
+  <title>Ignorance and Realism in Testing</title>
+  <link href="style.css" type="text/css" rel="stylesheet" />
+  
+  <link rel="canonical" href="" />
+  
+
+  <link type="text/atom+xml" rel="alternate" href="http://feeds.feedburner.com/zeespencer"/>
+  <meta name="viewport" content="initial-scale=1" />
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.0";
+      
+      analytics.load("DEDSLhOPXKFCHg4NglvHWqtQg6BgqJy2");
+      
+
+      
+        analytics.page();
+      
+      }}();
+    </script>
+    <script type="text/javascript" src="js/site.js"></script>
+</head>
+<body>
+  <div id="page">
+  <header>
+    <figure>
+      <img src="images/zee.png" alt="Zee Spencer" />
+    </figure>
+    
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <h2>Ignorance and Realism in Testing</h2>
+    
+
+  </header>
+  <main id="content">
+    <section id="article">
+<p>I was talking through some of my thoughts on applying visual and interaction
+design critique principles to code with <a href="http://www.ecomba.org/">Enrique Comba</a>.
+At the time, I was in the middle of analyzing the differences between <a href="https://gist.github.com/4141476#file_normal_spec.rb">directly
+calling the method</a> under
+test, <a href="https://gist.github.com/4141476#file_let_spec.rb">nested describes and
+lets</a>, and using a <a href="https://gist.github.com/4141476#file_custom_assertion_spec.rb">custom
+assertion</a>.</p>
+
+<p>I was pointing out how moving the method call out to a custom assert hid a
+breadcrumb developers would use when understanding the system under test, while
+leaving it in a let would at least keep it in the same test file. Enrique
+responded with an interesting perspective:</p>
+
+<p><strong>&quot;That&#39;s the point of BDD. Your tests shouldn&#39;t care about your implementation
+at all.&quot;</strong></p>
+
+<p>I was a little taken aback. One of my favorite parts about clearly written specs
+is how they give the programmer direction in the use of the code being tested.
+If the test code is completely ignorant of the implementation, how can it
+provide those insights?!</p>
+
+<p>After an hour or so, I started thinking about <a href="http://about.me/searls">Justin
+Searls</a> recent presentation on <a href="http://oredev.org/2012/sessions/budgeting-reality-a-new-approach-to-mock-objects">realism in
+tests</a>.
+This got me thinking: <strong>What if the level of realism and the level of ignorance
+of a test are two related variables?</strong> A test which provides a high level of
+realism of the system under test may not mock out external services the system
+uses because it does not know about them. Conversely, tests which provides a low
+level of realism often very clearly point out how its collaborators must be
+formed, as well as the usage of the code under test.</p>
+
+<p>Hopefully these complementary insights will provide me with more purposeful,
+better organized test suites in the future.</p>
+
+</section>
+
+<hr />
+<section id="post-tags">
+  <p>Browse posts about:
+  <ul>
+  
+  <li><a href="software">software</a></li>
+  
+  <li><a href="software-as-craft">software-as-craft</a></li>
+  
+  </ul></p>
+</section>
+
+<section id="newsletter-signup">
+  <p>Want to get notified when I publish new articles or update old ones?
+  Subscribe to my newsletter. It's a weekly-ish set of interesting links with a
+  short essay on programming, design, technical leadership, or anything else
+  that strikes my fancy.</p>
+
+  <form id="subscribe-to-newsletter" action="https://tinyletter.com/zspencer" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/zspencer', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+  <p><label for="tlemail">Email address:</label>
+  <input placeholder="your-email@example.com" type="text" name="email" id="tlemail" /></p>
+  <input type="hidden" value="1" name="embed"/>
+
+  <p>Not sure? <a id="newsletter-archive" href="http://tinyletter.com/zspencer/archive">Read the
+    archive.</a></p>
+  <input class="button" type="submit" value="Subscribe Now!" />
+</form>
+
+<script type="text/javascript">
+Track.cta("#subscribe-to-newsletter", "Newsletter Subscription", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Subscribe',
+  pageSubject: 'Article'
+});
+
+Track.cta("#newsletter-archive", "Check the Newsletter Archive", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Investigate me',
+  pageSubject: 'Article'
+});
+</script>
+
+</section>
+
+  </main>
+  <div class="push"></div>
+  </div>
+  <footer>
+    <section id="footer-content">
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <p class="license">
+        Copyright 2004 - 2020 Zee Spencer. Licensed under
+        a <a
+           rel="license"
+           href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+           Commons Attribution-NonCommercial-ShareAlike 4.0
+           International License</a>.
+      </p>
+    </section>
+  </footer>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
+<br />
       <a href="/ignorance-and-realism-in-testing">24 Nov 2012</a>
   </li>
   
 
   
   <li>Judging Code Simplicity Fit It Through The Tube &ndash;
-      <a href="/tags/software.html" rel="tag">software</a>, <a href="/tags/design.html" rel="tag">design</a>, <a href="/tags/software-as-craft.html" rel="tag">software-as-craft</a><br />
+      <!DOCTYPE html>
+<html>
+<head>
+  <title>Judging Code Simplicity Fit It Through The Tube</title>
+  <link href="style.css" type="text/css" rel="stylesheet" />
+  
+  <link rel="canonical" href="" />
+  
+
+  <link type="text/atom+xml" rel="alternate" href="http://feeds.feedburner.com/zeespencer"/>
+  <meta name="viewport" content="initial-scale=1" />
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.0";
+      
+      analytics.load("DEDSLhOPXKFCHg4NglvHWqtQg6BgqJy2");
+      
+
+      
+        analytics.page();
+      
+      }}();
+    </script>
+    <script type="text/javascript" src="js/site.js"></script>
+</head>
+<body>
+  <div id="page">
+  <header>
+    <figure>
+      <img src="images/zee.png" alt="Zee Spencer" />
+    </figure>
+    
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <h2>Judging Code Simplicity Fit It Through The Tube</h2>
+    
+
+  </header>
+  <main id="content">
+    <section id="article">
+<p>We coders have all kinds of definitions of simple code. To some, simple code is
+code they understand and read easily. Others believe simple code follows the
+coolest, most appropriate design pattern. Some say simple code has the fewest
+characters.</p>
+
+<p>Extreme Programming tries to setttle that debate by offering <a href="http://www.extremeprogramming.org/rules/simple.html">four qualities of
+simple code</a>: testability,
+browsability, understandability, and explainabilty.</p>
+
+<p>To make these qualities easier to remember I coin the mnemonic TUBE.</p>
+
+<h3 id="testable">Testable</h3>
+
+<p>Can automated tests be written for each piece of functionality and permutation
+of behavior? Are there positive <em>and</em> negative use-cases?</p>
+
+<h3 id="understandable">Understandable</h3>
+
+<p>When you read a function, does it do what you expected given it&#39;s method
+signature? How long does it take to figure out what the code does?</p>
+
+<h3 id="browsable">Browsable</h3>
+
+<p>Can the code be browsed in an IDE? How quickly does someone who didn&#39;t write the
+code find what they&#39;re looking for?</p>
+
+<h3 id="explainable">Explainable</h3>
+
+<p>I&#39;m pretty sure this is here twice because it&#39;s so important. Can a different
+developer tell you what the code does? Does their explanation match yours?</p>
+
+<p>If your code meets these criteria, congratulations! Your code fits in the TUBE,
+and when the TUBE fits, make commits!</p>
+
+</section>
+
+<hr />
+<section id="post-tags">
+  <p>Browse posts about:
+  <ul>
+  
+  <li><a href="software">software</a></li>
+  
+  <li><a href="design">design</a></li>
+  
+  <li><a href="software-as-craft">software-as-craft</a></li>
+  
+  </ul></p>
+</section>
+
+<section id="newsletter-signup">
+  <p>Want to get notified when I publish new articles or update old ones?
+  Subscribe to my newsletter. It's a weekly-ish set of interesting links with a
+  short essay on programming, design, technical leadership, or anything else
+  that strikes my fancy.</p>
+
+  <form id="subscribe-to-newsletter" action="https://tinyletter.com/zspencer" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/zspencer', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+  <p><label for="tlemail">Email address:</label>
+  <input placeholder="your-email@example.com" type="text" name="email" id="tlemail" /></p>
+  <input type="hidden" value="1" name="embed"/>
+
+  <p>Not sure? <a id="newsletter-archive" href="http://tinyletter.com/zspencer/archive">Read the
+    archive.</a></p>
+  <input class="button" type="submit" value="Subscribe Now!" />
+</form>
+
+<script type="text/javascript">
+Track.cta("#subscribe-to-newsletter", "Newsletter Subscription", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Subscribe',
+  pageSubject: 'Article'
+});
+
+Track.cta("#newsletter-archive", "Check the Newsletter Archive", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Investigate me',
+  pageSubject: 'Article'
+});
+</script>
+
+</section>
+
+  </main>
+  <div class="push"></div>
+  </div>
+  <footer>
+    <section id="footer-content">
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <p class="license">
+        Copyright 2004 - 2020 Zee Spencer. Licensed under
+        a <a
+           rel="license"
+           href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+           Commons Attribution-NonCommercial-ShareAlike 4.0
+           International License</a>.
+      </p>
+    </section>
+  </footer>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
+<br />
       <a href="/judging-code-simplicity-fit-it-through-the-tube">25 Apr 2010</a>
   </li>
   
@@ -92,7 +1376,7 @@
 
 <div id="tag-cloud">
   <h3>Find something to read in the following topics:</h3>
-  <a href="/tags/agency.html" class="set-1">agency</a> <a href="/tags/beginner.html" class="set-1">beginner</a> <a href="/tags/book-review.html" class="set-1">book-review</a> <a href="/tags/business.html" class="set-2">business</a> <a href="/tags/career.html" class="set-1">career</a> <a href="/tags/clojure.html" class="set-1">clojure</a> <a href="/tags/community.html" class="set-2">community</a> <a href="/tags/culture.html" class="set-1">culture</a> <a href="/tags/design.html" class="set-2">design</a> <a href="/tags/devenvironment.html" class="set-1">devenvironment</a> <a href="/tags/empathy.html" class="set-2">empathy</a> <a href="/tags/family.html" class="set-1">family</a> <a href="/tags/finance.html" class="set-1">finance</a> <a href="/tags/health.html" class="set-1">health</a> <a href="/tags/javascript.html" class="set-1">javascript</a> <a href="/tags/jekyll.html" class="set-1">jekyll</a> <a href="/tags/js.html" class="set-1">js</a> <a href="/tags/leadership.html" class="set-1">leadership</a> <a href="/tags/lean.html" class="set-1">lean</a> <a href="/tags/learning.html" class="set-1">learning</a> <a href="/tags/love.html" class="set-1">love</a> <a href="/tags/makermenagerie.html" class="set-1">makermenagerie</a> <a href="/tags/mastery.html" class="set-5">mastery</a> <a href="/tags/mentors.html" class="set-1">mentors</a> <a href="/tags/opportunity.html" class="set-1">opportunity</a> <a href="/tags/ops.html" class="set-1">ops</a> <a href="/tags/pairing.html" class="set-1">pairing</a> <a href="/tags/parables.html" class="set-2">parables</a> <a href="/tags/parody.html" class="set-1">parody</a> <a href="/tags/part-time.html" class="set-1">part-time</a> <a href="/tags/personal.html" class="set-1">personal</a> <a href="/tags/poetry.html" class="set-2">poetry</a> <a href="/tags/productivity.html" class="set-1">productivity</a> <a href="/tags/project-management.html" class="set-1">project-management</a> <a href="/tags/questions.html" class="set-1">questions</a> <a href="/tags/rails.html" class="set-1">rails</a> <a href="/tags/remote.html" class="set-1">remote</a> <a href="/tags/ruby.html" class="set-1">ruby</a> <a href="/tags/security.html" class="set-1">security</a> <a href="/tags/short-term.html" class="set-1">short-term</a> <a href="/tags/society.html" class="set-1">society</a> <a href="/tags/software.html" class="set-5">software</a> <a href="/tags/software-as-craft.html" class="set-2">software-as-craft</a> <a href="/tags/songs.html" class="set-1">songs</a> <a href="/tags/tapas.html" class="set-1">tapas</a> <a href="/tags/testing.html" class="set-1">testing</a> <a href="/tags/theory.html" class="set-1">theory</a> <a href="/tags/video.html" class="set-1">video</a> <a href="/tags/vim.html" class="set-1">vim</a> <a href="/tags/work.html" class="set-1">work</a>
+  Jekyll::Drops::SiteDrop
 </div>
 
 

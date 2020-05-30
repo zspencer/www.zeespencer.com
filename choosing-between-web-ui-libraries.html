@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Choosing Between Web UI Tooling and Libraries</title>
+  <link href="style.css" type="text/css" rel="stylesheet" />
+  
+  <link rel="canonical" href="" />
+  
+
+  <link type="text/atom+xml" rel="alternate" href="http://feeds.feedburner.com/zeespencer"/>
+  <meta name="viewport" content="initial-scale=1" />
+    <script type="text/javascript">
+      !function(){var analytics=window.analytics=window.analytics||[];if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.0";
+      
+      analytics.load("DEDSLhOPXKFCHg4NglvHWqtQg6BgqJy2");
+      
+
+      
+        analytics.page();
+      
+      }}();
+    </script>
+    <script type="text/javascript" src="js/site.js"></script>
+</head>
+<body>
+  <div id="page">
+  <header>
+    <figure>
+      <img src="images/zee.png" alt="Zee Spencer" />
+    </figure>
+    
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <h2>Choosing Between Web UI Tooling and Libraries</h2>
+    
+
+  </header>
+  <main id="content">
+    <section id="article">
+<p><a href="https://zinc.coop">Zinc</a> has been gently exploring HTML and CSS tooling for UI
+prototyping. I tend to approach tooling and library selection from a
+<a href="https://www.fastcompany.com/1113892/build-borrow-or-buy">buy/build/borrow</a>
+perspective, and personally landed pretty quickly on buying <a href="https://tailwindui.com/">TailwindUI</a> for two
+reasons:</p>
+
+<ol>
+<li>I am not particularly fluent in <em>visual design</em>; so having a professionally
+maintained library of off-the-shelf interaction-design components is a
+compelling value proposition.</li>
+<li>My usage of <a href="https://tailwindcss.com/">TailwindCSS</a> as a utility-first CSS framework has been quite
+pleasant. The maintainers leverage what we&#39;ve learned from <a href="https://getbootstrap.com/">Bootstrap</a>,
+<a href="https://tachyons.io/">Tachyons</a> and other utility-first UI tooling quite well.</li>
+</ol>
+
+<p>As we discussed the decision-making process, I realized underneath my initial
+&quot;this feels good&quot; response was a number of implicit architectural values.</p>
+
+<ol>
+<li>I rely heavily on <a href="https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle">Open/Closed</a> as an architectural decision-making
+principle.</li>
+<li>I like <em>thoughtful</em> programming. Thought is half of what it takes to build
+useful, reliable software. <em>Action</em> is the other half.</li>
+<li>I like <em>slow</em> release cycles for breaking changes and <em>fast</em> release cycles
+for adding improvements and resolving defects.</li>
+</ol>
+
+<h2 id="applying-the-open-closed-principle">Applying The Open / Closed Principle</h2>
+
+<p>Many CSS and Component Libraries provide fully-featured components. When these
+components apply the Open / Closed principle effectively, they follow one or two
+paths:</p>
+
+<ol>
+<li>They expect to be used <em>as-is</em> within the system, and expose <a href="https://www.interaction-design.org/literature/book/the-glossary-of-human-computer-interaction/affordances">affordances</a>
+for developers or designers to <a href="https://www.thoughtworks.com/insights/blog/composition-vs-inheritance-how-choose"><em>extend</em> or <em>wrap</em></a> the
+component without needing to understand the underlying implementation.</li>
+<li>They provide tiny pieces and a blueprint to assemble them into the desired
+component.</li>
+</ol>
+
+<p>Both strategies are valid applications of the Open / Closed principle. Early in
+my career, I gravitated towards relatively fully-formed components that could be
+extended or wrapped. Libraries that prioritize this design structure often allow
+for incredible initial productivity; and the longer these libraries and services
+stay around, the better-shaped the affordances for extension become.</p>
+
+<p>Over time, I have shifted more towards composing small-to-medium sized tools
+into larger systems; with an eye for disposing of the underlying code. This is
+due in no small part to how the economics of open source and free software play
+out, with libraries falling out of maintenance as tech fashion moves to new
+paradigms.</p>
+
+<h2 id="determining-thoughtfulness">Determining Thoughtfulness</h2>
+
+<p>Thoughtfulness is difficult to measure. Many projects bias towards <em>code</em> and
+<em>execution</em> instead of <em>documentation</em> and <em>community</em>. This is a classic
+chicken-and-egg problem.</p>
+
+<p>How can you build a community around a project if the project isn&#39;t in a
+functional state? How do you get a project to a functional state without pushing
+forward on the implementation? When and how do we decide to discard behaviors
+that served the project well in getting to a functional state are no longer
+serving as we extend the breadth and depth of the product?</p>
+
+<p>My current rubric is to evaluate the public discussion forums for a project. Do
+they have an active asynchronous community support system? What about for
+real-time community support? Do they have public documentation with a reasonable
+information architecture that prioritizes discoverability?</p>
+
+<p>I also tend to dive into the underlying code base and issue tracker. How timely
+are responses to issues? Are patches left open? Or do maintainers do the work to
+bring contributions home or gently redirect eager attention in a more productive
+manner?</p>
+
+<h2 id="assessing-the-release-cadence">Assessing the Release Cadence</h2>
+
+<p>Every project has a different tempo. Consider how often a release breaks
+backwards compatibility or changes its user or programmer interface drastically
+enough to require applications using the library to update their source code or
+configuration.</p>
+
+<p>Projects which release breaking changes frequently have higher carry-costs.
+These costs may be trivial in well-capitalized and well-staffed organizations,
+but can be debilitating in organizations with limited financial resources or a
+limited labor force.</p>
+
+<h2 id="so-what-to-choose">So What To Choose?</h2>
+
+<p>I, personally, do not believe the <em>result</em> of a decision is terribly important
+so long as the <em>methodology</em> for reaching a decision centers the group that will
+live with the decision.</p>
+
+<p>Personally, I prefer libraries like <a href="https://tailwindui.com/">TailwindUI</a> over libraries like <a href="https://getbootstrap.com/">Bootstrap</a> due
+to the level of thoughtfulness placed into their documentation, community and
+implementation; and the reasonably clear boundaries that allow me to extend or
+adjust components without needing to understand source code that lives outside a
+particular project.</p>
+
+</section>
+
+<hr />
+<section id="post-tags">
+  <p>Browse posts about:
+  <ul>
+  
+  <li><a href="programming">programming</a></li>
+  
+  <li><a href="architecture">architecture</a></li>
+  
+  </ul></p>
+</section>
+
+<section id="newsletter-signup">
+  <p>Want to get notified when I publish new articles or update old ones?
+  Subscribe to my newsletter. It's a weekly-ish set of interesting links with a
+  short essay on programming, design, technical leadership, or anything else
+  that strikes my fancy.</p>
+
+  <form id="subscribe-to-newsletter" action="https://tinyletter.com/zspencer" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/zspencer', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+  <p><label for="tlemail">Email address:</label>
+  <input placeholder="your-email@example.com" type="text" name="email" id="tlemail" /></p>
+  <input type="hidden" value="1" name="embed"/>
+
+  <p>Not sure? <a id="newsletter-archive" href="http://tinyletter.com/zspencer/archive">Read the
+    archive.</a></p>
+  <input class="button" type="submit" value="Subscribe Now!" />
+</form>
+
+<script type="text/javascript">
+Track.cta("#subscribe-to-newsletter", "Newsletter Subscription", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Subscribe',
+  pageSubject: 'Article'
+});
+
+Track.cta("#newsletter-archive", "Check the Newsletter Archive", {
+  location: 'bottom',
+  color: 'Red',
+  category: 'Investigate me',
+  pageSubject: 'Article'
+});
+</script>
+
+</section>
+
+  </main>
+  <div class="push"></div>
+  </div>
+  <footer>
+    <section id="footer-content">
+      <nav>
+  <a href="/">Explore</a>
+  <a href="/newsletter.html">Subscribe to my Newsletter</a>
+  <a href="/contact.html">Contact Me</a>
+  <a class="twitter" href="http://twitter.com/zspencer">Twitter</a>
+  <a class="github" href="http://github.com/zspencer">Github</a>
+  <a class="rss" href="http://feeds.feedburner.com/zeespencer">RSS</a>
+</nav>
+
+      <p class="license">
+        Copyright 2004 - 2020 Zee Spencer. Licensed under
+        a <a
+           rel="license"
+           href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+           Commons Attribution-NonCommercial-ShareAlike 4.0
+           International License</a>.
+      </p>
+    </section>
+  </footer>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
