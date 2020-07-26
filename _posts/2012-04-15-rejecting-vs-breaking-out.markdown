@@ -1,17 +1,21 @@
 ---
 layout: article
 title: When to Reject and Accept Work
-tags: [design, business]
+tags: [business, career]
 ---
 
-No matter how well you define what should be done you will always wind
-up with work that isn't quite right. In these situations you have three
-courses of action:
+No matter how well you define what should be done you will always wind up with
+work that isn't quite right. In these situations you have three courses of
+action:
+
 1. Reject the work and provide feedback.
 2. Accept the work and add new work items.
 3. Accept the work and ignore its imperfections.
 
+<!--more-->
+
 Choosing which course to take is dependent on a few concerns:
+
 1. Timing
 2. Solution/Problem Fit
 3. Cost
@@ -28,5 +32,5 @@ communicate that you share their goal to create something impressive, even if it
 takes longer.
 
 Next time you're in a position to accept work think about these concerns.
-Communicate why you have chosen to accept or reject the work. Hopefully
-you'll wind up with smoother projects because of it.
+Communicate why you have chosen to accept or reject the work. Hopefully you'll
+wind up with smoother projects because of it.

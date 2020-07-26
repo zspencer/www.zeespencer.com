@@ -1,7 +1,7 @@
 ---
 title: Keeping Space
 layout: article
-tags: [mastery, empathy]
+tags: [career, business]
 ---
 
 While at Devbootcamp last week I was introduced to a new phrase by an
@@ -11,6 +11,8 @@ he meant, so I asked him to clarify.
 
 "Keeping space," he said, "is when my wife gives me a safe haven to release the
 pent up emotions from spending all day investing myself in the students here."
+
+<!--more-->
 
 "So it's like being an emotional anchor?" I asked.
 

@@ -1,7 +1,7 @@
 ---
 title: Ignorance and Realism in Testing
 layout: article
-tags: [software, software-as-craft]
+tags: [programming]
 ---
 
 I was talking through some of my thoughts on applying visual and interaction
@@ -11,6 +11,8 @@ calling the method](https://gist.github.com/4141476#file_normal_spec.rb) under
 test, [nested describes and
 lets](https://gist.github.com/4141476#file_let_spec.rb), and using a [custom
 assertion](https://gist.github.com/4141476#file_custom_assertion_spec.rb).
+
+<!--more-->
 
 I was pointing out how moving the method call out to a custom assert hid a
 breadcrumb developers would use when understanding the system under test, while

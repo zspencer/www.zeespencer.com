@@ -1,7 +1,7 @@
 ---
 layout: article
 title: We Are Better Than This
-tags: [empathy, community]
+tags: [programming]
 ---
 
 Let me start this off by saying I'm furious. I'm furious at my gender, and my
@@ -12,6 +12,8 @@ stalker](http://www.irisclasson.com/2012/12/19/stupid-question-107-shhh-harassme
 but here's the gist: she's been programming for a year and a half and she is
 already experiencing the worst of us. Our sexism. Our selfishness. Our
 lack of decency.
+
+<!--more-->
 
 We don't have to tolerate this kind of behavior. We can reject those that
 propagate it. We can shout down those who defend it.

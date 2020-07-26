@@ -1,7 +1,7 @@
 ---
 title: Why I Don't Use Aliases
 layout: article
-tags: [mastery]
+tags: [career]
 ---
 The difference between an amateur and a professional is their capability to
 execute consistently in a variety of situations.

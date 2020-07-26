@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Breaking Up With Backbone
-tags: [js, software]
+tags: [programming]
 ---
 
 Dear Backbone,
@@ -12,6 +12,8 @@ don't see us working out.
 Don't get me wrong, you have some nice features, your code base is relatively
 clean, you have good test coverage, and features don't change drastically
 between releases.
+
+<!--more-->
 
 But you don't seem to understand what I want. I mean, yea, I *crave* a clear
 separation of concerns between domain, persistance, and presentation layers. I

@@ -1,12 +1,14 @@
 ---
 title: The Proud Ants
 layout: article
-tags: [parables, community, empathy]
+tags: [parables, business]
 ---
 
 Once upon a time there was an ant colony. It wasn't a very big colony, but it
 had the best hunters, builders, and nurses for miles around. For many seasons,
 the colony prospered.
+
+<!--more-->
 
 The builders dug out barracks for the hunters, nurseries for the nurses, and
 dormitories for themselves. They dug stores for the food, which were soon
@@ -15,7 +17,7 @@ swelled the ranks of the colony, making it stronger than ever.
 
 One day, the weather turned cooler. The hunters couldn't find as much food as
 before. Soon the food they brought back was not enough to feed the colony, so
-the Queen opened up the food reserves. 
+the Queen opened up the food reserves.
 
 As winter grew longer the ants became afraid they would run out of food before
 spring. The leaders of the castes, believing their own caste to be most
@@ -26,8 +28,8 @@ food or we will all starve, and then who will prevent the tunnels from
 collapsing upon us and killing us all?"
 
 "Don't listen to them!" snapped the leader of the hunters. "We are the ones who
-found and brought the food! We deserve more food, or who will find food
-when spring comes?"
+found and brought the food! We deserve more food, or who will find food when
+spring comes?"
 
 "Oh dear!" moaned the leader of the nurses. "Our poor children! How will we
 protect them and teach them to be strong? Our entire colony will die out if we
@@ -43,7 +45,8 @@ to you, the caste leaders, to choose who to feed to make it through the winter."
 The leaders were angry. "You are weak!" declared the hunter. "You are not strong
 enough to lead us!"
 
-"You are unstable!" gasped the builder, "You lack the foundations to support us!"
+"You are unstable!" gasped the builder, "You lack the foundations to support
+us!"
 
 "You are foolish!" said the nurse, "You are not wise enough to rule us!"
 
@@ -82,8 +85,8 @@ wisdom of the experts had been lost, they were able to collect food, keep their
 tunnels from collapsing, and rear their young. Slowly, the different castes grew
 to respect each other, and enjoy living with one another.
 
-As the summer slowly changed to fall three weak, strange ants came to the
-colony to beg audience with the Queen.
+As the summer slowly changed to fall three weak, strange ants came to the colony
+to beg audience with the Queen.
 
 "Please," the first begged, "I come from the colony of builders. We are in need
 of aid. We built the most beautiful colony, with deep and strong tunnels, but we
@@ -110,11 +113,12 @@ Hunters, give part of your food to the nurses for digging your tunnels and part
 to the builders for their help in reinforcing them."
 
 The three ants were shocked by this suggestion. "Give up our food?!" the hunter
-replied. "Never!" 
+replied. "Never!"
 
 "Help those selfish hunters?" shouted the builder. "I'd rather die!"
 
-"Our children are strong," declared the nurse. "We will make do without their help."
+"Our children are strong," declared the nurse. "We will make do without their
+help."
 
 And so they left. After another harsh winter, the queen sent scouts to find the
 colonies of her former friends. At the hunters colony, all was in ruins;

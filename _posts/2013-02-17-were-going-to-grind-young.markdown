@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Grind Young
-tags: [parody, songs]
+tags: [parodies]
 ---
 
 I hear your heart beat from all that caffeine<br />

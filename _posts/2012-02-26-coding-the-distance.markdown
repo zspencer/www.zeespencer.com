@@ -1,17 +1,17 @@
 ---
 layout: article
 title: Coding the Distance
-tags: [parody, songs]
+tags: [parodies]
 ---
 
 Reluctantly crouched at the command line<br />
 Keyboards clicking and clacking in time<br />
-<!--more-->
 The green bar flashes, the vim pops up<br />
 Churning, and burning, they push changes up<br />
 They deftly maneuver and regex to rename<br />
 Fingers flying fast keyboards in flame<br />
 Reckless and wild, they commit and they push<br />
+<!--more-->
 Their prowess is potent though they sit on their tush.<br />
 As they speed through the release, the deploy goes out<br />
 They all get up and pour themselves stout<br />

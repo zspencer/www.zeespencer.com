@@ -1,7 +1,7 @@
 ---
 layout: article
 title: How Do You Find Mentors Outside Your Core Skills?
-tags: [questions, mastery, mentors]
+tags: [career, business, programming]
 redirects:
  - /questions/how-do-you--mentors-outside-your-core-skills
 ---
@@ -11,6 +11,8 @@ To ring in the new year, I want to expose some of my ignorance.
 I'm a pretty sharp developer, I'm competent at experience and interaction design, and
 I'm reasonably good at running a business. Yet I'm not even nearing an expert in
 any of those things.
+
+<!--more-->
 
 My strongest skills by far are in programming and my social circle attracts
 fellow programmers. I love these people. They're smart, talented, have broad
