@@ -4,7 +4,7 @@
   <title>Musings and Mutterings of Zee Spencer</title>
   <link rel="self" type="application/atom+xml" href="http://zeespencer.com/index.xml" />
   <link href="http://zeespencer.com/" />
-  <updated>2020-05-30T14:59:29-07:00</updated>
+  <updated>2020-07-25T17:23:24-07:00</updated>
   <id>http://zeespencer.com/</id>
   <author>
     <name>Zee</name>
@@ -1553,6 +1553,8 @@ solutions for complex problems.&lt;/p&gt;
 &lt;footer&gt;
 &lt;cite&gt;Unknown&lt;/cite&gt;
 &lt;/footer&gt;&lt;/blockquote&gt;
+
+&lt;!--more--&gt;
 
 &lt;p&gt;I was pairing with a friend of mine who is working as a junior developer. We
 were reviewing and rewriting some of the code, and he asked &amp;quot;I can see this is
@@ -3682,6 +3684,7 @@ you&amp;#39;ll wind up with smoother projects because of it.&lt;/p&gt;
     </author>
     <content type="html">&lt;p&gt;Reluctantly crouched at the command line&lt;br /&gt;
 Keyboards clicking and clacking in time&lt;br /&gt;
+&amp;lt;!--more--&amp;gt;
 The green bar flashes, the vim pops up&lt;br /&gt;
 Churning, and burning, they push changes up&lt;br /&gt;
 They deftly maneuver and regex to rename&lt;br /&gt;
