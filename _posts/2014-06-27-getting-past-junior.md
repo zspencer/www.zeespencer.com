@@ -2,10 +2,6 @@
 title: Getting Past Junior
 layout: article
 tags: [learning, software, software-as-craft]
-excerpt: Junior developers have a unique struggle. How can they know when
-         they're "good enough" to be a non-junior developer? How can they move
-         quickly from the novice or advanced beginner level and into competent?
-canonical: https://medium.com/get-absurdist/getting-past-junior-50a1b1a7927
 ---
 <blockquote>
 <p>Junior developers make complex solutions for simple problems.</p>
@@ -18,7 +14,7 @@ solutions for complex problems.</p>
 <footer>
 <cite>Unknown</cite>
 </footer></blockquote>
-
+<!--more-->
 I was pairing with a friend of mine who is working as a junior developer. We
 were reviewing and rewriting some of the code, and he asked "I can see this is
 better, but how did you know to do it?"

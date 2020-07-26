@@ -5,15 +5,12 @@ layout: default
 <ul>
 {% for post in page.posts %}
   {% unless post.tags contains 'draft' %}
-  <li>{{ post.title }} &ndash;
-      {{ post | tags }}<br />
+  <li>
+    <a href="{{ post.url }}">{{ post.title }}</a> &mdash;
+    {{ post | working_tags }}
+  <br />
       <a href="{{ post.url }}">{{ post.date | date_to_string }}</a>
   </li>
   {% endunless %}
 {% endfor %}
 </ul>
-
-<div id="tag-cloud">
-  <h3>Find something to read in the following topics:</h3>
-  {{ site | tag_cloud }}
-</div>

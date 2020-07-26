@@ -2,12 +2,11 @@
 layout: article
 title: Coding the Distance
 tags: [parody, songs]
-excerpt: Reluctantly Crouched at the command line, Keyboards clicking and
-         clacking in time...
 ---
 
 Reluctantly crouched at the command line<br />
 Keyboards clicking and clacking in time<br />
+<!--more-->
 The green bar flashes, the vim pops up<br />
 Churning, and burning, they push changes up<br />
 They deftly maneuver and regex to rename<br />

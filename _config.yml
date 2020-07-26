@@ -4,6 +4,7 @@ exclude: [Gemfile, Gemfile.lock, config.rb]
 include: [_precompiled]
 markdown: redcarpet
 redirects: yes
+excerpt_separator: <!--more-->
 tag_page_layout: tag_page
 tag_page_dir: tags
 highlighter: 'rouge'

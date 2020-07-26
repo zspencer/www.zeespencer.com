@@ -53,7 +53,10 @@ ctas:
   <article>
     <h3 id="{{ post.title | handleize }}"><a href="{{post.url}}">{{ post.title }}</a></h3>
     {{ post.excerpt }}
-    <p>Posted on {{ post.date | pretty_date }} - about {{ post | tags }}</p>
+    <p>Posted on {{ post.date | pretty_date }}.
+      About
+      {{ post | working_tags }}
+    </p>
   </article>
   {% endfor %}
 </section>
