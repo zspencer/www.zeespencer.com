@@ -1,7 +1,7 @@
 ---
 layout: article
 title: I sense a pattern
-tags: [poetry, mastery]
+tags: [poetry, career]
 ---
 From curiosities, interest.
 

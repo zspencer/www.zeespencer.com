@@ -1,7 +1,7 @@
 ---
 title: Build a Command Line Remote Pairing Setup
 layout: article
-tags: [pairing, software-as-craft, devenvironment]
+tags: [programming]
 ---
 
 Over the past couple years I've done a bit of remote pairing. When I need a GUI
@@ -9,6 +9,8 @@ everything is pretty straightforward: [Join.me](http://join.me) for
 screen/keyboard sharing and iPad with Skype or Google Hangout for video calls.
 This is pretty bandwidth intensive and can be slow, so I'd rather keep as much
 as I can in a terminal.
+
+<!--more-->
 
 There's a few obstacles to that though:
 

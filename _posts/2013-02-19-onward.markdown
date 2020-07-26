@@ -1,7 +1,7 @@
 ---
 title: Onward
 layout: article
-tags: [community,mastery]
+tags: [career,business,programming]
 ---
 
 Last year was fantastic. I started my own business, helped three startups get
@@ -15,6 +15,8 @@ programming journey! Talk about fun!
 While I was initially leary of boot-camp style developer training DevBootCamp
 won me over. Not only do they teach practical programming skills they also
 teach:
+
+<!--more-->
 
 1. How to continue learning
 2. How to solve problems

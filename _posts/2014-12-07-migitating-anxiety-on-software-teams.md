@@ -1,13 +1,6 @@
 ---
 layout: article
-tags: [software, leadership, culture]
-ctas:
-  - location: bottom
-    selector: '#send-email'
-    color: Red
-    CTA: Email me
-    category: Contact
-    pageSubject: "Mitigating anxiety on software teams"
+tags: [business, facilitation, programming]
 ---
 Software development is a creative pursuit. It takes intense focus as well as
 time away from a problem to for subconscious work. Both of these cognitive modes
@@ -15,6 +8,8 @@ are debilitated by stress and anxiety.
 
 A major source of anxiety is uncertainty. Uncertainty is almost always deeply
 personal, and may be about many things:
+
+<!--more-->
 
 * Are we earning enough to live comfortably?
 * Are we compensated fairly for our time, effort and skills?

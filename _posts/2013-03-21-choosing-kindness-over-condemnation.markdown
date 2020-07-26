@@ -1,14 +1,12 @@
 ---
 layout: article
 title: Choosing Kindness over Condemnation
-tags: [love, poetry]
+tags: [business, poetry]
 ---
 
-It's easy when hurt to lash out.<br />
-To crush those who caused me pain.
+It's easy when hurt to lash out.<br /> To crush those who caused me pain.
 
-It's hard when hurt to reach out.<br />
-To comfort those who caused me pain.
+It's hard when hurt to reach out.<br /> To comfort those who caused me pain.
 
 When I choose to be kind, I am forgotten.
 
@@ -18,7 +16,9 @@ I broker my humanity for a moment of hate.
 
 I trade my dignity for a flash of pride.
 
-_This is written in the wake of death threats being made to a woman who stood
-up for herself. It's written in the wake of a man losing his job for an off
-color joke. It's written in the wake of the million ways I sell my goodness
-to my ego._
+<!--more-->
+
+_This is written in the wake of death threats being made to a woman who stood up
+for herself. It's written in the wake of a man losing his job for an off color
+joke. It's written in the wake of the million ways I sell my goodness to my
+ego._

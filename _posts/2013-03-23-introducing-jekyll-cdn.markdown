@@ -1,6 +1,6 @@
 ---
 title: Introducing jekyll-cdn
-tags: [ops, jekyll]
+tags: [programming]
 layout: article
 ---
 

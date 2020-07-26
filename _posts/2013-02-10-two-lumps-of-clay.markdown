@@ -1,12 +1,14 @@
 ---
 title: Two Lumps of Clay
 layout: article
-tags: [parables, empathy]
+tags: [parables, career]
 ---
 Two lumps of clay were bought by a potter and set on her windowsill to
 soften in the sun. The first was terrified of being prodded, poked, and shaped.
 "I don't want any part of this!" He said, "I'm a good piece of clay! I don't
 want to be a pot!" and he hardened himself in the noon day sun.
+
+<!--more-->
 
 His sister, however, was ecstatic. "I've always dreamed of being covered in
 patterns and holding flowers! This is the opportunity I was born for!" And as

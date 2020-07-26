@@ -1,7 +1,7 @@
 ---
 title: Gertrude the Giraffe
 layout: article
-tags: [makermenagerie]
+tags: [parables, programming, career]
 ---
 I have a small menagerie I take wherever I go. One who has accompanied me since
 I was a child is Gertrude. Gertrude is a giraffe with a long, beautiful neck
@@ -10,6 +10,8 @@ with spots which spell four words: _Guess, Google, Grab, Go_.
 When I get stuck Gertrude reaches up with her long neck and plucks a leaf out of
 a Guessandtrythis tree. She drops it in front of me and prods me until I pick it
 up. With each guess I gather information to help us make another, better guess.
+
+<!--more-->
 
 Gertrude is nobodies fool. If guessing isn't getting us anywhere, she nudges the
 big red _Google It!_ button. The Great Google opens up and we glean information

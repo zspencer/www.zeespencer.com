@@ -1,6 +1,6 @@
 ---
 layout: article
-tags: [software, career]
+tags: [programming, career]
 title: Back to Codin'
 ---
 
@@ -12,6 +12,8 @@ basics of development and help launch their career in a field I love.
 
 This has consumed every ounce of my energy, so I'm looking forward to taking
 time to recharge, relax, and **build some software**.
+
+<!--more-->
 
 #### I can provide:
 

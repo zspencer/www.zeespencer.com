@@ -1,30 +1,21 @@
 ---
 layout: article
-tags: [career, mastery, culture]
-ctas:
-  - location: bottom
-    selector: '.feedback-email'
-    color: Red
-    CTA: Email me
-    category: Contact
-  - location: bottom
-    selector: '.lead-email'
-    color: Red
-    CTA: Email me
-    category: Contact
+tags: [career, business]
 ---
 
 About a year ago I got back into freelancing and started building a small,
 distributed development studio. While I enjoyed the freedom and the people; I
 couldn't sustain the constant sales cycle and discovered management and
 operations is a recipe for burnout for me. My constant anxiety over payroll,
-bookkeeping and cash flow was/is debilitating.
+bookkeeping and cash flow was debilitating.
 
 I could write in depth about what I've learned about myself and running a
 business over the past year; or describe the agony of laying off good people who
 may struggle to find new work due to systemic bias; or tipping into depression
 due to a combination of burnout and the erosion of my self-confidence. But
 instead I'd like to look forward. It's less painful.
+
+<!--more-->
 
 It is time to shut down the consultancy side of Zinc. Zinc will remain focused
 on [The Apprenticeship Community](https://apprenticeship.community) and [Just

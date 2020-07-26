@@ -1,7 +1,7 @@
 ---
 title: Agency, Society, and Invention
 layout: article
-tags: [agency, empathy]
+tags: [business, personal]
 ---
 
 I've become convinced a life well lived requires a high level of personal
@@ -10,6 +10,8 @@ agency.
 I believe this not from rational introspection or a position of moral
 highground; but from noticing the things which make me happy or sad, bring me
 joy or rage, or drive me to engage or withdraw.
+
+<!--more-->
 
 Before we can continue, I'd like to explore the definition of agency.
 

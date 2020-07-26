@@ -1,20 +1,10 @@
 ---
 title: "Branding Inception: $2,000 - CLOSED"
 layout: article
-tags:
-  - remote
-  - design
-  - short-term
-  - part-time
-ctas:
-  - location: footer
-    selector: '.job-application-email'
-    color: Red
-    CTA: Apply to Job
-    category: Contact
+tags: [jobs, business]
 ---
 
-ZincMade is a recently incorporated business focused on technical team training,
+Zinc is a recently incorporated business focused on technical team training,
 end-to-end product development, and technical management consulting. We are
 investing in a solid foundation for our branding. To do so, we are looking for a
 designer to provide logo design, typography choices, and color selection
@@ -26,6 +16,8 @@ The resulting brand will reflect the following values:
 * High-quality
 * Thoughtfulness
 * Feedback-driven
+
+<!--more-->
 
 ### Is This Gig For You?
 

@@ -1,7 +1,7 @@
 ---
 title: The Learn Startup
 layout: article
-tags: [lean, parables]
+tags: [parables, business, programming, career]
 ---
 A long time ago, in an industry far far away, there were two competing
 production models: the assembly line and the master craftsmen.
@@ -9,6 +9,8 @@ production models: the assembly line and the master craftsmen.
 The master craftsmen hand built each and every machine. Painstakingly ensuring
 it was beautiful and functional. Each machine was resplendent and tuned to
 perfection, but it took days to build one.
+
+<!--more-->
 
 The assembly line churned hundreds of machines for each one the craftsmen
 produced. The machines worked and were not too shabby. Sure they were less

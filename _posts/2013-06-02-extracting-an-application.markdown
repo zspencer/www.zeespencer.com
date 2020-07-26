@@ -1,7 +1,7 @@
 ---
 title: Splitting codebases
 layout: article
-tags: [software, design]
+tags: [programming]
 ---
 
 As programmers, we split our code along what job those bits of code do for us.
@@ -14,6 +14,8 @@ little effort.
 
 I am curious: how does slicing code along the job code does for users impact how
 we build software?
+
+<!--more-->
 
 Consider the following:
 

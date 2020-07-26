@@ -1,7 +1,7 @@
 ---
 title: Begin Again
 layout: article
-tags: [mastery, poetry]
+tags: [career, poetry]
 ---
 
 Professions are complex. From outside it looks solid.
@@ -15,6 +15,8 @@ We discover, explore, and absorb skills and ideas one after another.
 
 The parts coalesce. Patterns direct our actions. We recompose our thoughts and
 behaviors.
+
+<!--more-->
 
 This is a dangerous moment.
 

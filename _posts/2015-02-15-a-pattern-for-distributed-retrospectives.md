@@ -1,17 +1,7 @@
 ---
 layout: article
-tags: [leadership, mastery, business]
-ctas:
-  - location: bottom
-    selector: '.feedback-email'
-    color: Red
-    CTA: Email me
-    category: Contact
-  - location: bottom
-    selector: '.lead-email'
-    color: Red
-    CTA: Email me
-    category: Contact
+tags: [business, facilitation]
+
 ---
 Well-facilitated, compassionate
 [retrospectives](http://www.amazon.com/Agile-Retrospectives-Making-Teams-Great/dp/0977616649)
@@ -19,16 +9,12 @@ Well-facilitated, compassionate
 team) are, in my experience, the core differentiator between a gelling,
 high-performing team and a team that struggles to get things done.
 
-<p class="note">
-Retrospectives, while powerful, may not be the ideal format for working out
-interpersonal conflict, as they require a high degree of trust to be effective.
-</p>
-
-
 Now that I work primarily on distributed teams, I've found that retrospectives
 are a touch harder. They lack the high-bandwidth feedback of body language that
 can tell you early on when someone is getting upset or has something to say but
 isn't quite ready to say it.
+
+<!--more-->
 
 A pattern that seems to work is to do distributed retrospectives in near
 silence.

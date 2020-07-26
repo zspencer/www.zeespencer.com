@@ -1,7 +1,7 @@
 ---
 title: Building Communities of Empowerment
 layout: article
-tags: [empathy, community]
+tags: [business]
 ---
 
 Recently I sat in on a conversation between two people I respect. One declared
@@ -10,7 +10,9 @@ we can choose to remove ourselves from unacceptable situations.
 
 The other stated empowerment requires us to have support from our community. It
 needs structures in place so that negative situations are reduced and positive
-situations are increased
+situations are increased.
+
+<!--more-->
 
 Both of them are right.
 

@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Now I Know That Love Is Blind
-tags: [poetry, love]
+tags: [poetry]
 ---
 Now I know that love is blind<br />
 In the dark your smile shines.<br />

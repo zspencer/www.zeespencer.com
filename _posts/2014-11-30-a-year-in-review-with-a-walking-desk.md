@@ -1,10 +1,7 @@
 ---
 layout: article
-tags: [devenvironment]
-title: Walking Desks - A Year in Review
-excerpt: For the past year, I've been doing most of my computing at a walking
-         desk. Learn how to assemble your own walking office, as well as what 
-         habits to build and which tendencies to avoid.
+tags: [personal,health]
+
 ---
 For the past year or so, I've been doing most of my computing at a walking
 desk. When I tell people this, they immediately ask "But how?!" or confidently
@@ -15,6 +12,8 @@ into my work habits. I start the day with a mile or so walk, followed by
 sitting and/or standing until lunch. After lunch I sit for a while, then switch
 to walking. On a good day, I walk about eight miles. On average, I tend to walk
 two to four miles a day.
+
+<!--more-->
 
 ### How Fast Do You Walk?
 
@@ -61,7 +60,7 @@ The Leap is, quite frankly, an amazing chair. I was walking *far more* when
 I had to choose between walking and a shitty chair. Now that I have the Leap I
 sit way too often. Ah well. Lesson learned! Don't buy a nice chair if you want to walk more!
 
-The TR1200 is a reasonable treadmill. While not noisy enough to bother me while listening to music, 
+The TR1200 is a reasonable treadmill. While not noisy enough to bother me while listening to music,
 I tend to use [Shush](http://mizage.com/shush/) to enable push to
 talk when on calls. My MacBook Air's microphone seems to pick up a gentle
 "whoosh whoosh" of the belt and the "slap slap" of my feet.

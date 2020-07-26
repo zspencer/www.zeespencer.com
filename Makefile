@@ -2,8 +2,8 @@ setup: setup-bundle-install
 
 build: build-sass build-site
 
-run:
-	bin/foreman start
+serve:
+	npx http-server _site
 
 release: build-production push-production
 

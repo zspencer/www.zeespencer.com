@@ -1,7 +1,7 @@
 ---
 title: The Chef's Tale
 layout: article
-tags: [parables, mastery]
+tags: [parables, career]
 ---
 
 Once upon a time there was a Chef. This Chef was sought by all of the rulers in
@@ -16,6 +16,8 @@ well, and I learn when things do.
 "But surely," one child contended, "surely your renowned and creative dishes
 must have a secret ingredient! Perhaps dust of a unicorn horn? Dragons blood?
 Fairy hair?"
+
+<!--more-->
 
 "I do not! When I explore a dish, I make it many different ways. Sometimes I
 make it week upon week. I modify the ingredients. I alter timing. I change

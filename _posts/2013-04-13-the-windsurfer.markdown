@@ -1,7 +1,7 @@
 ---
 title: The Windsurfer
 layout: article
-tags: [poetry, parables, opportunity]
+tags: [poetry, parables, career]
 ---
 
 She chrouches, alert and ready.<br />
@@ -12,6 +12,8 @@ Winds roar with fury<br />
 Waves whip to foam<br />
 All other beach-goers<br />
 Turn their faces home.<br />
+
+<!--more-->
 
 Not the lone windsurfer.<br />
 Cold and wind combine<br />

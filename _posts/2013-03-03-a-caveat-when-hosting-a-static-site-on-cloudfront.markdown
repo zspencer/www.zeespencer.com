@@ -1,6 +1,6 @@
 ---
 title: A Caveat When Hosting a Static Site on CloudFront
-tags: [ops, jekyll]
+tags: [programming]
 layout: article
 ---
 

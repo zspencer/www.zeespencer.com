@@ -1,24 +1,7 @@
 ---
 layout: article
-tags: [software-as-craft, testing, mastery, business]
-excerpt: <p>Tests are use cases. They illustrate how to use the code, how the code behaves, how it
-         works in a given context, highlight pain, and expose complexity.</p>
+tags: [programming, business]
 
-         <p>When they notify us the code does not behave as specified? That's a
-         bonus. Not the goal.</p>
-
-         <p>When we don't write tests, we miss out on design feedback.</p>
-ctas:
-  - location: bottom
-    selector: '.feedback-email'
-    color: Red
-    CTA: Email me
-    category: Contact
-  - location: bottom
-    selector: '.lead-email'
-    color: Red
-    CTA: Email me
-    category: Contact
 ---
 Tests are use cases.
 
@@ -26,16 +9,18 @@ They illustrate **how to use** the code they're testing.
 
 They provide **examples** of how the code works in a given context.
 
-They are a **describe in detail** the code's behavior.
+They **describe** the code's behavior.
 
 They **highlight pain** in how to use the code.
 
-They **expose complexity** in our model of the business domain.
+They **expose complexity** in our code and the business domain.
 
 When they **notify us** the code no longer behaves as specified? That's a bonus.
 Not the goal.
 
 When we test, we get **critical design feedback**.
+
+<!--more-->
 
 When we use tests to explore and refine our code's design, we **create nuanced,
 educational conversations**.

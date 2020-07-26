@@ -1,13 +1,16 @@
 ---
 title: Choosing Between Web UI Tooling and Libraries
 layout: article
-tags: [programming, architecture]
+tags: [programming]
 excerpt:
-  <p>Building high quality software as a small team requires thoughtful focus.
-  As primarily a back end or systems engineer, I rely heavily on well-designed
-  UI tooling to offload cognitive overhead and stafy focused.</p> <p> Here's how
-  I evaluate UI tooling and libraries for quality.</p>
 ---
+
+Building high quality software in a small team requires thoughtful application
+of both soft _and_ sharp focus. As primarily a back end or systems engineer, I
+rely heavily on UI tooling to offload cognitive overhead without sacrificing
+design quality.
+
+<!--more-->
 
 [Zinc](https://zinc.coop) has been gently exploring HTML and CSS tooling for UI
 prototyping. I tend to approach tooling and library selection from a
@@ -107,8 +110,8 @@ I, personally, do not believe the _result_ of a decision is terribly important
 so long as the _methodology_ for reaching a decision centers the group that will
 live with the decision.
 
-Personally, I prefer libraries like [TailwindUI] over libraries like [Bootstrap] due
-to the level of thoughtfulness placed into their documentation, community and
-implementation; and the reasonably clear boundaries that allow me to extend or
-adjust components without needing to understand source code that lives outside a
-particular project.
+Personally, I prefer libraries like [TailwindUI] over libraries like [Bootstrap]
+due to the level of thoughtfulness placed into their documentation, community
+and implementation; and the reasonably clear boundaries that allow me to extend
+or adjust components without needing to understand source code that lives
+outside a particular project.

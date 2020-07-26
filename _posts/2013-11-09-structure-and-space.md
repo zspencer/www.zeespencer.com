@@ -1,13 +1,15 @@
 ---
 layout: article
 title: Structure and Space
-tags: [agency, society, design]
+tags: [business, facilitation]
 ---
 > First we shape our buildings, thereafter they shape us.
 
 I first heard this phrase from my friend and colleague [Davin
 Granroth](http://blog.davingranroth.com/). While the phrase may originally have
 been meant literally; I prefer a more allegorical interpretation.
+
+<!--more-->
 
 > First we shape our society, thereafter it shapes us.
 

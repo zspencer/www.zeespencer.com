@@ -1,7 +1,7 @@
 ---
 layout: article
 title: The Ruby & Symbol
-tags: [software, ruby, tapas]
+tags: [programming]
 redirects:
   - /musings/the-ruby-&-symbol/
 ---
@@ -24,6 +24,8 @@ like this:
 [1,2,nil,3].reject(&proc)
 [1,2,nil,3].reject { |e| e.nil? }
 {% endhighlight %}
+
+<!--more-->
 
 The second is explicitly declaring a block by using the `&` in a method
 definition:

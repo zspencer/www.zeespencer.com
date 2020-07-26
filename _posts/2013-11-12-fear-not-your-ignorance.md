@@ -1,6 +1,6 @@
 ---
 title: Fear Not Your Ignorance
-tags: [mastery]
+tags: [career]
 layout: article
 ---
 

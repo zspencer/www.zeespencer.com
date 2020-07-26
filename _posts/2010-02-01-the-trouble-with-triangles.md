@@ -1,6 +1,6 @@
 ---
 layout: article
-tags: [project-management, business, leadership]
+tags: [business]
 ---
 
 The iron triangle has been redefined several times in the past few years.
@@ -12,6 +12,8 @@ Triangle](http://jimhighsmith.com/beyond-scope-schedule-and-cost-the-agile-trian
 Line](http://codesqueeze.com/the-broken-iron-triangle-is-broken/), and any
 number of other variations. At first glance, these seem like good models which
 allow us to balance needs.
+
+<!--more-->
 
 
 ### But There Is a Flaw.

@@ -1,9 +1,11 @@
 ---
 title: How Kiera and I Merged (some of) our Finances
 layout: article
-tags: [finance, personal, family]
+tags: [finance, personal]
 ---
 Having been with [Kiera](https://twitter.com/kmanion) for going on 4 years now; and having lived together for 3 of those years; It seemed a bit unnecessary that we maintain separate budgets for shared resources like groceries, rent, utilities, streaming media accounts, etc. We&rsquo;d cobbled together a &ldquo;I&lsquo;ll pay for Blue Apron if you pay for the CSA&rdquo; form of spreading of fiscal responsibilities, but that was getting more and more complicated and difficult to balance to ensure an equitable split based upon our respective incomes.
+
+<!--more-->
 
 I strongly value my independence and have a bit of anxiety around financial entanglements. We both strongly prefer a structured, equitable approach that allows the two of us to afford our shared expenses and make progress on shared goals while keeping our personal expenses and goals independent.
 

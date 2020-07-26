@@ -1,30 +1,21 @@
 ---
 layout: article
-tags: [software-as-craft, mastery, culture]
-ctas:
-  - location: bottom
-    selector: '.feedback-email'
-    color: Red
-    CTA: Email me
-    category: Contact
-  - location: bottom
-    selector: '.lead-email'
-    color: Red
-    CTA: Email me
-    category: Contact
+tags: [business, programming]
 ---
 
 Code review gets a bad rap. People worry that code reviews slow teams down,
 create conflict between team members, or disempower team members by taking away
 decision making authority.
 
-I believe these concers are anti-patterns that indicate a team is using code
+I believe these concerns are anti-patterns that indicate a team is using code
 review for _criticism_ as opposed to _critique_. What's the difference?
-*Critique is focused on  specific parameters, where criticism is unbound.*
+*Critique is focused on specific parameters, where criticism is unbound.*
 
 That said, many programmers are unclear how to perform judgement free code
 reviews. The following are a series of suggestions which may help move code
 reviews from criticism to critique:
+
+<!--more-->
 
 * [Start with compassion](#start-with-compassion)
 * [Working code wins](#working-code-wins)

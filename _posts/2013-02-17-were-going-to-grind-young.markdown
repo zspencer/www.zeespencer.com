@@ -14,6 +14,7 @@ We're gonna grind young<br />
 
 Let's make the most of the beans like we're gonna grind young<br />
 Let's make the most of the beans like we're gonna grind young<br />
+<!--more-->
 
 Young beans, fresh from the trees<br />
 As they roast the aroma frees<br />

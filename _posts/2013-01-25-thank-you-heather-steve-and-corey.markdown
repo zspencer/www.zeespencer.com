@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Thank You Heather, Steve, and Corey
-tags: [empathy, community]
+tags: [career,programming]
 ---
 Recently I saw a few highly critical tweets go by my stream about a package
 written by Heather Arthur. They were by Corey Haines and Steve Klabnik, a couple
@@ -13,6 +13,8 @@ them](http://harthur.wordpress.com/2013/01/24/771/). Both
 [Steve](http://blog.steveklabnik.com/posts/2013-01-23-node) posted apologies;
 which Heather
 [accepted](https://twitter.com/harthvader/status/294609044323328000).
+
+<!--more-->
 
 Everyone handled this better than I could. Heather called out behavior that
 caused her pain. Steve and Corey acknowledged their hurtful behavior. Everyone
