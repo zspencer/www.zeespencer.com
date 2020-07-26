@@ -4,7 +4,7 @@
   <title>Musings and Mutterings of Zee Spencer</title>
   <link rel="self" type="application/atom+xml" href="http://zeespencer.com/index.xml" />
   <link href="http://zeespencer.com/" />
-  <updated>2020-07-25T18:32:50-07:00</updated>
+  <updated>2020-07-25T18:42:13-07:00</updated>
   <id>http://zeespencer.com/</id>
   <author>
     <name>Zee</name>
@@ -3451,14 +3451,18 @@ practice it?&lt;/p&gt;
 &lt;li&gt;It&amp;#39;s about knowing yourself&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Excellence takes commitment. I have to work to remember:&lt;/p&gt;
+&lt;p&gt;Excellence takes commitment.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;I have to work to remember:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;To trust first, question later&lt;/li&gt;
 &lt;li&gt;To listen with my heart as well as my ears&lt;/li&gt;
 &lt;li&gt;To appreciate and explore the subtle complexities of others views&lt;/li&gt;
 &lt;li&gt;To give my attention firmly to those who ask of it&lt;/li&gt;
-&lt;li&gt;To respond respectully, honestly, and directly&lt;/li&gt;
+&lt;li&gt;To respond respectfully, honestly, and directly&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;What values and principles guide your search for excellence?&lt;/p&gt;
@@ -3505,6 +3509,8 @@ test, &lt;a href=&quot;https://gist.github.com/4141476#file_let_spec.rb&quot;&gt
 lets&lt;/a&gt;, and using a &lt;a href=&quot;https://gist.github.com/4141476#file_custom_assertion_spec.rb&quot;&gt;custom
 assertion&lt;/a&gt;.&lt;/p&gt;
 
+&lt;!--more--&gt;
+
 &lt;p&gt;I was pointing out how moving the method call out to a custom assert hid a
 breadcrumb developers would use when understanding the system under test, while
 leaving it in a let would at least keep it in the same test file. Enrique
@@ -3548,6 +3554,8 @@ better organized test suites in the future.&lt;/p&gt;
 had the best hunters, builders, and nurses for miles around. For many seasons,
 the colony prospered.&lt;/p&gt;
 
+&lt;!--more--&gt;
+
 &lt;p&gt;The builders dug out barracks for the hunters, nurseries for the nurses, and
 dormitories for themselves. They dug stores for the food, which were soon
 overflowing with the hunters spoils. The nurses raised strong children who
@@ -3555,7 +3563,7 @@ swelled the ranks of the colony, making it stronger than ever.&lt;/p&gt;
 
 &lt;p&gt;One day, the weather turned cooler. The hunters couldn&amp;#39;t find as much food as
 before. Soon the food they brought back was not enough to feed the colony, so
-the Queen opened up the food reserves. &lt;/p&gt;
+the Queen opened up the food reserves.&lt;/p&gt;
 
 &lt;p&gt;As winter grew longer the ants became afraid they would run out of food before
 spring. The leaders of the castes, believing their own caste to be most
@@ -3566,8 +3574,8 @@ food or we will all starve, and then who will prevent the tunnels from
 collapsing upon us and killing us all?&amp;quot;&lt;/p&gt;
 
 &lt;p&gt;&amp;quot;Don&amp;#39;t listen to them!&amp;quot; snapped the leader of the hunters. &amp;quot;We are the ones who
-found and brought the food! We deserve more food, or who will find food
-when spring comes?&amp;quot;&lt;/p&gt;
+found and brought the food! We deserve more food, or who will find food when
+spring comes?&amp;quot;&lt;/p&gt;
 
 &lt;p&gt;&amp;quot;Oh dear!&amp;quot; moaned the leader of the nurses. &amp;quot;Our poor children! How will we
 protect them and teach them to be strong? Our entire colony will die out if we
@@ -3583,7 +3591,8 @@ to you, the caste leaders, to choose who to feed to make it through the winter.&
 &lt;p&gt;The leaders were angry. &amp;quot;You are weak!&amp;quot; declared the hunter. &amp;quot;You are not strong
 enough to lead us!&amp;quot;&lt;/p&gt;
 
-&lt;p&gt;&amp;quot;You are unstable!&amp;quot; gasped the builder, &amp;quot;You lack the foundations to support us!&amp;quot;&lt;/p&gt;
+&lt;p&gt;&amp;quot;You are unstable!&amp;quot; gasped the builder, &amp;quot;You lack the foundations to support
+us!&amp;quot;&lt;/p&gt;
 
 &lt;p&gt;&amp;quot;You are foolish!&amp;quot; said the nurse, &amp;quot;You are not wise enough to rule us!&amp;quot;&lt;/p&gt;
 
@@ -3622,8 +3631,8 @@ wisdom of the experts had been lost, they were able to collect food, keep their
 tunnels from collapsing, and rear their young. Slowly, the different castes grew
 to respect each other, and enjoy living with one another.&lt;/p&gt;
 
-&lt;p&gt;As the summer slowly changed to fall three weak, strange ants came to the
-colony to beg audience with the Queen.&lt;/p&gt;
+&lt;p&gt;As the summer slowly changed to fall three weak, strange ants came to the colony
+to beg audience with the Queen.&lt;/p&gt;
 
 &lt;p&gt;&amp;quot;Please,&amp;quot; the first begged, &amp;quot;I come from the colony of builders. We are in need
 of aid. We built the most beautiful colony, with deep and strong tunnels, but we
@@ -3650,11 +3659,12 @@ Hunters, give part of your food to the nurses for digging your tunnels and part
 to the builders for their help in reinforcing them.&amp;quot;&lt;/p&gt;
 
 &lt;p&gt;The three ants were shocked by this suggestion. &amp;quot;Give up our food?!&amp;quot; the hunter
-replied. &amp;quot;Never!&amp;quot; &lt;/p&gt;
+replied. &amp;quot;Never!&amp;quot;&lt;/p&gt;
 
 &lt;p&gt;&amp;quot;Help those selfish hunters?&amp;quot; shouted the builder. &amp;quot;I&amp;#39;d rather die!&amp;quot;&lt;/p&gt;
 
-&lt;p&gt;&amp;quot;Our children are strong,&amp;quot; declared the nurse. &amp;quot;We will make do without their help.&amp;quot;&lt;/p&gt;
+&lt;p&gt;&amp;quot;Our children are strong,&amp;quot; declared the nurse. &amp;quot;We will make do without their
+help.&amp;quot;&lt;/p&gt;
 
 &lt;p&gt;And so they left. After another harsh winter, the queen sent scouts to find the
 colonies of her former friends. At the hunters colony, all was in ruins;
@@ -3704,6 +3714,8 @@ execute consistently in a variety of situations.&lt;/p&gt;
 impact society. While it&amp;#39;s content is exceptional, It has stylistic issues that
 sometimes detract.&lt;/p&gt;
 
+&lt;!--more--&gt;
+
 &lt;p&gt;I met Saul late last year at BIF and I consider him a friend. As a friend, I
 tend to hold him to an absurdly high standard. The book is good. I&amp;#39;m just an
 asshole.&lt;/p&gt;
@@ -3751,18 +3763,26 @@ hardcover before investing in a physical copy.&lt;/p&gt;
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
     </author>
-    <content type="html">&lt;p&gt;No matter how well you define what should be done you will always wind
-up with work that isn&amp;#39;t quite right. In these situations you have three
-courses of action:
-1. Reject the work and provide feedback.
-2. Accept the work and add new work items.
-3. Accept the work and ignore its imperfections.&lt;/p&gt;
+    <content type="html">&lt;p&gt;No matter how well you define what should be done you will always wind up with
+work that isn&amp;#39;t quite right. In these situations you have three courses of
+action:&lt;/p&gt;
 
-&lt;p&gt;Choosing which course to take is dependent on a few concerns:
-1. Timing
-2. Solution/Problem Fit
-3. Cost
-4. Team Impact&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Reject the work and provide feedback.&lt;/li&gt;
+&lt;li&gt;Accept the work and add new work items.&lt;/li&gt;
+&lt;li&gt;Accept the work and ignore its imperfections.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Choosing which course to take is dependent on a few concerns:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Timing&lt;/li&gt;
+&lt;li&gt;Solution/Problem Fit&lt;/li&gt;
+&lt;li&gt;Cost&lt;/li&gt;
+&lt;li&gt;Team Impact&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;p&gt;Accepting the work despite imperfections is prudent when time is of the essence.
 Blocking forward progress may be the best option if what was done is
@@ -3775,8 +3795,8 @@ communicate that you share their goal to create something impressive, even if it
 takes longer.&lt;/p&gt;
 
 &lt;p&gt;Next time you&amp;#39;re in a position to accept work think about these concerns.
-Communicate why you have chosen to accept or reject the work. Hopefully
-you&amp;#39;ll wind up with smoother projects because of it.&lt;/p&gt;
+Communicate why you have chosen to accept or reject the work. Hopefully you&amp;#39;ll
+wind up with smoother projects because of it.&lt;/p&gt;
 </content>
   </entry>
   
@@ -3793,12 +3813,12 @@ you&amp;#39;ll wind up with smoother projects because of it.&lt;/p&gt;
     </author>
     <content type="html">&lt;p&gt;Reluctantly crouched at the command line&lt;br /&gt;
 Keyboards clicking and clacking in time&lt;br /&gt;
-&amp;lt;!--more--&amp;gt;
 The green bar flashes, the vim pops up&lt;br /&gt;
 Churning, and burning, they push changes up&lt;br /&gt;
 They deftly maneuver and regex to rename&lt;br /&gt;
 Fingers flying fast keyboards in flame&lt;br /&gt;
 Reckless and wild, they commit and they push&lt;br /&gt;
+&amp;lt;!--more--&amp;gt;
 Their prowess is potent though they sit on their tush.&lt;br /&gt;
 As they speed through the release, the deploy goes out&lt;br /&gt;
 They all get up and pour themselves stout&lt;br /&gt;
@@ -3867,6 +3887,8 @@ don&amp;#39;t see us working out.&lt;/p&gt;
 &lt;p&gt;Don&amp;#39;t get me wrong, you have some nice features, your code base is relatively
 clean, you have good test coverage, and features don&amp;#39;t change drastically
 between releases.&lt;/p&gt;
+
+&lt;!--more--&gt;
 
 &lt;p&gt;But you don&amp;#39;t seem to understand what I want. I mean, yea, I &lt;em&gt;crave&lt;/em&gt; a clear
 separation of concerns between domain, persistance, and presentation layers. I
@@ -4005,6 +4027,8 @@ testers to learn to write
 code&lt;/a&gt;.
 Here&amp;#39;s three reasons why a tester &lt;em&gt;shouldn&amp;#39;t&lt;/em&gt; learn to code.&lt;/p&gt;
 
+&lt;!--more--&gt;
+
 &lt;p&gt;On one hand, this is incredibly important. After all, learning as much as we can
 about as many things as we can is a powerful career move.&lt;/p&gt;
 
@@ -4081,9 +4105,11 @@ code they understand and read easily. Others believe simple code follows the
 coolest, most appropriate design pattern. Some say simple code has the fewest
 characters.&lt;/p&gt;
 
-&lt;p&gt;Extreme Programming tries to setttle that debate by offering &lt;a href=&quot;http://www.extremeprogramming.org/rules/simple.html&quot;&gt;four qualities of
-simple code&lt;/a&gt;: testability,
-browsability, understandability, and explainabilty.&lt;/p&gt;
+&lt;p&gt;Extreme Programming tries to settle that debate by offering
+&lt;a href=&quot;http://www.extremeprogramming.org/rules/simple.html&quot;&gt;four qualities of simple code&lt;/a&gt;:
+testability, browsability, understandability, and explainability.&lt;/p&gt;
+
+&lt;!--more--&gt;
 
 &lt;p&gt;To make these qualities easier to remember I coin the mnemonic TUBE.&lt;/p&gt;
 
