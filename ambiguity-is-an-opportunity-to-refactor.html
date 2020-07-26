@@ -33,32 +33,35 @@
 <p>There&#39;s a common design principle that states &quot;Design the system to prevent
 errors from occuring.&quot; Lean manufacturing calls this
 <em><a href="http://en.wikipedia.org/wiki/Poka-yoke">Poka-yoke</a></em>. Interaction design calls
-these <em><a href="http://www.interaction-design.org/encyclopedia/forcing_functions.html">forcing
-functions</a></em>.</p>
+these
+<em>[forcing functions](http://www.interaction-design.org/encyclopedia/forcing</em>functions.html)_.</p>
 
-<p>Since a much of the time building software is spent reading code, it&#39;s
-important to decrease the amount of errors in understanding while we read.</p>
+<p>Since a much of the time building software is spent reading code, it&#39;s important
+to decrease the amount of errors in understanding while we read.</p>
+
+<!--more-->
 
 <p>One way to do this is to decrease ambiguity. Consider the <code>&amp;</code> symbol in Ruby.
-It&#39;s a method call on some ruby classes, <a href="/musings/the-ruby-&-symbol/">a unary
-operator</a> for converting objects to blocks, and a
-binary operator for calling the <code>&amp;</code> method without using a <code>.</code>.</p>
+It&#39;s a method call on some ruby classes,
+<a href="/musings/the-ruby-&-symbol/">a unary operator</a> for converting objects to
+blocks, and a binary operator for calling the <code>&amp;</code> method without using a <code>.</code>.</p>
 
 <p>In order to properly understand what the <code>&amp;</code> is doing you have to figure out
 which of it&#39;s three roles it&#39;s fulfilling. If it&#39;s a binary operator or a method
 call you also must understand what that method is in the context of which object
 it&#39;s using.</p>
 
-<p>For example, <code>1 | 5</code> is a <a href="http://en.wikipedia.org/wiki/Bitwise_operation#OR">bitwise
-or</a> operation, while <code>[1,3,5]
-| [3,5,7]</code> is a [set union](http://en.wikipedia.org/wiki/Union<em>(set</em>theory).</p>
+<p>For example, <code>1 | 5</code> is a
+<a href="http://en.wikipedia.org/wiki/Bitwise_operation#OR">bitwise or</a> operation, while
+<code>[1,3,5] | [3,5,7]</code> is a [set
+union](http://en.wikipedia.org/wiki/Union<em>(set</em>theory).</p>
 
 <p>While we learn to infer this over time there is some cognitive overhead as we
-read. To combat this, I propose we take a cue from the <a href="http://www.python.org/dev/peps/pep-0020/">zen of
-python</a>, which states <em>explicit is
-better than implicit</em>. In that spirit, python provides <a href="http://docs.python.org/2/library/stdtypes.html#set.intersection">two
-ways</a> to do set
-intersections: the <code>&amp;</code> operator, and the <code>intersection</code> function.</p>
+read. To combat this, I propose we take a cue from the
+<a href="http://www.python.org/dev/peps/pep-0020/">zen of python</a>, which states
+<em>explicit is better than implicit</em>. In that spirit, python provides
+<a href="http://docs.python.org/2/library/stdtypes.html#set.intersection">two ways</a> to
+do set intersections: the <code>&amp;</code> operator, and the <code>intersection</code> function.</p>
 
 <p>Since ruby does not always provide named variants for ambiguous symbols this
 provides us with an opportunity to refactor. When we encounter ambiguity, maybe
@@ -72,13 +75,7 @@ it&#39;s time to extract a method to describes the operation more explicitely th
   <p>Browse posts about:
   <ul>
   
-  <li><a href="/tags/software">software</a></li>
-  
-  <li><a href="/tags/ruby">ruby</a></li>
-  
-  <li><a href="/tags/tapas">tapas</a></li>
-  
-  <li><a href="/tags/design">design</a></li>
+  <li><a href="/tags/programming">programming</a></li>
   
   </ul></p>
 </section>

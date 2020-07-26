@@ -4,7 +4,7 @@
   <title>Musings and Mutterings of Zee Spencer</title>
   <link rel="self" type="application/atom+xml" href="http://zeespencer.com/index.xml" />
   <link href="http://zeespencer.com/" />
-  <updated>2020-07-25T17:23:24-07:00</updated>
+  <updated>2020-07-25T18:31:12-07:00</updated>
   <id>http://zeespencer.com/</id>
   <author>
     <name>Zee</name>
@@ -22,7 +22,14 @@
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
     </author>
-    <content type="html">&lt;p&gt;&lt;a href=&quot;https://zinc.coop&quot;&gt;Zinc&lt;/a&gt; has been gently exploring HTML and CSS tooling for UI
+    <content type="html">&lt;p&gt;Building high quality software in a small team requires thoughtful application
+of both soft &lt;em&gt;and&lt;/em&gt; sharp focus. As primarily a back end or systems engineer, I
+rely heavily on UI tooling to offload cognitive overhead without sacrificing
+design quality.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://zinc.coop&quot;&gt;Zinc&lt;/a&gt; has been gently exploring HTML and CSS tooling for UI
 prototyping. I tend to approach tooling and library selection from a
 &lt;a href=&quot;https://www.fastcompany.com/1113892/build-borrow-or-buy&quot;&gt;buy/build/borrow&lt;/a&gt;
 perspective, and personally landed pretty quickly on buying &lt;a href=&quot;https://tailwindui.com/&quot;&gt;TailwindUI&lt;/a&gt; for two
@@ -115,11 +122,11 @@ limited labor force.&lt;/p&gt;
 so long as the &lt;em&gt;methodology&lt;/em&gt; for reaching a decision centers the group that will
 live with the decision.&lt;/p&gt;
 
-&lt;p&gt;Personally, I prefer libraries like &lt;a href=&quot;https://tailwindui.com/&quot;&gt;TailwindUI&lt;/a&gt; over libraries like &lt;a href=&quot;https://getbootstrap.com/&quot;&gt;Bootstrap&lt;/a&gt; due
-to the level of thoughtfulness placed into their documentation, community and
-implementation; and the reasonably clear boundaries that allow me to extend or
-adjust components without needing to understand source code that lives outside a
-particular project.&lt;/p&gt;
+&lt;p&gt;Personally, I prefer libraries like &lt;a href=&quot;https://tailwindui.com/&quot;&gt;TailwindUI&lt;/a&gt; over libraries like &lt;a href=&quot;https://getbootstrap.com/&quot;&gt;Bootstrap&lt;/a&gt;
+due to the level of thoughtfulness placed into their documentation, community
+and implementation; and the reasonably clear boundaries that allow me to extend
+or adjust components without needing to understand source code that lives
+outside a particular project.&lt;/p&gt;
 </content>
   </entry>
   
@@ -134,71 +141,105 @@ particular project.&lt;/p&gt;
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
     </author>
-    <content type="html">&lt;p&gt;Over the years, I&amp;#39;ve heard many ways to frame the tradeoff in work conditions that optimize contributors&amp;#39; work productivity and managers&amp;#39; work productivity.
-The most popular being &amp;quot;Maker schedule, manager schedule.&amp;quot;
-While I agree that some kinds of work are best suited to specific work conditions, I&amp;#39;m unconvinced a manager versus individual contributor framing is helpful when attempting to determine how to structure my workday.
-Why?&lt;/p&gt;
+    <content type="html">&lt;p&gt;Over the years, I&amp;#39;ve heard many ways to frame the tradeoff in work conditions
+that optimize contributors&amp;#39; work productivity and managers&amp;#39; work productivity.
+The most popular being &amp;quot;Maker schedule, manager schedule.&amp;quot; While I agree that
+some kinds of work are best suited to specific work conditions, I&amp;#39;m unconvinced
+a manager versus individual contributor framing is helpful when attempting to
+determine how to structure my workday.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Why?&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;It exacerbates tensions between management practices and software development practices.&lt;/li&gt;
-&lt;li&gt;It &amp;quot;walls off&amp;quot; work tactics or strategies that may be suitable across roles behind role boundaries.&lt;/li&gt;
+&lt;li&gt;It exacerbates tensions between management practices and software development
+practices.&lt;/li&gt;
+&lt;li&gt;It &amp;quot;walls off&amp;quot; work tactics or strategies that may be suitable across roles
+behind role boundaries.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;I suggest an alternative: shift work and drift work.
-Instead of splitting work between a boss/worker hierarchy, we acknowledge that work fits best when and where the time and attention the worker has is well suited to the task at hand.&lt;/p&gt;
+&lt;p&gt;I suggest an alternative: shift work and drift work. Instead of splitting work
+between a boss/worker hierarchy, we acknowledge that work fits best when and
+where the time and attention the worker has is well suited to the task at hand.&lt;/p&gt;
 
-&lt;p&gt;Thinking in terms of shift work and drift work gives us options for mitigating tensions around what work is and is not getting done.
-We can evaluate the work that is missing, determine whether it&amp;#39;s more amenable to shift work or drift work, and adjust our work-schedules as appropriate.&lt;/p&gt;
+&lt;p&gt;Thinking in terms of shift work and drift work gives us options for mitigating
+tensions around what work is and is not getting done. We can evaluate the work
+that is missing, determine whether it&amp;#39;s more amenable to shift work or drift
+work, and adjust our work-schedules as appropriate.&lt;/p&gt;
 
 &lt;h2 id=&quot;shift-work&quot;&gt;Shift Work&lt;/h2&gt;
 
-&lt;p&gt;Shift work is &lt;em&gt;focused.&lt;/em&gt;
-It&amp;#39;s the work where we are at our best in a &lt;a href=&quot;https://en.wikipedia.org/wiki/Flow_(psychology)&quot;&gt;flow state&lt;/a&gt;.
-Our goal is to complete &lt;em&gt;all the things&lt;/em&gt; or perform a particularly time-intensive task to completion.
-Work like debugging, designing test plans,  processing support tickets, shipping a feature, intensively reading a book or following a course, or providing thoughtful critique are some examples of &lt;em&gt;shift work&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Shift work is &lt;em&gt;focused.&lt;/em&gt; It&amp;#39;s the work where we are at our best in a
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Flow_(psychology)&quot;&gt;flow state&lt;/a&gt;. Our goal is to
+complete &lt;em&gt;all the things&lt;/em&gt; or perform a particularly time-intensive task to
+completion. Work like debugging, designing test plans, processing support
+tickets, shipping a feature, intensively reading a book or following a course,
+or providing thoughtful critique are some examples of &lt;em&gt;shift work&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;Shift work responds well to &lt;em&gt;structures that enable a state of flow&lt;/em&gt; while performing that work.
-For some, these structures may be working in a particular place at a specific time.
-For others, they may be having the flexibility to drop deeply into work when inspiration strikes.
-Perhaps someone achieves flow when their workflow bubbles up the next piece of work worth doing.
-Or maybe it&amp;#39;s easier to achieve flow in a distraction-free environment where only the current task matters.&lt;/p&gt;
+&lt;p&gt;Shift work responds well to &lt;em&gt;structures that enable a state of flow&lt;/em&gt; while
+performing that work. For some, these structures may be working in a particular
+place at a specific time. For others, they may be having the flexibility to drop
+deeply into work when inspiration strikes. Perhaps someone achieves flow when
+their workflow bubbles up the next piece of work worth doing. Or maybe it&amp;#39;s
+easier to achieve flow in a distraction-free environment where only the current
+task matters.&lt;/p&gt;
 
-&lt;p&gt;There is no &amp;quot;right&amp;quot; or &amp;quot;wrong&amp;quot; way to perform shift work, and &lt;strong&gt;what works well for me may not work well for you.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;There is no &amp;quot;right&amp;quot; or &amp;quot;wrong&amp;quot; way to perform shift work, and &lt;strong&gt;what works well
+for me may not work well for you.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;drift-work&quot;&gt;Drift Work&lt;/h2&gt;
 
-&lt;p&gt;Conversely, drift work is &lt;em&gt;unfocused.&lt;/em&gt;
-The goal with drift work is not &amp;quot;complete all the things,&amp;quot; but rather &amp;quot;notice what wants doing, and (perhaps!) do it.&amp;quot;
-When doing drift work, we do not try to complete a known set of tasks.
-Instead, we try to take care of the things that may be at risk of falling through the cracks.
-Some examples of drift work are catching up on correspondence, double checking some numbers, jotting out a rough draft, fiddling a bit with a design that isn&amp;#39;t quite baked, skimming a monitoring suite to evaluate system health, or casually reading a book or following a course.&lt;/p&gt;
+&lt;p&gt;Conversely, drift work is &lt;em&gt;unfocused.&lt;/em&gt; The goal with drift work is not &amp;quot;complete
+all the things,&amp;quot; but rather &amp;quot;notice what wants doing, and (perhaps!) do it.&amp;quot;
+When doing drift work, we do not try to complete a known set of tasks. Instead,
+we try to take care of the things that may be at risk of falling through the
+cracks. Some examples of drift work are catching up on correspondence, double
+checking some numbers, jotting out a rough draft, fiddling a bit with a design
+that isn&amp;#39;t quite baked, skimming a monitoring suite to evaluate system health,
+or casually reading a book or following a course.&lt;/p&gt;
 
-&lt;p&gt;Drift work responds well to &lt;em&gt;structures that increase spaciousness&lt;/em&gt; while performing the work.
-For some, having clear time-budgets encourages spaciousness.
-For others, time limits feel constraining and over-bearing.
-Some drift work requires availability to be interrupted.
-Other drift work is done best when you don&amp;#39;t have to worry about other people or pressing tasks wanting your attention.&lt;/p&gt;
+&lt;p&gt;Drift work responds well to &lt;em&gt;structures that increase spaciousness&lt;/em&gt; while
+performing the work. For some, having clear time-budgets encourages
+spaciousness. For others, time limits feel constraining and over-bearing. Some
+drift work requires availability to be interrupted. Other drift work is done
+best when you don&amp;#39;t have to worry about other people or pressing tasks wanting
+your attention.&lt;/p&gt;
 
-&lt;p&gt;Like shift work, there is no right or wrong way to make space and perform drift work.&lt;/p&gt;
+&lt;p&gt;Like shift work, there is no right or wrong way to make space and perform drift
+work.&lt;/p&gt;
 
 &lt;h2 id=&quot;make-time-for-both&quot;&gt;Make Time for Both&lt;/h2&gt;
 
-&lt;p&gt;In systems where people are not doing enough drift work may have stresses and tensions emerge where people feel there &amp;quot;isn&amp;#39;t enough time&amp;quot; to get &amp;quot;all the things done.&amp;quot;
-These tensions emerge not because there is not enough time to get all the things done, but because we are not doing enough drift to evaluate what is genuinely valuable and what appears urgent or critical at first glance.&lt;/p&gt;
+&lt;p&gt;In systems where people are not doing enough drift work may have stresses and
+tensions emerge where people feel there &amp;quot;isn&amp;#39;t enough time&amp;quot; to get &amp;quot;all the
+things done.&amp;quot; These tensions emerge not because there is not enough time to get
+all the things done, but because we are not doing enough drift to evaluate what
+is genuinely valuable and what appears urgent or critical at first glance.&lt;/p&gt;
 
-&lt;p&gt;Conversely, in systems where people are not doing enough shift work struggle to execute on work worth doing.
-People may feel pulled in too many directions, or like there isn&amp;#39;t a &lt;em&gt;point&lt;/em&gt; to the conversations they&amp;#39;re having at work. After all, &lt;em&gt;nothing gets done anyway.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Conversely, in systems where people are not doing enough shift work struggle to
+execute on work worth doing. People may feel pulled in too many directions, or
+like there isn&amp;#39;t a &lt;em&gt;point&lt;/em&gt; to the conversations they&amp;#39;re having at work. After
+all, &lt;em&gt;nothing gets done anyway.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;It may come as no surprise that different people within the same team or organization may perceive the tensions as having different causes.
-People who feel most productive doing shift work or enjoy the feeling of pushing their limits may feel like doubling down on getting things done will make the tensions go away.
-People with a strong preference for drift work may feel exhausted by spending even a few hours a day in a focused, high-activation work state.
-Even more confounding, the same person may have different needs applying the drift work/shift work spectrum based upon factors outside the context of the organization.&lt;/p&gt;
+&lt;p&gt;It may come as no surprise that different people within the same team or
+organization may perceive the tensions as having different causes. People who
+feel most productive doing shift work or enjoy the feeling of pushing their
+limits may feel like doubling down on getting things done will make the tensions
+go away. People with a strong preference for drift work may feel exhausted by
+spending even a few hours a day in a focused, high-activation work state. Even
+more confounding, the same person may have different needs applying the drift
+work/shift work spectrum based upon factors outside the context of the
+organization.&lt;/p&gt;
 
 &lt;h2 id=&quot;what-works-well-for-me-for-now&quot;&gt;What Works Well For Me (For Now)&lt;/h2&gt;
 
-&lt;p&gt;I&amp;#39;ve found that my most productive days are ones where I can take thirty minutes in a &amp;quot;triage and respond shift&amp;quot; that slowly transitions into drift work.
-Once I no longer have things pulling my attention, I take a break, eat some food, move around a bit, and wash up.
-Once restored, I&amp;#39;m ready for some tightly-focused shift-work that can last two to six hours and ends when I&amp;#39;m fatigued or otherwise &amp;#39;done.&amp;#39;&lt;/p&gt;
+&lt;p&gt;I&amp;#39;ve found that my most productive days are ones where I can take thirty minutes
+in a &amp;quot;triage and respond shift&amp;quot; that slowly transitions into drift work. Once I
+no longer have things pulling my attention, I take a break, eat some food, move
+around a bit, and wash up. Once restored, I&amp;#39;m ready for some tightly-focused
+shift-work that can last two to six hours and ends when I&amp;#39;m fatigued or
+otherwise &amp;#39;done.&amp;#39;&lt;/p&gt;
 </content>
   </entry>
   
@@ -277,6 +318,8 @@ Once restored, I&amp;#39;m ready for some tightly-focused shift-work that can la
     </author>
     <content type="html">&lt;p&gt;Having been with &lt;a href=&quot;https://twitter.com/kmanion&quot;&gt;Kiera&lt;/a&gt; for going on 4 years now; and having lived together for 3 of those years; It seemed a bit unnecessary that we maintain separate budgets for shared resources like groceries, rent, utilities, streaming media accounts, etc. We&amp;rsquo;d cobbled together a &amp;ldquo;I&amp;lsquo;ll pay for Blue Apron if you pay for the CSA&amp;rdquo; form of spreading of fiscal responsibilities, but that was getting more and more complicated and difficult to balance to ensure an equitable split based upon our respective incomes.&lt;/p&gt;
 
+&lt;!--more--&gt;
+
 &lt;p&gt;I strongly value my independence and have a bit of anxiety around financial entanglements. We both strongly prefer a structured, equitable approach that allows the two of us to afford our shared expenses and make progress on shared goals while keeping our personal expenses and goals independent.&lt;/p&gt;
 
 &lt;h3 id=&quot;constraints&quot;&gt;Constraints&lt;/h3&gt;
@@ -336,13 +379,15 @@ Once restored, I&amp;#39;m ready for some tightly-focused shift-work that can la
 distributed development studio. While I enjoyed the freedom and the people; I
 couldn&amp;#39;t sustain the constant sales cycle and discovered management and
 operations is a recipe for burnout for me. My constant anxiety over payroll,
-bookkeeping and cash flow was/is debilitating.&lt;/p&gt;
+bookkeeping and cash flow was debilitating.&lt;/p&gt;
 
 &lt;p&gt;I could write in depth about what I&amp;#39;ve learned about myself and running a
 business over the past year; or describe the agony of laying off good people who
 may struggle to find new work due to systemic bias; or tipping into depression
 due to a combination of burnout and the erosion of my self-confidence. But
 instead I&amp;#39;d like to look forward. It&amp;#39;s less painful.&lt;/p&gt;
+
+&lt;!--more--&gt;
 
 &lt;p&gt;It is time to shut down the consultancy side of Zinc. Zinc will remain focused
 on &lt;a href=&quot;https://apprenticeship.community&quot;&gt;The Apprenticeship Community&lt;/a&gt; and &lt;a href=&quot;https://leanpub.com/u/justenoughmedia&quot;&gt;Just
@@ -435,13 +480,15 @@ media&lt;/a&gt;.&lt;/p&gt;
 create conflict between team members, or disempower team members by taking away
 decision making authority.&lt;/p&gt;
 
-&lt;p&gt;I believe these concers are anti-patterns that indicate a team is using code
+&lt;p&gt;I believe these concerns are anti-patterns that indicate a team is using code
 review for &lt;em&gt;criticism&lt;/em&gt; as opposed to &lt;em&gt;critique&lt;/em&gt;. What&amp;#39;s the difference?
-&lt;em&gt;Critique is focused on  specific parameters, where criticism is unbound.&lt;/em&gt;&lt;/p&gt;
+&lt;em&gt;Critique is focused on specific parameters, where criticism is unbound.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;That said, many programmers are unclear how to perform judgement free code
 reviews. The following are a series of suggestions which may help move code
 reviews from criticism to critique:&lt;/p&gt;
+
+&lt;!--more--&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;#start-with-compassion&quot;&gt;Start with compassion&lt;/a&gt;&lt;/li&gt;
@@ -611,15 +658,12 @@ struggle with pair or mob programming.&lt;/p&gt;
 team) are, in my experience, the core differentiator between a gelling,
 high-performing team and a team that struggles to get things done.&lt;/p&gt;
 
-&lt;p class=&quot;note&quot;&gt;
-Retrospectives, while powerful, may not be the ideal format for working out
-interpersonal conflict, as they require a high degree of trust to be effective.
-&lt;/p&gt;
-
 &lt;p&gt;Now that I work primarily on distributed teams, I&amp;#39;ve found that retrospectives
 are a touch harder. They lack the high-bandwidth feedback of body language that
 can tell you early on when someone is getting upset or has something to say but
 isn&amp;#39;t quite ready to say it.&lt;/p&gt;
+
+&lt;!--more--&gt;
 
 &lt;p&gt;A pattern that seems to work is to do distributed retrospectives in near
 silence.&lt;/p&gt;
@@ -701,16 +745,18 @@ zee@wecohere.com&quot;&gt;Let me know&lt;/a&gt; if you&amp;#39;re interested!&lt
 
 &lt;p&gt;They provide &lt;strong&gt;examples&lt;/strong&gt; of how the code works in a given context.&lt;/p&gt;
 
-&lt;p&gt;They are a &lt;strong&gt;describe in detail&lt;/strong&gt; the code&amp;#39;s behavior.&lt;/p&gt;
+&lt;p&gt;They &lt;strong&gt;describe&lt;/strong&gt; the code&amp;#39;s behavior.&lt;/p&gt;
 
 &lt;p&gt;They &lt;strong&gt;highlight pain&lt;/strong&gt; in how to use the code.&lt;/p&gt;
 
-&lt;p&gt;They &lt;strong&gt;expose complexity&lt;/strong&gt; in our model of the business domain.&lt;/p&gt;
+&lt;p&gt;They &lt;strong&gt;expose complexity&lt;/strong&gt; in our code and the business domain.&lt;/p&gt;
 
 &lt;p&gt;When they &lt;strong&gt;notify us&lt;/strong&gt; the code no longer behaves as specified? That&amp;#39;s a bonus.
 Not the goal.&lt;/p&gt;
 
 &lt;p&gt;When we test, we get &lt;strong&gt;critical design feedback&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;!--more--&gt;
 
 &lt;p&gt;When we use tests to explore and refine our code&amp;#39;s design, we &lt;strong&gt;create nuanced,
 educational conversations&lt;/strong&gt;.&lt;/p&gt;
@@ -748,42 +794,45 @@ href=&quot;lead-email&quot; href=&quot;mailto: zee@wecohere.com&quot;&gt;drop me
 to contribute to a software project, companies are learning how (and how not) to
 integrate these lower-cost, less experienced developers with their teams.
 Frequently, these companies hire these less-experienced, single-skilled
-individuals as &amp;quot;Junior Developers&amp;quot; and throw them at a project. While this has
-some level of success, savvy companies are turning to
+individuals as &amp;quot;Junior Developers&amp;quot; and throw them at a project.&lt;/p&gt;
+
+&lt;p&gt;While this has some level of success, savvy companies are turning to
 &lt;a href=&quot;https://engineering.groupon.com/2012/software-apprenticeship/groupons-apprenticeship-program/&quot;&gt;apprenticeship&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!--more--&gt;
 
 &lt;h3 id=&quot;what-is-apprenticeship&quot;&gt;What Is Apprenticeship?&lt;/h3&gt;
 
-&lt;p&gt;Apprenticeship is a powerful concept. They take people with a growth
-mindset, can-do attitude, an aptitude for development skills and a baseline of
-competence and turn them into productive team members. A good apprenticeship
-program takes into account all the skills necessary to ship software at a given
-company and provides educational resources that bring a novice developer&amp;#39;s
-principles and practices in line with those of the team. Apprentices are
-provided hands-on time with dedicated mentors who give them specific, actionable
-and kind feedback on their work; building their judgement and experience while
-minimizing the risk that the software calcifies.&lt;/p&gt;
+&lt;p&gt;Apprenticeship is a powerful concept. They take people with a growth mindset,
+can-do attitude, an aptitude for development skills and a baseline of competence
+and turn them into productive team members. A good apprenticeship program takes
+into account all the skills necessary to ship software at a given company and
+provides educational resources that bring a novice developer&amp;#39;s principles and
+practices in line with those of the team. Apprentices are provided hands-on time
+with dedicated mentors who give them specific, actionable and kind feedback on
+their work; building their judgement and experience while minimizing the risk
+that the software calcifies.&lt;/p&gt;
 
 &lt;h3 id=&quot;what-is-a-junior-developer&quot;&gt;What Is a Junior Developer?&lt;/h3&gt;
 
-&lt;p&gt;Junior developers are also incredibly useful. Junior developers are generally capable
-of delivering software independently or on a team, provided they&amp;#39;re given enough
-guidance on what to build. They are frequently left to learn things on their
-own, with the only feedback they&amp;#39;re given as part of the code-review or project
-demo. In the worst cases, this lack of feedback and guidance results in
+&lt;p&gt;Junior developers are also incredibly useful. Junior developers are generally
+capable of delivering software independently or on a team, provided they&amp;#39;re
+given enough guidance on what to build. They are frequently left to learn things
+on their own, with the only feedback they&amp;#39;re given as part of the code-review or
+project demo. In the worst cases, this lack of feedback and guidance results in
 short-term productivity gains followed by a &amp;#39;calcification&amp;#39; of the software.
 Features that would have taken a few hours a month or two ago now take days and
-have multiple regressions. This is not the fault of the junior developer, as they
-lack the experience necessary to have good judgement about how to build software
-that can be adapted as we understand users needs.&lt;/p&gt;
+have multiple regressions. This is not the fault of the junior developer, as
+they lack the experience necessary to have good judgement about how to build
+software that can be adapted as we understand users needs.&lt;/p&gt;
 
 &lt;h3 id=&quot;when-to-hire-junior-developers&quot;&gt;When To Hire Junior Developers&lt;/h3&gt;
 
-&lt;p&gt;Junior developers work great when there is already a cultural imperative of clean
-code and learning. Once junior developers are integrated directly into the
+&lt;p&gt;Junior developers work great when there is already a cultural imperative of
+clean code and learning. Once junior developers are integrated directly into the
 practices you have established to maintain a high level of quality in your
-software they can make changes and add features without much risk of
-software calcification.&lt;/p&gt;
+software they can make changes and add features without much risk of software
+calcification.&lt;/p&gt;
 
 &lt;p&gt;Generally junior developers work best in a problem domain where it&amp;#39;s possible to
 come up to speed in a few months and doesn&amp;#39;t require deep technical knowledge of
@@ -845,7 +894,7 @@ zee@wecohere.com&quot;&gt;Tell me what I could do better.&lt;/a&gt;&lt;/p&gt;
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
     </author>
-    <content type="html">&lt;p&gt;ZincMade is a recently incorporated business focused on technical team training,
+    <content type="html">&lt;p&gt;Zinc is a recently incorporated business focused on technical team training,
 end-to-end product development, and technical management consulting. We are
 investing in a solid foundation for our branding. To do so, we are looking for a
 designer to provide logo design, typography choices, and color selection
@@ -859,6 +908,8 @@ services.&lt;/p&gt;
 &lt;li&gt;Thoughtfulness&lt;/li&gt;
 &lt;li&gt;Feedback-driven&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;!--more--&gt;
 
 &lt;h3 id=&quot;is-this-gig-for-you&quot;&gt;Is This Gig For You?&lt;/h3&gt;
 
@@ -929,14 +980,16 @@ proposal with:&lt;/p&gt;
     <content type="html">&lt;p&gt;It&amp;#39;s no secret there is a growing demand for technical and creative skills and
 that our educational system is struggling to provide the skills to deliver
 useful, working, modern products and services. This is further exacerbated by
-our industries &lt;a href=&quot;https://modelviewculture.com/pieces/manufacturing-the-talent-shortage&quot;&gt;unwillingness to look beyond a certain
-archetype&lt;/a&gt;.&lt;/p&gt;
+our industries
+&lt;a href=&quot;https://modelviewculture.com/pieces/manufacturing-the-talent-shortage&quot;&gt;unwillingness to look beyond a certain archetype&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Companies are now realizing what science has told us for years: &lt;a href=&quot;http://en.wikipedia.org/wiki/Wason_selection_task#Explanations_of_performance_on_the_task&quot;&gt;framing the
-problem effectively is the best way to encourage others to solve
-it&lt;/a&gt;
-and are responding by investing more heavily in employee training. Companies
-such as
+&lt;p&gt;Companies are beginning to realize what science has told us for years:
+&lt;a href=&quot;http://en.wikipedia.org/wiki/Wason_selection_task#Explanations_of_performance_on_the_task&quot;&gt;framing the problem effectively is the best way to encourage others to solve it&lt;/a&gt;
+and are responding by investing more heavily in employee training.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Companies such as
 &lt;a href=&quot;https://www.facebook.com/notes/facebook-engineering/facebook-engineering-bootcamp/177577963919&quot;&gt;Facebook&lt;/a&gt;,
 &lt;a href=&quot;http://www.thoughtworks.com/products/courses/agile-object-oriented-boot-camp&quot;&gt;Thoughtworks&lt;/a&gt;,
 and &lt;a href=&quot;https://www.devmynd.com/jobs/apprenticeship&quot;&gt;so&lt;/a&gt;,
@@ -952,7 +1005,7 @@ mistakes. Even well structured apprenticeship programs may cause
 &lt;a href=&quot;/migitating-anxiety-on-software-teams/&quot;&gt;anxiety&lt;/a&gt; which adds to a junior team
 member&amp;#39;s cognitive overhead and shrink their learning capacity.&lt;/p&gt;
 
-&lt;p&gt;I&amp;#39;ve found that the companies where junior team members are most successful share
+&lt;p&gt;I&amp;#39;ve found that the companies where junior team members are successful share
 common attributes:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -961,18 +1014,18 @@ common attributes:&lt;/p&gt;
 &lt;li&gt;Budgets for continued education and training.&lt;/li&gt;
 &lt;li&gt;Regular, intentional interactions with senior and executive level colleagues.&lt;/li&gt;
 &lt;li&gt;Dedicated advocates for team members.&lt;/li&gt;
-&lt;li&gt;Flexible organizational architecture.&lt;/li&gt;
+&lt;li&gt;Flexible organizational structures.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;frequent-high-quality-feedback&quot;&gt;Frequent, High Quality Feedback&lt;/h3&gt;
 
-&lt;p&gt;Delivering specific, actionable and kind feedback is &lt;a href=&quot;http://www.pechakucha.org/presentations/the-most-valuable-skill&quot;&gt;the most valuable
-skill&lt;/a&gt; you can
-build on your team. Without frequent, compassionate feedback small behavioral
-concerns or technical misunderstandings become educational blockers. Just as the
-cost to fix a bug increases the longer the fix is delayed, innacurate mental
-models or behavioral patterns calcify into habits that take much more work to
-rectify.&lt;/p&gt;
+&lt;p&gt;Delivering specific, actionable and kind feedback is
+&lt;a href=&quot;http://www.pechakucha.org/presentations/the-most-valuable-skill&quot;&gt;the most valuable skill&lt;/a&gt;
+you can build on your team. Without frequent, compassionate feedback small
+behavioral concerns or technical misunderstandings become educational blockers.
+Just as the cost to fix a bug increases the longer the fix is delayed,
+innacurate mental models or behavioral patterns calcify into habits that take
+much more work to rectify.&lt;/p&gt;
 
 &lt;p&gt;I recommend a four-pronged approach to delivering feedback:&lt;/p&gt;
 
@@ -1004,17 +1057,17 @@ and patterns can be introduced at the exact time they&amp;#39;re most useful.&lt
 
 &lt;h4 id=&quot;regular-critical-peer-reviews&quot;&gt;Regular, critical peer reviews&lt;/h4&gt;
 
-&lt;p&gt;Building peer review into your work process creates an opportunity for
-observing and re-aligning low-level concerns (&amp;quot;It looks like you&amp;#39;re using a shade
-of blue that&amp;#39;s different than our style guide, why is that?&amp;quot;) as well as
-high-level concerns (&amp;quot;This part of our application seems to be collecting long
-methods which take many arguments. How could we refactor it to encourage
-smaller, composable parts?&amp;quot;).&lt;/p&gt;
+&lt;p&gt;Building peer review into your work process creates an opportunity for observing
+and re-aligning low-level concerns (&amp;quot;It looks like you&amp;#39;re using a shade of blue
+that&amp;#39;s different than our style guide, why is that?&amp;quot;) as well as high-level
+concerns (&amp;quot;This part of our application seems to be collecting long methods
+which take many arguments. How could we refactor it to encourage smaller,
+composable parts?&amp;quot;).&lt;/p&gt;
 
 &lt;p&gt;These reviews are best when they&amp;#39;re independently useful pieces of work being
 compared against the artifact without the work. For those using version control,
-this review happens for every &lt;a href=&quot;https://guides.github.com/introduction/flow/index.html&quot;&gt;submitted
-patch&lt;/a&gt;.&lt;/p&gt;
+this review happens for every
+&lt;a href=&quot;https://guides.github.com/introduction/flow/index.html&quot;&gt;submitted patch&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Reviews should never, ever block useful work being completed.&lt;/em&gt; If the work
 passes a very minimum level of quality (tests pass, adheres to style guide) then
@@ -1066,18 +1119,17 @@ so, and discusses what they want to:&lt;/p&gt;
 &lt;li&gt;Do less of&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;There are many &lt;a href=&quot;http://www.amazon.com/Agile-Retrospectives-Making-Teams-Great/dp/0977616649&quot;&gt;forms a retrospective can
-take&lt;/a&gt;,
-but these 5 items are the main gist. &lt;/p&gt;
+&lt;p&gt;There are many
+&lt;a href=&quot;http://www.amazon.com/Agile-Retrospectives-Making-Teams-Great/dp/0977616649&quot;&gt;forms a retrospective can take&lt;/a&gt;,
+but these 5 items are the main gist.&lt;/p&gt;
 
-&lt;p&gt;Good retrospectives start with the &lt;a href=&quot;http://www.retrospectives.com/pages/retroPrimeDirective.html&quot;&gt;retrospective prime
-directive&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Good retrospectives start with the
+&lt;a href=&quot;http://www.retrospectives.com/pages/retroPrimeDirective.html&quot;&gt;retrospective prime directive&lt;/a&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;Regardless of what we discover, &lt;em&gt;we understand and truly believe that
-everyone did the best job they could&lt;/em&gt;, given what they knew at the time,
-their skills and abilities, the resources available, and the situation
-at hand.&lt;/p&gt;
+&lt;p&gt;Regardless of what we discover, &lt;em&gt;we understand and truly believe that everyone
+did the best job they could&lt;/em&gt;, given what they knew at the time, their skills
+and abilities, the resources available, and the situation at hand.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;Retrospectives, when time is allocated to address the issues brought up, can go
@@ -1098,15 +1150,16 @@ potential bad actors, remove them if found, and rebuild trust.&lt;/p&gt;
 
 &lt;p&gt;There&amp;#39;s a minor anti-pattern where interns or junior team members are tossed
 onto an unimportant side-project that doesn&amp;#39;t matter if it lives or dies. While
-I strongly advocate for &lt;a href=&quot;http://chimera.labs.oreilly.com/books/1234000001813/ch05.html#breakable_toys&quot;&gt;breakable
-toys&lt;/a&gt;
+I strongly advocate for
+&lt;a href=&quot;http://chimera.labs.oreilly.com/books/1234000001813/ch05.html#breakable_toys&quot;&gt;breakable toys&lt;/a&gt;
 there&amp;#39;s no stronger signal that you don&amp;#39;t trust or believe in someone than to
 give them work that doesn&amp;#39;t matter.&lt;/p&gt;
 
 &lt;p&gt;Of course, putting someone with little experience or judgement on a critical
 project is also risky. We mitigate this risk by integrating junior team member
-into teams where &lt;a href=&quot;#frequent-high-quality-feedback&quot;&gt;frequent, high quality
-feedback&lt;/a&gt; is the status quo.&lt;/p&gt;
+into teams where
+&lt;a href=&quot;#frequent-high-quality-feedback&quot;&gt;frequent, high quality feedback&lt;/a&gt; is the status
+quo.&lt;/p&gt;
 
 &lt;p&gt;If none of your teams have a culture of compassionate feedback, find the one
 that is most open or closest to the principles and focus on improving their
@@ -1124,9 +1177,9 @@ something that stuck with me.&lt;/p&gt;
 &lt;p&gt;Money is the secular form of value.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;On it&amp;#39;s face this looks obvious, yet it has powerful implications.  If a
-company claims to value education or learning, it must also &lt;em&gt;spend money&lt;/em&gt; on
-learning and education.&lt;/p&gt;
+&lt;p&gt;On it&amp;#39;s face this looks obvious, yet it has powerful implications. If a company
+claims to value education or learning, it must also &lt;em&gt;spend money&lt;/em&gt; on learning
+and education.&lt;/p&gt;
 
 &lt;p&gt;If you plan to hire junior team members, provide them a dedicated budget to
 improve their skills. Make it high enough to cover a dozen books, online
@@ -1167,8 +1220,7 @@ descriptions of your company engraines advocacy as valued, desired behavior.&lt;
 
 &lt;p&gt;When bringing on team members without much experience it&amp;#39;s possible the team
 they&amp;#39;re on or the role they&amp;#39;re brought in for is not actually a good match. A
-&lt;a href=&quot;http://www.amazon.com/The-Corporate-Lattice-Achieving-Performance/dp/1422155161&quot;&gt;flexible
-organization&lt;/a&gt;
+&lt;a href=&quot;http://www.amazon.com/The-Corporate-Lattice-Achieving-Performance/dp/1422155161&quot;&gt;flexible organization&lt;/a&gt;
 allows people to find where their existing and desired skills fit well with the
 companies needs. Flexible organizations create opportunities for people to
 transition across roles and teams as they develop skills and improve their
@@ -1183,10 +1235,11 @@ the organization.&lt;/p&gt;
 &lt;hr&gt;
 
 &lt;p&gt;Is your team or company interested in bringing on junior team members? I&amp;#39;d be
-happy to &lt;a class=&quot;lead-email&quot; href=&quot;mailto: zee@wecohere.com&quot;&gt;listen to
-your questions and provide advice or consulting&lt;/a&gt;&lt;/p&gt;
+happy to &lt;a class=&quot;lead-email&quot; href=&quot;mailto: zee@wecohere.com&quot;&gt;listen to your
+questions and provide advice or consulting&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Disagree with something I&amp;#39;ve said? I&amp;#39;d love to &lt;a class=&quot;feedback-email&quot; href=&quot;mailto:
+&lt;p&gt;Disagree with something I&amp;#39;ve said? I&amp;#39;d love to
+&lt;a class=&quot;feedback-email&quot; href=&quot;mailto:
 zee@wecohere.com&quot;&gt;hear your thoughts.&lt;/a&gt;&lt;/p&gt;
 </content>
   </entry>
@@ -1203,9 +1256,8 @@ zee@wecohere.com&quot;&gt;hear your thoughts.&lt;/a&gt;&lt;/p&gt;
       <uri>http://zeespencer.com/</uri>
     </author>
     <content type="html">&lt;p&gt;When writing &lt;a href=&quot;http://glossary.codeunion.io/gem/&quot;&gt;gems&lt;/a&gt;, we frequently want to
-verify behavior across a variety of ruby versions. While this is quite &lt;a href=&quot;http://docs.travis-ci.com/user/languages/ruby/#Choosing-Ruby-versions-and-implementations-to-test-against&quot;&gt;easy
-with travis
-ci&lt;/a&gt;,
+verify behavior across a variety of ruby versions. While this is
+&lt;a href=&quot;http://docs.travis-ci.com/user/languages/ruby/#Choosing-Ruby-versions-and-implementations-to-test-against&quot;&gt;possible with travis ci&lt;/a&gt;,
 running microtests before pushing shrinks the likelihood of breaking the build.&lt;/p&gt;
 
 &lt;p&gt;My objectives were to:&lt;/p&gt;
@@ -1218,6 +1270,8 @@ cores, why not use them?&lt;/li&gt;
 &lt;li&gt;Adding additional versions must be relatively painless.&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;!--more--&gt;
+
 &lt;p&gt;After a bit of prototyping, I settled on:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -1229,34 +1283,33 @@ system change.&lt;/li&gt;
 
 &lt;p&gt;For those of you who want the code right now, grab my
 &lt;a href=&quot;https://github.com/zspencer/make-many-rubies&quot;
-id=&quot;make-many-rubies-mid&quot;&gt;make-many-rubies&lt;/a&gt; repo. For those
-interested in the thought process, read on.&lt;/p&gt;
+id=&quot;make-many-rubies-mid&quot;&gt;make-many-rubies&lt;/a&gt; repo. For those interested in the
+thought process, read on.&lt;/p&gt;
 
 &lt;h3 id=&quot;make-and-rake-better-together&quot;&gt;Make and Rake, Better Together.&lt;/h3&gt;
 
 &lt;p&gt;Make is a powerful build system. While Rake is great for complex tasks that
-require a language with functions and lists, Make
-shines at discoverability (&lt;a href=&quot;http://bash-completion.alioth.debian.org&quot;&gt;free
-tab-completion!&lt;/a&gt; woo!) and
+require a language with functions and lists, Make shines at discoverability
+(&lt;a href=&quot;http://bash-completion.alioth.debian.org&quot;&gt;free tab-completion!&lt;/a&gt; woo!) and
 cross-language support.&lt;/p&gt;
 
-&lt;p&gt;I tend to have a Makefile in every project I work on which encapsulate the primary
-commands:&lt;/p&gt;
+&lt;p&gt;I tend to have a Makefile in every project I work on which encapsulate the
+primary commands:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;make run&lt;/code&gt;     - Runs the project&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;make test&lt;/code&gt;    - Tests the project&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;make build&lt;/code&gt;   - Builds the project&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;make run&lt;/code&gt; - Runs the project&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;make test&lt;/code&gt; - Tests the project&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;make build&lt;/code&gt; - Builds the project&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;make release&lt;/code&gt; - Releases the project artifact.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;make deploy&lt;/code&gt;  - Deploys the project to production.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;make tbrd&lt;/code&gt;    - Pronounced &amp;quot;Tee-bird&amp;quot; tests, builds, releases and deploys
-                the project.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;make deploy&lt;/code&gt; - Deploys the project to production.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;make tbrd&lt;/code&gt; - Pronounced &amp;quot;Tee-bird&amp;quot; tests, builds, releases and deploys the
+project.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;These tasks allow projects to have a common interface no matter what
-language, deployment strategy, or test framework we use.  Not every project has
-every task of course; but the convention makes switching between different kinds
-of projects in different languages a bit easier.&lt;/p&gt;
+&lt;p&gt;These tasks allow projects to have a common interface no matter what language,
+deployment strategy, or test framework we use. Not every project has every task
+of course; but the convention makes switching between different kinds of
+projects in different languages a bit easier.&lt;/p&gt;
 
 &lt;h3 id=&quot;read-the-source-luke&quot;&gt;Read the Source, Luke!&lt;/h3&gt;
 
@@ -1267,8 +1320,8 @@ on every single line; and the Readme provides (hopefully useful) usage
 instructions.&lt;/p&gt;
 
 &lt;p&gt;Did you find this helpful? I&amp;#39;d love to hear how you keep your code working
-across multiple ruby versions or use make to create a common interface
-across teams and projects!  Why not &lt;a id=&quot;send-email&quot; href=&quot;mailto:
+across multiple ruby versions or use make to create a common interface across
+teams and projects! Why not &lt;a id=&quot;send-email&quot; href=&quot;mailto:
 zee@wecohere.com&quot;&gt;drop me a line&lt;/a&gt;?&lt;/p&gt;
 </content>
   </entry>
@@ -1290,6 +1343,8 @@ are debilitated by stress and anxiety.&lt;/p&gt;
 
 &lt;p&gt;A major source of anxiety is uncertainty. Uncertainty is almost always deeply
 personal, and may be about many things:&lt;/p&gt;
+
+&lt;!--more--&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Are we earning enough to live comfortably?&lt;/li&gt;
@@ -1444,7 +1499,7 @@ line&lt;/a&gt;?&lt;/p&gt;
   <entry>
     <id>http://zeespencer.com/a-year-in-review-with-a-walking-desk</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/a-year-in-review-with-a-walking-desk"/>
-    <title>Walking Desks - A Year in Review</title>
+    <title>A Year In Review With A Walking Desk</title>
     <updated>2014-11-30T00:00:00-08:00</updated>
     <author>
       <name>Zee</name>
@@ -1459,6 +1514,8 @@ into my work habits. I start the day with a mile or so walk, followed by
 sitting and/or standing until lunch. After lunch I sit for a while, then switch
 to walking. On a good day, I walk about eight miles. On average, I tend to walk
 two to four miles a day.&lt;/p&gt;
+
+&lt;!--more--&gt;
 
 &lt;h3 id=&quot;how-fast-do-you-walk&quot;&gt;How Fast Do You Walk?&lt;/h3&gt;
 
@@ -1506,7 +1563,7 @@ in the middle of the room, however so I abandoned it in my current setup.&lt;/p&
 I had to choose between walking and a shitty chair. Now that I have the Leap I
 sit way too often. Ah well. Lesson learned! Don&amp;#39;t buy a nice chair if you want to walk more!&lt;/p&gt;
 
-&lt;p&gt;The TR1200 is a reasonable treadmill. While not noisy enough to bother me while listening to music, 
+&lt;p&gt;The TR1200 is a reasonable treadmill. While not noisy enough to bother me while listening to music,
 I tend to use &lt;a href=&quot;http://mizage.com/shush/&quot;&gt;Shush&lt;/a&gt; to enable push to
 talk when on calls. My MacBook Air&amp;#39;s microphone seems to pick up a gentle
 &amp;quot;whoosh whoosh&amp;quot; of the belt and the &amp;quot;slap slap&amp;quot; of my feet.&lt;/p&gt;
@@ -1668,6 +1725,8 @@ well, and I learn when things do.&lt;/p&gt;
 must have a secret ingredient! Perhaps dust of a unicorn horn? Dragons blood?
 Fairy hair?&amp;quot;&lt;/p&gt;
 
+&lt;!--more--&gt;
+
 &lt;p&gt;&amp;quot;I do not! When I explore a dish, I make it many different ways. Sometimes I
 make it week upon week. I modify the ingredients. I alter timing. I change
 the cooking temperature. Each day I seek to understand the dish more deeply.&lt;/p&gt;
@@ -1703,11 +1762,15 @@ ecosystem. Emacs uses Cider and Paredit to make it super easy to:&lt;/p&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;Unfortunately I don&amp;#39;t really know emacs and would rather focus on learning a
-language than an editor; so I set out to find vim equivalents. Wonder of
-wonders, I happened upon:&lt;/p&gt;
+language than an editor; so I set out to find vim equivalents.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Wonder of wonders, I happened upon:&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;code&gt;vim-fireplace&lt;/code&gt; for dead-simple REPL functionality, jump-to-source, omni-complete, and a host of other goodies&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;vim-fireplace&lt;/code&gt; for dead-simple REPL functionality, jump-to-source,
+omni-complete, and a host of other goodies&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;surround.vim&lt;/code&gt; for changing, adding and removing braces, parenthesis, etc&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;paredit.vim&lt;/code&gt; for slurping and keeping parenthesis matching&lt;/li&gt;
 &lt;/ol&gt;
@@ -1720,11 +1783,11 @@ pretty drop-in-and-go. Some of my favorite normal mode commands:&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;code&gt;cpp&lt;/code&gt; - Evaluate the s-expression and print the results&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;K&lt;/code&gt;   - Print the Clojure documentation for the symbol under the cursor&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;K&lt;/code&gt; - Print the Clojure documentation for the symbol under the cursor&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;cqc&lt;/code&gt; - Open a mini-repl for executing arbitrary Clojure code&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;cqq&lt;/code&gt; - Open a mini-repl, with the current S-expression pre-entered&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;[d&lt;/code&gt;  - Print the Clojure source for the symbol under the cursor&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;[C-d&lt;/code&gt;  - Go to the definition of the symbol under the cursor&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[d&lt;/code&gt; - Print the Clojure source for the symbol under the cursor&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[C-d&lt;/code&gt; - Go to the definition of the symbol under the cursor&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;It also comes with some nice command mode helpers as well:&lt;/p&gt;
@@ -1735,15 +1798,16 @@ pretty drop-in-and-go. Some of my favorite normal mode commands:&lt;/p&gt;
 respectively.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;:Apropos &amp;lt;keyword&amp;gt;&lt;/code&gt; - Searches the current class path for symbols which
 match the keyword&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;:Eval &amp;lt;clojure code&amp;gt;&lt;/code&gt; - Executes arbitrary Clojure code and prints the result&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:Eval &amp;lt;clojure code&amp;gt;&lt;/code&gt; - Executes arbitrary Clojure code and prints the
+result&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h3 id=&quot;surround-vim&quot;&gt;Surround.vim&lt;/h3&gt;
 
 &lt;p&gt;Surround.vim (also by Tim Pope) is great for manipulating parenthesis, quotes,
 or brackets around your code. While initially designed for manipulating XML
-documents and swapping tags, it&amp;#39;s definitely a handy tool for a new-found lisper.
-Some normal mode commands:&lt;/p&gt;
+documents and swapping tags, it&amp;#39;s definitely a handy tool for a new-found
+lisper. Some normal mode commands:&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;code&gt;ys&amp;lt;motion&amp;gt;&amp;lt;char&amp;gt;&lt;/code&gt; - E.g. &lt;code&gt;ys$&amp;quot;&lt;/code&gt; surrounds the current line with quotation
@@ -1757,7 +1821,7 @@ changes &lt;code&gt;(foo) to [foo]&lt;/code&gt;&lt;/li&gt;
 &lt;h3 id=&quot;paredit-vim&quot;&gt;Paredit.vim&lt;/h3&gt;
 
 &lt;p&gt;Paredit.vim by Tamas Kavacs was extracted from Slimv, a much broader alternative
-to vim-fireplace. Paredit.vim keeps your parenthesis  well balanced, as well as
+to vim-fireplace. Paredit.vim keeps your parenthesis well balanced, as well as
 builds in slurping and barfing for your S Expressions.&lt;/p&gt;
 
 &lt;p&gt;Paredit.vim is reasonably good, but if you use &lt;code&gt;\&lt;/code&gt; for your &lt;code&gt;leader&lt;/code&gt; key you&amp;#39;ll
@@ -1766,13 +1830,13 @@ want to add &lt;code&gt;let g:paredit_leader = &amp;#39;\&amp;#39;&lt;/code&gt; 
 &lt;p&gt;Unfortunately I&amp;#39;ve found it&amp;#39;s possible to accidentally unbalance your code,
 making paredit.vim start to get in the way. The best way I&amp;#39;ve found to resolve
 this is to select the offending character in visual mode and use &lt;code&gt;X&lt;/code&gt; to delete
-it. This is because  paredit does not seem to override &lt;code&gt;X&lt;/code&gt; in visual mode.&lt;/p&gt;
+it. This is because paredit does not seem to override &lt;code&gt;X&lt;/code&gt; in visual mode.&lt;/p&gt;
 
 &lt;h3 id=&quot;happy-clojurevimming&quot;&gt;Happy ClojureVimming!&lt;/h3&gt;
 
-&lt;p&gt;Overall, I&amp;#39;m pretty happy with this setup for now.  It gives enough
-functionality for me to focus on Clojure instead of the editor. Admittedly, I&amp;#39;ll
-probably want to pick up emacs as soon as I&amp;#39;m reasonably comfortable in clojure.&lt;/p&gt;
+&lt;p&gt;Overall, I&amp;#39;m pretty happy with this setup for now. It gives enough functionality
+for me to focus on Clojure instead of the editor. Admittedly, I&amp;#39;ll probably want
+to pick up emacs as soon as I&amp;#39;m reasonably comfortable in clojure.&lt;/p&gt;
 </content>
   </entry>
   
@@ -1788,23 +1852,26 @@ probably want to pick up emacs as soon as I&amp;#39;m reasonably comfortable in 
       <uri>http://zeespencer.com/</uri>
     </author>
     <content type="html">&lt;blockquote&gt;
-&lt;p&gt;Plans are worthless, but planning is everything.
-&lt;cite&gt;Dwight D. Eisenhower&lt;/cite&gt;&lt;/p&gt;
+&lt;p&gt;Plans are worthless, but planning is everything. &lt;cite&gt;Dwight D.
+Eisenhower&lt;/cite&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;We all have different paths along &lt;a href=&quot;http://chimera.labs.oreilly.com/books/1234000001813/ch03.html&quot;&gt;the long
-road&lt;/a&gt;, and it&amp;#39;s
-often difficult to find the best path. We have different goals and different
-constraints. Some of us want to specialize in consumer-facing mobile apps;
-others want to rethink the cryptographical underpinnings of our networking
+&lt;p&gt;We all have different paths along
+&lt;a href=&quot;http://chimera.labs.oreilly.com/books/1234000001813/ch03.html&quot;&gt;the long road&lt;/a&gt;,
+and it&amp;#39;s often difficult to find the best path. We have different goals and
+different constraints. Some of us want to specialize in consumer-facing mobile
+apps; others want to rethink the cryptographical underpinnings of our networking
 protocols, and still others want to write code to provide a safe driving
 experience for those of us who plummet down the highway in a metal container
 going 80 miles an hour.&lt;/p&gt;
 
-&lt;p&gt;This is OK; there&amp;#39;s tons of room for different passions in the technology
-field. The constraints in what you can accomplish as a programmer have less to
-do with availability of meaningful problems and more to do with the resources
-you have available to accomplish these objectives.&lt;/p&gt;
+&lt;p&gt;This is OK; there&amp;#39;s tons of room for different passions in the technology field.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;The constraints in what you can accomplish as a programmer have less to do with
+availability of meaningful problems and more to do with the resources you have
+available to accomplish these objectives.&lt;/p&gt;
 
 &lt;p&gt;This is why it&amp;#39;s critically important for each of us to design our own personal
 learning plan. It&amp;#39;s incredibly easy to say &amp;quot;I want to build mobile apps!&amp;quot; or &amp;quot;I
@@ -1819,13 +1886,13 @@ these goals.&lt;/p&gt;
 &lt;li&gt;What are resources I could leverage to help accomplish these goals?&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Each week, I then set small, achievable goals that will take me a step closer
-to my goals by creating a 1 ~ 3 item list that starts with &amp;quot;This week I intend
+&lt;p&gt;Each week, I then set small, achievable goals that will take me a step closer to
+my goals by creating a 1 ~ 3 item list that starts with &amp;quot;This week I intend
 to...&amp;quot;&lt;/p&gt;
 
 &lt;p&gt;At the end of the week, I reflect on the intentions and set new ones. For
-intentions I didn&amp;#39;t follow through on, I default to &lt;em&gt;not&lt;/em&gt; choosing them for
-next time. Instead, I ask myself:&lt;/p&gt;
+intentions I didn&amp;#39;t follow through on, I default to &lt;em&gt;not&lt;/em&gt; choosing them for next
+time. Instead, I ask myself:&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Why did I not follow through with that intention?&lt;/li&gt;
@@ -1839,15 +1906,15 @@ much easier for me to intentionally improve my skills as a programmer.&lt;/p&gt;
 
 &lt;hr&gt;
 
-&lt;p&gt;&lt;em&gt;This article was originally posted on &lt;a href=&quot;https://medium.com/@growdevelopers/designing-a-personal-learning-plan-3755e953e85e&quot;&gt;Growing
-Developers&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This article was originally posted on
+&lt;a href=&quot;https://medium.com/@growdevelopers/designing-a-personal-learning-plan-3755e953e85e&quot;&gt;Growing Developers&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Have other advice on how to improve your programming skills? &lt;a
 class=&quot;feedback-email&quot; href=&quot;mailto: zee@wecohere.com&quot;&gt;Send me your
 thoughts.&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Are you or your team interested in personalized coaching as you learn to
-program?  I&amp;#39;d love to &lt;a class=&quot;lead-email&quot; href=&quot;mailto: zee@wecohere.com&quot;&gt;help
+program? I&amp;#39;d love to &lt;a class=&quot;lead-email&quot; href=&quot;mailto: zee@wecohere.com&quot;&gt;help
 you design a personal learning plan for your or your team!&lt;/a&gt;&lt;/p&gt;
 </content>
   </entry>
@@ -1863,25 +1930,26 @@ you design a personal learning plan for your or your team!&lt;/a&gt;&lt;/p&gt;
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
     </author>
-    <content type="html">&lt;p&gt;Becoming an excellent programmer is hard. It takes &lt;a href=&quot;http://expertenough.com/1423/deliberate-practice&quot;&gt;deliberate
-practice&lt;/a&gt;,
+    <content type="html">&lt;p&gt;Becoming an excellent programmer is hard. It takes
+&lt;a href=&quot;http://expertenough.com/1423/deliberate-practice&quot;&gt;deliberate practice&lt;/a&gt;,
 &lt;a href=&quot;http://chimera.labs.oreilly.com/books/1234000001813/ch04.html#find_mentors&quot;&gt;mentorship&lt;/a&gt;,
 and availability of &lt;a href=&quot;http://teamtreehouse.com/home&quot;&gt;quality&lt;/a&gt;
 &lt;a href=&quot;https://www.codeschool.com/&quot;&gt;resources&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;It takes [thousands of hours](https://en.wikipedia.org/wiki/Outliers_(book)) to
+&lt;p&gt;It takes &lt;a href=&quot;https://en.wikipedia.org/wiki/Outliers_(book)&quot;&gt;thousands of hours&lt;/a&gt; to
 become en expert in a field, and programming is no exception.&lt;/p&gt;
 
-&lt;p&gt;I want to help people get their 10,000 hours. So I&amp;#39;m relaunching &lt;a href=&quot;http://growingdevelopers.com&quot;&gt;Growing
-Developers&lt;/a&gt;.&lt;/p&gt;
+&lt;!--more--&gt;
+
+&lt;p&gt;I want to help people get their 10,000 hours. So I&amp;#39;m relaunching
+&lt;a href=&quot;http://growingdevelopers.com&quot;&gt;Growing Developers&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Growing Developers will offer discussion groups, chat rooms, hangouts, and other
 pieces of &lt;a href=&quot;/articles/structure-and-space/&quot;&gt;structure&lt;/a&gt; to support an online
 community of programmers who are constantly leveling up.&lt;/p&gt;
 
 &lt;p&gt;If you are interested in any way, drop me a line at
-&lt;a href=&quot;mailto:zee@wecohere.com&quot;&gt;zee@wecohere.com&lt;/a&gt; and we can level up
-together.&lt;/p&gt;
+&lt;a href=&quot;mailto:zee@wecohere.com&quot;&gt;zee@wecohere.com&lt;/a&gt; and we can level up together.&lt;/p&gt;
 </content>
   </entry>
   
@@ -1921,6 +1989,8 @@ Explore the unknown.&lt;br /&gt;&lt;/p&gt;
 &lt;p&gt;I first heard this phrase from my friend and colleague &lt;a href=&quot;http://blog.davingranroth.com/&quot;&gt;Davin
 Granroth&lt;/a&gt;. While the phrase may originally have
 been meant literally; I prefer a more allegorical interpretation.&lt;/p&gt;
+
+&lt;!--more--&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;First we shape our society, thereafter it shapes us.&lt;/p&gt;
@@ -2013,6 +2083,8 @@ rules of simple design; they asked for an introduction to JavaScript.&lt;/p&gt;
 &lt;p&gt;So of course I obliged. Here I impromptu TDD a palindrome checker in
 JavaScript.&lt;/p&gt;
 
+&lt;!--more--&gt;
+
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/OWL-ev-j89s&quot;
 frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
 </content>
@@ -2035,6 +2107,8 @@ agency.&lt;/p&gt;
 &lt;p&gt;I believe this not from rational introspection or a position of moral
 highground; but from noticing the things which make me happy or sad, bring me
 joy or rage, or drive me to engage or withdraw.&lt;/p&gt;
+
+&lt;!--more--&gt;
 
 &lt;p&gt;Before we can continue, I&amp;#39;d like to explore the definition of agency.&lt;/p&gt;
 
@@ -2124,6 +2198,8 @@ basics of development and help launch their career in a field I love.&lt;/p&gt;
 &lt;p&gt;This has consumed every ounce of my energy, so I&amp;#39;m looking forward to taking
 time to recharge, relax, and &lt;strong&gt;build some software&lt;/strong&gt;.&lt;/p&gt;
 
+&lt;!--more--&gt;
+
 &lt;h4 id=&quot;i-can-provide&quot;&gt;I can provide:&lt;/h4&gt;
 
 &lt;ol&gt;
@@ -2166,6 +2242,8 @@ little effort.&lt;/p&gt;
 
 &lt;p&gt;I am curious: how does slicing code along the job code does for users impact how
 we build software?&lt;/p&gt;
+
+&lt;!--more--&gt;
 
 &lt;p&gt;Consider the following:&lt;/p&gt;
 
@@ -2229,6 +2307,8 @@ production models: the assembly line and the master craftsmen.&lt;/p&gt;
 &lt;p&gt;The master craftsmen hand built each and every machine. Painstakingly ensuring
 it was beautiful and functional. Each machine was resplendent and tuned to
 perfection, but it took days to build one.&lt;/p&gt;
+
+&lt;!--more--&gt;
 
 &lt;p&gt;The assembly line churned hundreds of machines for each one the craftsmen
 produced. The machines worked and were not too shabby. Sure they were less
@@ -2298,6 +2378,8 @@ contrasts.&lt;/p&gt;
 &lt;p&gt;The parts coalesce. Patterns direct our actions. We recompose our thoughts and
 behaviors.&lt;/p&gt;
 
+&lt;!--more--&gt;
+
 &lt;p&gt;This is a dangerous moment.&lt;/p&gt;
 
 &lt;p&gt;When our vision is clear, we are blind.&lt;/p&gt;
@@ -2327,6 +2409,8 @@ Winds roar with fury&lt;br /&gt;
 Waves whip to foam&lt;br /&gt;
 All other beach-goers&lt;br /&gt;
 Turn their faces home.&lt;br /&gt;&lt;/p&gt;
+
+&lt;!--more--&gt;
 
 &lt;p&gt;Not the lone windsurfer.&lt;br /&gt;
 Cold and wind combine&lt;br /&gt;
@@ -2376,11 +2460,9 @@ pipeline. Have fun fellow jekyll-lovers!&lt;/p&gt;
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
     </author>
-    <content type="html">&lt;p&gt;It&amp;#39;s easy when hurt to lash out.&lt;br /&gt;
-To crush those who caused me pain.&lt;/p&gt;
+    <content type="html">&lt;p&gt;It&amp;#39;s easy when hurt to lash out.&lt;br /&gt; To crush those who caused me pain.&lt;/p&gt;
 
-&lt;p&gt;It&amp;#39;s hard when hurt to reach out.&lt;br /&gt;
-To comfort those who caused me pain.&lt;/p&gt;
+&lt;p&gt;It&amp;#39;s hard when hurt to reach out.&lt;br /&gt; To comfort those who caused me pain.&lt;/p&gt;
 
 &lt;p&gt;When I choose to be kind, I am forgotten.&lt;/p&gt;
 
@@ -2390,10 +2472,12 @@ To comfort those who caused me pain.&lt;/p&gt;
 
 &lt;p&gt;I trade my dignity for a flash of pride.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;This is written in the wake of death threats being made to a woman who stood
-up for herself. It&amp;#39;s written in the wake of a man losing his job for an off
-color joke. It&amp;#39;s written in the wake of the million ways I sell my goodness
-to my ego.&lt;/em&gt;&lt;/p&gt;
+&lt;!--more--&gt;
+
+&lt;p&gt;&lt;em&gt;This is written in the wake of death threats being made to a woman who stood up
+for herself. It&amp;#39;s written in the wake of a man losing his job for an off color
+joke. It&amp;#39;s written in the wake of the million ways I sell my goodness to my
+ego.&lt;/em&gt;&lt;/p&gt;
 </content>
   </entry>
   
@@ -2415,6 +2499,8 @@ with spots which spell four words: &lt;em&gt;Guess, Google, Grab, Go&lt;/em&gt;.
 &lt;p&gt;When I get stuck Gertrude reaches up with her long neck and plucks a leaf out of
 a Guessandtrythis tree. She drops it in front of me and prods me until I pick it
 up. With each guess I gather information to help us make another, better guess.&lt;/p&gt;
+
+&lt;!--more--&gt;
 
 &lt;p&gt;Gertrude is nobodies fool. If guessing isn&amp;#39;t getting us anywhere, she nudges the
 big red &lt;em&gt;Google It!&lt;/em&gt; button. The Great Google opens up and we glean information
@@ -2484,6 +2570,8 @@ programming journey! Talk about fun!&lt;/p&gt;
 won me over. Not only do they teach practical programming skills they also
 teach:&lt;/p&gt;
 
+&lt;!--more--&gt;
+
 &lt;ol&gt;
 &lt;li&gt;How to continue learning&lt;/li&gt;
 &lt;li&gt;How to solve problems&lt;/li&gt;
@@ -2527,7 +2615,8 @@ Let&amp;#39;s make the most of the beans that we&amp;#39;re gonna grind young&lt
 We&amp;#39;re gonna grind young&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;Let&amp;#39;s make the most of the beans like we&amp;#39;re gonna grind young&lt;br /&gt;
-Let&amp;#39;s make the most of the beans like we&amp;#39;re gonna grind young&lt;br /&gt;&lt;/p&gt;
+Let&amp;#39;s make the most of the beans like we&amp;#39;re gonna grind young&lt;br /&gt;
+&amp;lt;!--more--&amp;gt;&lt;/p&gt;
 
 &lt;p&gt;Young beans, fresh from the trees&lt;br /&gt;
 As they roast the aroma frees&lt;br /&gt;
@@ -2595,21 +2684,23 @@ We&amp;#39;re gonna grind young&lt;br /&gt;&lt;/p&gt;
     </author>
     <content type="html">&lt;p&gt;We seem to use &lt;code&gt;nil&lt;/code&gt;s in place of a default return value in a function. Say you
 wanted to write a function that splits a string on its commas:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;def nil_split_on_comma(string)
-  return nil unless string.include? &quot;,&quot;
-  string.split(&quot;,&quot;)
-end
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;nil_split_on_comma&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;nil&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;unless&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;include?&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;,&quot;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;,&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;While this seems reasonable it can have some unfortunate side effects:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;p nil_split_on_comma(&quot;asdfqwer&quot;).map(&amp;amp;:length)
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nil_split_on_comma&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;asdfqwer&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Woops! Undefined method map for &lt;code&gt;nil&lt;/code&gt; class! Let&amp;#39;s try again!&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;def better_split_on_comma(string)
-  return [] unless string.include? &quot;,&quot;
-  string.split(&quot;,&quot;)
-end
 
-p better_split_on_comma(&quot;asdfqwer&quot;).map(&amp;amp;:length)
+&lt;!--more--&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;better_split_on_comma&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;unless&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;include?&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;,&quot;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;,&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;better_split_on_comma&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;asdfqwer&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Ah! Much better! Because this function always returns an object of the same type
 it can be used without checking the value! The astute reader will spot this as
@@ -2618,17 +2709,17 @@ an example of the &lt;a href=&quot;http://c2.com/cgi/wiki?NullObject&quot;&gt;Nu
 &lt;p&gt;In spite of it&amp;#39;s lack of suitability as a replacement for a reasonable default
 value, I&amp;#39;m a fan of &lt;code&gt;nil&lt;/code&gt;. I especially like it&amp;#39;s use as a &lt;a href=&quot;http://en.wikipedia.org/wiki/Null_character&quot;&gt;null
 terminator&lt;/a&gt;:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;def iterable_fetch_val(index)
-  data = &quot;1234567890&quot;
-  data[index]
-end
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;iterable_fetch_val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;1234567890&quot;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 
-index = 0
+&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
 
-while iterable_fetch_val(index)
-  p iterable_fetch_val(index)
-  index += 1
-end
+&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;iterable_fetch_val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;iterable_fetch_val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Here we&amp;#39;re relying on the side effect that a &lt;code&gt;nil&lt;/code&gt; value is also falsey. I&amp;#39;m
 less edgey about this because this functions use case is an iterator, instead of
@@ -2636,16 +2727,16 @@ an accessor; but it&amp;#39;s still a little iffy.&lt;/p&gt;
 
 &lt;p&gt;However, if you return an empty string instead of a falsey value it requires an
 additional method call to use as an iterator:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;def uniterable_fetch_val(index)
-  data = &quot;1234567890&quot;
-  data[index] || &quot;&quot;
-end
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;uniterable_fetch_val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;1234567890&quot;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 
-index = 0
-until uniterable_fetch_val(index).empty?
-  p uniterable_fetch_val(index)
-  index += 1
-end
+&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;until&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;uniterable_fetch_val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;empty?&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;uniterable_fetch_val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;As you can see, &lt;code&gt;nil&lt;/code&gt;&amp;#39;s aren&amp;#39;t all bad. However they should be used with
 precision. Think about how varyied return types can cause complexity to move
@@ -2686,6 +2777,8 @@ Why is organ harvesting a crime?&lt;br /&gt;&lt;/p&gt;
 soften in the sun. The first was terrified of being prodded, poked, and shaped.
 &amp;quot;I don&amp;#39;t want any part of this!&amp;quot; He said, &amp;quot;I&amp;#39;m a good piece of clay! I don&amp;#39;t
 want to be a pot!&amp;quot; and he hardened himself in the noon day sun.&lt;/p&gt;
+
+&lt;!--more--&gt;
 
 &lt;p&gt;His sister, however, was ecstatic. &amp;quot;I&amp;#39;ve always dreamed of being covered in
 patterns and holding flowers! This is the opportunity I was born for!&amp;quot; And as
@@ -2740,32 +2833,35 @@ And rejection befell poor young Rictor&lt;br /&gt;&lt;/p&gt;
     <content type="html">&lt;p&gt;There&amp;#39;s a common design principle that states &amp;quot;Design the system to prevent
 errors from occuring.&amp;quot; Lean manufacturing calls this
 &lt;em&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Poka-yoke&quot;&gt;Poka-yoke&lt;/a&gt;&lt;/em&gt;. Interaction design calls
-these &lt;em&gt;&lt;a href=&quot;http://www.interaction-design.org/encyclopedia/forcing_functions.html&quot;&gt;forcing
-functions&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
+these
+&lt;em&gt;[forcing functions](http://www.interaction-design.org/encyclopedia/forcing&lt;/em&gt;functions.html)_.&lt;/p&gt;
 
-&lt;p&gt;Since a much of the time building software is spent reading code, it&amp;#39;s
-important to decrease the amount of errors in understanding while we read.&lt;/p&gt;
+&lt;p&gt;Since a much of the time building software is spent reading code, it&amp;#39;s important
+to decrease the amount of errors in understanding while we read.&lt;/p&gt;
+
+&lt;!--more--&gt;
 
 &lt;p&gt;One way to do this is to decrease ambiguity. Consider the &lt;code&gt;&amp;amp;&lt;/code&gt; symbol in Ruby.
-It&amp;#39;s a method call on some ruby classes, &lt;a href=&quot;/musings/the-ruby-&amp;-symbol/&quot;&gt;a unary
-operator&lt;/a&gt; for converting objects to blocks, and a
-binary operator for calling the &lt;code&gt;&amp;amp;&lt;/code&gt; method without using a &lt;code&gt;.&lt;/code&gt;.&lt;/p&gt;
+It&amp;#39;s a method call on some ruby classes,
+&lt;a href=&quot;/musings/the-ruby-&amp;-symbol/&quot;&gt;a unary operator&lt;/a&gt; for converting objects to
+blocks, and a binary operator for calling the &lt;code&gt;&amp;amp;&lt;/code&gt; method without using a &lt;code&gt;.&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;In order to properly understand what the &lt;code&gt;&amp;amp;&lt;/code&gt; is doing you have to figure out
 which of it&amp;#39;s three roles it&amp;#39;s fulfilling. If it&amp;#39;s a binary operator or a method
 call you also must understand what that method is in the context of which object
 it&amp;#39;s using.&lt;/p&gt;
 
-&lt;p&gt;For example, &lt;code&gt;1 | 5&lt;/code&gt; is a &lt;a href=&quot;http://en.wikipedia.org/wiki/Bitwise_operation#OR&quot;&gt;bitwise
-or&lt;/a&gt; operation, while &lt;code&gt;[1,3,5]
-| [3,5,7]&lt;/code&gt; is a [set union](http://en.wikipedia.org/wiki/Union&lt;em&gt;(set&lt;/em&gt;theory).&lt;/p&gt;
+&lt;p&gt;For example, &lt;code&gt;1 | 5&lt;/code&gt; is a
+&lt;a href=&quot;http://en.wikipedia.org/wiki/Bitwise_operation#OR&quot;&gt;bitwise or&lt;/a&gt; operation, while
+&lt;code&gt;[1,3,5] | [3,5,7]&lt;/code&gt; is a [set
+union](http://en.wikipedia.org/wiki/Union&lt;em&gt;(set&lt;/em&gt;theory).&lt;/p&gt;
 
 &lt;p&gt;While we learn to infer this over time there is some cognitive overhead as we
-read. To combat this, I propose we take a cue from the &lt;a href=&quot;http://www.python.org/dev/peps/pep-0020/&quot;&gt;zen of
-python&lt;/a&gt;, which states &lt;em&gt;explicit is
-better than implicit&lt;/em&gt;. In that spirit, python provides &lt;a href=&quot;http://docs.python.org/2/library/stdtypes.html#set.intersection&quot;&gt;two
-ways&lt;/a&gt; to do set
-intersections: the &lt;code&gt;&amp;amp;&lt;/code&gt; operator, and the &lt;code&gt;intersection&lt;/code&gt; function.&lt;/p&gt;
+read. To combat this, I propose we take a cue from the
+&lt;a href=&quot;http://www.python.org/dev/peps/pep-0020/&quot;&gt;zen of python&lt;/a&gt;, which states
+&lt;em&gt;explicit is better than implicit&lt;/em&gt;. In that spirit, python provides
+&lt;a href=&quot;http://docs.python.org/2/library/stdtypes.html#set.intersection&quot;&gt;two ways&lt;/a&gt; to
+do set intersections: the &lt;code&gt;&amp;amp;&lt;/code&gt; operator, and the &lt;code&gt;intersection&lt;/code&gt; function.&lt;/p&gt;
 
 &lt;p&gt;Since ruby does not always provide named variants for ambiguous symbols this
 provides us with an opportunity to refactor. When we encounter ambiguity, maybe
@@ -2796,6 +2892,8 @@ people give me money to sit on my butt and get fatter. Yes Mom, I know I haven&a
 called in a few weeks. I&amp;#39;m sorry. Anyway, my people have really let you all down
 right now.&lt;/p&gt;
 
+&lt;!--more--&gt;
+
 &lt;p&gt;You see, there&amp;#39;s a problem with the Internet right now. It&amp;#39;s even worse because
 Facebook, Twitter, and Google are central to our digital lives.&lt;/p&gt;
 
@@ -2809,17 +2907,17 @@ on Rails. This framework runs a lot of websites. Websites like
 business applications like &lt;a href=&quot;http://www.getharvest.com/&quot;&gt;Harvest&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;If an app you added on Facebook, Twitter, Google or LinkedIn is compromised it
-gives the attacker the ability to do whatever that app is allowed to
-do on facebook, twitter, google or linked in.&lt;/p&gt;
+gives the attacker the ability to do whatever that app is allowed to do on
+facebook, twitter, google or linked in.&lt;/p&gt;
 
 &lt;p&gt;Even worse many of the applications we developers make are greedy about what we
 want you to allow the app to do. Some social games require you to give them the
 right to post things on your friends timeline before they&amp;#39;ll even let you play!
 What dirtbags, right?&lt;/p&gt;
 
-&lt;p&gt;I figured I should apologize for all of us, as well as inform
-you of the risks that you are now being exposed to, as well as what steps to
-take to make yourself a little safer.&lt;/p&gt;
+&lt;p&gt;I figured I should apologize for all of us, as well as inform you of the risks
+that you are now being exposed to, as well as what steps to take to make
+yourself a little safer.&lt;/p&gt;
 
 &lt;h3 id=&quot;protecting-your-google-accounts&quot;&gt;Protecting Your Google Accounts&lt;/h3&gt;
 
@@ -2828,12 +2926,12 @@ and it has tons of my personal data in it. Including client lists, budgets, and
 things like that.&lt;/p&gt;
 
 &lt;p&gt;Apps you log in to with Google can access all kinds of things; like your
-contacts, email, calendar, documents in google drive, and even
-your chat history if you use google chat!&lt;/p&gt;
+contacts, email, calendar, documents in google drive, and even your chat history
+if you use google chat!&lt;/p&gt;
 
 &lt;p&gt;Thankfully it&amp;#39;s pretty straightforward to revoke access with Google, though a
-bit time consuming. They have a &lt;a href=&quot;http://support.google.com/accounts/bin/answer.py?hl=en&amp;answer=41236&quot;&gt;support page explaining
-how&lt;/a&gt;,
+bit time consuming. They have a
+&lt;a href=&quot;http://support.google.com/accounts/bin/answer.py?hl=en&amp;answer=41236&quot;&gt;support page explaining how&lt;/a&gt;,
 located here:
 &lt;a href=&quot;http://support.google.com/accounts/bin/answer.py?hl=en&amp;answer=41236&quot;&gt;http://support.google.com/accounts/bin/answer.py?hl=en&amp;amp;answer=41236&lt;/a&gt;&lt;/p&gt;
 
@@ -2845,8 +2943,7 @@ status or pictures, and a few can add or remove friends.&lt;/p&gt;
 &lt;p&gt;If your not cool that some stranger on the Internet can someday possibly
 impersonate you on Facebook, even if you change your password you may want to
 follow
-&lt;a href=&quot;http://howto.cnet.com/8301-11310_39-57347928-285/how-to-revoke-facebook-app-permissions/&quot;&gt;these
-instructions&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&quot;http://howto.cnet.com/8301-11310_39-57347928-285/how-to-revoke-facebook-app-permissions/&quot;&gt;these instructions&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;I know, I know. It&amp;#39;s painful. You have to click twice per app you want to
 remove, and if you&amp;#39;re like me you somehow have accumulated dozens of them over
@@ -2854,12 +2951,11 @@ the years. Oops. I&amp;#39;ll think twice before logging in with facebook!&lt;/p
 
 &lt;h3 id=&quot;protecting-your-linked-in-account&quot;&gt;Protecting Your Linked In Account&lt;/h3&gt;
 
-&lt;p&gt;Most LinkedIn apps can access your personal information, as well as
-post updates to your timeline. Some can update your work history, or send
-private messages.&lt;/p&gt;
+&lt;p&gt;Most LinkedIn apps can access your personal information, as well as post updates
+to your timeline. Some can update your work history, or send private messages.&lt;/p&gt;
 
-&lt;p&gt;It&amp;#39;s easy to &lt;a href=&quot;http://www.linkedin.com/answers/using-linkedIn/ULI/868108-1020804&quot;&gt;revoke access on
-LinkedIn&lt;/a&gt;,
+&lt;p&gt;It&amp;#39;s easy to
+&lt;a href=&quot;http://www.linkedin.com/answers/using-linkedIn/ULI/868108-1020804&quot;&gt;revoke access on LinkedIn&lt;/a&gt;,
 especially because there are so few apps for the platform!&lt;/p&gt;
 
 &lt;h3 id=&quot;protecting-your-twitter-account&quot;&gt;Protecting Your Twitter Account&lt;/h3&gt;
@@ -2868,8 +2964,7 @@ especially because there are so few apps for the platform!&lt;/p&gt;
 personal brand is tied up in Twitter, so this is more important for me than
 LinkedIn, but I&amp;#39;m assuming the opposite is true for you.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://support.twitter.com/articles/76052-how-to-connect-and-revoke-third-party-applications&quot;&gt;Revoking twitter
-access&lt;/a&gt;
+&lt;p&gt;&lt;a href=&quot;https://support.twitter.com/articles/76052-how-to-connect-and-revoke-third-party-applications&quot;&gt;Revoking twitter access&lt;/a&gt;
 is a joy compared to Facebook!&lt;/p&gt;
 
 &lt;h3 id=&quot;the-thrilling-conclusion&quot;&gt;The Thrilling Conclusion&lt;/h3&gt;
@@ -2886,8 +2981,8 @@ bumpy ride over the next few months.&lt;/p&gt;
 &lt;h3 id=&quot;more-details&quot;&gt;More Details&lt;/h3&gt;
 
 &lt;p&gt;For a more detailed understanding of the security exploit, you should read this
-article by &lt;a href=&quot;http://www.kalzumeus.com/2013/01/31/what-the-rails-security-issue-means-for-your-startup/&quot;&gt;Patrick
-McKenzie&lt;/a&gt;.&lt;/p&gt;
+article by
+&lt;a href=&quot;http://www.kalzumeus.com/2013/01/31/what-the-rails-security-issue-means-for-your-startup/&quot;&gt;Patrick McKenzie&lt;/a&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;call-to-action&quot;&gt;&lt;p&gt;Are you a business owner or manager responsible
 for a rails app? I'm available to help ensure your customers are safe. Just send
@@ -2952,6 +3047,8 @@ like this:&lt;/p&gt;
 &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;reject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;proc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;reject&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;nil?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
+&lt;!--more--&gt;
+
 &lt;p&gt;The second is explicitly declaring a block by using the &lt;code&gt;&amp;amp;&lt;/code&gt; in a method
 definition:&lt;/p&gt;
 
@@ -3002,6 +3099,8 @@ everything is pretty straightforward: &lt;a href=&quot;http://join.me&quot;&gt;J
 screen/keyboard sharing and iPad with Skype or Google Hangout for video calls.
 This is pretty bandwidth intensive and can be slow, so I&amp;#39;d rather keep as much
 as I can in a terminal.&lt;/p&gt;
+
+&lt;!--more--&gt;
 
 &lt;p&gt;There&amp;#39;s a few obstacles to that though:&lt;/p&gt;
 
@@ -3158,6 +3257,8 @@ them&lt;/a&gt;. Both
 which Heather
 &lt;a href=&quot;https://twitter.com/harthvader/status/294609044323328000&quot;&gt;accepted&lt;/a&gt;.&lt;/p&gt;
 
+&lt;!--more--&gt;
+
 &lt;p&gt;Everyone handled this better than I could. Heather called out behavior that
 caused her pain. Steve and Corey acknowledged their hurtful behavior. Everyone
 was respectful, open, and honest.&lt;/p&gt;
@@ -3195,7 +3296,9 @@ we can choose to remove ourselves from unacceptable situations.&lt;/p&gt;
 
 &lt;p&gt;The other stated empowerment requires us to have support from our community. It
 needs structures in place so that negative situations are reduced and positive
-situations are increased&lt;/p&gt;
+situations are increased.&lt;/p&gt;
+
+&lt;!--more--&gt;
 
 &lt;p&gt;Both of them are right.&lt;/p&gt;
 
@@ -4023,6 +4126,8 @@ Triangle&lt;/a&gt;,
 Line&lt;/a&gt;, and any
 number of other variations. At first glance, these seem like good models which
 allow us to balance needs.&lt;/p&gt;
+
+&lt;!--more--&gt;
 
 &lt;h3 id=&quot;but-there-is-a-flaw&quot;&gt;But There Is a Flaw.&lt;/h3&gt;
 

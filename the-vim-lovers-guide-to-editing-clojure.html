@@ -40,11 +40,15 @@ ecosystem. Emacs uses Cider and Paredit to make it super easy to:</p>
 </ol>
 
 <p>Unfortunately I don&#39;t really know emacs and would rather focus on learning a
-language than an editor; so I set out to find vim equivalents. Wonder of
-wonders, I happened upon:</p>
+language than an editor; so I set out to find vim equivalents.</p>
+
+<!--more-->
+
+<p>Wonder of wonders, I happened upon:</p>
 
 <ol>
-<li><code>vim-fireplace</code> for dead-simple REPL functionality, jump-to-source, omni-complete, and a host of other goodies</li>
+<li><code>vim-fireplace</code> for dead-simple REPL functionality, jump-to-source,
+omni-complete, and a host of other goodies</li>
 <li><code>surround.vim</code> for changing, adding and removing braces, parenthesis, etc</li>
 <li><code>paredit.vim</code> for slurping and keeping parenthesis matching</li>
 </ol>
@@ -57,11 +61,11 @@ pretty drop-in-and-go. Some of my favorite normal mode commands:</p>
 
 <ol>
 <li><code>cpp</code> - Evaluate the s-expression and print the results</li>
-<li><code>K</code>   - Print the Clojure documentation for the symbol under the cursor</li>
+<li><code>K</code> - Print the Clojure documentation for the symbol under the cursor</li>
 <li><code>cqc</code> - Open a mini-repl for executing arbitrary Clojure code</li>
 <li><code>cqq</code> - Open a mini-repl, with the current S-expression pre-entered</li>
-<li><code>[d</code>  - Print the Clojure source for the symbol under the cursor</li>
-<li><code>[C-d</code>  - Go to the definition of the symbol under the cursor</li>
+<li><code>[d</code> - Print the Clojure source for the symbol under the cursor</li>
+<li><code>[C-d</code> - Go to the definition of the symbol under the cursor</li>
 </ol>
 
 <p>It also comes with some nice command mode helpers as well:</p>
@@ -72,15 +76,16 @@ pretty drop-in-and-go. Some of my favorite normal mode commands:</p>
 respectively.</li>
 <li><code>:Apropos &lt;keyword&gt;</code> - Searches the current class path for symbols which
 match the keyword</li>
-<li><code>:Eval &lt;clojure code&gt;</code> - Executes arbitrary Clojure code and prints the result</li>
+<li><code>:Eval &lt;clojure code&gt;</code> - Executes arbitrary Clojure code and prints the
+result</li>
 </ol>
 
 <h3 id="surround-vim">Surround.vim</h3>
 
 <p>Surround.vim (also by Tim Pope) is great for manipulating parenthesis, quotes,
 or brackets around your code. While initially designed for manipulating XML
-documents and swapping tags, it&#39;s definitely a handy tool for a new-found lisper.
-Some normal mode commands:</p>
+documents and swapping tags, it&#39;s definitely a handy tool for a new-found
+lisper. Some normal mode commands:</p>
 
 <ol>
 <li><code>ys&lt;motion&gt;&lt;char&gt;</code> - E.g. <code>ys$&quot;</code> surrounds the current line with quotation
@@ -94,7 +99,7 @@ changes <code>(foo) to [foo]</code></li>
 <h3 id="paredit-vim">Paredit.vim</h3>
 
 <p>Paredit.vim by Tamas Kavacs was extracted from Slimv, a much broader alternative
-to vim-fireplace. Paredit.vim keeps your parenthesis  well balanced, as well as
+to vim-fireplace. Paredit.vim keeps your parenthesis well balanced, as well as
 builds in slurping and barfing for your S Expressions.</p>
 
 <p>Paredit.vim is reasonably good, but if you use <code>\</code> for your <code>leader</code> key you&#39;ll
@@ -103,13 +108,13 @@ want to add <code>let g:paredit_leader = &#39;\&#39;</code> to your <code>.vimrc
 <p>Unfortunately I&#39;ve found it&#39;s possible to accidentally unbalance your code,
 making paredit.vim start to get in the way. The best way I&#39;ve found to resolve
 this is to select the offending character in visual mode and use <code>X</code> to delete
-it. This is because  paredit does not seem to override <code>X</code> in visual mode.</p>
+it. This is because paredit does not seem to override <code>X</code> in visual mode.</p>
 
 <h3 id="happy-clojurevimming">Happy ClojureVimming!</h3>
 
-<p>Overall, I&#39;m pretty happy with this setup for now.  It gives enough
-functionality for me to focus on Clojure instead of the editor. Admittedly, I&#39;ll
-probably want to pick up emacs as soon as I&#39;m reasonably comfortable in clojure.</p>
+<p>Overall, I&#39;m pretty happy with this setup for now. It gives enough functionality
+for me to focus on Clojure instead of the editor. Admittedly, I&#39;ll probably want
+to pick up emacs as soon as I&#39;m reasonably comfortable in clojure.</p>
 
 </section>
 
@@ -118,13 +123,7 @@ probably want to pick up emacs as soon as I&#39;m reasonably comfortable in cloj
   <p>Browse posts about:
   <ul>
   
-  <li><a href="/tags/clojure">clojure</a></li>
-  
-  <li><a href="/tags/devenvironment">devenvironment</a></li>
-  
-  <li><a href="/tags/vim">vim</a></li>
-  
-  <li><a href="/tags/software">software</a></li>
+  <li><a href="/tags/programming">programming</a></li>
   
   </ul></p>
 </section>

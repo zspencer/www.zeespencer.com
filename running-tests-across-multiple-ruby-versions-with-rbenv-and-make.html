@@ -31,9 +31,8 @@
   <main id="content">
     <section id="article">
 <p>When writing <a href="http://glossary.codeunion.io/gem/">gems</a>, we frequently want to
-verify behavior across a variety of ruby versions. While this is quite <a href="http://docs.travis-ci.com/user/languages/ruby/#Choosing-Ruby-versions-and-implementations-to-test-against">easy
-with travis
-ci</a>,
+verify behavior across a variety of ruby versions. While this is
+<a href="http://docs.travis-ci.com/user/languages/ruby/#Choosing-Ruby-versions-and-implementations-to-test-against">possible with travis ci</a>,
 running microtests before pushing shrinks the likelihood of breaking the build.</p>
 
 <p>My objectives were to:</p>
@@ -46,6 +45,8 @@ cores, why not use them?</li>
 <li>Adding additional versions must be relatively painless.</li>
 </ul>
 
+<!--more-->
+
 <p>After a bit of prototyping, I settled on:</p>
 
 <ul>
@@ -57,34 +58,33 @@ system change.</li>
 
 <p>For those of you who want the code right now, grab my
 <a href="https://github.com/zspencer/make-many-rubies"
-id="make-many-rubies-mid">make-many-rubies</a> repo. For those
-interested in the thought process, read on.</p>
+id="make-many-rubies-mid">make-many-rubies</a> repo. For those interested in the
+thought process, read on.</p>
 
 <h3 id="make-and-rake-better-together">Make and Rake, Better Together.</h3>
 
 <p>Make is a powerful build system. While Rake is great for complex tasks that
-require a language with functions and lists, Make
-shines at discoverability (<a href="http://bash-completion.alioth.debian.org">free
-tab-completion!</a> woo!) and
+require a language with functions and lists, Make shines at discoverability
+(<a href="http://bash-completion.alioth.debian.org">free tab-completion!</a> woo!) and
 cross-language support.</p>
 
-<p>I tend to have a Makefile in every project I work on which encapsulate the primary
-commands:</p>
+<p>I tend to have a Makefile in every project I work on which encapsulate the
+primary commands:</p>
 
 <ul>
-<li><code>make run</code>     - Runs the project</li>
-<li><code>make test</code>    - Tests the project</li>
-<li><code>make build</code>   - Builds the project</li>
+<li><code>make run</code> - Runs the project</li>
+<li><code>make test</code> - Tests the project</li>
+<li><code>make build</code> - Builds the project</li>
 <li><code>make release</code> - Releases the project artifact.</li>
-<li><code>make deploy</code>  - Deploys the project to production.</li>
-<li><code>make tbrd</code>    - Pronounced &quot;Tee-bird&quot; tests, builds, releases and deploys
-                the project.</li>
+<li><code>make deploy</code> - Deploys the project to production.</li>
+<li><code>make tbrd</code> - Pronounced &quot;Tee-bird&quot; tests, builds, releases and deploys the
+project.</li>
 </ul>
 
-<p>These tasks allow projects to have a common interface no matter what
-language, deployment strategy, or test framework we use.  Not every project has
-every task of course; but the convention makes switching between different kinds
-of projects in different languages a bit easier.</p>
+<p>These tasks allow projects to have a common interface no matter what language,
+deployment strategy, or test framework we use. Not every project has every task
+of course; but the convention makes switching between different kinds of
+projects in different languages a bit easier.</p>
 
 <h3 id="read-the-source-luke">Read the Source, Luke!</h3>
 
@@ -95,8 +95,8 @@ on every single line; and the Readme provides (hopefully useful) usage
 instructions.</p>
 
 <p>Did you find this helpful? I&#39;d love to hear how you keep your code working
-across multiple ruby versions or use make to create a common interface
-across teams and projects!  Why not <a id="send-email" href="mailto:
+across multiple ruby versions or use make to create a common interface across
+teams and projects! Why not <a id="send-email" href="mailto:
 zee@wecohere.com">drop me a line</a>?</p>
 
 </section>
@@ -106,13 +106,7 @@ zee@wecohere.com">drop me a line</a>?</p>
   <p>Browse posts about:
   <ul>
   
-  <li><a href="/tags/software">software</a></li>
-  
-  <li><a href="/tags/testing">testing</a></li>
-  
-  <li><a href="/tags/ruby">ruby</a></li>
-  
-  <li><a href="/tags/devenvironment">devenvironment</a></li>
+  <li><a href="/tags/programming">programming</a></li>
   
   </ul></p>
 </section>

@@ -32,21 +32,23 @@
     <section id="article">
 <p>We seem to use <code>nil</code>s in place of a default return value in a function. Say you
 wanted to write a function that splits a string on its commas:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">def nil_split_on_comma(string)
-  return nil unless string.include? ","
-  string.split(",")
-end
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">nil_split_on_comma</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
+  <span class="k">return</span> <span class="kp">nil</span> <span class="k">unless</span> <span class="n">string</span><span class="p">.</span><span class="nf">include?</span> <span class="s2">","</span>
+  <span class="n">string</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="s2">","</span><span class="p">)</span>
+<span class="k">end</span>
 </code></pre></div>
 <p>While this seems reasonable it can have some unfortunate side effects:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">p nil_split_on_comma("asdfqwer").map(&amp;:length)
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">p</span> <span class="n">nil_split_on_comma</span><span class="p">(</span><span class="s2">"asdfqwer"</span><span class="p">).</span><span class="nf">map</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:length</span><span class="p">)</span>
 </code></pre></div>
 <p>Woops! Undefined method map for <code>nil</code> class! Let&#39;s try again!</p>
-<div class="highlight"><pre><code class="language-" data-lang="">def better_split_on_comma(string)
-  return [] unless string.include? ","
-  string.split(",")
-end
 
-p better_split_on_comma("asdfqwer").map(&amp;:length)
+<!--more-->
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">better_split_on_comma</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
+  <span class="k">return</span> <span class="p">[]</span> <span class="k">unless</span> <span class="n">string</span><span class="p">.</span><span class="nf">include?</span> <span class="s2">","</span>
+  <span class="n">string</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="s2">","</span><span class="p">)</span>
+<span class="k">end</span>
+
+<span class="nb">p</span> <span class="n">better_split_on_comma</span><span class="p">(</span><span class="s2">"asdfqwer"</span><span class="p">).</span><span class="nf">map</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:length</span><span class="p">)</span>
 </code></pre></div>
 <p>Ah! Much better! Because this function always returns an object of the same type
 it can be used without checking the value! The astute reader will spot this as
@@ -55,17 +57,17 @@ an example of the <a href="http://c2.com/cgi/wiki?NullObject">Null Object Patter
 <p>In spite of it&#39;s lack of suitability as a replacement for a reasonable default
 value, I&#39;m a fan of <code>nil</code>. I especially like it&#39;s use as a <a href="http://en.wikipedia.org/wiki/Null_character">null
 terminator</a>:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">def iterable_fetch_val(index)
-  data = "1234567890"
-  data[index]
-end
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">iterable_fetch_val</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+  <span class="n">data</span> <span class="o">=</span> <span class="s2">"1234567890"</span>
+  <span class="n">data</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+<span class="k">end</span>
 
-index = 0
+<span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
 
-while iterable_fetch_val(index)
-  p iterable_fetch_val(index)
-  index += 1
-end
+<span class="k">while</span> <span class="n">iterable_fetch_val</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+  <span class="nb">p</span> <span class="n">iterable_fetch_val</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+  <span class="n">index</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="k">end</span>
 </code></pre></div>
 <p>Here we&#39;re relying on the side effect that a <code>nil</code> value is also falsey. I&#39;m
 less edgey about this because this functions use case is an iterator, instead of
@@ -73,16 +75,16 @@ an accessor; but it&#39;s still a little iffy.</p>
 
 <p>However, if you return an empty string instead of a falsey value it requires an
 additional method call to use as an iterator:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">def uniterable_fetch_val(index)
-  data = "1234567890"
-  data[index] || ""
-end
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">uniterable_fetch_val</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+  <span class="n">data</span> <span class="o">=</span> <span class="s2">"1234567890"</span>
+  <span class="n">data</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">||</span> <span class="s2">""</span>
+<span class="k">end</span>
 
-index = 0
-until uniterable_fetch_val(index).empty?
-  p uniterable_fetch_val(index)
-  index += 1
-end
+<span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">until</span> <span class="n">uniterable_fetch_val</span><span class="p">(</span><span class="n">index</span><span class="p">).</span><span class="nf">empty?</span>
+  <span class="nb">p</span> <span class="n">uniterable_fetch_val</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+  <span class="n">index</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="k">end</span>
 </code></pre></div>
 <p>As you can see, <code>nil</code>&#39;s aren&#39;t all bad. However they should be used with
 precision. Think about how varyied return types can cause complexity to move
@@ -95,11 +97,7 @@ through the code.</p>
   <p>Browse posts about:
   <ul>
   
-  <li><a href="/tags/tapas">tapas</a></li>
-  
-  <li><a href="/tags/ruby">ruby</a></li>
-  
-  <li><a href="/tags/software">software</a></li>
+  <li><a href="/tags/programming">programming</a></li>
   
   </ul></p>
 </section>
