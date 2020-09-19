@@ -4,7 +4,7 @@
   <title>Musings and Mutterings of Zee Spencer</title>
   <link rel="self" type="application/atom+xml" href="http://zeespencer.com/index.xml" />
   <link href="http://zeespencer.com/" />
-  <updated>2020-07-25T18:42:13-07:00</updated>
+  <updated>2020-09-19T22:59:44+00:00</updated>
   <id>http://zeespencer.com/</id>
   <author>
     <name>Zee</name>
@@ -14,10 +14,131 @@
   
   
   <entry>
+    <id>http://zeespencer.com/transitioning-a-small-tech-company-to-self-governance-an-experience-report</id>
+    <link type="text/html" rel="alternate" href="http://zeespencer.com/transitioning-a-small-tech-company-to-self-governance-an-experience-report"/>
+    <title>Transitioning a Small, Bootstrapped Tech Company to Self-Governance: An Experience Report</title>
+    <updated>2020-09-19T00:00:00+00:00</updated>
+    <author>
+      <name>Zee</name>
+      <uri>http://zeespencer.com/</uri>
+    </author>
+    <content type="html">&lt;p&gt;Over the past year I&amp;#39;ve been working to transition a 9-person,
+single-owner company to a democratic organization with a
+non-trivial amount of worker-ownership. It was a long, hard piece
+of work; and (like any democracy) that work is never done.&lt;/p&gt;
+
+&lt;p&gt;I am sharing it in the hope that others may consider how to transition their
+workplaces to ones where responsibility and authority are broadly distributed.&lt;/p&gt;
+
+&lt;p&gt;If you have questions, please reach out via email to zee@zinc.coop.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;There were a number of pre-conditions that made this transition possible:
+1. The sole-founder and CEO has been deeply invested in humane and
+   non-hierarchical organizational systems, such as TEAL, sociocracy, holocracy,
+   etc from the beginning.
+2. There were many small structures in place to facilitate group cohesion and
+   decision making.
+3. The CEO was willing to see and understand how his power within the
+   organization and distaste for boundaries intersected with the tyranny of
+   structurelessness to disempower the team and learn from his team how to better
+   hold space for them to be the best versions of themselves.
+4. The team was willing to put in the work to develop their professional skills
+   in such a way that they could safely steward the organization.&lt;/p&gt;
+
+&lt;p&gt;We started by taking the product and engineering leadership responsibilities off
+of the CEO. The CEO nominated each lead, and the full team performed a
+confirmation vote.&lt;/p&gt;
+
+&lt;p&gt;Over the next few months, we iterated on formalizing the responsibilities and
+rights those roles had within the organization. We observed the tensions between
+the leads and the team. We made changes. We undid things.&lt;/p&gt;
+
+&lt;p&gt;By taking implicit authority away from the CEO and explicitly distributing it,
+the team was able to safely hold responsibility for the product that granted
+them their livelihood.&lt;/p&gt;
+
+&lt;p&gt;As we navigated these tensions, we worked to  further shift responsibility and
+authority from the CEO into the team:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;We established a cross-team Finance Circle to hold responsibility for
+financial forecasting, budgeting, and compensation.&lt;/li&gt;
+&lt;li&gt;The Customer Team nominated and confirmed a Customer Lead to hold
+responsibility for stewarding the norms and structures around customer
+acquisition, success, and happiness.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;When COVID hit, it had a direct impact on the organizations financials. The
+finance circle was able to find ways to cut spending without recommending laying
+a single person off.&lt;/p&gt;
+
+&lt;p&gt;As the team navigated COVID, they nominated and confirmed an Operations Lead to
+hold responsibility for stewarding the teams working agreements, navigating the
+changing legal and financial landscape, and facilitating conversations around
+hard decisions in the event our forecasts were too optimistic.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, the uncertainty of Americas COVID response made it unclear
+whether the organization would be able to afford to retain the current team
+through 2021.&lt;/p&gt;
+
+&lt;p&gt;As the CEO stepped back from the day-to-day imperatives of operating a business
+he realized that his three key objectives for starting the organization were
+achieved:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;To fill a high-value, low-profit deeply meaningful socioeconomic niche in a
+ compassionate and just way.&lt;/li&gt;
+&lt;li&gt;To assemble a team of thoughtful, compassionate people who care deeply for
+ each other and their customers and work well together.&lt;/li&gt;
+&lt;li&gt;And to establish an asset that could provide him and his family a long-term
+ income stream.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;At the same time, he recognized the amount of energy he spent holding
+responsibility for the organization was pulling him away from his family.&lt;/p&gt;
+
+&lt;p&gt;The organizational work we had done gave him confidence the organization was in
+a position to safely steward itself. We began exploring what it would take for
+him to feel safe to step down from his role as CEO and seek a full-time position
+as a staff engineer.&lt;/p&gt;
+
+&lt;p&gt;Over the next three months:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;The engineering lead engaged in a high-intensity process of pulling as much
+technical context from the CEOs head as possible.&lt;/li&gt;
+&lt;li&gt;The CEO nominated (and the team confirmed) an Executive Director who would
+act as an officer of the company and hold responsibility for cultivating a
+safe and effective space to work towards the organizations mission.&lt;/li&gt;
+&lt;li&gt;The team nominated and the CEO confirmed a Treasurer to act as a signing
+authority for financial purposes.&lt;/li&gt;
+&lt;li&gt;The CEO and team drafted and approved a statement of intent to formally
+create a Board of Directors balanced between the Founder, the Executive
+Director, and a Team Representative. This boards role is to provide quarterly
+reflections and guidance to the team and oversight for the officers.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The CEOs last day was Tuesday. The board meets, for the first time, in
+October.&lt;/p&gt;
+
+&lt;p&gt;The work of finding mutually beneficial arrangements that value and respect each
+participant is never done.&lt;/p&gt;
+
+&lt;p&gt;But self-determination? That is priceless.&lt;/p&gt;
+
+&lt;p&gt;Onward.&lt;/p&gt;
+</content>
+  </entry>
+  
+  
+  
+  <entry>
     <id>http://zeespencer.com/choosing-between-web-ui-libraries</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/choosing-between-web-ui-libraries"/>
     <title>Choosing Between Web UI Tooling and Libraries</title>
-    <updated>2020-05-30T00:00:00-07:00</updated>
+    <updated>2020-05-30T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -136,7 +257,7 @@ outside a particular project.&lt;/p&gt;
     <id>http://zeespencer.com/drift-work-and-shift-work</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/drift-work-and-shift-work"/>
     <title>Drift Work, Shift Work</title>
-    <updated>2020-01-08T00:00:00-08:00</updated>
+    <updated>2020-01-08T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -249,7 +370,7 @@ otherwise &amp;#39;done.&amp;#39;&lt;/p&gt;
     <id>http://zeespencer.com/a-2019-physical-economic-and-mental-health-year-in-review</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/a-2019-physical-economic-and-mental-health-year-in-review"/>
     <title>2019 Year in Review</title>
-    <updated>2020-01-01T00:00:00-08:00</updated>
+    <updated>2020-01-01T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -311,7 +432,7 @@ otherwise &amp;#39;done.&amp;#39;&lt;/p&gt;
     <id>http://zeespencer.com/how-kiera-and-i-merged-finances</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/how-kiera-and-i-merged-finances"/>
     <title>How Kiera and I Merged (some of) our Finances</title>
-    <updated>2016-04-17T00:00:00-07:00</updated>
+    <updated>2016-04-17T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -370,7 +491,7 @@ otherwise &amp;#39;done.&amp;#39;&lt;/p&gt;
     <id>http://zeespencer.com/defining-my-dream-job</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/defining-my-dream-job"/>
     <title>Defining My Dream Job</title>
-    <updated>2015-08-03T00:00:00-07:00</updated>
+    <updated>2015-08-03T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -471,7 +592,7 @@ media&lt;/a&gt;.&lt;/p&gt;
     <id>http://zeespencer.com/effective-code-critique</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/effective-code-critique"/>
     <title>Effective Code Critique</title>
-    <updated>2015-07-26T00:00:00-07:00</updated>
+    <updated>2015-07-26T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -647,7 +768,7 @@ struggle with pair or mob programming.&lt;/p&gt;
     <id>http://zeespencer.com/a-pattern-for-distributed-retrospectives</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/a-pattern-for-distributed-retrospectives"/>
     <title>A Pattern For Distributed Retrospectives</title>
-    <updated>2015-02-15T00:00:00-08:00</updated>
+    <updated>2015-02-15T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -734,7 +855,7 @@ zee@wecohere.com&quot;&gt;Let me know&lt;/a&gt; if you&amp;#39;re interested!&lt
     <id>http://zeespencer.com/the-rationale-behind-testing</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/the-rationale-behind-testing"/>
     <title>The Rationale Behind Testing</title>
-    <updated>2015-02-12T00:00:00-08:00</updated>
+    <updated>2015-02-12T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -785,7 +906,7 @@ href=&quot;lead-email&quot; href=&quot;mailto: zee@wecohere.com&quot;&gt;drop me
     <id>http://zeespencer.com/when-to-hire-apprentices-and-junior-developers</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/when-to-hire-apprentices-and-junior-developers"/>
     <title>When To Hire Apprentices And Junior Developers</title>
-    <updated>2015-02-02T00:00:00-08:00</updated>
+    <updated>2015-02-02T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -889,7 +1010,7 @@ zee@wecohere.com&quot;&gt;Tell me what I could do better.&lt;/a&gt;&lt;/p&gt;
     <id>http://zeespencer.com/jobs/logo-design-typography-and-branding</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/jobs/logo-design-typography-and-branding"/>
     <title>Branding Inception: $2,000 - CLOSED</title>
-    <updated>2015-01-26T00:00:00-08:00</updated>
+    <updated>2015-01-26T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -972,7 +1093,7 @@ proposal with:&lt;/p&gt;
     <id>http://zeespencer.com/effectively-onboarding-junior-team-members</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/effectively-onboarding-junior-team-members"/>
     <title>Effectively Onboarding Junior Team Members</title>
-    <updated>2015-01-13T00:00:00-08:00</updated>
+    <updated>2015-01-13T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -1250,7 +1371,7 @@ zee@wecohere.com&quot;&gt;hear your thoughts.&lt;/a&gt;&lt;/p&gt;
     <id>http://zeespencer.com/running-tests-across-multiple-ruby-versions-with-rbenv-and-make</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/running-tests-across-multiple-ruby-versions-with-rbenv-and-make"/>
     <title>Running Tests Across Multiple Ruby Versions With Rbenv And Make</title>
-    <updated>2015-01-06T00:00:00-08:00</updated>
+    <updated>2015-01-06T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -1332,7 +1453,7 @@ zee@wecohere.com&quot;&gt;drop me a line&lt;/a&gt;?&lt;/p&gt;
     <id>http://zeespencer.com/migitating-anxiety-on-software-teams</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/migitating-anxiety-on-software-teams"/>
     <title>Migitating Anxiety On Software Teams</title>
-    <updated>2014-12-07T00:00:00-08:00</updated>
+    <updated>2014-12-07T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -1500,7 +1621,7 @@ line&lt;/a&gt;?&lt;/p&gt;
     <id>http://zeespencer.com/a-year-in-review-with-a-walking-desk</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/a-year-in-review-with-a-walking-desk"/>
     <title>A Year In Review With A Walking Desk</title>
-    <updated>2014-11-30T00:00:00-08:00</updated>
+    <updated>2014-11-30T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -1594,7 +1715,7 @@ on it!&lt;/a&gt;&lt;/p&gt;
     <id>http://zeespencer.com/getting-past-junior</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/getting-past-junior"/>
     <title>Getting Past Junior</title>
-    <updated>2014-06-27T00:00:00-07:00</updated>
+    <updated>2014-06-27T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -1707,7 +1828,7 @@ beyond junior.&lt;/p&gt;
     <id>http://zeespencer.com/the-chefs-tale</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/the-chefs-tale"/>
     <title>The Chef's Tale</title>
-    <updated>2014-06-25T00:00:00-07:00</updated>
+    <updated>2014-06-25T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -1747,7 +1868,7 @@ all the fame and glory! They must be hiding a secret ingredient!&amp;quot;&lt;/p
     <id>http://zeespencer.com/the-vim-lovers-guide-to-editing-clojure</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/the-vim-lovers-guide-to-editing-clojure"/>
     <title>The Vim Lovers Guide to Editing Clojure</title>
-    <updated>2013-12-05T00:00:00-08:00</updated>
+    <updated>2013-12-05T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -1846,7 +1967,7 @@ to pick up emacs as soon as I&amp;#39;m reasonably comfortable in clojure.&lt;/p
     <id>http://zeespencer.com/designing-a-personal-learning-plan</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/designing-a-personal-learning-plan"/>
     <title>Designing A Personal Learning Plan</title>
-    <updated>2013-11-19T00:00:00-08:00</updated>
+    <updated>2013-11-19T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -1925,7 +2046,7 @@ you design a personal learning plan for your or your team!&lt;/a&gt;&lt;/p&gt;
     <id>http://zeespencer.com/teach-yourself-programming-in-10000-hours</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/teach-yourself-programming-in-10000-hours"/>
     <title>Teach Yourself Programming in 10,000 Hours</title>
-    <updated>2013-11-13T00:00:00-08:00</updated>
+    <updated>2013-11-13T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -1959,7 +2080,7 @@ community of programmers who are constantly leveling up.&lt;/p&gt;
     <id>http://zeespencer.com/fear-not-your-ignorance</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/fear-not-your-ignorance"/>
     <title>Fear Not Your Ignorance</title>
-    <updated>2013-11-12T00:00:00-08:00</updated>
+    <updated>2013-11-12T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -1977,7 +2098,7 @@ Explore the unknown.&lt;br /&gt;&lt;/p&gt;
     <id>http://zeespencer.com/structure-and-space</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/structure-and-space"/>
     <title>Structure and Space</title>
-    <updated>2013-11-09T00:00:00-08:00</updated>
+    <updated>2013-11-09T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -2071,7 +2192,7 @@ structural changes are:&lt;/p&gt;
     <id>http://zeespencer.com/impromptu-introduction-to-javascript</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/impromptu-introduction-to-javascript"/>
     <title>Intro to JavaScript - TDD a Palindrome Checker</title>
-    <updated>2013-11-05T00:00:00-08:00</updated>
+    <updated>2013-11-05T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -2096,7 +2217,7 @@ frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
     <id>http://zeespencer.com/agency-society-and-invention</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/agency-society-and-invention"/>
     <title>Agency, Society, and Invention</title>
-    <updated>2013-10-29T00:00:00-07:00</updated>
+    <updated>2013-10-29T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -2184,7 +2305,7 @@ resources in are:&lt;/p&gt;
     <id>http://zeespencer.com/back-to-coding</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/back-to-coding"/>
     <title>Back to Codin'</title>
-    <updated>2013-10-25T00:00:00-07:00</updated>
+    <updated>2013-10-25T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -2227,7 +2348,7 @@ time to recharge, relax, and &lt;strong&gt;build some software&lt;/strong&gt;.&l
     <id>http://zeespencer.com/extracting-an-application</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/extracting-an-application"/>
     <title>Splitting codebases</title>
-    <updated>2013-06-02T00:00:00-07:00</updated>
+    <updated>2013-06-02T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -2296,7 +2417,7 @@ for us programmers.&lt;/p&gt;
     <id>http://zeespencer.com/the-learn-startup</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/the-learn-startup"/>
     <title>The Learn Startup</title>
-    <updated>2013-05-13T00:00:00-07:00</updated>
+    <updated>2013-05-13T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -2361,7 +2482,7 @@ the technology industry. Stop doing lean startups. Start doing learn startups.&l
     <id>http://zeespencer.com/beginning-again</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/beginning-again"/>
     <title>Begin Again</title>
-    <updated>2013-05-05T00:00:00-07:00</updated>
+    <updated>2013-05-05T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -2396,7 +2517,7 @@ behaviors.&lt;/p&gt;
     <id>http://zeespencer.com/the-windsurfer</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/the-windsurfer"/>
     <title>The Windsurfer</title>
-    <updated>2013-04-13T00:00:00-07:00</updated>
+    <updated>2013-04-13T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -2434,7 +2555,7 @@ She leaves birds in the dust.&lt;br/&gt;&lt;/p&gt;
     <id>http://zeespencer.com/introducing-jekyll-cdn</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/introducing-jekyll-cdn"/>
     <title>Introducing jekyll-cdn</title>
-    <updated>2013-03-23T00:00:00-07:00</updated>
+    <updated>2013-03-23T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -2455,7 +2576,7 @@ pipeline. Have fun fellow jekyll-lovers!&lt;/p&gt;
     <id>http://zeespencer.com/choosing-kindness-over-condemnation</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/choosing-kindness-over-condemnation"/>
     <title>Choosing Kindness over Condemnation</title>
-    <updated>2013-03-21T00:00:00-07:00</updated>
+    <updated>2013-03-21T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -2487,7 +2608,7 @@ ego.&lt;/em&gt;&lt;/p&gt;
     <id>http://zeespencer.com/gertrude-the-giraffe</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/gertrude-the-giraffe"/>
     <title>Gertrude the Giraffe</title>
-    <updated>2013-03-12T00:00:00-07:00</updated>
+    <updated>2013-03-12T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -2528,7 +2649,7 @@ walks. I don&amp;#39;t know where I&amp;#39;d be without her!&lt;/p&gt;
     <id>http://zeespencer.com/a-caveat-when-hosting-a-static-site-on-cloudfront</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/a-caveat-when-hosting-a-static-site-on-cloudfront"/>
     <title>A Caveat When Hosting a Static Site on CloudFront</title>
-    <updated>2013-03-03T00:00:00-08:00</updated>
+    <updated>2013-03-03T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -2553,7 +2674,7 @@ filters so switching between local testing and hosted is a snap.&lt;/p&gt;
     <id>http://zeespencer.com/onward</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/onward"/>
     <title>Onward</title>
-    <updated>2013-02-19T00:00:00-08:00</updated>
+    <updated>2013-02-19T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -2601,7 +2722,7 @@ the end of their program. They make three promises:&lt;/p&gt;
     <id>http://zeespencer.com/were-going-to-grind-young</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/were-going-to-grind-young"/>
     <title>Grind Young</title>
-    <updated>2013-02-17T00:00:00-08:00</updated>
+    <updated>2013-02-17T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -2677,7 +2798,7 @@ We&amp;#39;re gonna grind young&lt;br /&gt;&lt;/p&gt;
     <id>http://zeespencer.com/using-nil-effectively</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/using-nil-effectively"/>
     <title>Using Nil Effectively</title>
-    <updated>2013-02-17T00:00:00-08:00</updated>
+    <updated>2013-02-17T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -2750,7 +2871,7 @@ through the code.&lt;/p&gt;
     <id>http://zeespencer.com/now-i-know-that-love-is-blind</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/now-i-know-that-love-is-blind"/>
     <title>Now I Know That Love Is Blind</title>
-    <updated>2013-02-14T00:00:00-08:00</updated>
+    <updated>2013-02-14T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -2768,7 +2889,7 @@ Why is organ harvesting a crime?&lt;br /&gt;&lt;/p&gt;
     <id>http://zeespencer.com/two-lumps-of-clay</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/two-lumps-of-clay"/>
     <title>Two Lumps of Clay</title>
-    <updated>2013-02-10T00:00:00-08:00</updated>
+    <updated>2013-02-10T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -2806,7 +2927,7 @@ appreciate our differences we can find places for everyone to excel.&lt;/p&gt;
     <id>http://zeespencer.com/point-victor</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/point-victor"/>
     <title>Point Victor</title>
-    <updated>2013-02-10T00:00:00-08:00</updated>
+    <updated>2013-02-10T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -2825,7 +2946,7 @@ And rejection befell poor young Rictor&lt;br /&gt;&lt;/p&gt;
     <id>http://zeespencer.com/ambiguity-is-an-opportunity-to-refactor</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/ambiguity-is-an-opportunity-to-refactor"/>
     <title>Ambiguity In Code Is an Opportunity to Refactor</title>
-    <updated>2013-02-01T00:00:00-08:00</updated>
+    <updated>2013-02-01T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -2876,7 +2997,7 @@ it&amp;#39;s time to extract a method to describes the operation more explicitel
     <id>http://zeespencer.com/what-mom-and-dad-need-to-know-about-the-current-security-breakdown</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/what-mom-and-dad-need-to-know-about-the-current-security-breakdown"/>
     <title>What Mom and Dad Need to Know About the Rails Security Exploit</title>
-    <updated>2013-01-31T00:00:00-08:00</updated>
+    <updated>2013-01-31T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -2997,7 +3118,7 @@ for a rails app? I'm available to help ensure your customers are safe. Just send
     <id>http://zeespencer.com/i-sense-a-pattern</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/i-sense-a-pattern"/>
     <title>I sense a pattern</title>
-    <updated>2013-01-31T00:00:00-08:00</updated>
+    <updated>2013-01-31T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -3026,7 +3147,7 @@ for a rails app? I'm available to help ensure your customers are safe. Just send
     <id>http://zeespencer.com/the-ruby-&-symbol</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/the-ruby-&-symbol"/>
     <title>The Ruby & Symbol</title>
-    <updated>2013-01-30T00:00:00-08:00</updated>
+    <updated>2013-01-30T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -3089,7 +3210,7 @@ by &lt;a href=&quot;http://www.robertsosinski.com/&quot;&gt;Robert Sosinki&lt;/a
     <id>http://zeespencer.com/building-a-remote-pairing-setup</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/building-a-remote-pairing-setup"/>
     <title>Build a Command Line Remote Pairing Setup</title>
-    <updated>2013-01-29T00:00:00-08:00</updated>
+    <updated>2013-01-29T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -3241,7 +3362,7 @@ power, there&amp;#39;s a few things you should do:&lt;/p&gt;
     <id>http://zeespencer.com/thank-you-heather-steve-and-corey</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/thank-you-heather-steve-and-corey"/>
     <title>Thank You Heather, Steve, and Corey</title>
-    <updated>2013-01-25T00:00:00-08:00</updated>
+    <updated>2013-01-25T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -3285,7 +3406,7 @@ Steve and Corey for taking responsibility for your actions.&lt;/p&gt;
     <id>http://zeespencer.com/building-communities-of-empowerment</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/building-communities-of-empowerment"/>
     <title>Building Communities of Empowerment</title>
-    <updated>2013-01-13T00:00:00-08:00</updated>
+    <updated>2013-01-13T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -3333,7 +3454,7 @@ that back each other up. It&amp;#39;s hard to shape a culture of empathy and sup
     <id>http://zeespencer.com/how-do-you-find-mentors-outside-your-core-skills</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/how-do-you-find-mentors-outside-your-core-skills"/>
     <title>How Do You Find Mentors Outside Your Core Skills?</title>
-    <updated>2013-01-08T00:00:00-08:00</updated>
+    <updated>2013-01-08T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -3367,7 +3488,7 @@ relationships with people who have passions orthogonal to yours?&lt;/p&gt;
     <id>http://zeespencer.com/we-are-better-than-this</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/we-are-better-than-this"/>
     <title>We Are Better Than This</title>
-    <updated>2012-12-20T00:00:00-08:00</updated>
+    <updated>2012-12-20T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -3405,7 +3526,7 @@ house. We can treat each other with dignity and respect.&lt;/p&gt;
     <id>http://zeespencer.com/keeping-space</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/keeping-space"/>
     <title>Keeping Space</title>
-    <updated>2012-12-12T00:00:00-08:00</updated>
+    <updated>2012-12-12T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -3438,7 +3559,7 @@ practice it?&lt;/p&gt;
     <id>http://zeespencer.com/in-pursuit-of-excellence</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/in-pursuit-of-excellence"/>
     <title>In Pursuit of Excellence</title>
-    <updated>2012-12-02T00:00:00-08:00</updated>
+    <updated>2012-12-02T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -3475,7 +3596,7 @@ practice it?&lt;/p&gt;
     <id>http://zeespencer.com/simplicity-wins</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/simplicity-wins"/>
     <title>Simplicity Wins</title>
-    <updated>2012-11-29T00:00:00-08:00</updated>
+    <updated>2012-11-29T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -3496,7 +3617,7 @@ practice it?&lt;/p&gt;
     <id>http://zeespencer.com/ignorance-and-realism-in-testing</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/ignorance-and-realism-in-testing"/>
     <title>Ignorance and Realism in Testing</title>
-    <updated>2012-11-24T00:00:00-08:00</updated>
+    <updated>2012-11-24T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -3545,7 +3666,7 @@ better organized test suites in the future.&lt;/p&gt;
     <id>http://zeespencer.com/the-proud-ants</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/the-proud-ants"/>
     <title>The Proud Ants</title>
-    <updated>2012-11-23T00:00:00-08:00</updated>
+    <updated>2012-11-23T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -3687,7 +3808,7 @@ rules; and formed a second colony in the builders majestic ruins.&lt;/p&gt;
     <id>http://zeespencer.com/why-i-dont-use-aliases</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/why-i-dont-use-aliases"/>
     <title>Why I Don't Use Aliases</title>
-    <updated>2012-06-20T00:00:00-07:00</updated>
+    <updated>2012-06-20T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -3705,7 +3826,7 @@ execute consistently in a variety of situations.&lt;/p&gt;
     <id>http://zeespencer.com/business-model-innovation-factory-book-review</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/business-model-innovation-factory-book-review"/>
     <title>Saul Kaplan's Business Model Innovation Factory</title>
-    <updated>2012-05-06T00:00:00-07:00</updated>
+    <updated>2012-05-06T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -3758,7 +3879,7 @@ hardcover before investing in a physical copy.&lt;/p&gt;
     <id>http://zeespencer.com/rejecting-vs-breaking-out</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/rejecting-vs-breaking-out"/>
     <title>When to Reject and Accept Work</title>
-    <updated>2012-04-15T00:00:00-07:00</updated>
+    <updated>2012-04-15T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -3806,7 +3927,7 @@ wind up with smoother projects because of it.&lt;/p&gt;
     <id>http://zeespencer.com/coding-the-distance</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/coding-the-distance"/>
     <title>Coding the Distance</title>
-    <updated>2012-02-26T00:00:00-08:00</updated>
+    <updated>2012-02-26T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -3874,7 +3995,7 @@ He&amp;#39;s deploying continuous&lt;br /&gt;&lt;/p&gt;
     <id>http://zeespencer.com/a-breakup-letter-for-backbone</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/a-breakup-letter-for-backbone"/>
     <title>Breaking Up With Backbone</title>
-    <updated>2012-02-14T00:00:00-08:00</updated>
+    <updated>2012-02-14T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -3939,7 +4060,7 @@ code.&lt;/p&gt;
     <id>http://zeespencer.com/finding-flow-in-practice</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/finding-flow-in-practice"/>
     <title>Finding Flow in Practice</title>
-    <updated>2012-01-14T00:00:00-08:00</updated>
+    <updated>2012-01-14T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -3964,7 +4085,7 @@ code.&lt;/p&gt;
     <id>http://zeespencer.com/talking-is-hard</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/talking-is-hard"/>
     <title>Talking is Hard</title>
-    <updated>2011-12-30T00:00:00-08:00</updated>
+    <updated>2011-12-30T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -3993,7 +4114,7 @@ code.&lt;/p&gt;
     <id>http://zeespencer.com/confessions-of-a-shitty-pianist</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/confessions-of-a-shitty-pianist"/>
     <title>Confessions of a Shitty Pianist</title>
-    <updated>2011-12-29T00:00:00-08:00</updated>
+    <updated>2011-12-29T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -4017,7 +4138,7 @@ my own music.&lt;/p&gt;
     <id>http://zeespencer.com/three-reasons-for-testers-not-to-learn-to-code</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/three-reasons-for-testers-not-to-learn-to-code"/>
     <title>Three Reasons For Testers Not To Learn To Code</title>
-    <updated>2011-09-01T00:00:00-07:00</updated>
+    <updated>2011-09-01T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -4095,7 +4216,7 @@ level.&lt;/em&gt;&lt;/p&gt;
     <id>http://zeespencer.com/judging-code-simplicity-fit-it-through-the-tube</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/judging-code-simplicity-fit-it-through-the-tube"/>
     <title>Judging Code Simplicity Fit It Through The Tube</title>
-    <updated>2010-04-25T00:00:00-07:00</updated>
+    <updated>2010-04-25T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
@@ -4144,7 +4265,7 @@ and when the TUBE fits, make commits!&lt;/p&gt;
     <id>http://zeespencer.com/the-trouble-with-triangles</id>
     <link type="text/html" rel="alternate" href="http://zeespencer.com/the-trouble-with-triangles"/>
     <title>The Trouble With Triangles</title>
-    <updated>2010-02-01T00:00:00-08:00</updated>
+    <updated>2010-02-01T00:00:00+00:00</updated>
     <author>
       <name>Zee</name>
       <uri>http://zeespencer.com/</uri>
